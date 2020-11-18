@@ -21,9 +21,9 @@ import CardBody from "components/Card/CardBody.js";
 import CustomInput from "components/CustomInput/CustomInput.js";
 import Footer from "components/Footer/Footer.js";
 // sections for this page
-import SectionLatestOffers from "pages-sections/ecommerce/SectionLatestOffers.js";
-import SectionProducts from "pages-sections/ecommerce/SectionProducts.js";
-import SectionBlog from "pages-sections/ecommerce/SectionBlog.js";
+import SectionLatestOffers from "pages-sections/demo/ecommerce/SectionLatestOffers.js";
+import SectionProducts from "pages-sections/demo/ecommerce/SectionProducts.js";
+import SectionBlog from "pages-sections/demo/ecommerce/SectionBlog.js";
 
 import ecommerceHeader from "assets/img/examples/ecommerce-header.jpg";
 import face1 from "assets/img/faces/card-profile6-square.jpg";

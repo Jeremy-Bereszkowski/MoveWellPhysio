@@ -21,9 +21,9 @@ import Parallax from "components/Parallax/Parallax.js";
 import landingPageStyle from "assets/jss/nextjs-material-kit-pro/pages/landingPageStyle.js";
 
 // Sections for this page
-import SectionProduct from "pages-sections/landing-page/SectionProduct.js";
-import SectionTeam from "pages-sections/landing-page/SectionTeam.js";
-import SectionWork from "pages-sections/landing-page/SectionWork.js";
+import SectionProduct from "pages-sections/demo/landing-page/SectionProduct.js";
+import SectionTeam from "pages-sections/demo/landing-page/SectionTeam.js";
+import SectionWork from "pages-sections/demo/landing-page/SectionWork.js";
 
 const useStyles = makeStyles(landingPageStyle);
 

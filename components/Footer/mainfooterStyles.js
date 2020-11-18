@@ -56,6 +56,16 @@ const style = {
         display: "block",
         paddingLeft: "5%"
     },
+    left1: {
+        float: "left!important",
+        display: "block",
+        paddingLeft: "3%"
+    },
+    left2: {
+        float: "left!important",
+        display: "block",
+        paddingLeft: "2%"
+    },
     right: {
         padding: "15px 0",
         margin: "0",
@@ -78,14 +88,14 @@ const style = {
     },
     footerBrand: {
         height: "50px",
-        padding: "15px 15px",
         fontSize: "18px",
         lineHeight: "50px",
         marginLeft: "-15px",
-        color: grayColor[1],
+        color: whiteColor,
         textDecoration: "none",
-        fontWeight: 700,
-        fontFamily: "Roboto Slab,Times New Roman,serif"
+        fontWeight: 300,
+        fontFamily: "Roboto Slab,Times New Roman,serif",
+        margin: "0"
     },
     pullCenter: {
         display: "inline-block",
@@ -128,7 +138,7 @@ const style = {
             display: "inline-block"
         },
         "& h4, & h5": {
-            color: grayColor[1],
+            color: whiteColor,
             textDecoration: "none"
         },
         "& ul:not($socialButtons) li a": {
@@ -223,6 +233,7 @@ const style = {
     },
     footerContainer: {
         paddingRight: "15px",
+        paddingBottom: "15px",
         paddingLeft: "15px",
         marginRight: "auto",
         marginLeft: "auto",

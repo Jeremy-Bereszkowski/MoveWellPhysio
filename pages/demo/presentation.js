@@ -15,15 +15,15 @@ import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
 import Button from "components/CustomButtons/Button.js";
 // sections for this page
-import SectionDescription from "pages-sections/presentation-page/SectionDescription.js";
-import SectionComponents from "pages-sections/presentation-page/SectionComponents.js";
-import SectionCards from "pages-sections/presentation-page/SectionCards.js";
-import SectionContent from "pages-sections/presentation-page/SectionContent.js";
-import SectionSections from "pages-sections/presentation-page/SectionSections.js";
-import SectionExamples from "pages-sections/presentation-page/SectionExamples.js";
-import SectionFreeDemo from "pages-sections/presentation-page/SectionFreeDemo.js";
-import SectionOverview from "pages-sections/presentation-page/SectionOverview.js";
-import SectionPricing from "pages-sections/presentation-page/SectionPricing.js";
+import SectionDescription from "pages-sections/demo/presentation-page/SectionDescription.js";
+import SectionComponents from "pages-sections/demo/presentation-page/SectionComponents.js";
+import SectionCards from "pages-sections/demo/presentation-page/SectionCards.js";
+import SectionContent from "pages-sections/demo/presentation-page/SectionContent.js";
+import SectionSections from "pages-sections/demo/presentation-page/SectionSections.js";
+import SectionExamples from "pages-sections/demo/presentation-page/SectionExamples.js";
+import SectionFreeDemo from "pages-sections/demo/presentation-page/SectionFreeDemo.js";
+import SectionOverview from "pages-sections/demo/presentation-page/SectionOverview.js";
+import SectionPricing from "pages-sections/demo/presentation-page/SectionPricing.js";
 
 import presentationStyle from "assets/jss/nextjs-material-kit-pro/pages/presentationStyle.js";
 

@@ -1,30 +1,31 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 
-import LandingHeader from "../components/Header/LandingHeader";
-import LandingHeaderLinks from "../components/Header/LandingHeaderLinks";
 import LandingPageCarousel from "../components/Carousel/LandingPageCarousel";
 
-import carouselStyle from "assets/jss/pages/landingPage";
+import landingStyle from "assets/jss/pages/landingPage";
+import WhatItMeans from "../pages-sections/landing-page/WhatItMeans";
+import IntroVideo from "../pages-sections/landing-page/IntroVideo";
+import classNames from "classnames";
+import About from "../pages-sections/landing-page/About";
 
-const useStyles = makeStyles(carouselStyle);
+const useStyles = makeStyles(landingStyle);
 
 export default function LandingPage(props) {
     const classes = useStyles();
 
     return (
         <div>
-            <LandingHeader
-                color="transparent"
-                brand="MoveWell Physiotherapy"
-                links={<LandingHeaderLinks dropdownHoverColor="black" />}
-                fixed
-                changeColorOnScroll={{
-                    height: 300,
-                    color: "black"
-                }}
-            />
             <LandingPageCarousel />
+            <div className={classNames(classes.section, classes.sectionGray)}>
+                <div className={classes.container}>
+                    <div className={classNames(classes.main, classes.mainRaised)}>
+                        <WhatItMeans />
+                        <IntroVideo />
+                        <About />
+                    </div>
+                </div>
+            </div>
         </div>
     )
 }

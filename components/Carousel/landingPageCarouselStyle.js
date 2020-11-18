@@ -1,4 +1,4 @@
-import {blackColor, container, grayColor, hexToRgb, title} from "../../assets/jss/nextjs-material-kit-pro";
+import {blackColor, container, grayColor, hexToRgb, title, whiteColor} from "../../assets/jss/nextjs-material-kit-pro";
 
 const landingPageCarouselStyle = {
     section: {
@@ -39,7 +39,7 @@ const landingPageCarouselStyle = {
         zIndex: "3"
     },
     imageText: {
-        marginBottom: "500px",
+        marginBottom: "15%",
         paddingBottom: "45px",
         position: "absolute",
         right: "15%",
@@ -68,10 +68,81 @@ const landingPageCarouselStyle = {
         minHeight: "32px",
         textDecoration: "none",
         fontSize: "6.125rem",
-        maxWidth: "70%",
+        maxWidth: "75%",
         marginLeft: "auto",
         marginRight: "auto",
-    }
+    },
+    button: {
+        backgroundColor: "#2fb027",
+        minHeight: "auto",
+        minWidth: "auto",
+        color: whiteColor,
+        border: "none",
+        borderRadius: "3px",
+        position: "relative",
+        padding: "12px 30px",
+        margin: ".7125rem 1px",
+        marginTop: "25px",
+        fontSize: "12px",
+        fontWeight: "400",
+        textTransform: "uppercase",
+        letterSpacing: "0",
+        willChange: "box-shadow, transform",
+        transition:
+            "box-shadow 0.2s cubic-bezier(0.4, 0, 1, 1), background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1)",
+        lineHeight: "1.42857143",
+        textAlign: "center",
+        whiteSpace: "nowrap",
+        verticalAlign: "middle",
+        touchAction: "manipulation",
+        cursor: "pointer",
+        "&:hover": {
+            color: whiteColor,
+            backgroundColor: grayColor[0],
+            boxShadow:
+                "0 14px 26px -12px rgba(" +
+                hexToRgb(grayColor[0]) +
+                ", 0.42), 0 4px 23px 0px rgba(" +
+                hexToRgb(blackColor) +
+                ", 0.12), 0 8px 10px -5px rgba(" +
+                hexToRgb(grayColor[0]) +
+                ", 0.2)"
+        },
+        "& .fab,& .fas,& .far,& .fal,& .material-icons": {
+            position: "relative",
+            display: "inline-block",
+            top: "0",
+            marginTop: "-1em",
+            marginBottom: "-1em",
+            fontSize: "1.1rem",
+            marginRight: "4px",
+            verticalAlign: "middle"
+        },
+        "& svg": {
+            position: "relative",
+            display: "inline-block",
+            top: "0",
+            width: "18px",
+            height: "18px",
+            marginRight: "4px",
+            verticalAlign: "middle"
+        },
+        "&$justIcon": {
+            "& .fab,& .fas,& .far,& .fal,& .material-icons": {
+                marginTop: "0px",
+                marginRight: "0px",
+                position: "absolute",
+                width: "100%",
+                transform: "none",
+                left: "0px",
+                top: "0px",
+                height: "100%",
+                lineHeight: "41px",
+                fontSize: "20px"
+            }
+        }
+
+    },
 };
 
 export default landingPageCarouselStyle;

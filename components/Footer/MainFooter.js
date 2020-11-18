@@ -24,16 +24,22 @@ export default function MainFooter(props) {
             <div className={classes.footerContainer}>
                 <div>
                     <div className={classes.left}>
-                        <a
-                            href="https://www.creative-tim.com/product/nextjs-material-kit-pro?ref=njsmkp-footer-components"
-                            target="_blank"
-                            className={classes.footerBrand}
-                        >
+                        <h3 className={classes.footerBrand}>
                             MoveWell Physiotherapy
-                        </a>
+                        </h3>
+                    </div>
+                    <div className={classes.left1}>
+                        <h4 className={classes.footerBrand}>
+                            |
+                        </h4>
+                    </div>
+                    <div className={classes.left2}>
+                        <h5 className={classes.footerBrand}>
+                            151 Bay Street, Brighton, VIC, 3188
+                        </h5>
                     </div>
                     <div className={classes.pullCenter}>
-                        <List className={classes.list}>
+                        {/*<List className={classes.list}>
                             <ListItem className={classes.inlineBlock}>
                                 <a
                                     href="http://blog.creative-tim.com/?ref=njsmkp-footer-components"
@@ -42,8 +48,11 @@ export default function MainFooter(props) {
                                 >
                                     Blog
                                 </a>
-                            </ListItem>
-                            <ListItem className={classes.inlineBlock}>
+                                <div className={classes.block}>
+                                    <p1>151 BayStreet, Brighton, VIC, 3188</p1>
+                                </div>
+                            </ListItem>*/}
+                            {/*<ListItem className={classes.inlineBlock}>
                                 <a
                                     href="https://www.creative-tim.com/presentation?ref=njsmkp-footer-components"
                                     target="_blank"
@@ -78,8 +87,8 @@ export default function MainFooter(props) {
                                 >
                                     Contact us
                                 </a>
-                            </ListItem>
-                        </List>
+                            </ListItem>*/}
+                        {/*</List>*/}
                     </div>
                     <div className={classes.rightLinks}>
                         <ul>

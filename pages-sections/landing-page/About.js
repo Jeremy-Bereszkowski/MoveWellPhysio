@@ -13,10 +13,28 @@ import Badge from "../../components/Badge/Badge";
 
 import cardProject5 from "../../assets/img/examples/card-project5.jpg";
 import styles from "./whatItMeansStyles";
+import {useScroll} from "react-use-gesture";
+import Slide from "react-reveal/Slide";
 const useStyles = makeStyles(styles);
 
 export default function About(props) {
     const classes = useStyles();
+
+    const [show, setShow] = React.useState(false);
+
+    const scroll = useScroll(state => {
+        console.log("scrolling", state)
+
+        if (state.offset[1] > 1500){
+            setShow(true)
+        } else if (state.offset[1] < 100){
+            setShow(false)
+        }
+    }, {
+        domTarget: window,
+    });
+
+    React.useEffect(scroll, [scroll]);
 
     return (
         <Grid
@@ -52,39 +70,41 @@ export default function About(props) {
                     justify="space-between"
                     alignItems="flex-start"
                 >
-                    <GridItem>
-                        <h2 className={classNames(classes.title, classes.subHeaderText)}>
-                            <b>ABOUT MOVEWELL</b>
-                        </h2>
-                    </GridItem>
-                    <GridItem>
-                        <h4>
-                            <b>We're experts in physiotherapy and exercise.</b>
-                        </h4>
-                    </GridItem>
-                    <GridItem>
-                        <h4>
-                            <b>We take care to understand you first, designing your recovery around your needs and fitness goals.</b>
-                        </h4>
-                    </GridItem>
-                    <GridItem>
-                        <h4>
-                            <b>MoveWell uses an active style of treatment that prioritises pain relief through improved function.</b>
-                        </h4>
-                    </GridItem>
-                    <GridItem>
-                        <h4>
-                            <b>Our team believes in the value of helping you develop a lifestyle that prevents pain.</b>
-                        </h4>
-                    </GridItem>
-                    <GridItem>
-                        <h5 className={classNames( classes.subHeaderText, classes.inlineBlock)}>
-                            <b>MORE ABOUT MOVEWELL</b>
-                        </h5>
-                        <Icon className={classNames(classes.inlineBlock, classes.arrow)} >
-                            <KeyboardArrowRightIcon />
-                        </Icon>
-                    </GridItem>
+                    {/*<Slide right when={show}>*/}
+                        <GridItem>
+                            <h2 className={classNames(classes.title, classes.subHeaderText)}>
+                                <b>ABOUT MOVEWELL</b>
+                            </h2>
+                        </GridItem>
+                        <GridItem>
+                            <h4>
+                                <b>We're experts in physiotherapy and exercise.</b>
+                            </h4>
+                        </GridItem>
+                        <GridItem>
+                            <h4>
+                                <b>We take care to understand you first, designing your recovery around your needs and fitness goals.</b>
+                            </h4>
+                        </GridItem>
+                        <GridItem>
+                            <h4>
+                                <b>MoveWell uses an active style of treatment that prioritises pain relief through improved function.</b>
+                            </h4>
+                        </GridItem>
+                        <GridItem>
+                            <h4>
+                                <b>Our team believes in the value of helping you develop a lifestyle that prevents pain.</b>
+                            </h4>
+                        </GridItem>
+                        <GridItem>
+                            <h5 className={classNames( classes.subHeaderText, classes.inlineBlock)}>
+                                <b>MORE ABOUT MOVEWELL</b>
+                            </h5>
+                            <Icon className={classNames(classes.inlineBlock, classes.arrow)} >
+                                <KeyboardArrowRightIcon />
+                            </Icon>
+                        </GridItem>
+                    {/*</Slide>*/}
                 </Grid>
             </GridItem>
             <GridItem>

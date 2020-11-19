@@ -9,6 +9,8 @@ import IntroVideo from "../pages-sections/landing-page/IntroVideo";
 import classNames from "classnames";
 import About from "../pages-sections/landing-page/About";
 
+import AnimatedTest from "components/Animated/test"
+
 const useStyles = makeStyles(landingStyle);
 
 export default function LandingPage(props) {

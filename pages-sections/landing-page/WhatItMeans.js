@@ -13,10 +13,28 @@ import Badge from "../../components/Badge/Badge";
 
 import cardProject5 from "../../assets/img/examples/card-project5.jpg";
 import styles from "./whatItMeansStyles";
+import {useScroll} from "react-use-gesture";
+import Slide from "react-reveal/Slide";
 const useStyles = makeStyles(styles);
 
 export default function WhatItMeans(props) {
     const classes = useStyles();
+
+    const [show, setShow] = React.useState(false);
+
+    const scroll = useScroll(state => {
+        console.log("scrolling", state)
+
+        if (state.offset[1] > 500){
+            setShow(true)
+        } else if (state.offset[1] < 100){
+            setShow(false)
+        }
+    }, {
+        domTarget: window,
+    });
+
+    React.useEffect(scroll, [scroll]);
 
     return (
         <Grid
@@ -33,39 +51,41 @@ export default function WhatItMeans(props) {
                     justify="space-between"
                     alignItems="flex-start"
                 >
-                    <GridItem>
-                        <h2 className={classNames(classes.title, classes.subHeaderText)}>
-                            <b>WHAT IT MEANS TO MOVE WELL</b>
-                        </h2>
-                    </GridItem>
-                    <GridItem>
-                        <h4>
-                            <b>You want to exercise throughout your life. Exercise is a modality for a healthy and happy life.</b>
-                        </h4>
-                    </GridItem>
-                    <GridItem>
-                        <h4>
-                            <b>Your treatment is improving your capacity to do the exercise and movement that's important to you.</b>
-                        </h4>
-                    </GridItem>
-                    <GridItem>
-                        <h4>
-                            <b>Your recovery means being able to run that 10km, go for that walk, perform in your sport.</b>
-                        </h4>
-                    </GridItem>
-                    <GridItem>
-                        <h4>
-                            <b>We help you take the next step towards living an active lifestyle with pain-free movement and exercise.</b>
-                        </h4>
-                    </GridItem>
-                    <GridItem>
-                        <h5 className={classNames( classes.subHeaderText, classes.inlineBlock)}>
-                            <b>OUR PHYSIOTHERAPY APPROACH</b>
-                        </h5>
-                        <Icon className={classNames(classes.inlineBlock, classes.arrow)} >
-                            <KeyboardArrowRightIcon />
-                        </Icon>
-                    </GridItem>
+                    {/*<Slide left when={show}>*/}
+                        <GridItem>
+                            <h2 className={classNames(classes.title, classes.subHeaderText)}>
+                                <b>WHAT IT MEANS TO MOVE WELL</b>
+                            </h2>
+                        </GridItem>
+                        <GridItem>
+                            <h4>
+                                <b>You want to exercise throughout your life. Exercise is a modality for a healthy and happy life.</b>
+                            </h4>
+                        </GridItem>
+                        <GridItem>
+                            <h4>
+                                <b>Your treatment is improving your capacity to do the exercise and movement that's important to you.</b>
+                            </h4>
+                        </GridItem>
+                        <GridItem>
+                            <h4>
+                                <b>Your recovery means being able to run that 10km, go for that walk, perform in your sport.</b>
+                            </h4>
+                        </GridItem>
+                        <GridItem>
+                            <h4>
+                                <b>We help you take the next step towards living an active lifestyle with pain-free movement and exercise.</b>
+                            </h4>
+                        </GridItem>
+                        <GridItem>
+                            <h5 className={classNames( classes.subHeaderText, classes.inlineBlock)}>
+                                <b>OUR PHYSIOTHERAPY APPROACH</b>
+                            </h5>
+                            <Icon className={classNames(classes.inlineBlock, classes.arrow)} >
+                                <KeyboardArrowRightIcon />
+                            </Icon>
+                        </GridItem>
+                    {/*</Slide>*/}
                 </Grid>
             </GridItem>
             <GridItem xs={12} sm={5} md={5}>

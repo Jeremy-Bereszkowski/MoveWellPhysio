@@ -17,7 +17,7 @@ export default function LandingPageCarousel(props) {
     const settings = {
         dots: true,
         infinite: true,
-        speed: 1000,
+        speed: 1500,
         slidesToShow: 1,
         slidesToScroll: 1,
         autoplay: true
@@ -29,7 +29,7 @@ export default function LandingPageCarousel(props) {
                 <img src={image1} alt="First slide" className="slick-image" />
                 <div className={classes.imageText}>
                     <h1 className={classes.title}>MoveWell Physiotherapy</h1>
-                    <h2 >Active, goal-focused physiotherapy.</h2>
+                    <h2 >Active, goal-focused physiotherapy</h2>
                     <Button className={classes.button}>
                         <p2>
                             <b>Book Online</b>
@@ -40,7 +40,7 @@ export default function LandingPageCarousel(props) {
             <div className={classes.imageTint}>
                 <img src={image2} alt="Second slide" className="slick-image" />
                 <div className={classes.imageText}>
-                    <h1 className={classes.title2}>Freedom from acute pain in daily lifestyle</h1>
+                    <h1 className={classes.title2}>Freedom from acute pain</h1>
                     <Button className={classes.button}>
                         <p2>
                             <b>LEARN HOW</b>
@@ -51,7 +51,7 @@ export default function LandingPageCarousel(props) {
             <div className={classes.imageTint}>
                 <img src={image3} alt="Third slide" className="slick-image" />
                 <div className={classes.imageText}>
-                    <h1 className={classes.title2}>Returning to optimal sports performance</h1>
+                    <h1 className={classes.title2}>Return to optimal sports performance</h1>
                     <Button className={classes.button}>
                         <p2>
                             <b>LEARN HOW</b>
@@ -62,7 +62,7 @@ export default function LandingPageCarousel(props) {
             <div className={classes.imageTint}>
                 <img src={image3} alt="Third slide" className="slick-image" />
                 <div className={classes.imageText}>
-                    <h1 className={classes.title2}>Relieving pain from persistent conditions</h1>
+                    <h1 className={classes.title2}>Improve strength and conditioning</h1>
                     <Button className={classes.button}>
                         <p2>
                             <b>LEARN HOW</b>

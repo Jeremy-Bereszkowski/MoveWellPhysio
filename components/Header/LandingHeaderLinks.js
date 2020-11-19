@@ -128,17 +128,23 @@ export default function HeaderLinks(props) {
         </ListItem>
         <ListItem className={classes.listItem}>
           <Button className={classes.button}>
-            About MoveWell
+            {/*<b>*/}
+              About MoveWell
+            {/*</b>*/}
           </Button>
         </ListItem>
         <ListItem className={classes.listItem}>
           <Button className={classes.button}>
-            Book Online
+            {/*<b>*/}
+              Book Online
+            {/*</b>*/}
           </Button>
         </ListItem>
         <ListItem className={classes.listItem}>
           <Button className={classes.button}>
-            Contact
+            {/*<b>*/}
+              Contact
+            {/*</b>*/}
           </Button>
         </ListItem>
       </List>

@@ -70,6 +70,7 @@ export default function About(props) {
                     justify="space-between"
                     alignItems="flex-start"
                 >
+                    <Slide right >
                     {/*<Slide right when={show}>*/}
                         <GridItem>
                             <h2 className={classNames(classes.title, classes.subHeaderText)}>
@@ -104,12 +105,12 @@ export default function About(props) {
                                 <KeyboardArrowRightIcon />
                             </Icon>
                         </GridItem>
-                    {/*</Slide>*/}
+                    </Slide>
                 </Grid>
             </GridItem>
-            <GridItem>
+            {/*<GridItem>
                 <hr size={30} className={classes.hr}/>
-            </GridItem>
+            </GridItem>*/}
         </Grid>
     )
 }

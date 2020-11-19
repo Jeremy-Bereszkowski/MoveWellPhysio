@@ -55,7 +55,7 @@ export default class MyApp extends App {
                     links={<LandingHeaderLinks dropdownHoverColor="black" />}
                     fixed
                     changeColorOnScroll={{
-                        height: 300,
+                        height: 25,
                         color: "dark"
                     }}
                 />

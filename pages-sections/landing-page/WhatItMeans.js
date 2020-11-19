@@ -27,9 +27,9 @@ export default function WhatItMeans(props) {
 
         if (state.offset[1] > 500){
             setShow(true)
-        } else if (state.offset[1] < 100){
+        }/* else if (state.offset[1] < 100){
             setShow(false)
-        }
+        }*/
     }, {
         domTarget: window,
     });
@@ -51,6 +51,7 @@ export default function WhatItMeans(props) {
                     justify="space-between"
                     alignItems="flex-start"
                 >
+                    <Slide left when={show}>
                     {/*<Slide left when={show}>*/}
                         <GridItem>
                             <h2 className={classNames(classes.title, classes.subHeaderText)}>
@@ -85,7 +86,7 @@ export default function WhatItMeans(props) {
                                 <KeyboardArrowRightIcon />
                             </Icon>
                         </GridItem>
-                    {/*</Slide>*/}
+                    </Slide>
                 </Grid>
             </GridItem>
             <GridItem xs={12} sm={5} md={5}>

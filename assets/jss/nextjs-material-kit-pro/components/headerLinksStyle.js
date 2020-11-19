@@ -210,10 +210,12 @@ const headerLinksStyle = theme => ({
   },
   mlAuto,
   button: {
+
+    /*color: "#2fb027",*/
+    color: whiteColor,
     backgroundColor: "transparent",
     minHeight: "auto",
     minWidth: "auto",
-    color: whiteColor,
     border: "none",
     borderRadius: "3px",
     position: "relative",

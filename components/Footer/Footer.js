@@ -41,8 +41,8 @@ export default function Footer() {
                 </Grid>
                 <Grid item className={classes.centerItem}>
                     <h3 style={{display: "inline"}}>Supporters: </h3>
-                    <img src={AJAXLogo} style={{height: "80px", width: "auto", display: "inline", marginLeft: "10px", marginRight: "10px"}}/>
-                    <img src={MaccabiLogo} style={{height: "80px", width: "auto", display: "inline", marginLeft: "10px", marginRight: "10px"}}/>
+                    <img src={AJAXLogo} className={classes.supporterLogo}/>
+                    <img src={MaccabiLogo} className={classes.supporterLogo}/>
                 </Grid>
                 <Grid item className={classes.rightItem}>
                     <ul>

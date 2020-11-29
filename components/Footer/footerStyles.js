@@ -47,6 +47,13 @@ const style = {
         paddingLeft: "1vw",
         paddingRight: "1vw",
     },
+    supporterLogo: {
+        height: "80px",
+        width: "auto",
+        display: "inline",
+        marginLeft: "10px",
+        marginRight: "10px"
+    },
     dark: {
         background:
             "radial-gradient(ellipse at center," +

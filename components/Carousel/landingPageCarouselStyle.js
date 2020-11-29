@@ -1,4 +1,6 @@
 import {blackColor, container, grayColor, hexToRgb, title, whiteColor} from "../../assets/jss/nextjs-material-kit-pro";
+import image1 from "../../assets/img/physio/layout_1.jpg";
+import Colours from "../../assets/strings/colours";
 
 const landingPageCarouselStyle = {
     section: {
@@ -11,7 +13,7 @@ const landingPageCarouselStyle = {
     },
     filter: {},
     imageTint: {
-        backgroundSize: "cover",
+        backgroundSize: "contain",
         "&:before": {
             background: "rgba(" + hexToRgb(blackColor) + ", 0.5)"
         },
@@ -39,7 +41,7 @@ const landingPageCarouselStyle = {
         zIndex: "3"
     },
     imageText: {
-        marginBottom: "15%",
+        marginBottom: "25vh",
         paddingBottom: "45px",
         position: "absolute",
         right: "15%",
@@ -54,16 +56,16 @@ const landingPageCarouselStyle = {
     title: {
         fontWeight: "1000",
         marginBottom: "25px",
-        fontFamily: `"Roboto Slab", "Times New Roman", serif`,
+        fontFamily: `"Roboto Slab", "Times New Roman", sans-serif`,
         marginTop: "30px",
         minHeight: "32px",
         textDecoration: "none",
-        fontSize: "6.125rem"
+        fontSize: "10vh"
     },
     title2: {
         fontWeight: "1000",
         marginBottom: "25px",
-        fontFamily: `"Roboto Slab", "Times New Roman", serif`,
+        fontFamily: `"Roboto Slab", "Times New Roman", sans-serif`,
         marginTop: "30px",
         minHeight: "32px",
         textDecoration: "none",
@@ -73,7 +75,7 @@ const landingPageCarouselStyle = {
         marginRight: "auto",
     },
     button: {
-        backgroundColor: "#2fb027",
+        backgroundColor: Colours.green,
         minHeight: "auto",
         minWidth: "auto",
         color: whiteColor,
@@ -143,6 +145,20 @@ const landingPageCarouselStyle = {
         }
 
     },
+    imageStyle: {
+        backgroundImage: "url(" + image1 + ")",
+        backgroundSize: "cover",
+        backgroundPosition: "top center",
+        height: "100vh",
+        width: "auto",
+        minWidth: "100%",
+        display: "inherit",
+        position: "relative",
+        margin: "0",
+        padding: "0",
+        border: "0",
+        alignItems: "center",
+    }
 };
 
 export default landingPageCarouselStyle;

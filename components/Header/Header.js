@@ -1,27 +1,26 @@
 import React from "react";
 import Link from "next/link";
-// nodejs library that concatenates classes
 import classNames from "classnames";
-// nodejs library to set properties for components
 import PropTypes from "prop-types";
-// @material-ui/core components
+
 import { makeStyles } from "@material-ui/core/styles";
 import AppBar from "@material-ui/core/AppBar";
-import Toolbar from "@material-ui/core/Toolbar";
 import IconButton from "@material-ui/core/IconButton";
 import Button from "@material-ui/core/Button";
 import Hidden from "@material-ui/core/Hidden";
 import Drawer from "@material-ui/core/Drawer";
-// @material-ui/icons
 import Menu from "@material-ui/icons/Menu";
 import Close from "@material-ui/icons/Close";
-// core components
-import styles from "assets/jss/nextjs-material-kit-pro/components/headerStyle.js";
 
+import URL from "../../assets/strings/urls";
+import Logo from "../../assets/img/logos/1x/Asset 1mdpi.png"
+
+import styles from "./headerStyles";
 const useStyles = makeStyles(styles);
 
 export default function Header(props) {
   const [mobileOpen, setMobileOpen] = React.useState(false);
+  const [logoClass, setLogoClass] = React.useState({height: "auto", width: "18vw", minWidth: "150px"})
   const classes = useStyles();
   React.useEffect(() => {
     if (props.changeColorOnScroll) {
@@ -47,6 +46,7 @@ export default function Header(props) {
       document.body
         .getElementsByTagName("header")[0]
         .classList.add(classes[changeColorOnScroll.color]);
+      setLogoClass({height: "auto", width: "5vw", minWidth: "150px"})
     } else {
       document.body
         .getElementsByTagName("header")[0]
@@ -54,6 +54,7 @@ export default function Header(props) {
       document.body
         .getElementsByTagName("header")[0]
         .classList.remove(classes[changeColorOnScroll.color]);
+      setLogoClass({height: "auto", width: "18vw", minWidth: "150px"})
     }
   };
   const { color, links, brand, fixed, absolute } = props;
@@ -65,10 +66,10 @@ export default function Header(props) {
   });
   return (
     <AppBar className={appBarClasses}>
-      <Toolbar className={classes.container}>
+      <div className={classes.container}>
         <Button className={classes.title}>
-          <Link href="/presentation">
-            <a>{brand}</a>
+          <Link href={URL.LANDING_PAGE} as={URL.ROOT}>
+            <img src={Logo} style={logoClass}/>
           </Link>
         </Button>
         <Hidden smDown implementation="css" className={classes.hidden}>
@@ -83,7 +84,7 @@ export default function Header(props) {
             <Menu />
           </IconButton>
         </Hidden>
-      </Toolbar>
+      </div>
       <Hidden mdUp implementation="js">
         <Drawer
           variant="temporary"

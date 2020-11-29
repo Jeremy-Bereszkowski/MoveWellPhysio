@@ -7,6 +7,7 @@ import {
 } from "assets/jss/nextjs-material-kit-pro.js";
 
 import tooltip from "assets/jss/nextjs-material-kit-pro/tooltipsStyle.js";
+import Colours from "../../../strings/colours";
 
 const headerLinksStyle = theme => ({
   list: {
@@ -185,7 +186,8 @@ const headerLinksStyle = theme => ({
   },
   dropdownLink: {
     "&,&:hover,&:focus": {
-      color: "inherit",
+      color: Colours.white,
+      fontWeight: "600",
       textDecoration: "none",
       display: "flex",
       padding: "0.75rem 1.25rem 0.75rem 0.75rem"
@@ -236,7 +238,7 @@ const headerLinksStyle = theme => ({
     cursor: "pointer",
     "&:hover": {
       color: whiteColor,
-      backgroundColor: grayColor[0],
+      backgroundColor: Colours.green,
       boxShadow:
           "0 14px 26px -12px rgba(" +
           hexToRgb(grayColor[0]) +

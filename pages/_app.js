@@ -5,9 +5,9 @@ import Head from "next/head";
 import Router from "next/router";
 
 import PageChange from "components/PageChange/PageChange.js";
-import MainFooter from "../components/Footer/MainFooter";
-import LandingHeaderLinks from "../components/Header/LandingHeaderLinks";
-import LandingHeader from "../components/Header/LandingHeader";
+import Footer from "../components/Footer/Footer";
+import LandingHeaderLinks from "../components/Header/HeaderLinks";
+import LandingHeader from "../components/Header/Header";
 
 import "assets/scss/nextjs-material-kit-pro.scss?v=1.1.0";
 import "assets/css/react-demo.css";
@@ -52,7 +52,7 @@ export default class MyApp extends App {
                 <LandingHeader
                     color="transparent"
                     brand="MoveWell Physiotherapy"
-                    links={<LandingHeaderLinks dropdownHoverColor="black" />}
+                    links={<LandingHeaderLinks dropdownHoverColor="dark" />}
                     fixed
                     changeColorOnScroll={{
                         height: 25,
@@ -60,7 +60,7 @@ export default class MyApp extends App {
                     }}
                 />
                 <Component {...pageProps} />
-                <MainFooter />
+                <Footer />
             </React.Fragment>
         );
     }

@@ -21,7 +21,7 @@ export default function IntroVideo(props) {
             <GridItem md={10}>
                 <div className={classes.iframeContainer}>
                     <iframe
-                        height="600"
+                        height="800"
                         width="4000"
                         src="https://www.youtube.com/embed/IN6QnLpVEPI?ref=creativetim"
                         frameBorder="0"
@@ -30,9 +30,6 @@ export default function IntroVideo(props) {
                         title="Tesla"
                     />
                 </div>
-            </GridItem>
-            <GridItem>
-                <hr size={30} className={classes.hr}/>
             </GridItem>
         </Grid>
     )

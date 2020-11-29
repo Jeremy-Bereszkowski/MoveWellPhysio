@@ -14,7 +14,7 @@ const landingPageStyle = {
         marginRight: "auto",
         marginLeft: "auto",
         width: "100%",
-        maxWidth: "95%"
+        maxWidth: "90%"
     },
     main: {
         background: grayColor[16],
@@ -23,13 +23,14 @@ const landingPageStyle = {
     },
     mainRaised: {
         "@media (max-width: 576px)": {
-            marginTop: "-30px"
+            marginTop: "-20px"
         },
         "@media (max-width: 830px)": {
             marginLeft: "10px",
             marginRight: "10px"
         },
-        margin: "-60px 30px 30px",
+        margin: "-20px 0px 0px",
+        marginBottom: "40px",
         borderRadius: "6px",
         boxShadow:
             "0 16px 24px 2px rgba(" +
@@ -40,7 +41,11 @@ const landingPageStyle = {
             hexToRgb(blackColor) +
             ", 0.2)",
         padding: "100px"
-    }
+    },
+    hr: {
+        marginTop: "40px",
+        borderTop: "1px solid black"
+    },
 }
 
 export default landingPageStyle;

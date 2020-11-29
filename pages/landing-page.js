@@ -1,16 +1,15 @@
 import React from "react";
+import classNames from "classnames";
 import { makeStyles } from "@material-ui/core/styles";
 
 import LandingPageCarousel from "../components/Carousel/LandingPageCarousel";
 
-import landingStyle from "assets/jss/pages/landingPage";
 import WhatItMeans from "../pages-sections/landing-page/WhatItMeans";
 import IntroVideo from "../pages-sections/landing-page/IntroVideo";
-import classNames from "classnames";
 import About from "../pages-sections/landing-page/About";
 
-import AnimatedTest from "components/Animated/test"
-
+import landingStyle from "assets/jss/pages/landingPage";
+import GridItem from "../components/Grid/GridItem";
 const useStyles = makeStyles(landingStyle);
 
 export default function LandingPage(props) {
@@ -23,7 +22,9 @@ export default function LandingPage(props) {
                 <div className={classes.container}>
                     <div className={classNames(classes.main, classes.mainRaised)}>
                         <WhatItMeans />
+                        <hr size={30} className={classes.hr}/>
                         <IntroVideo />
+                        <hr size={30} className={classes.hr}/>
                         <About />
                     </div>
                 </div>

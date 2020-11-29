@@ -1,51 +1,76 @@
-/* eslint-disable */
 import React from "react";
-// nodejs library to set properties for components
-import PropTypes from "prop-types";
-// nodejs library that concatenates classes
 import classNames from "classnames";
-// @material-ui/core components
-import { makeStyles } from "@material-ui/core/styles";
 
-import styles from "assets/jss/nextjs-material-kit-pro/components/footerStyle.js";
+import {makeStyles} from "@material-ui/core/styles";
+import {Grid} from "@material-ui/core";
 
+import Button from "../CustomButtons/Button";
+
+import AJAXLogo from "../../assets/img/logos/AJAX.png"
+import MaccabiLogo from "../../assets/img/logos/MacabbiCricket.jpg"
+
+import styles from "./footerStyles";
 const useStyles = makeStyles(styles);
 
-export default function Footer(props) {
-  const { children, content, theme, big, className } = props;
-  const classes = useStyles();
-  const themeType =
-    theme === "transparent" || theme == undefined ? false : true;
-  const footerClasses = classNames({
-    [classes.footer]: true,
-    [classes[theme]]: themeType,
-    [classes.big]: big || children !== undefined,
-    [className]: className !== undefined
-  });
-  const aClasses = classNames({
-    [classes.a]: true
-  });
+export default function Footer() {
+    const classes = useStyles();
+    const footerClasses = classNames({
+        [classes.footer]: true,
+        [classes["dark"]]: true,
+    });
 
-  return (
-    <footer className={footerClasses}>
-      <div className={classes.container}>
-        {children !== undefined ? (
-          <div>
-            <div className={classes.content}>{children}</div>
-            <hr />
-          </div>
-        ) : (
-          " "
-        )}
-        {content}
-        <div className={classes.clearFix} />
-      </div>
-    </footer>
-  );
+    return (
+        <footer className={footerClasses}>
+            <Grid
+                container
+                spacing={4}
+                direction={"row"}
+                justify={"space-around"}
+                alignContent={"center"}
+            >
+                <Grid item className={classes.leftItem}>
+                    <h3 className={classes.footerBrand}>
+                        MoveWell Physiotherapy
+                    </h3>
+                    <h5 className={classes.footerBrand}>
+                        181 Bay Street
+                    </h5>
+                    <h5 className={classes.footerBrand}>
+                        Brighton, VIC, 3188
+                    </h5>
+                </Grid>
+                <Grid item className={classes.centerItem}>
+                    <h3 style={{display: "inline"}}>Supporters: </h3>
+                    <img src={AJAXLogo} style={{height: "80px", width: "auto", display: "inline", marginLeft: "10px", marginRight: "10px"}}/>
+                    <img src={MaccabiLogo} style={{height: "80px", width: "auto", display: "inline", marginLeft: "10px", marginRight: "10px"}}/>
+                </Grid>
+                <Grid item className={classes.rightItem}>
+                    <ul>
+                        <li>
+                            <Button
+                                href="https://www.facebook.com/movewellmelbourne"
+                                target="_blank"
+                                color="white"
+                                justIcon
+                                simple
+                            >
+                                <i className="fab fa-facebook" />
+                            </Button>
+                        </li>
+                        <li>
+                            <Button
+                                href="https://www.instagram.com/movewellmelbourne/"
+                                target="_blank"
+                                color="white"
+                                justIcon
+                                simple
+                            >
+                                <i className="fab fa-instagram" />
+                            </Button>
+                        </li>
+                    </ul>
+                </Grid>
+            </Grid>
+        </footer>
+    )
 }
-
-Footer.propTypes = {
-  theme: PropTypes.oneOf(["dark", "white", "transparent"]),
-  big: PropTypes.bool,
-  content: PropTypes.node.isRequired
-};

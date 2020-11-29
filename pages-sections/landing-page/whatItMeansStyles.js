@@ -1,5 +1,4 @@
 import {
-    container,
     mlAuto,
     mrAuto,
     title,
@@ -8,9 +7,9 @@ import {
     coloredShadow,
     whiteColor,
     sectionDark,
-    hexToRgb, grayColor, mainRaised, section
+    hexToRgb, grayColor, mainRaised, section, blackColor
 } from "assets/jss/nextjs-material-kit-pro.js";
-import {grey} from "@material-ui/core/colors";
+import Colours from "../../assets/strings/colours";
 
 const whatItMeansStyles = {
     mlAuto,
@@ -94,8 +93,18 @@ const whatItMeansStyles = {
         padding: "0"
     },
     subHeaderText: {
-        color: "#2fb027",
-        margin: "0"
+        color: Colours.green,
+        margin: "0",
+        fontSize: "2vw",
+        marginTop: "2vh",
+        marginBottom: "2vh",
+    },
+    middleText: {
+        fontSize: "1vw",
+        marginTop: "2vh",
+        marginBottom: "2vh",
+        marginLeft: "2px",
+        marginRight: "2vw",
     },
     mainRaised: {
         ...mainRaised
@@ -126,7 +135,46 @@ const whatItMeansStyles = {
         borderTop: "1px solid black"
     },
     topMargin: {
-        marginTop: "140px"
+        marginTop: "40px"
+    },
+    parallax: {
+        height: "72vh",
+        width: "auto",
+        maxHeight: "1600px",
+        overflow: "hidden",
+        position: "relative",
+        backgroundPosition: "50%",
+        backgroundSize: "cover",
+        margin: "0",
+        padding: "0",
+        border: "0",
+        display: "flex",
+        alignItems: "center",
+        boxShadow:
+            "0 16px 24px 2px rgba(" +
+            hexToRgb(blackColor) +
+            ", 0.14), 0 6px 30px 5px rgba(" +
+            hexToRgb(blackColor) +
+            ", 0.12), 0 8px 10px -5px rgba(" +
+            hexToRgb(blackColor) +
+            ", 0.2)",
+        borderRadius: "6px"
+    },
+    filter: {},
+    darkColor: {
+        "&:before": {
+            background: "rgba(" + hexToRgb(blackColor) + ", 0.5)"
+        },
+        "&:after,&:before": {
+            position: "absolute",
+            zIndex: "1",
+            width: "100%",
+            height: "100%",
+            display: "block",
+            left: "0",
+            top: "0",
+            content: "''"
+        }
     }
 };
 

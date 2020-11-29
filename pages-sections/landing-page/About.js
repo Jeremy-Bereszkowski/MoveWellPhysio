@@ -1,20 +1,17 @@
 import React from "react";
 import classNames from "classnames"
+import Slide from "react-reveal/Slide";
+import {useScroll} from "react-use-gesture";
+
 import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 import Icon from "@material-ui/core/Icon";
 import KeyboardArrowRightIcon from '@material-ui/icons/KeyboardArrowRight';
 
 import GridItem from "../../components/Grid/GridItem";
-import Card from "../../components/Card/Card";
-import CardBody from "../../components/Card/CardBody";
+import image from "../../assets/img/physio/clients/client.jpg";
 
-import Badge from "../../components/Badge/Badge";
-
-import cardProject5 from "../../assets/img/examples/card-project5.jpg";
 import styles from "./whatItMeansStyles";
-import {useScroll} from "react-use-gesture";
-import Slide from "react-reveal/Slide";
 const useStyles = makeStyles(styles);
 
 export default function About(props) {
@@ -44,25 +41,18 @@ export default function About(props) {
             alignItems="center"
             className={classes.topMargin}
         >
-            <GridItem xs={12} sm={5} md={5}>
-                <Card
-                    background
-                    className={classes.card4}
-                    style={{ backgroundImage: `url(${cardProject5})` }}
-                >
-                    <CardBody background className={classes.cardBody4}>
-                        <Badge color="rose">CLIENT: DJ KHALED</Badge>
-                        <a href="#pablo" onClick={e => e.preventDefault}>
-                            <h3 className={classes.cardTitle}>Another One</h3>
-                            <p className={classes.cardDescription}>
-                                Don{"'"}t be scared of the truth because we need to
-                                restart the human foundation in truth.
-                            </p>
-                        </a>
-                    </CardBody>
-                </Card>
+            <GridItem xs={12} sm={6} md={6}>
+                <div
+                    className={classNames({
+                        [classes.parallax]: true,
+                        [classes["darkColor"]]: true
+                    })}
+                    style={{
+                        backgroundImage: "url(" + image + ")",
+                    }}
+                />
             </GridItem>
-            <GridItem xs={12} sm={5} md={5}>
+            <GridItem xs={12} sm={6} md={6}>
                 <Grid
                     container
                     spacing={2}
@@ -71,29 +61,28 @@ export default function About(props) {
                     alignItems="flex-start"
                 >
                     <Slide right >
-                    {/*<Slide right when={show}>*/}
                         <GridItem>
                             <h2 className={classNames(classes.title, classes.subHeaderText)}>
                                 <b>ABOUT MOVEWELL</b>
                             </h2>
                         </GridItem>
                         <GridItem>
-                            <h4>
+                            <h4 className={classes.middleText}>
                                 <b>We're experts in physiotherapy and exercise.</b>
                             </h4>
                         </GridItem>
                         <GridItem>
-                            <h4>
+                            <h4 className={classes.middleText}>
                                 <b>We take care to understand you first, designing your recovery around your needs and fitness goals.</b>
                             </h4>
                         </GridItem>
                         <GridItem>
-                            <h4>
+                            <h4 className={classes.middleText}>
                                 <b>MoveWell uses an active style of treatment that prioritises pain relief through improved function.</b>
                             </h4>
                         </GridItem>
                         <GridItem>
-                            <h4>
+                            <h4 className={classes.middleText}>
                                 <b>Our team believes in the value of helping you develop a lifestyle that prevents pain.</b>
                             </h4>
                         </GridItem>
@@ -108,9 +97,6 @@ export default function About(props) {
                     </Slide>
                 </Grid>
             </GridItem>
-            {/*<GridItem>
-                <hr size={30} className={classes.hr}/>
-            </GridItem>*/}
         </Grid>
     )
 }

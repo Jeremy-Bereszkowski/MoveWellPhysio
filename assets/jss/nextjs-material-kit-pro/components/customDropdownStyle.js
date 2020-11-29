@@ -17,6 +17,7 @@ import {
   grayColor,
   hexToRgb
 } from "assets/jss/nextjs-material-kit-pro.js";
+import Colours from "../../../strings/colours";
 
 const customDropdownStyle = theme => ({
   popperClose: {
@@ -81,7 +82,7 @@ const customDropdownStyle = theme => ({
     fontSize: "14px",
     textAlign: "left",
     listStyle: "none",
-    backgroundColor: whiteColor,
+    backgroundColor: Colours.dark,
     backgroundClip: "padding-box"
   },
   menuList: {
@@ -247,7 +248,7 @@ const customDropdownStyle = theme => ({
     cursor: "pointer",
     "&:hover": {
       color: whiteColor,
-      backgroundColor: grayColor[0],
+      backgroundColor: Colours.green,
       boxShadow:
           "0 14px 26px -12px rgba(" +
           hexToRgb(grayColor[0]) +

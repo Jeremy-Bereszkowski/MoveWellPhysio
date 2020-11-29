@@ -1,20 +1,17 @@
 import React from "react";
 import classNames from "classnames"
+import Slide from "react-reveal/Slide";
+import {useScroll} from "react-use-gesture";
+
 import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 import Icon from "@material-ui/core/Icon";
 import KeyboardArrowRightIcon from '@material-ui/icons/KeyboardArrowRight';
 
 import GridItem from "../../components/Grid/GridItem";
-import Card from "../../components/Card/Card";
-import CardBody from "../../components/Card/CardBody";
+import image from "../../assets/img/physio/yasha_headshot.jpg"
 
-import Badge from "../../components/Badge/Badge";
-
-import cardProject5 from "../../assets/img/examples/card-project5.jpg";
 import styles from "./whatItMeansStyles";
-import {useScroll} from "react-use-gesture";
-import Slide from "react-reveal/Slide";
 const useStyles = makeStyles(styles);
 
 export default function WhatItMeans(props) {
@@ -27,9 +24,7 @@ export default function WhatItMeans(props) {
 
         if (state.offset[1] > 500){
             setShow(true)
-        }/* else if (state.offset[1] < 100){
-            setShow(false)
-        }*/
+        }
     }, {
         domTarget: window,
     });
@@ -43,38 +38,37 @@ export default function WhatItMeans(props) {
             justify="space-around"
             alignItems="center"
         >
-            <GridItem xs={12} sm={5} md={5}>
+            <GridItem xs={12} sm={6} md={6}>
                 <Grid
                     container
-                    spacing={2}
+                    spacing={10}
                     direction="column"
                     justify="space-between"
                     alignItems="flex-start"
                 >
                     <Slide left when={show}>
-                    {/*<Slide left when={show}>*/}
                         <GridItem>
                             <h2 className={classNames(classes.title, classes.subHeaderText)}>
                                 <b>WHAT IT MEANS TO MOVE WELL</b>
                             </h2>
                         </GridItem>
                         <GridItem>
-                            <h4>
+                            <h4 className={classes.middleText}>
                                 <b>You want to exercise throughout your life. Exercise is a modality for a healthy and happy life.</b>
                             </h4>
                         </GridItem>
                         <GridItem>
-                            <h4>
+                            <h4 className={classes.middleText}>
                                 <b>Your treatment is improving your capacity to do the exercise and movement that's important to you.</b>
                             </h4>
                         </GridItem>
                         <GridItem>
-                            <h4>
+                            <h4 className={classes.middleText}>
                                 <b>Your recovery means being able to run that 10km, go for that walk, perform in your sport.</b>
                             </h4>
                         </GridItem>
                         <GridItem>
-                            <h4>
+                            <h4 className={classes.middleText}>
                                 <b>We help you take the next step towards living an active lifestyle with pain-free movement and exercise.</b>
                             </h4>
                         </GridItem>
@@ -89,26 +83,16 @@ export default function WhatItMeans(props) {
                     </Slide>
                 </Grid>
             </GridItem>
-            <GridItem xs={12} sm={5} md={5}>
-                <Card
-                    background
-                    className={classes.card4}
-                    style={{ backgroundImage: `url(${cardProject5})` }}
-                >
-                    <CardBody background className={classes.cardBody4}>
-                        <Badge color="rose">CLIENT: DJ KHALED</Badge>
-                        <a href="#pablo" onClick={e => e.preventDefault}>
-                            <h3 className={classes.cardTitle}>Another One</h3>
-                            <p className={classes.cardDescription}>
-                                Don{"'"}t be scared of the truth because we need to
-                                restart the human foundation in truth.
-                            </p>
-                        </a>
-                    </CardBody>
-                </Card>
-            </GridItem>
-            <GridItem>
-                <hr size={30} className={classes.hr}/>
+            <GridItem xs={12} sm={6} md={6}>
+                <div
+                    className={classNames({
+                        [classes.parallax]: true,
+                        [classes["darkColor"]]: true
+                    })}
+                    style={{
+                        backgroundImage: "url(" + image + ")",
+                    }}
+                />
             </GridItem>
         </Grid>
     )

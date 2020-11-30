@@ -11,6 +11,7 @@ import CustomDropdown from "components/CustomDropdown/CustomDropdown.js";
 
 import styles from "assets/jss/nextjs-material-kit-pro/components/headerLinksStyle.js";
 import Colours from "../../assets/strings/colours";
+import URL from "../../assets/strings/urls";
 const useStyles = makeStyles(styles);
 
 export default function HeaderLinks(props) {
@@ -68,43 +69,57 @@ export default function HeaderLinks(props) {
                 color: Colours.green
               }}
               dropdownList={[
-                <Link href="/">
-                  <a className={classes.dropdownLink}>
-                    PHYSIOTHERAPY
-                  </a>
+                <Link href={URL.PHYSIOTHERAPY}>
+                  <Button className={classes.subHeadingButton}>
+                    <b>
+                      PHYSIOTHERAPY
+                    </b>
+                  </Button>
                 </Link>,
                 <Link href="/">
-                  <a className={classes.dropdownLink}>
-                    PHYSIO-LEAD REHABILITATION CLASSES
-                  </a>
+                  <Button className={classes.subHeadingButton}>
+                    <b>
+                      PHYSIO-LEAD REHABILITATION CLASSES
+                    </b>
+                  </Button>
                 </Link>,
                 <Link href="/">
-                  <a className={classes.dropdownLink}>
-                    FOCUSED GROUP EXERCISE
-                  </a>
+                  <Button className={classes.subHeadingButton}>
+                    <b>
+                      FOCUSED GROUP EXERCISE
+                    </b>
+                  </Button>
                 </Link>,
                 <Link href="/">
-                  <a className={classes.dropdownLink}>
-                    PROFESSIONAL MENTORING
-                  </a>
+                  <Button className={classes.subHeadingButton}>
+                    <b>
+                      PROFESSIONAL MENTORING
+                    </b>
+                  </Button>
                 </Link>,
               ]}
           />
         </ListItem>
         <ListItem className={classes.listItem}>
-          <Button className={classes.button}>
-            About MoveWell
-          </Button>
+          <Link href={URL.ABOUT}>
+            <Button className={classes.button}>
+              About MoveWell
+            </Button>
+          </Link>
         </ListItem>
         <ListItem className={classes.listItem}>
-          <Button className={classes.button}>
-            Book Online
-          </Button>
+          <Link href="/">
+            <Button className={classes.button}>
+              Book Online
+            </Button>
+          </Link>
         </ListItem>
         <ListItem className={classes.listItem}>
-          <Button className={classes.button}>
-            Contact
-          </Button>
+          <Link href={URL.CONTACT}>
+            <Button className={classes.button}>
+              Contact
+            </Button>
+          </Link>
         </ListItem>
       </List>
   );

@@ -29,7 +29,7 @@ export default function LandingPageCarousel(props) {
                 <img src={image1} alt="First slide" className={classes.imageStyle}/>
                 <div className={classes.imageText}>
                     <h1 className={classes.title}>MoveWell Physiotherapy</h1>
-                    <h2 style={{fontSize: "14sp"}}>Active, goal-focused physiotherapy</h2>
+                    <h2 style={{fontSize: "2.5vw"}}>Active, goal-focused physiotherapy</h2>
                     <Button className={classes.button}>
                         <p2>
                             <b>Book Online</b>

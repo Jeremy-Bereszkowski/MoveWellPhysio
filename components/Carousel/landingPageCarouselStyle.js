@@ -60,7 +60,7 @@ const landingPageCarouselStyle = {
         marginTop: "30px",
         minHeight: "32px",
         textDecoration: "none",
-        fontSize: "10vh"
+        fontSize: "5vw",
     },
     title2: {
         fontWeight: "1000",
@@ -69,7 +69,7 @@ const landingPageCarouselStyle = {
         marginTop: "30px",
         minHeight: "32px",
         textDecoration: "none",
-        fontSize: "6.125rem",
+        fontSize: "5vw",
         maxWidth: "75%",
         marginLeft: "auto",
         marginRight: "auto",

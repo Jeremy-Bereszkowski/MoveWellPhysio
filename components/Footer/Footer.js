@@ -45,7 +45,7 @@ export default function Footer() {
                     <img src={MaccabiLogo} className={classes.supporterLogo}/>
                 </Grid>
                 <Grid item className={classes.rightItem}>
-                    <ul>
+                    <ul style={{padding: 0}}>
                         <li>
                             <Button
                                 href="https://www.facebook.com/movewellmelbourne"

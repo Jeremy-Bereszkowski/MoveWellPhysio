@@ -10,18 +10,6 @@ const styles = {
         marginLeft: "auto",
         width: "100%",
         maxWidth: "60%",
-        /*"@media (min-width: 576px)": {
-            maxWidth: "540px"
-        },
-        "@media (min-width: 768px)": {
-            maxWidth: "720px"
-        },
-        "@media (min-width: 992px)": {
-            maxWidth: "960px"
-        },
-        "@media (min-width: 1200px)": {
-            maxWidth: "1140px"
-        },*/
         zIndex: "2"
     },
     bodyContainer: {
@@ -39,7 +27,6 @@ const styles = {
         minHeight: "32px",
         color: whiteColor,
         textDecoration: "none",
-
         textTransform: "uppercase",
         textAlign: "center"
     },

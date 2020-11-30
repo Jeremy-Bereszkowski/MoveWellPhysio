@@ -10,6 +10,7 @@ import image3 from "assets/img/physio/ring_reformer.jpg";
 import image4 from "assets/img/physio/redcord.jpg";
 
 import carouselStyle from "./landingPageCarouselStyle";
+import Grid from "@material-ui/core/Grid";
 const useStyles = makeStyles(carouselStyle);
 
 export default function LandingPageCarousel(props) {
@@ -27,7 +28,25 @@ export default function LandingPageCarousel(props) {
         <Carousel {...settings}>
             <div className={classes.imageTint}>
                 <img src={image1} alt="First slide" className={classes.imageStyle}/>
-                <div className={classes.imageText}>
+                <Grid
+                    container
+                    direction={"column"}
+                    justify={"center"}
+                    alignContent={"center"}
+                >
+                    <Grid item style={{display: "flex"}} justify={"center"} alignContent={"center"}>
+                        <h1 className={classes.title}>MoveWell Physiotherapy</h1>
+                    </Grid>
+                    <Grid item>
+                        <hr size={30} className={classes.greenHr}/>
+                    </Grid>
+                    <Grid item style={{display: "flex"}} justify={"center"} alignContent={"center"}>
+                        <h4 className={classes.titleSubHeading}>
+                            Active, goal-focused physiotherapy
+                        </h4>
+                    </Grid>
+                </Grid>
+                {/*<div className={classes.imageText}>
                     <h1 className={classes.title}>MoveWell Physiotherapy</h1>
                     <h2 style={{fontSize: "2.5vw"}}>Active, goal-focused physiotherapy</h2>
                     <Button className={classes.button}>
@@ -35,7 +54,7 @@ export default function LandingPageCarousel(props) {
                             <b>Book Online</b>
                         </p2>
                     </Button>
-                </div>
+                </div>*/}
             </div>
             <div className={classes.imageTint}>
                 <img src={image2} alt="First slide" className={classes.imageStyle}/>

@@ -15,10 +15,10 @@ const styles = {
         textAlign: "center"
     },
     blackBodyText: {
-        fontWeight: "400",
+        fontWeight: "300",
         textAlign: "left",
-        paddingLeft: "3vh",
-        paddingRight: "3vh",
+        paddingLeft: "7vw",
+        paddingRight: "7vw",
     },
     button: {
         backgroundColor: Colours.green,

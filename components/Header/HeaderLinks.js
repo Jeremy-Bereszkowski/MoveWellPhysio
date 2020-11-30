@@ -90,8 +90,8 @@ export default function HeaderLinks(props) {
                     </b>
                   </Button>
                 </Link>,
-                <Link href="/">
-                  <Button className={classes.subHeadingButton}>
+                <Link href={URL.PROFESSIONAL_MENTORING}>
+                  <Button className={classes.subHeadingButton} >
                     <b>
                       PROFESSIONAL MENTORING
                     </b>
@@ -109,7 +109,7 @@ export default function HeaderLinks(props) {
         </ListItem>
         <ListItem className={classes.listItem}>
           <Link href="/">
-            <Button className={classes.button}>
+            <Button className={classes.button} >
               Book Online
             </Button>
           </Link>

@@ -58,7 +58,9 @@ export default function Physiotherapy({...rest}) {
                     <h5 className={classes.addressText} style={{marginTop: "40px"}}>
                         On the corner of Bay Street and Cochrane Street
                     </h5>
-                    <MapContainer />
+                    <div style={{position: "relative", height: "25vh", width: "100%"}}>
+                        <MapContainer />
+                    </div>
                 </Grid>
                 <Grid
                     item

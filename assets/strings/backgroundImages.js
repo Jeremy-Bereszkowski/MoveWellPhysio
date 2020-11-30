@@ -1,5 +1,4 @@
-const URL = {
-    ROOT: "/",
+const BackgroundImages = {
     LANDING_PAGE: "/landing-page",
     ABOUT: "/about",
     CONTACT: "/contact",
@@ -11,4 +10,4 @@ const URL = {
     PROFESSIONAL_MENTORING: "/services/professional-mentoring",
 }
 
-export default URL
+export default BackgroundImages

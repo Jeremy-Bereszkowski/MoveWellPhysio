@@ -18,13 +18,13 @@ export default function Physiotherapy({...rest}) {
     const parallaxBody = "Physiotherapy is the holistic treatment of your physical discomfort"
 
     return (
-        <ServicesLayout parallaxImage={ParallaxImage} parallaxHeader={parallaxHeader} parallaxBody={parallaxBody} maxWidth={"lg"}>
+        <ServicesLayout parallaxImage={ParallaxImage} parallaxHeader={parallaxHeader} parallaxBody={parallaxBody}>
             <Grid
                 container
+                spacing={4}
                 direction={"row"}
                 justify={"center"}
                 alignContent={"center"}
-                style={{display: "flex"}}
             >
                 <Grid
                     item
@@ -37,19 +37,28 @@ export default function Physiotherapy({...rest}) {
                 </Grid>
                 <Grid
                     item
-                    spacing={6}
-                    md={9} xl={9}
                     justify={"center"}
                     alignContent={"center"}
-                    style={{display: "relative"}}
                 >
-                    <h3 className={classes.blackBodyText}>
+                    <h4 className={classes.blackBodyText}>
                         Physiotherapy treats pain. But it is also an approach to preventing injury, achieving higher performance and maintaining a healthy physical lifestyle.
-                    </h3>
-                    <h3 className={classes.blackBodyText}>
+                    </h4>
+                </Grid>
+                <Grid
+                    item
+                    justify={"center"}
+                    alignContent={"center"}
+                >
+                    <h4 className={classes.blackBodyText}>
                         You don’t need a doctor’s referral to get professional help with your pain.
-                    </h3>
-                    <div style={{margin: "0", position: "absolute", left: "50%", transform: "translateX(-50%)"}}>
+                    </h4>
+                </Grid>
+                <Grid
+                    item
+                    justify={"center"}
+                    alignContent={"center"}
+                >
+                    <div style={{marginTop: "4vh", position: "absolute", left: "50%", transform: "translateX(-50%)"}}>
                         <Button className={classes.button}>
                             <p2>
                                 <b>

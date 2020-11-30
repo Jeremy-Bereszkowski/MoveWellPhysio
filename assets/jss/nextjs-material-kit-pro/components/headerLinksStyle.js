@@ -292,7 +292,7 @@ const headerLinksStyle = theme => ({
     border: "none",
     borderRadius: "3px",
     position: "relative",
-    padding: "12px 30px",
+    padding: "10px 30px",
     margin: ".3125rem 1px",
     fontSize: "12px",
     fontWeight: "400",
@@ -302,7 +302,9 @@ const headerLinksStyle = theme => ({
     transition:
         "box-shadow 0.2s cubic-bezier(0.4, 0, 1, 1), background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1)",
     lineHeight: "1.42857143",
+    justifyContent: "flex-start",
     textAlign: "left",
+    float: "left",
     whiteSpace: "nowrap",
     verticalAlign: "middle",
     touchAction: "manipulation",

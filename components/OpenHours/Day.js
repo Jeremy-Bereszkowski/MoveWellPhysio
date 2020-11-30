@@ -8,8 +8,8 @@ export default function Day(props) {
     return (
         <Grid
             container
-            justify={"flex-start"}
-            alignContent={"flex-start"}
+            justify={"center"}
+            alignContent={"center"}
         >
             <Grid
                 item

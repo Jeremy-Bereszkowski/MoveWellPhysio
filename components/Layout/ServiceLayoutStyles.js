@@ -39,11 +39,13 @@ const styles = {
         minHeight: "32px",
         color: whiteColor,
         textDecoration: "none",
-        fontSize: "5vw",
+
         textTransform: "uppercase",
+        textAlign: "center"
     },
     titleSubHeading: {
-        fontSize: "1.5vw",
+        /*fontSize: "1.5vw",*/
+        textAlign: "center"
     },
     section: {
         backgroundPosition: "50%",
@@ -77,9 +79,9 @@ const styles = {
             hexToRgb(blackColor) +
             ", 0.2)",
         paddingTop: "3vh",
-        paddingBottom: "50px",
-        paddingLeft: "1vw",
-        paddingRight: "1vw",
+        paddingBottom: "3vh",
+        paddingLeft: "5vw",
+        paddingRight: "5vw",
     },
     hr: {
         marginTop: "40px",

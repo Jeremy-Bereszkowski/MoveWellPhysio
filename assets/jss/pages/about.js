@@ -12,12 +12,13 @@ const styles = {
         color: Colours.green,
         fontWeight: "800",
         textTransform: "uppercase",
+        textAlign: "center"
     },
     blackBodyText: {
         fontWeight: "400",
         textAlign: "left",
-        paddingLeft: "2vw",
-        paddingRight: "2vw",
+        paddingLeft: "3vh",
+        paddingRight: "3vh",
     },
     button: {
         backgroundColor: Colours.green,
@@ -67,7 +68,8 @@ const styles = {
         marginRight: "20%"
     },
     addressText: {
-        fontWeight: "400"
+        fontWeight: "400",
+        textAlign: "center"
     }
 }
 

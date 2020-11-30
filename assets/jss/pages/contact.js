@@ -8,16 +8,16 @@ const styles = {
         borderTop: "2px solid black"
     },
     greenHeaderText: {
-        marginTop: "-2vh",
+        marginTop: "1vh",
         color: Colours.green,
+        fontSize: "3vw",
         fontWeight: "800",
         textTransform: "uppercase",
     },
     blackBodyText: {
+        fontSize: "1vw",
         fontWeight: "400",
-        textAlign: "left",
-        paddingLeft: "2vw",
-        paddingRight: "2vw",
+        textAlign: "left"
     },
     button: {
         backgroundColor: Colours.green,
@@ -66,9 +66,6 @@ const styles = {
         marginLeft: "20%",
         marginRight: "20%"
     },
-    addressText: {
-        fontWeight: "400"
-    }
 }
 
 export default styles

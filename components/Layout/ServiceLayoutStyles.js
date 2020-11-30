@@ -9,7 +9,7 @@ const styles = {
         marginRight: "auto",
         marginLeft: "auto",
         width: "100%",
-        maxWidth: "50%",
+        maxWidth: "60%",
         /*"@media (min-width: 576px)": {
             maxWidth: "540px"
         },
@@ -25,12 +25,11 @@ const styles = {
         zIndex: "2"
     },
     bodyContainer: {
-        paddingRight: "15px",
-        paddingLeft: "15px",
+        paddingRight: "1vw",
+        paddingLeft: "1vw",
         marginRight: "auto",
         marginLeft: "auto",
         width: "100%",
-        maxWidth: "70%"
     },
     title: {
         ...title,
@@ -45,11 +44,11 @@ const styles = {
     },
     titleSubHeading: {
         fontSize: "1.5vw",
-
     },
     section: {
         backgroundPosition: "50%",
-        backgroundSize: "cover"
+        backgroundSize: "cover",
+        paddingBottom: "20px"
     },
     sectionGray: {
         background: grayColor[14]
@@ -68,7 +67,6 @@ const styles = {
             marginRight: "10px"
         },
         margin: "-20px 0px 0px",
-        marginBottom: "40px",
         borderRadius: "6px",
         boxShadow:
             "0 16px 24px 2px rgba(" +
@@ -78,7 +76,10 @@ const styles = {
             ", 0.12), 0 8px 10px -5px rgba(" +
             hexToRgb(blackColor) +
             ", 0.2)",
-        padding: "100px"
+        paddingTop: "3vh",
+        paddingBottom: "50px",
+        paddingLeft: "1vw",
+        paddingRight: "1vw",
     },
     hr: {
         marginTop: "40px",
@@ -86,7 +87,13 @@ const styles = {
     },
     greenHr: {
         borderTop: "7px solid " + Colours.green
-    }
+    },
+    large: {
+        maxWidth: "90%"
+    },
+    medium: {
+        maxWidth: "70%"
+    },
 }
 
 export default styles

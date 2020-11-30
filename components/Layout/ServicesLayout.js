@@ -13,7 +13,11 @@ const useStyles = makeStyles(style)
 export default function ServicesLayout(props) {
     const classes = useStyles()
 
-    const {children, parallaxImage, parallaxHeader, parallaxBody} = props
+    const {children, parallaxImage, parallaxHeader, parallaxBody, maxWidth} = props
+
+    const containerClasses = maxWidth === "lg" ? classNames(classes.bodyContainer, classes.large) : classNames(classes.bodyContainer, classes.medium)
+
+
 
     return (
         <div>
@@ -40,7 +44,7 @@ export default function ServicesLayout(props) {
                 </div>
             </Parallax>
             <div className={classNames(classes.section, classes.sectionGray)}>
-                <div className={classes.bodyContainer}>
+                <div className={containerClasses}>
                     <div className={classNames(classes.main, classes.mainRaised)}>
                         {children}
                     </div>
@@ -54,4 +58,5 @@ ServicesLayout.PropTypes = {
     parallaxImage: PropTypes.string,
     parallaxHeader: PropTypes.string,
     parallaxBody: PropTypes.string,
+    maxWidth: PropTypes.string,
 }

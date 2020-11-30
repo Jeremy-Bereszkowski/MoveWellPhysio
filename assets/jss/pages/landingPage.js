@@ -6,7 +6,8 @@ const landingPageStyle = {
     },
     section: {
         backgroundPosition: "50%",
-        backgroundSize: "cover"
+        backgroundSize: "cover",
+        paddingBottom: "20px"
     },
     container: {
         paddingRight: "15px",
@@ -30,7 +31,6 @@ const landingPageStyle = {
             marginRight: "10px"
         },
         margin: "-20px 0px 0px",
-        marginBottom: "40px",
         borderRadius: "6px",
         boxShadow:
             "0 16px 24px 2px rgba(" +

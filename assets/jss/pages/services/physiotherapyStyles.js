@@ -3,33 +3,32 @@ import {blackColor, grayColor, hexToRgb, whiteColor} from "../../nextjs-material
 
 const styles = {
     hr: {
-        marginTop: "40px",
+        marginTop: "5vh",
         borderTop: "1px solid black"
     },
     greenHeaderText: {
-        marginTop: "-1vh",
+        marginTop: "-2vh",
         color: Colours.green,
-        fontSize: "3vw",
         fontWeight: "800",
         textTransform: "uppercase",
+        textAlign: "center"
     },
     blackBodyText: {
-        fontSize: "1vw",
         fontWeight: "400",
-        textAlign: "center"
+        textAlign: "left"
     },
     button: {
         backgroundColor: Colours.green,
         minHeight: "auto",
-        width: "10vw",
-        height: "5vh",
+        width: "30vw",
+        height: "6vh",
+        maxWidth: "200px",
+        maxHeight: "120px",
         color: whiteColor,
         border: "none",
         borderRadius: "3px",
         padding: "12px 30px",
         marginTop: "25px",
-        marginLeft: "calc(50% - 5vw)",
-        marginRight: "calc(50% - 5vw)",
         fontSize: "12px",
         fontWeight: "400",
         textTransform: "uppercase",

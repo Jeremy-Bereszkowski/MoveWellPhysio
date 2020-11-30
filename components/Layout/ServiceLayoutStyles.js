@@ -78,7 +78,7 @@ const styles = {
             ", 0.12), 0 8px 10px -5px rgba(" +
             hexToRgb(blackColor) +
             ", 0.2)",
-        paddingTop: "3vh",
+        paddingTop: "5vh",
         paddingBottom: "3vh",
         paddingLeft: "5vw",
         paddingRight: "5vw",
@@ -96,6 +96,7 @@ const styles = {
     medium: {
         maxWidth: "70%"
     },
+
 }
 
 export default styles

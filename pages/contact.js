@@ -8,6 +8,7 @@ import ServicesLayout from "../components/Layout/ServicesLayout";
 import Day from "../components/OpenHours/Day";
 
 import styles from "../assets/jss/pages/about";
+import MapContainer from "../util/google";
 const useStyles = makeStyles(styles);
 
 export default function Physiotherapy({...rest}) {
@@ -19,7 +20,7 @@ export default function Physiotherapy({...rest}) {
         <ServicesLayout parallaxImage={ParallaxImage} parallaxHeader={parallaxHeader} maxWidth={"lg"}>
             <Grid
                 container
-                spacing={5}
+                spacing={3}
                 direction={"row"}
                 justify={"center"}
                 alignContent={"center"}
@@ -55,8 +56,9 @@ export default function Physiotherapy({...rest}) {
                         Brighton, VIC, 3188
                     </h5>
                     <h5 className={classes.addressText} style={{marginTop: "40px"}}>
-                        On the corner of Bay Street and Cochrane street
+                        On the corner of Bay Street and Cochrane Street
                     </h5>
+                    <MapContainer />
                 </Grid>
                 <Grid
                     item

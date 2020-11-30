@@ -70,6 +70,11 @@ const styles = {
     addressText: {
         fontWeight: "400",
         textAlign: "center"
+    },
+    card2: {
+        marginTop: "0",
+        marginBottom: "0",
+        padding: "0",
     }
 }
 

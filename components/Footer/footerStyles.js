@@ -24,15 +24,17 @@ const style = {
     },
     footerBrand: {
         color: Colours.green,
-        textDecoration: "none",
         fontFamily: "Roboto Slab,Times New Roman,serif",
-        margin: "0"
+        margin: "0",
     },
     leftItem: {
-        justifyContent: "flex-start",
+        marginTop: "auto",
+        marginBottom: "auto",
+        justifyContent: "center",
         alignItems: "center",
         paddingLeft: "1vw",
         paddingRight: "1vw",
+        display: "flex",
     },
     centerItem: {
         justifyContent: "center",
@@ -42,7 +44,7 @@ const style = {
     },
     rightItem: {
         display: "flex",
-        justifyContent: "flex-end",
+        justifyContent: "center",
         alignItems: "center",
         paddingLeft: "1vw",
         paddingRight: "1vw",

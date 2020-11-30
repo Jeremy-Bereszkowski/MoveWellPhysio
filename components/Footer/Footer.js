@@ -28,23 +28,27 @@ export default function Footer() {
                 justify={"space-around"}
                 alignContent={"center"}
             >
-                <Grid item className={classes.leftItem}>
-                    <h3 className={classes.footerBrand}>
-                        MoveWell Physiotherapy
-                    </h3>
-                    <h5 className={classes.footerBrand}>
-                        181 Bay Street
-                    </h5>
-                    <h5 className={classes.footerBrand}>
-                        Brighton, VIC, 3188
-                    </h5>
+                <Grid item md={4} className={classes.leftItem}>
+                    <div style={{marginLeft: "auto", marginRight: "auto"}}>
+                        <h3 className={classes.footerBrand}>
+                            MoveWell Physiotherapy
+                        </h3>
+                        <h5 className={classes.footerBrand}>
+                            181 Bay Street
+                        </h5>
+                        <h5 className={classes.footerBrand}>
+                            Brighton, VIC, 3188
+                        </h5>
+                    </div>
                 </Grid>
-                <Grid item className={classes.centerItem}>
-                    <h3 style={{display: "inline"}}>Supporters: </h3>
-                    <img src={AJAXLogo} className={classes.supporterLogo}/>
-                    <img src={MaccabiLogo} className={classes.supporterLogo}/>
+                <Grid item md={4} className={classes.centerItem}>
+                    <h3 style={{textAlign: "center", marginTop: "10px"}}>Supporters: </h3>
+                    <div style={{textAlign: "center", marginLeft: "auto", marginRight: "auto"}}>
+                        <img src={AJAXLogo} className={classes.supporterLogo}/>
+                        <img src={MaccabiLogo} className={classes.supporterLogo}/>
+                    </div>
                 </Grid>
-                <Grid item className={classes.rightItem}>
+                <Grid item md={4} className={classes.rightItem}>
                     <ul style={{padding: 0}}>
                         <li>
                             <Button

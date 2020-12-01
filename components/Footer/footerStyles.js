@@ -86,9 +86,6 @@ const style = {
         },
         "& hr": {
             borderColor: "rgba(" + hexToRgb(whiteColor) + ",0.2)"
-        },
-        "& $btnTwitter, & $btnDribbble, & $btnInstagram": {
-            color: whiteColor
         }
     }
 };

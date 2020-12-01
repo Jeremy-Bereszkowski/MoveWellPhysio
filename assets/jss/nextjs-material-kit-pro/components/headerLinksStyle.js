@@ -267,21 +267,6 @@ const headerLinksStyle = theme => ({
       marginRight: "4px",
       verticalAlign: "middle"
     },
-    "&$justIcon": {
-      "& .fab,& .fas,& .far,& .fal,& .material-icons": {
-        marginTop: "0px",
-        marginRight: "0px",
-        position: "absolute",
-        width: "100%",
-        transform: "none",
-        left: "0px",
-        top: "0px",
-        height: "100%",
-        lineHeight: "41px",
-        fontSize: "20px"
-      }
-    }
-
   },
   subHeadingButton: {
     color: whiteColor,
@@ -340,21 +325,6 @@ const headerLinksStyle = theme => ({
       marginRight: "4px",
       verticalAlign: "middle"
     },
-    "&$justIcon": {
-      "& .fab,& .fas,& .far,& .fal,& .material-icons": {
-        marginTop: "0px",
-        marginRight: "0px",
-        position: "absolute",
-        width: "100%",
-        transform: "none",
-        left: "0px",
-        top: "0px",
-        height: "100%",
-        lineHeight: "41px",
-        fontSize: "20px"
-      }
-    }
-
   },
 });
 

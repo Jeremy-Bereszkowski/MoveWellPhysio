@@ -1,5 +1,6 @@
 import {title, whiteColor} from "../../assets/jss/nextjs-material-kit-pro";
 import Colours from "../../assets/strings/colours";
+import {greenParallaxText} from "../../assets/jss/coreStyles";
 
 const styles = {
     container: {
@@ -13,15 +14,7 @@ const styles = {
         zIndex: "2"
     },
     title: {
-        ...title,
-        display: "inline-block",
-        position: "relative",
-        marginTop: "30px",
-        minHeight: "32px",
-        color: whiteColor,
-        textDecoration: "none",
-        textTransform: "uppercase",
-        textAlign: "center"
+        ...greenParallaxText
     },
     titleSubHeading: {
         textAlign: "center"

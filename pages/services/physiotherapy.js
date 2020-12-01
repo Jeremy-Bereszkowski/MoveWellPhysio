@@ -28,55 +28,33 @@ export default function Physiotherapy({...rest}) {
                     justify={"center"}
                     alignContent={"center"}
                 >
-                    <Grid
-                        item
-                        justify={"center"}
-                        alignContent={"center"}
-                    >
+                    <Grid item>
                         <h2 className={classes.greenHeaderText}>
                             How physiotherapy can help
                         </h2>
                     </Grid>
-                    <Grid
-                        item
-                        justify={"center"}
-                        alignContent={"center"}
-                    >
+                    <Grid item>
                         <h4 className={classes.blackBodyText}>
                             Physiotherapy treats pain. But it is also an approach to preventing injury, achieving higher performance and maintaining a healthy physical lifestyle.
                         </h4>
                     </Grid>
-                    <Grid
-                        item
-                        justify={"center"}
-                        alignContent={"center"}
-                    >
+                    <Grid item>
                         <h4 className={classes.blackBodyText}>
                             You don’t need a doctor’s referral to get professional help with your pain.
                         </h4>
                     </Grid>
-                    <Grid
-                        item
-                        justify={"center"}
-                        alignContent={"center"}
-                    >
+                    <Grid item>
                         <div style={{marginTop: "4vh", position: "absolute", left: "50%", transform: "translateX(-50%)"}}>
                             <Button className={classes.button}>
-                                <p2>
+                                <p>
                                     <b>
                                         Book A consult
                                     </b>
-                                </p2>
+                                </p>
                             </Button>
                         </div>
                     </Grid>
-                    <Grid
-                        item
-                        md={10} xl={10}
-                        justify={"center"}
-                        alignContent={"center"}
-                        style={{display: "flex"}}
-                    >
+                    <Grid item md={10} xl={10}>
                         <hr size={30} className={classes.hr}/>
                     </Grid>
                 </Grid>
@@ -87,13 +65,7 @@ export default function Physiotherapy({...rest}) {
                     alignContent={"center"}
                     style={{display: "flex"}}
                 >
-                    <Grid
-                        item
-                        md={10} xl={10}
-                        justify={"center"}
-                        alignContent={"center"}
-                        style={{display: "flex"}}
-                    >
+                    <Grid item md={10} xl={10}>
                         <hr size={30} className={classes.hr}/>
                     </Grid>
                 </Grid>
@@ -104,13 +76,7 @@ export default function Physiotherapy({...rest}) {
                     alignContent={"center"}
                     style={{display: "flex"}}
                 >
-                    <Grid
-                        item
-                        md={10} xl={10}
-                        justify={"center"}
-                        alignContent={"center"}
-                        style={{display: "flex"}}
-                    >
+                    <Grid item md={10} xl={10}>
                         <hr size={30} className={classes.hr}/>
                     </Grid>
                 </Grid>

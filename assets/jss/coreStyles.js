@@ -1,5 +1,17 @@
 import Colours from "../strings/colours";
-import {blackColor, hexToRgb} from "./nextjs-material-kit-pro";
+import {blackColor, hexToRgb, title, whiteColor} from "./nextjs-material-kit-pro";
+
+const greenParallaxText = {
+    ...title,
+    display: "inline-block",
+    position: "relative",
+    marginTop: "30px",
+    minHeight: "32px",
+    color: whiteColor,
+    textDecoration: "none",
+    textTransform: "uppercase",
+    textAlign: "center"
+}
 
 const bodyHeaderText = {
     color: Colours.green,
@@ -60,6 +72,8 @@ const greenHrThick = {
 }
 
 export {
+    greenParallaxText,
+
     bodyHeaderText,
     bodyParaText,
     bodyActionText,

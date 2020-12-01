@@ -33,8 +33,6 @@ export default function Physiotherapy({...rest}) {
                 >
                     <Grid
                         item
-                        justify={"center"}
-                        alignContent={"center"}
                     >
                         <h4 className={classes.bodyParaText}>
                             MoveWell are experts in physiotherapy
@@ -52,8 +50,6 @@ export default function Physiotherapy({...rest}) {
                     </Grid>
                     <Grid
                         item
-                        justify={"center"}
-                        alignContent={"center"}
                     >
                         <Grid
                             container
@@ -63,8 +59,6 @@ export default function Physiotherapy({...rest}) {
                         >
                             <Grid
                                 item
-                                justify={"center"}
-                                alignContent={"center"}
                             >
                                 <h2 className={classes.greenHeaderText}>
                                     Our Team
@@ -72,8 +66,6 @@ export default function Physiotherapy({...rest}) {
                             </Grid>
                             <Grid
                                 item
-                                justify={"center"}
-                                alignContent={"center"}
                             >
                                 <Grid
                                     container
@@ -83,8 +75,6 @@ export default function Physiotherapy({...rest}) {
                                     <Grid
                                         item
                                         md={6} xl={6}
-                                        justify={"center"}
-                                        alignContent={"center"}
                                         style={{display: "flex"}}
                                     >
                                         <Card plain className={classes.card2}>
@@ -119,8 +109,6 @@ export default function Physiotherapy({...rest}) {
                                     <Grid
                                         item
                                         md={6} xl={6}
-                                        justify={"center"}
-                                        alignContent={"center"}
                                         style={{display: "flex"}}
                                     >
                                         <Card plain className={classes.card2}>

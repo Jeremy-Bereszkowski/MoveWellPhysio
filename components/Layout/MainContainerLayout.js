@@ -27,6 +27,6 @@ export default function MainContainerLayout(props) {
     )
 }
 
-MainContainerLayout.PropTypes = {
+MainContainerLayout.propTypes = {
     maxWidth: PropTypes.string,
 }

@@ -23,61 +23,46 @@ export default function LandingPageCarousel(props) {
         autoplay: false
     };
 
-    return (
-        <Carousel {...settings}>
+    const slideData = [
+        [image1, "MoveWell Physiotherapy", "Active, goal-focused physiotherapy", "Book Online",],
+        [image2, "Freedom from acute pain", 0, "LEARN HOW",],
+        [image3, "Return to optimal sports performance", 0, "LEARN HOW",],
+        [image4, "Improve strength and conditioning", 0, "LEARN HOW",],
+    ]
+
+    function Slide(image, header, body, buttonText) {
+        return (
             <div className={classes.imageTint}>
-                <img src={image1} alt="First slide" className={classes.imageStyle}/>
+                <img src={image} alt={header + " Slide"} className={classes.imageStyle}/>
                 <div className={classes.imageText}>
                     <h1 className={classes.title}>
-                            <p className="child">MoveWell Physiotherapy</p>
+                        {header}
                     </h1>
                     <hr size={30} className={classes.greenHr}/>
-                    <h4 className={classes.titleSubHeading}>
-                        Active, goal-focused physiotherapy
-                    </h4>
+                    {body !== null ?
+                        <h4 className={classes.titleSubHeading}>
+                            {body}
+                        </h4>
+                        :
+                        null
+                    }
                     <Button className={classes.button}>
-                        <p2>
-                            <b>Book Online</b>
-                        </p2>
+                        <p>
+                            <b>{buttonText}</b>
+                        </p>
                     </Button>
                 </div>
             </div>
-            <div className={classes.imageTint}>
-                <img src={image2} alt="First slide" className={classes.imageStyle}/>
-                <div className={classes.imageText}>
-                    <h1 className={classes.title}>Freedom from acute pain</h1>
-                    <hr size={30} className={classes.greenHr}/>
-                    <Button className={classes.button}>
-                        <p2>
-                            <b>LEARN HOW</b>
-                        </p2>
-                    </Button>
-                </div>
-            </div>
-            <div className={classes.imageTint}>
-                <img src={image3} alt="First slide" className={classes.imageStyle}/>
-                <div className={classes.imageText}>
-                    <h1 className={classes.title}>Return to optimal sports performance</h1>
-                    <hr size={30} className={classes.greenHr}/>
-                    <Button className={classes.button}>
-                        <p2>
-                            <b>LEARN HOW</b>
-                        </p2>
-                    </Button>
-                </div>
-            </div>
-            <div className={classes.imageTint}>
-                <img src={image4} alt="First slide" className={classes.imageStyle}/>
-                <div className={classes.imageText}>
-                    <h1 className={classes.title}>Improve strength and conditioning</h1>
-                    <hr size={30} className={classes.greenHr}/>
-                    <Button className={classes.button}>
-                        <p2>
-                            <b>LEARN HOW</b>
-                        </p2>
-                    </Button>
-                </div>
-            </div>
+        )
+    }
+
+    return (
+        <Carousel {...settings}>
+            {slideData.map(elements => {
+                return(
+                    Slide(elements[0], elements[1], elements[2], elements[3])
+                )
+            })}
         </Carousel>
     )
 }

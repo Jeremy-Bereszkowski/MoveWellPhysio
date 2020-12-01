@@ -1,7 +1,7 @@
 import {blackColor, grayColor, hexToRgb, title, whiteColor} from "../../assets/jss/nextjs-material-kit-pro";
 import image1 from "../../assets/img/physio/layout_1.jpg";
 import Colours from "../../assets/strings/colours";
-import {greenHrThick} from "../../assets/jss/coreStyles";
+import {greenHrThick, greenParallaxText} from "../../assets/jss/coreStyles";
 
 const landingPageCarouselStyle = {
     filter: {},
@@ -22,29 +22,16 @@ const landingPageCarouselStyle = {
         }
     },
     imageText: {
-        paddingBottom: "35px",
         position: "absolute",
-        bottom: "25vh",
-        left: "auto",
-        right: "auto",
+        height: "100vh",
+        width: "100vw",
         zIndex: "10",
-        color: "#ffffff",
+        marginTop: "-60vh",
         textAlign: "center",
         display: "block!important",
     },
     title: {
-        ...title,
-        display: "inline-block",
-        position: "relative",
-        marginTop: "30px",
-        minHeight: "32px",
-        color: whiteColor,
-        textDecoration: "none",
-        textTransform: "uppercase",
-        textAlign: "center",
-        marginLeft: "auto",
-        marginRight: "auto",
-        textSize: "calc(2vw * 2)",
+        ...greenParallaxText,
     },
     button: {
         backgroundColor: Colours.green,
@@ -98,7 +85,13 @@ const landingPageCarouselStyle = {
         alignItems: "center",
     },
     greenHr: {
-        ...greenHrThick
+        ...greenHrThick,
+        marginLeft: "15%",
+        marginRight: "15%",
+    },
+    titleSubHeading: {
+        textAlign: "center",
+        color: Colours.white,
     },
 };
 

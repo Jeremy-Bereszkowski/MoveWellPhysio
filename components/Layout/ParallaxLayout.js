@@ -20,27 +20,17 @@ export default function ParallaxLayout(props) {
                 <div className={classes.container}>
                     <Grid
                         container
-                        direction={"column"}
+                        direction={"row"}
                         justify={"center"}
                         alignContent={"center"}
                     >
-                        <Grid
-                            item
-                            className={classes.flexItem}
-                            justify={"center"}
-                            alignContent={"center"}
-                        >
+                        <Grid item md={12} style={{display: "flex"}} alignItems={"center"} justify={"center"}>
                             <h1 className={classes.title}>{parallaxHeader}</h1>
                         </Grid>
-                        <Grid item>
+                        <Grid item md={12}>
                             <hr size={30} className={classes.greenHr}/>
                         </Grid>
-                        <Grid
-                            item
-                            className={classes.flexItem}
-                            justify={"center"}
-                            alignContent={"center"}
-                        >
+                        <Grid item md={12}>
                             <h4 className={classes.titleSubHeading}>
                                 {parallaxBody}
                             </h4>
@@ -53,7 +43,7 @@ export default function ParallaxLayout(props) {
     )
 }
 
-ParallaxLayout.PropTypes = {
+ParallaxLayout.propTypes = {
     parallaxImage: PropTypes.string,
     parallaxHeader: PropTypes.string,
     parallaxBody: PropTypes.string,

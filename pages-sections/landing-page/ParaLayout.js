@@ -18,7 +18,7 @@ export default function ParaLayout(props) {
 
     const TextBlock  = () => {
         return (
-            <Grid item justify={"center"} alignContent={"center"} style={{display: "flex"}} xs={12} sm={12} md={6}>
+            <Grid item xs={12} sm={12} md={6}>
                 <Slide >
                     <div style={{marginLeft: "auto", justify: "center",  marginRight: "auto"}}>
                         <h2 className={classNames(classes.title, classes.bodyHeaderText)}>
@@ -26,7 +26,7 @@ export default function ParaLayout(props) {
                         </h2>
                         {bodyStringArray.map(bodyString => {
                             return (
-                                <h4 className={classes.bodyParaText}>
+                                <h4 className={classes.bodyParaText} key={bodyString}>
                                     <b>{bodyString}</b>
                                 </h4>
                             )
@@ -84,7 +84,7 @@ export default function ParaLayout(props) {
     )
 }
 
-ParaLayout.PropTypes = {
+ParaLayout.propTypes = {
     image: PropTypes.string,
     headerString: PropTypes.string,
     bodyStringArray: PropTypes.array,

@@ -39,7 +39,7 @@ export default function LandingPageCarousel(props) {
                         {header}
                     </h1>
                     <hr size={30} className={classes.greenHr}/>
-                    {body !== null ?
+                    {body !== 0 ?
                         <h4 className={classes.titleSubHeading}>
                             {body}
                         </h4>

@@ -95,12 +95,13 @@ const whatItMeansStyles = {
     subHeaderText: {
         color: Colours.green,
         margin: "0",
-        fontSize: "2vw",
+        fontWeight: "1000",
         marginTop: "2vh",
         marginBottom: "2vh",
+        textTransform: "uppercase",
     },
     middleText: {
-        fontSize: "1vw",
+        fontWeight: "400",
         marginTop: "2vh",
         marginBottom: "2vh",
         marginLeft: "2px",

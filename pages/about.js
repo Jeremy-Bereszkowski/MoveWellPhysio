@@ -80,6 +80,7 @@ export default function Physiotherapy({...rest}) {
                             md={9} xl={9}
                             justify={"center"}
                             alignContent={"center"}
+
                         >
                             <h4 className={classes.blackBodyText}>
                                 Our recovery plans place ultimate importance on the achievement of your goals.

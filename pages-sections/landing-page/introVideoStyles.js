@@ -34,7 +34,7 @@ const introVideoStyles = {
         borderTop: "1px solid black",
     },
     topMargin: {
-        marginTop: "40px"
+        marginTop: "2vh"
     }
 };
 

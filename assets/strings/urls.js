@@ -3,10 +3,11 @@ const URL = {
     LANDING_PAGE: "/landing-page",
     ABOUT: "/about",
     CONTACT: "/contact",
+    BOOK: "/book",
 
     /*SERVICES*/
     PHYSIOTHERAPY: "/services/physiotherapy",
-    PHYSIO_LED_REHAB: "/services/physio-led-rehab",
+    PHYSIO_LEAD_REHAB: "/services/physio-led-rehab",
     FOCUSED_GROUP_EXERCISE: "/services/focused-group-exercise",
     PROFESSIONAL_MENTORING: "/services/professional-mentoring",
 }

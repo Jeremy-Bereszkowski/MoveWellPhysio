@@ -1,38 +1,12 @@
-import {blackColor, grayColor, hexToRgb, title, whiteColor} from "../../assets/jss/nextjs-material-kit-pro";
-import Colours from "../../assets/strings/colours";
+import {blackColor, grayColor, hexToRgb} from "../../assets/jss/nextjs-material-kit-pro";
 
 const styles = {
-    container: {
-        color: whiteColor,
-        paddingRight: "15px",
-        paddingLeft: "15px",
-        marginRight: "auto",
-        marginLeft: "auto",
-        width: "100%",
-        maxWidth: "60%",
-        zIndex: "2"
-    },
     bodyContainer: {
         paddingRight: "1vw",
         paddingLeft: "1vw",
         marginRight: "auto",
         marginLeft: "auto",
         width: "100%",
-    },
-    title: {
-        ...title,
-        display: "inline-block",
-        position: "relative",
-        marginTop: "30px",
-        minHeight: "32px",
-        color: whiteColor,
-        textDecoration: "none",
-        textTransform: "uppercase",
-        textAlign: "center"
-    },
-    titleSubHeading: {
-        /*fontSize: "1.5vw",*/
-        textAlign: "center"
     },
     section: {
         backgroundPosition: "50%",
@@ -69,13 +43,6 @@ const styles = {
         paddingBottom: "3vh",
         paddingLeft: "5vw",
         paddingRight: "5vw",
-    },
-    hr: {
-        marginTop: "40px",
-        borderTop: "1px solid black"
-    },
-    greenHr: {
-        borderTop: "7px solid " + Colours.green
     },
     large: {
         maxWidth: "90%"

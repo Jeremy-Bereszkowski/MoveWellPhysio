@@ -59,6 +59,13 @@ export default function HeaderLinks(props) {
   return (
       <List className={classes.list + " " + classes.mlAuto}>
         <ListItem className={classes.listItem}>
+          <Link href={URL.LANDING_PAGE} as={URL.ROOT}>
+            <Button className={classes.button}>
+              Home
+            </Button>
+          </Link>
+        </ListItem>
+        <ListItem className={classes.listItem}>
           <CustomDropdown
               noLiPadding
               navDropdown
@@ -76,14 +83,14 @@ export default function HeaderLinks(props) {
                     </b>
                   </Button>
                 </Link>,
-                <Link href="/">
+                <Link href={URL.PHYSIO_LEAD_REHAB}>
                   <Button className={classes.subHeadingButton}>
                     <b>
                       PHYSIO-LEAD REHABILITATION CLASSES
                     </b>
                   </Button>
                 </Link>,
-                <Link href="/">
+                <Link href={URL.FOCUSED_GROUP_EXERCISE}>
                   <Button className={classes.subHeadingButton}>
                     <b>
                       FOCUSED GROUP EXERCISE
@@ -108,7 +115,7 @@ export default function HeaderLinks(props) {
           </Link>
         </ListItem>
         <ListItem className={classes.listItem}>
-          <Link href="/">
+          <Link href={URL.BOOK}>
             <Button className={classes.button} >
               Book Online
             </Button>

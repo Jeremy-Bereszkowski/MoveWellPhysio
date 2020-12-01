@@ -49,8 +49,8 @@ const headerStyle = theme => ({
     container: {
         paddingRight: "15px",
         paddingLeft: "15px",
-        marginRight: "10%",
-        marginLeft: "10%",
+        marginRight: "4%",
+        marginLeft: "4%",
         width: "100%",
         minHeight: "50px",
         alignItems: "center",

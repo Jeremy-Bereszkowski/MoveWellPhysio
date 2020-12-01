@@ -3,12 +3,13 @@ import classNames from "classnames";
 import {makeStyles} from "@material-ui/core/styles";
 
 import ParallaxImage from "../../assets/img/physio/outside.jpg"
-import ServicesLayout from "../../components/Layout/ServicesLayout";
+import MainContainerLayout from "../../components/Layout/MainContainerLayout";
 
 
 import styles from "../../assets/jss/pages/services/physiotherapyStyles";
 import {Grid} from "@material-ui/core";
 import Button from "@material-ui/core/Button";
+import ParallaxLayout from "../../components/Layout/ParallaxLayout";
 const useStyles = makeStyles(styles);
 
 export default function Physiotherapy({...rest}) {
@@ -18,7 +19,8 @@ export default function Physiotherapy({...rest}) {
     const parallaxBody = "Physiotherapy is the holistic treatment of your physical discomfort"
 
     return (
-        <ServicesLayout parallaxImage={ParallaxImage} parallaxHeader={parallaxHeader} parallaxBody={parallaxBody}>
+        <ParallaxLayout parallaxImage={ParallaxImage} parallaxHeader={parallaxHeader} parallaxBody={parallaxBody}>
+        <MainContainerLayout>
             <Grid
                 container
                 spacing={4}
@@ -112,6 +114,7 @@ export default function Physiotherapy({...rest}) {
                     <hr size={30} className={classes.hr}/>
                 </Grid>
             </Grid>
-        </ServicesLayout>
+        </MainContainerLayout>
+        </ParallaxLayout>
     )
 }

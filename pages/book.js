@@ -1,11 +1,11 @@
 import React from "react";
 
-import ParallaxLayout from "../../components/Layout/ParallaxLayout";
-import ParallaxImage from "../../assets/img/physio/sign.jpg";
+import ParallaxLayout from "../components/Layout/ParallaxLayout";
+import ParallaxImage from "../assets/img/physio/sign.jpg";
 
-export default function PhysioLesdRehab(props) {
+export default function Book(props) {
 
-    const parallaxHeader = "Physio-led Rehab"
+    const parallaxHeader = "Book Online"
     const parallaxBody = "Coming soon"
 
     return (

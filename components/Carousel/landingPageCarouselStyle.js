@@ -1,16 +1,9 @@
-import {blackColor, container, grayColor, hexToRgb, title, whiteColor} from "../../assets/jss/nextjs-material-kit-pro";
+import {blackColor, grayColor, hexToRgb, title, whiteColor} from "../../assets/jss/nextjs-material-kit-pro";
 import image1 from "../../assets/img/physio/layout_1.jpg";
 import Colours from "../../assets/strings/colours";
+import {greenHrThick} from "../../assets/jss/coreStyles";
 
 const landingPageCarouselStyle = {
-    section: {
-        padding: "70px 0"
-    },
-    container,
-    marginAuto: {
-        marginLeft: "auto !important",
-        marginRight: "auto !important"
-    },
     filter: {},
     imageTint: {
         backgroundSize: "contain",
@@ -28,51 +21,30 @@ const landingPageCarouselStyle = {
             content: "''"
         }
     },
-    dots: {
-        marginRight: "20%",
-        marginTop: "0",
-        marginBottom: "1rem",
-        position: "absolute",
-        bottom: "5px",
-        width: "100%",
-        padding: "0",
-        listStyle: "none",
-        textAlign: "center",
-        zIndex: "3"
-    },
     imageText: {
-        marginBottom: "25vh",
-        paddingBottom: "45px",
+        paddingBottom: "35px",
         position: "absolute",
-        right: "15%",
-        bottom: "20px",
-        left: "15%",
+        bottom: "25vh",
+        left: "auto",
+        right: "auto",
         zIndex: "10",
-        paddingTop: "20px",
         color: "#ffffff",
         textAlign: "center",
         display: "block!important",
     },
     title: {
-        fontWeight: "1000",
-        marginBottom: "25px",
-        fontFamily: `"Roboto Slab", "Times New Roman", sans-serif`,
+        ...title,
+        display: "inline-block",
+        position: "relative",
         marginTop: "30px",
         minHeight: "32px",
+        color: whiteColor,
         textDecoration: "none",
-        fontSize: "5vw",
-    },
-    title2: {
-        fontWeight: "1000",
-        marginBottom: "25px",
-        fontFamily: `"Roboto Slab", "Times New Roman", sans-serif`,
-        marginTop: "30px",
-        minHeight: "32px",
-        textDecoration: "none",
-        fontSize: "5vw",
-        maxWidth: "75%",
+        textTransform: "uppercase",
+        textAlign: "center",
         marginLeft: "auto",
         marginRight: "auto",
+        textSize: "calc(2vw * 2)",
     },
     button: {
         backgroundColor: Colours.green,
@@ -110,40 +82,6 @@ const landingPageCarouselStyle = {
                 hexToRgb(grayColor[0]) +
                 ", 0.2)"
         },
-        "& .fab,& .fas,& .far,& .fal,& .material-icons": {
-            position: "relative",
-            display: "inline-block",
-            top: "0",
-            marginTop: "-1em",
-            marginBottom: "-1em",
-            fontSize: "1.1rem",
-            marginRight: "4px",
-            verticalAlign: "middle"
-        },
-        "& svg": {
-            position: "relative",
-            display: "inline-block",
-            top: "0",
-            width: "18px",
-            height: "18px",
-            marginRight: "4px",
-            verticalAlign: "middle"
-        },
-        "&$justIcon": {
-            "& .fab,& .fas,& .far,& .fal,& .material-icons": {
-                marginTop: "0px",
-                marginRight: "0px",
-                position: "absolute",
-                width: "100%",
-                transform: "none",
-                left: "0px",
-                top: "0px",
-                height: "100%",
-                lineHeight: "41px",
-                fontSize: "20px"
-            }
-        }
-
     },
     imageStyle: {
         backgroundImage: "url(" + image1 + ")",
@@ -158,7 +96,10 @@ const landingPageCarouselStyle = {
         padding: "0",
         border: "0",
         alignItems: "center",
-    }
+    },
+    greenHr: {
+        ...greenHrThick
+    },
 };
 
 export default landingPageCarouselStyle;

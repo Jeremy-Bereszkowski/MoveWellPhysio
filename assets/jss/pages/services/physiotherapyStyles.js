@@ -1,5 +1,6 @@
 import Colours from "../../../strings/colours";
 import {blackColor, grayColor, hexToRgb, whiteColor} from "../../nextjs-material-kit-pro";
+import {bodyHeaderText, bodyParaText} from "../../coreStyles";
 
 const styles = {
     hr: {
@@ -7,13 +8,10 @@ const styles = {
         borderTop: "1px solid black"
     },
     greenHeaderText: {
-        marginTop: "-2vh",
-        color: Colours.green,
-        fontWeight: "800",
-        textTransform: "uppercase",
-        textAlign: "center"
+        ...bodyHeaderText,
     },
     blackBodyText: {
+        ...bodyParaText,
         textAlign: "left",
         marginLeft: "7vw",
         marginRight: "7vw",

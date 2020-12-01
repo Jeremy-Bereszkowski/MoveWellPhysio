@@ -35,14 +35,17 @@ const style = {
         paddingLeft: "1vw",
         paddingRight: "1vw",
         display: "flex",
+        minWidth: "33%",
     },
     centerItem: {
         justifyContent: "center",
         alignItems: "center",
         paddingLeft: "1vw",
         paddingRight: "1vw",
+        minWidth: "33%",
     },
     rightItem: {
+        minWidth: "33%",
         display: "flex",
         justifyContent: "center",
         alignItems: "center",

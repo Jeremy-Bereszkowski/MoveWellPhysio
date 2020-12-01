@@ -23,12 +23,11 @@ export default function Footer() {
         <footer className={footerClasses}>
             <Grid
                 container
-                spacing={4}
                 direction={"row"}
-                justify={"space-around"}
+                justify={"center"}
                 alignContent={"center"}
             >
-                <Grid item sm={12} md={4} className={classes.leftItem}>
+                <Grid item xs={12} sm={12} md={4} className={classes.leftItem}>
                     <div style={{marginLeft: "auto", marginRight: "auto"}}>
                         <h3 className={classes.footerBrand}>
                             MoveWell Physiotherapy
@@ -41,14 +40,14 @@ export default function Footer() {
                         </h5>
                     </div>
                 </Grid>
-                <Grid item sm={12} md={4} className={classes.centerItem}>
+                <Grid item xs={12} sm={12} md={4} className={classes.centerItem}>
                     <h3 style={{textAlign: "center", marginTop: "10px"}}>Supporters: </h3>
                     <div style={{textAlign: "center", marginLeft: "auto", marginRight: "auto"}}>
                         <img src={AJAXLogo} className={classes.supporterLogo}/>
                         <img src={MaccabiLogo} className={classes.supporterLogo}/>
                     </div>
                 </Grid>
-                <Grid item sm={12} md={4} className={classes.rightItem}>
+                <Grid item xs={12} sm={12} md={4} className={classes.rightItem}>
                     <ul style={{padding: 0}}>
                         <li>
                             <Button

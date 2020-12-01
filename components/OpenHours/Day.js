@@ -8,15 +8,16 @@ export default function Day(props) {
     return (
         <Grid
             container
+            spacing={2}
             justify={"center"}
             alignContent={"center"}
         >
             <Grid
                 item
-                sm={12} md={3} ld={3}
-                justify={"flex-start"}
+                sm={12} md={4} ld={4}
+                justify={"flex-end"}
                 alignContent={"center"}
-                style={{paddingLeft: "5px"}}
+                style={{paddingLeft: "5px", display: "flex"}}
             >
                 <h4>
                     {dayText}:
@@ -24,7 +25,7 @@ export default function Day(props) {
             </Grid>
             <Grid
                 item
-                sm={12} md={3} ld={3}
+                sm={12} md={4} ld={4}
                 justify={"flex-start"}
                 alignContent={"center"}
             >

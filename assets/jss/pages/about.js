@@ -15,7 +15,7 @@ const styles = {
         textAlign: "center"
     },
     blackBodyText: {
-        fontWeight: "300",
+        fontWeight: "400",
         textAlign: "left",
         paddingLeft: "7vw",
         paddingRight: "7vw",

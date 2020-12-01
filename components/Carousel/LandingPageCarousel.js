@@ -10,6 +10,7 @@ import image3 from "assets/img/physio/ring_reformer.jpg";
 import image4 from "assets/img/physio/redcord.jpg";
 
 import carouselStyle from "./landingPageCarouselStyle";
+import {Grid} from "@material-ui/core";
 const useStyles = makeStyles(carouselStyle);
 
 export default function LandingPageCarousel(props) {
@@ -34,24 +35,38 @@ export default function LandingPageCarousel(props) {
         return (
             <div className={classes.imageTint}>
                 <img src={image} alt={header + " Slide"} className={classes.imageStyle}/>
-                <div className={classes.imageText}>
-                    <h1 className={classes.title}>
-                        {header}
-                    </h1>
-                    <hr size={30} className={classes.greenHr}/>
+                <Grid
+                    container
+                    direction={"column"}
+                    justify={"center"}
+                    alignItems={"center"}
+                    className={classes.imageText}
+                >
+                    <Grid item>
+                        <h1 className={classes.title}>
+                            {header}
+                        </h1>
+                    </Grid>
+                    <Grid item>
+                        <hr size={30} className={classes.greenHr}/>
+                    </Grid>
                     {body !== 0 ?
-                        <h4 className={classes.titleSubHeading}>
-                            {body}
-                        </h4>
+                        <Grid item>
+                            <h4 className={classes.titleSubHeading}>
+                                {body}
+                            </h4>
+                        </Grid>
                         :
                         null
                     }
-                    <Button className={classes.button}>
-                        <p>
-                            <b>{buttonText}</b>
-                        </p>
-                    </Button>
-                </div>
+                    <Grid item>
+                        <Button className={classes.button}>
+                            <p>
+                                <b>{buttonText}</b>
+                            </p>
+                        </Button>
+                    </Grid>
+                </Grid>
             </div>
         )
     }

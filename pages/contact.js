@@ -8,7 +8,8 @@ import ParallaxLayout from "../components/Layout/ParallaxLayout";
 import OpeningHours from "../pages-sections/contact-page/OpeningHours";
 import Address from "../pages-sections/contact-page/Address";
 import Contact from "../pages-sections/contact-page/Contact";
-import {ContactData} from "../assets/strings/pageData";
+
+import ContactData from "../assets/data/pages/contact";
 
 export default function ContactPage(props) {
     return (

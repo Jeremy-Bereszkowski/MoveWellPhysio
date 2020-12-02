@@ -8,7 +8,7 @@ import Button from "@material-ui/core/Button";
 import MainContainerLayout from "../../components/Layout/MainContainerLayout";
 import ParallaxLayout from "../../components/Layout/ParallaxLayout";
 
-import {PhysiotherapyData} from "../../assets/strings/pageData";
+import PhysiotherapyData from "../../assets/data/pages/services/physiotherapy";
 
 import styles from "../../assets/jss/pages/services/physiotherapyStyles";
 const useStyles = makeStyles(styles);
@@ -18,7 +18,7 @@ export default function Physiotherapy({...rest}) {
 
     return (
         <ParallaxLayout parallaxImage={PhysiotherapyData.core.parallaxImage} parallaxHeader={PhysiotherapyData.core.parallaxHeader} parallaxBody={PhysiotherapyData.core.parallaxBody}>
-            <MainContainerLayout maxWidth={"lg"}>
+            {/*<MainContainerLayout maxWidth={"lg"}>
                 <Grid
                     container
                     direction={"row"}
@@ -77,7 +77,7 @@ export default function Physiotherapy({...rest}) {
                         <hr size={30} className={classes.hr}/>
                     </Grid>
                 </Grid>
-            </MainContainerLayout>
+            </MainContainerLayout>*/}
         </ParallaxLayout>
     )
 }

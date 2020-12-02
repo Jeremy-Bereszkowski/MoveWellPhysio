@@ -9,7 +9,7 @@ import ParallaxLayout from "../components/Layout/ParallaxLayout";
 import TopText from "../pages-sections/about-page/TopText";
 import BottomProfiles from "../pages-sections/about-page/BottomProfiles";
 
-import {AboutData} from "../assets/strings/pageData";
+import AboutData from "../assets/data/pages/about";
 
 import styles from "../assets/jss/pages/about";
 const useStyles = makeStyles(styles);

@@ -5,8 +5,9 @@ import {Grid} from "@material-ui/core";
 
 import Day from "../../components/OpenHours/Day";
 
+import ContactData from "../../assets/data/pages/contact";
+
 import styles from "./openingHoursStyles";
-import {ContactData} from "../../assets/strings/pageData";
 const useStyles = makeStyles(styles);
 
 export default function OpeningHours() {

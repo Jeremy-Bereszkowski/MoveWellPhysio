@@ -2,7 +2,7 @@ import {Grid} from "@material-ui/core";
 import React from "react";
 import {makeStyles} from "@material-ui/core/styles";
 
-import {AboutData} from "../../assets/strings/pageData";
+import AboutData from "../../assets/data/pages/about";
 
 import styles from "./topTextStyles";
 const useStyles = makeStyles(styles);

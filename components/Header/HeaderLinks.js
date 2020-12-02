@@ -4,8 +4,8 @@ import { makeStyles } from "@material-ui/core/styles";
 import List from "@material-ui/core/List";
 
 import styles from "assets/jss/nextjs-material-kit-pro/components/headerLinksStyle.js";
-import {HeaderLinkData} from "../../assets/strings/pageData";
 import HeaderLink from "./HeaderLink";
+import HeaderLinkData from "../../assets/data/components/header";
 const useStyles = makeStyles(styles);
 
 export default function HeaderLinks(props) {

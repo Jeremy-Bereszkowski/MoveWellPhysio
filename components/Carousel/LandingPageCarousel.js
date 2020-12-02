@@ -1,12 +1,13 @@
 import React from "react";
 import Carousel from "react-slick";
 
+import {Grid} from "@material-ui/core";
 import {makeStyles} from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
 
+import LandingData from "../../assets/data/pages/landing-data";
+
 import carouselStyle from "./landingPageCarouselStyle";
-import {Grid} from "@material-ui/core";
-import {LandingData} from "../../assets/strings/pageData";
 const useStyles = makeStyles(carouselStyle);
 
 export default function LandingPageCarousel(props) {

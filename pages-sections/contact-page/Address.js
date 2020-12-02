@@ -4,10 +4,11 @@ import classNames from "classnames";
 import {makeStyles} from "@material-ui/core/styles";
 import {Grid} from "@material-ui/core";
 
+import ContactData from "../../assets/data/pages/contact";
+
 import MapContainer from "../../util/google";
 
 import styles from "./addressStyles";
-import {ContactData} from "../../assets/strings/pageData";
 const useStyles = makeStyles(styles);
 
 export default function OpeningHours() {

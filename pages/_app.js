@@ -15,7 +15,7 @@ import "animate.css/animate.min.css";
 
 Router.events.on("routeChangeStart", url => {
     console.log(`Loading: ${url}`);
-    document.body.classList.add("body-page-transition");
+    document.body.classList.add("body-data-transition");
     ReactDOM.render(
         <PageChange path={url} />,
         document.getElementById("page-transition")
@@ -23,11 +23,11 @@ Router.events.on("routeChangeStart", url => {
 });
 Router.events.on("routeChangeComplete", () => {
     ReactDOM.unmountComponentAtNode(document.getElementById("page-transition"));
-    document.body.classList.remove("body-page-transition");
+    document.body.classList.remove("body-data-transition");
 });
 Router.events.on("routeChangeError", () => {
     ReactDOM.unmountComponentAtNode(document.getElementById("page-transition"));
-    document.body.classList.remove("body-page-transition");
+    document.body.classList.remove("body-data-transition");
 });
 
 export default class MyApp extends App {

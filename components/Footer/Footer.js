@@ -6,11 +6,11 @@ import {Grid} from "@material-ui/core";
 
 import Button from "../CustomButtons/Button";
 
+import FooterData from "../../assets/data/components/footer";
 import AJAXLogo from "../../assets/img/logos/AJAX.png"
 import MaccabiLogo from "../../assets/img/logos/MacabbiCricket.jpg"
 
 import styles from "./footerStyles";
-import {FooterData} from "../../assets/strings/pageData";
 const useStyles = makeStyles(styles);
 
 export default function Footer() {

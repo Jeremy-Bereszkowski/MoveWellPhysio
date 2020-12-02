@@ -6,7 +6,7 @@ import {Grid} from "@material-ui/core";
 import MainContainerLayout from "../../components/Layout/MainContainerLayout";
 import ParallaxLayout from "../../components/Layout/ParallaxLayout";
 
-import {ProfessionalMentoringData} from "../../assets/strings/pageData";
+import ProfessionalMentoringData from "../../assets/data/pages/services/professionalMentoring";
 
 import styles from "../../assets/jss/pages/services/professionalMentoringStyles";
 const useStyles = makeStyles(styles);

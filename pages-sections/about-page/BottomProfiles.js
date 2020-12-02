@@ -5,7 +5,7 @@ import {makeStyles} from "@material-ui/core/styles";
 
 import EmployeeProfileCard from "../../components/Card/EmployeeProfileCard";
 
-import {AboutData} from "../../assets/strings/pageData";
+import AboutData from "../../assets/data/pages/about";
 
 import styles from "./bottomProfilesStyles";
 const useStyles = makeStyles(styles);

@@ -9,7 +9,7 @@ import MainContainerLayout from "../components/Layout/MainContainerLayout";
 import IntroVideo from "../pages-sections/landing-page/IntroVideo";
 import ParaLayout from "../pages-sections/landing-page/ParaLayout";
 
-import {LandingData} from "../assets/strings/pageData";
+import LandingData from "../assets/data/pages/landing-data";
 
 import landingStyle from "assets/jss/pages/landingPage";
 const useStyles = makeStyles(landingStyle);

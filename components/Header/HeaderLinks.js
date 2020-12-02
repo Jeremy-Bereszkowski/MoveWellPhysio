@@ -1,18 +1,11 @@
 import React from "react";
-import PropTypes from "prop-types";
-import Link from "next/link";
 
 import { makeStyles } from "@material-ui/core/styles";
 import List from "@material-ui/core/List";
-import ListItem from "@material-ui/core/ListItem";
-import Button from "@material-ui/core/Button";
-
-import CustomDropdown from "components/CustomDropdown/CustomDropdown.js";
 
 import styles from "assets/jss/nextjs-material-kit-pro/components/headerLinksStyle.js";
-import Colours from "../../assets/strings/colours";
-import URL from "../../assets/strings/urls";
 import {HeaderLinkData} from "../../assets/strings/pageData";
+import HeaderLink from "./HeaderLink";
 const useStyles = makeStyles(styles);
 
 export default function HeaderLinks(props) {
@@ -55,74 +48,16 @@ export default function HeaderLinks(props) {
   };
   var onClickSections = {};
 
-  function renderButton(element) {
-    return (
-        <ListItem className={classes.listItem}>
-          <Link href={element.core.link} as={element.core.as}>
-            <Button className={classes.button}>
-              {element.core.key}
-            </Button>
-          </Link>
-        </ListItem>
-    )
-  }
-
-  function renderHeaderLink(element) {
-    if (element.sub === undefined) {
-      return (
-          renderButton(element)
-      )
-    } else {
-      const subLinks = element.sub.map((ele) => {
-        return renderButton(ele)
-      })
-
-      return (
-          <ListItem className={classes.listItem}>
-            <CustomDropdown
-                noLiPadding
-                navDropdown
-                hoverColor={dropdownHoverColor}
-                buttonText="Services"
-                buttonProps={{
-                  className: classes.navLink,
-                  color: Colours.green
-                }}
-                dropdownList={subLinks}
-            />
-          </ListItem>
-      )
-    }
-
-  }
-
-  const { dropdownHoverColor } = props;
   const classes = useStyles();
   return (
       <List className={classes.list + " " + classes.mlAuto}>
         {
           HeaderLinkData.map(element => {
             return (
-                renderHeaderLink(element)
+                <HeaderLink element={element} />
             )
           })
         }
       </List>
   );
 }
-
-HeaderLinks.defaultProps = {
-  hoverColor: "primary"
-};
-
-HeaderLinks.propTypes = {
-  dropdownHoverColor: PropTypes.oneOf([
-    "dark",
-    "primary",
-    "info",
-    "success",
-    "warning",
-    "danger",
-    "rose"
-  ])
-};

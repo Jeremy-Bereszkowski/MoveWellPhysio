@@ -52,7 +52,7 @@ export default class MyApp extends App {
                 <LandingHeader
                     color="transparent"
                     brand="MoveWell Physiotherapy"
-                    links={<LandingHeaderLinks dropdownHoverColor="dark" />}
+                    links={<LandingHeaderLinks />}
                     fixed
                     changeColorOnScroll={{
                         height: 25,

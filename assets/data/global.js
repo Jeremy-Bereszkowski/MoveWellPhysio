@@ -4,6 +4,8 @@ const comanyName = "MoveWell"
 const address1 = "181 Bay Street"
 const address2 = "Brighton, VIC, 3188"
 
+const email = "hello@movewellmelbourne.com"
+
 /* Landing Carousel images */
 import image1 from "../img/physio/layout_1.jpg";
 import image2 from "../img/physio/reformer.jpg";
@@ -25,6 +27,7 @@ export {
     comanyName,
     address1,
     address2,
+    email,
 
     image1,
     image2,

@@ -1,4 +1,4 @@
-import {FocusedGroupBackground} from "../../global"
+import {comanyName, email, FocusedGroupBackground} from "../../global"
 
 const FocusedGroupData = {
     core: {
@@ -28,14 +28,14 @@ const FocusedGroupData = {
             },
             {
                 header: "What should I bring?",
-                body: "MoveWell has all the equipment required for the sessions. Just wear activewear and bring a towel. Water is available here, but we recommend bringing a water bottle too."
+                body: comanyName + " has all the equipment required for the sessions. Just wear activewear and bring a towel. Water is available here, but we recommend bringing a water bottle too."
             },
             {
                 header: "Where can I book?",
-                body: "If you’re new to Movewell, book a consult here."
+                body: "If you’re new to "+comanyName+", book a consult here."
             },
             {
-                body: "Existing clients can book online or email us at hello@movewellmelbourne.com to organise your next session."
+                body: "Existing clients can book online or email us at "+email+" to organise your next session."
             },
         ]
     }

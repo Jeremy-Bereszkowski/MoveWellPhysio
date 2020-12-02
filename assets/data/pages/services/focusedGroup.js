@@ -10,7 +10,7 @@ const FocusedGroupData = {
     top: {
         header: "Developing and maintaining physical health",
         body: [
-            "Focused group exercise that caters for groups of 6-10, fo long term development of your physical wellness.",
+            "Focused group exercise that caters for groups of 6-10, for long term development of your physical wellness.",
             "Sessions are designed by a physiotherapist to improve full body function through joint and bone health, cardiovascular fitness, mobility and balance.",
             "We provide a workout that is challenging and refreshing, helping you build structured exercise into your lifestyle.",
         ]

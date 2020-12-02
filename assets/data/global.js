@@ -1,4 +1,6 @@
 /* Global variables */
+const comanyName = "MoveWell"
+
 const address1 = "181 Bay Street"
 const address2 = "Brighton, VIC, 3188"
 
@@ -20,6 +22,7 @@ import FocusedGroupBackground from "../img/physio/sign.jpg";
 import ProfessionalMentorBackground from "../img/physio/balls_weights.jpg";
 
 export {
+    comanyName,
     address1,
     address2,
 

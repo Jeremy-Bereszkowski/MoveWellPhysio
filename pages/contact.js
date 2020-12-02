@@ -10,7 +10,7 @@ import Address from "../pages-sections/contact-page/Address";
 import Contact from "../pages-sections/contact-page/Contact";
 import {ContactData} from "../assets/strings/pageData";
 
-export default function Physiotherapy(props) {
+export default function ContactPage(props) {
     return (
         <ParallaxLayout parallaxImage={ContactData.core.parallaxImage} parallaxHeader={ContactData.core.parallaxHeader}>
             <MainContainerLayout maxWidth={"lg"}>
@@ -24,24 +24,18 @@ export default function Physiotherapy(props) {
                     <Grid
                         item
                         sm={12} md={4}
-                        justify={"center"}
-                        alignContent={"center"}
                     >
                         <OpeningHours />
                     </Grid>
                     <Grid
                         item
                         sm={12} md={4}
-                        justify={"center"}
-                        alignContent={"center"}
                     >
                         <Address />
                     </Grid>
                     <Grid
                         item
                         sm={12} md={4}
-                        justify={"center"}
-                        alignContent={"center"}
                     >
                         <Contact />
                     </Grid>

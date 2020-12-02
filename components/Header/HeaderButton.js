@@ -26,5 +26,5 @@ export default function HeaderButton(props) {
 }
 
 HeaderButton.propTypes = {
-    element: PropTypes.string,
+    element: PropTypes.object,
 }

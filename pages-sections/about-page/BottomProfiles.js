@@ -38,6 +38,7 @@ export default function BottomProfiles(props) {
                                     item
                                     md={6} xl={6}
                                     className={classes.flexBox}
+                                    key={element}
                                 >
                                     <EmployeeProfileCard employeeName={element[0]} employeePosition={element[1]} employeeDescription={element[2]} employeeImage={element[3]}/>
                                 </Grid>

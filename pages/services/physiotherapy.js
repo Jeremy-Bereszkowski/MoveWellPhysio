@@ -21,7 +21,6 @@ export default function Physiotherapy({...rest}) {
             <MainContainerLayout maxWidth={"lg"}>
                 <Grid
                     container
-                    spacing={4}
                     direction={"row"}
                     justify={"center"}
                     alignContent={"center"}

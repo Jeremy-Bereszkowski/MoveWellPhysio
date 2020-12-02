@@ -40,7 +40,7 @@ export default function Physiotherapy({...rest}) {
                     {
                         ProfessionalMentoringData.body.strings.map(element => {
                             return (
-                                <Grid item>
+                                <Grid item key={element}>
                                     <h4 className={classes.blackBodyText}>
                                         {element}
                                     </h4>

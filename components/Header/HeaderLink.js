@@ -44,5 +44,5 @@ export default function HeaderLink(props) {
 }
 
 HeaderLink.propTypes = {
-    element: PropTypes.string,
+    element: PropTypes.object,
 }

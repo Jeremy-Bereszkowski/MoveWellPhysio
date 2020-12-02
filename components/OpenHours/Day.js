@@ -34,7 +34,7 @@ export default function Day(props) {
     )
 }
 
-Day.PropTypes = {
+Day.propTypes = {
     dayText: PropTypes.string,
     hoursText: PropTypes.string,
 }

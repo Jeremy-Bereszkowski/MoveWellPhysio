@@ -15,11 +15,11 @@ export default function TopText(props) {
             container
             direction={"row"}
             alignItems={"center"}
-            justify={"centert"}
+            justify={"center"}
         >
             {AboutData.top.map(element => {
                 return (
-                    <Grid item sm={12} md={12} className={classes.gridSpacing}>
+                    <Grid item sm={12} md={12} className={classes.gridSpacing} key={element}>
                         <h4 className={classes.bodyParaText}>
                             {element}
                         </h4>

@@ -12,6 +12,7 @@ import CustomDropdown from "components/CustomDropdown/CustomDropdown.js";
 import styles from "assets/jss/nextjs-material-kit-pro/components/headerLinksStyle.js";
 import Colours from "../../assets/strings/colours";
 import URL from "../../assets/strings/urls";
+import {HeaderLinkData} from "../../assets/strings/pageData";
 const useStyles = makeStyles(styles);
 
 export default function HeaderLinks(props) {
@@ -54,80 +55,58 @@ export default function HeaderLinks(props) {
   };
   var onClickSections = {};
 
+  function renderButton(element) {
+    return (
+        <ListItem className={classes.listItem}>
+          <Link href={element.core.link} as={element.core.as}>
+            <Button className={classes.button}>
+              {element.core.key}
+            </Button>
+          </Link>
+        </ListItem>
+    )
+  }
+
+  function renderHeaderLink(element) {
+    if (element.sub === undefined) {
+      return (
+          renderButton(element)
+      )
+    } else {
+      const subLinks = element.sub.map((ele) => {
+        return renderButton(ele)
+      })
+
+      return (
+          <ListItem className={classes.listItem}>
+            <CustomDropdown
+                noLiPadding
+                navDropdown
+                hoverColor={dropdownHoverColor}
+                buttonText="Services"
+                buttonProps={{
+                  className: classes.navLink,
+                  color: Colours.green
+                }}
+                dropdownList={subLinks}
+            />
+          </ListItem>
+      )
+    }
+
+  }
+
   const { dropdownHoverColor } = props;
   const classes = useStyles();
   return (
       <List className={classes.list + " " + classes.mlAuto}>
-        <ListItem className={classes.listItem}>
-          <Link href={URL.LANDING_PAGE} as={URL.ROOT}>
-            <Button className={classes.button}>
-              Home
-            </Button>
-          </Link>
-        </ListItem>
-        <ListItem className={classes.listItem}>
-          <CustomDropdown
-              noLiPadding
-              navDropdown
-              hoverColor={dropdownHoverColor}
-              buttonText="Services"
-              buttonProps={{
-                className: classes.navLink,
-                color: Colours.green
-              }}
-              dropdownList={[
-                <Link href={URL.PHYSIOTHERAPY}>
-                  <Button className={classes.subHeadingButton}>
-                    <b>
-                      PHYSIOTHERAPY
-                    </b>
-                  </Button>
-                </Link>,
-                <Link href={URL.PHYSIO_LEAD_REHAB}>
-                  <Button className={classes.subHeadingButton}>
-                    <b>
-                      PHYSIO-LEAD REHABILITATION CLASSES
-                    </b>
-                  </Button>
-                </Link>,
-                <Link href={URL.FOCUSED_GROUP_EXERCISE}>
-                  <Button className={classes.subHeadingButton}>
-                    <b>
-                      FOCUSED GROUP EXERCISE
-                    </b>
-                  </Button>
-                </Link>,
-                <Link href={URL.PROFESSIONAL_MENTORING}>
-                  <Button className={classes.subHeadingButton} >
-                    <b>
-                      PROFESSIONAL MENTORING
-                    </b>
-                  </Button>
-                </Link>,
-              ]}
-          />
-        </ListItem>
-        <ListItem className={classes.listItem}>
-          <Link href={URL.ABOUT}>
-            <Button className={classes.button}>
-              About MoveWell
-            </Button>
-          </Link>
-        </ListItem>
-        <ListItem className={classes.listItem}>
-          <Link href={URL.BOOK}>
-            <Button className={classes.button} >
-              Book Online
-            </Button>
-          </Link>
-        </ListItem>
-        <ListItem className={classes.listItem}>
-          <Link href={URL.CONTACT}>
-            <Button className={classes.button}>
-              Contact
-            </Button>
-          </Link>
-        </ListItem>
+        {
+          HeaderLinkData.map(element => {
+            return (
+                renderHeaderLink(element)
+            )
+          })
+        }
       </List>
   );
 }

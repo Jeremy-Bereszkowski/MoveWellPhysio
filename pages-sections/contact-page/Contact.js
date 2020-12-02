@@ -28,7 +28,7 @@ export default function OpeningHours() {
                 <Day dayText={ContactData.contact.telephone.header} hoursText={ContactData.contact.telephone.value} />
             </Grid>
             <Grid item>
-                <Day dayText={ContactData.contact.email.header} hoursText={ContactData.contact.email.header} />
+                <Day dayText={ContactData.contact.email.header} hoursText={ContactData.contact.email.data} />
             </Grid>
         </Grid>
     )

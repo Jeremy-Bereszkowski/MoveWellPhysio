@@ -10,6 +10,7 @@ import AJAXLogo from "../../assets/img/logos/AJAX.png"
 import MaccabiLogo from "../../assets/img/logos/MacabbiCricket.jpg"
 
 import styles from "./footerStyles";
+import {FooterData} from "../../assets/strings/pageData";
 const useStyles = makeStyles(styles);
 
 export default function Footer() {
@@ -30,18 +31,20 @@ export default function Footer() {
                 <Grid item xs={12} sm={12} md={4} className={classes.leftItem}>
                     <div style={{marginLeft: "auto", marginRight: "auto"}}>
                         <h3 className={classes.footerBrand}>
-                            MoveWell Physiotherapy
+                            {FooterData.core.header}
                         </h3>
                         <h5 className={classes.footerBrand}>
-                            181 Bay Street
+                            {FooterData.core.address1}
                         </h5>
                         <h5 className={classes.footerBrand}>
-                            Brighton, VIC, 3188
+                            {FooterData.core.address2}
                         </h5>
                     </div>
                 </Grid>
                 <Grid item xs={12} sm={12} md={4} className={classes.centerItem}>
-                    <h3 style={{textAlign: "center", marginTop: "10px"}}>Supporters: </h3>
+                    <h3 style={{textAlign: "center", marginTop: "10px"}}>
+                        {FooterData.middle.header}
+                    </h3>
                     <div style={{textAlign: "center", marginLeft: "auto", marginRight: "auto"}}>
                         <img src={AJAXLogo} className={classes.supporterLogo}/>
                         <img src={MaccabiLogo} className={classes.supporterLogo}/>

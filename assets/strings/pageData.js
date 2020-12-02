@@ -5,6 +5,80 @@ import image2 from "../img/physio/reformer.jpg";
 import image3 from "../img/physio/ring_reformer.jpg";
 import image4 from "../img/physio/redcord.jpg";
 
+const address1 = "181 Bay Street"
+const address2 = "Brighton, VIC, 3188"
+
+const HeaderLinkData = [
+    {
+        core: {
+            key: "Home",
+            link: URL.LANDING_PAGE,
+            as: URL.ROOT,
+        },
+    },
+    {
+        core: {
+            key: "Services",
+            link: "",
+        },
+        sub: [
+            {
+                core: {
+                    key: "PHYSIOTHERAPY",
+                    link: URL.PHYSIOTHERAPY,
+                },
+            },
+            {
+                core: {
+                    key: "PHYSIO-LEAD REHABILITATION CLASSES",
+                    link: URL.PHYSIO_LEAD_REHAB,
+                },
+            },
+            {
+                core: {
+                    key: "FOCUSED GROUP EXERCISE",
+                    link: URL.FOCUSED_GROUP_EXERCISE,
+                },
+            },
+            {
+                core: {
+                    key: "PROFESSIONAL MENTORING",
+                    link: URL.PROFESSIONAL_MENTORING,
+                },
+            }
+        ]
+    },
+    {
+        core: {
+            key: "About",
+            link: URL.ABOUT,
+        },
+    },
+    {
+        core: {
+            key: "Book Online",
+            link: URL.BOOK,
+        },
+    },
+    {
+        core: {
+            key: "Contact",
+            link: URL.CONTACT,
+        },
+    },
+]
+
+const FooterData = {
+    core: {
+        header: "MoveWell Physiotherapy",
+        address1: address1,
+        address2: address2,
+    },
+    middle: {
+        header: "Supporters:",
+    }
+}
+
 const LandingData = {
     carousel: [
         [
@@ -56,11 +130,43 @@ const LandingData = {
     }
 }
 
-import ParallaxImage from "../img/physio/balls_weights.jpg";
+import PhysiotherapyBackground from "../img/physio/outside.jpg"
+
+const PhysiotherapyData = {
+    core: {
+        parallaxImage: PhysiotherapyBackground,
+        parallaxHeader: "physiotherapy",
+        parallaxBody: "Physiotherapy is the holistic treatment of your physical discomfort",
+    },
+}
+
+import PhysioLedRehabBackground from "../img/physio/sign.jpg";
+
+const PhysioLedRehabData = {
+    core: {
+        parallaxImage: PhysioLedRehabBackground,
+        parallaxHeader: "Physio-led Rehabilitation",
+        parallaxBody: "Coming soon",
+        /*parallaxBody: "A structured, active approach to helping you overcome pain and move the way you want to",*/
+    },
+}
+
+import FocusedGroupBackground from "../img/physio/sign.jpg";
+
+const FocusedGroupData = {
+    core: {
+        parallaxImage: FocusedGroupBackground,
+        parallaxHeader: "Focused Group Exercise",
+        parallaxBody: "Coming soon",
+        /*parallaxBody: "Group sessions targeting specific areas of the body and function",*/
+    },
+}
+
+import ProfessionalMentorBackground from "../img/physio/balls_weights.jpg";
 
 const ProfessionalMentoringData = {
     core: {
-        parallaxImage: ParallaxImage,
+        parallaxImage: ProfessionalMentorBackground,
         parallaxHeader: "Professional Mentoring",
         parallaxBody: "Education for health students and practitioners",
     },
@@ -113,6 +219,7 @@ const AboutData = {
 }
 
 import ContactBackground from "../img/physio/layout_2.jpg"
+import URL from "./urls";
 
 const ContactData = {
     core: {
@@ -144,8 +251,8 @@ const ContactData = {
     },
     address: {
         header: "Address",
-        address1: "181 Bay Street",
-        address2: "Brighton, VIC, 3188",
+        address1: address1,
+        address2: address2,
         hint: "On the corner of Bay Street and Cochrane Street"
     },
     contact: {
@@ -162,9 +269,14 @@ const ContactData = {
 }
 
 export {
+    HeaderLinkData,
+    FooterData,
+
     LandingData,
 
-
+    PhysiotherapyData,
+    PhysioLedRehabData,
+    FocusedGroupData,
     ProfessionalMentoringData,
 
     AboutData,

@@ -1,25 +1,23 @@
 import React from "react";
 import classNames from "classnames";
+
 import {makeStyles} from "@material-ui/core/styles";
-
-import ParallaxImage from "../../assets/img/physio/outside.jpg"
-import MainContainerLayout from "../../components/Layout/MainContainerLayout";
-
-
-import styles from "../../assets/jss/pages/services/physiotherapyStyles";
 import {Grid} from "@material-ui/core";
 import Button from "@material-ui/core/Button";
+
+import MainContainerLayout from "../../components/Layout/MainContainerLayout";
 import ParallaxLayout from "../../components/Layout/ParallaxLayout";
+
+import {PhysiotherapyData} from "../../assets/strings/pageData";
+
+import styles from "../../assets/jss/pages/services/physiotherapyStyles";
 const useStyles = makeStyles(styles);
 
 export default function Physiotherapy({...rest}) {
     const classes = useStyles();
 
-    const parallaxHeader = "physiotherapy"
-    const parallaxBody = "Physiotherapy is the holistic treatment of your physical discomfort"
-
     return (
-        <ParallaxLayout parallaxImage={ParallaxImage} parallaxHeader={parallaxHeader} parallaxBody={parallaxBody}>
+        <ParallaxLayout parallaxImage={PhysiotherapyData.core.parallaxImage} parallaxHeader={PhysiotherapyData.core.parallaxHeader} parallaxBody={PhysiotherapyData.core.parallaxBody}>
             <MainContainerLayout maxWidth={"lg"}>
                 <Grid
                     container

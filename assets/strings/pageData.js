@@ -1,12 +1,31 @@
-import Para1Image from "../img/physio/clients/client_11.jpg";
-import Para2Image from "../img/physio/clients/client.jpg"
+import URL from "./urls";
+
+/* Global variables */
+const address1 = "181 Bay Street"
+const address2 = "Brighton, VIC, 3188"
+
+/* Landing Page Carousel images */
 import image1 from "../img/physio/layout_1.jpg";
 import image2 from "../img/physio/reformer.jpg";
 import image3 from "../img/physio/ring_reformer.jpg";
 import image4 from "../img/physio/redcord.jpg";
 
-const address1 = "181 Bay Street"
-const address2 = "Brighton, VIC, 3188"
+/* Parallax background images */
+import PhysiotherapyBackground from "../img/physio/outside.jpg"
+import PhysioLedRehabBackground from "../img/physio/sign.jpg";
+import FocusedGroupBackground from "../img/physio/sign.jpg";
+import ProfessionalMentorBackground from "../img/physio/balls_weights.jpg";
+
+import AboutBackground from "../img/physio/sign.jpg";
+import ContactBackground from "../img/physio/layout_2.jpg"
+
+/* Landing page images */
+import Para1Image from "../img/physio/clients/client_11.jpg";
+import Para2Image from "../img/physio/clients/client.jpg"
+
+/* About page images */
+import YashaHeadshot from "../img/physio/yasha_headshot.jpg";
+import ChrisHeadshot from "../img/physio/chris headshot.jpg";
 
 const HeaderLinkData = [
     {
@@ -130,8 +149,6 @@ const LandingData = {
     }
 }
 
-import PhysiotherapyBackground from "../img/physio/outside.jpg"
-
 const PhysiotherapyData = {
     core: {
         parallaxImage: PhysiotherapyBackground,
@@ -139,8 +156,6 @@ const PhysiotherapyData = {
         parallaxBody: "Physiotherapy is the holistic treatment of your physical discomfort",
     },
 }
-
-import PhysioLedRehabBackground from "../img/physio/sign.jpg";
 
 const PhysioLedRehabData = {
     core: {
@@ -151,8 +166,6 @@ const PhysioLedRehabData = {
     },
 }
 
-import FocusedGroupBackground from "../img/physio/sign.jpg";
-
 const FocusedGroupData = {
     core: {
         parallaxImage: FocusedGroupBackground,
@@ -161,8 +174,6 @@ const FocusedGroupData = {
         /*parallaxBody: "Group sessions targeting specific areas of the body and function",*/
     },
 }
-
-import ProfessionalMentorBackground from "../img/physio/balls_weights.jpg";
 
 const ProfessionalMentoringData = {
     core: {
@@ -183,9 +194,6 @@ const ProfessionalMentoringData = {
     }
 }
 
-import YashaHeadshot from "../img/physio/yasha_headshot.jpg";
-import ChrisHeadshot from "../img/physio/chris headshot.jpg";
-import AboutBackground from "../img/physio/sign.jpg";
 
 const AboutData = {
     core: {
@@ -217,9 +225,6 @@ const AboutData = {
         ]
     },
 }
-
-import ContactBackground from "../img/physio/layout_2.jpg"
-import URL from "./urls";
 
 const ContactData = {
     core: {

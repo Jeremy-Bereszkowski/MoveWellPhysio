@@ -1,8 +1,23 @@
 import Colours from "../strings/colours";
 import {blackColor, hexToRgb, title, whiteColor} from "./nextjs-material-kit-pro";
 
-const greenParallaxText = {
+const smallFont = {
+    fontSize: "calc(16px + (20 - 16) * ((100vw - 300px) / (1600 - 300)))"
+
+}
+
+const mediumFont = {
+    fontSize: "calc(20px + (30 - 20) * ((100vw - 300px) / (1600 - 300)))"
+
+}
+
+const largeFont = {
+    fontSize: "calc(30px + (56 - 30) * ((100vw - 300px) / (1600 - 300)))"
+}
+
+const parallaxHeaderText = {
     ...title,
+    ...largeFont,
     display: "inline-block",
     position: "relative",
     marginTop: "30px",
@@ -10,13 +25,13 @@ const greenParallaxText = {
     color: whiteColor,
     textDecoration: "none",
     textTransform: "uppercase",
-    textAlign: "center"
+    textAlign: "center",
 }
 
 const bodyHeaderText = {
+    ...largeFont,
     color: Colours.green,
     margin: "0",
-    fontSize: "45px",
     fontWeight: "150",
     marginTop: "1.5vh",
     marginBottom: "1.5vh",
@@ -24,6 +39,7 @@ const bodyHeaderText = {
     textTransform: "uppercase",
 }
 const bodyParaText = {
+    ...smallFont,
     fontWeight: "400",
     lineHeight: "3vh",
     marginTop: "3vh",
@@ -33,9 +49,9 @@ const bodyParaText = {
 }
 
 const bodyActionText = {
+    ...mediumFont,
     color: Colours.green,
     margin: "0",
-    fontSize: "38px",
     fontWeight: "200",
     marginTop: "2vh",
     marginBottom: "2vh",
@@ -72,7 +88,11 @@ const greenHrThick = {
 }
 
 export {
-    greenParallaxText,
+    smallFont,
+    mediumFont,
+    largeFont,
+
+    parallaxHeaderText,
 
     bodyHeaderText,
     bodyParaText,

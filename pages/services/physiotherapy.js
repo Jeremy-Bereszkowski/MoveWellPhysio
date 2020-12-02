@@ -15,7 +15,7 @@ const useStyles = makeStyles(styles);
 export default function Physiotherapy({...rest}) {
     const classes = useStyles();
 
-    const parallaxHeader = "physio"
+    const parallaxHeader = "physiotherapy"
     const parallaxBody = "Physiotherapy is the holistic treatment of your physical discomfort"
 
     return (

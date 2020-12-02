@@ -1,7 +1,7 @@
 import {blackColor, grayColor, hexToRgb, title, whiteColor} from "../../assets/jss/nextjs-material-kit-pro";
 import image1 from "../../assets/img/physio/layout_1.jpg";
 import Colours from "../../assets/strings/colours";
-import {greenHrThick, greenParallaxText} from "../../assets/jss/coreStyles";
+import {greenHrThick, parallaxHeaderText} from "../../assets/jss/coreStyles";
 
 const landingPageCarouselStyle = {
     filter: {},
@@ -31,7 +31,9 @@ const landingPageCarouselStyle = {
         display: "block!important",
     },
     title: {
-        ...greenParallaxText,
+        ...parallaxHeaderText,
+        marginLeft: "15%",
+        marginRight: "15%",
     },
     button: {
         backgroundColor: Colours.green,

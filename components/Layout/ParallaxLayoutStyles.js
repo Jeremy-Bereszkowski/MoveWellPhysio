@@ -1,6 +1,5 @@
-import {title, whiteColor} from "../../assets/jss/nextjs-material-kit-pro";
-import Colours from "../../assets/strings/colours";
-import {greenParallaxText} from "../../assets/jss/coreStyles";
+import {whiteColor} from "../../assets/jss/nextjs-material-kit-pro";
+import {greenHrThick, parallaxHeaderText} from "../../assets/jss/coreStyles";
 
 const styles = {
     container: {
@@ -14,7 +13,7 @@ const styles = {
         zIndex: "2"
     },
     title: {
-        ...greenParallaxText
+        ...parallaxHeaderText,
     },
     titleSubHeading: {
         textAlign: "center"
@@ -23,7 +22,7 @@ const styles = {
         display: "flex",
     },
     greenHr: {
-        borderTop: "7px solid " + Colours.green
+        ...greenHrThick,
     },
 }
 

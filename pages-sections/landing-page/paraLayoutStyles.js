@@ -20,8 +20,16 @@ const styles = {
         display: "inline-block"
     },
     arrow: {
-        marginTop: "auto",
-        marginBottom: "auto",
+        marginBottom: "-6px",
+    },
+    textDiv: {
+        marginLeft: "auto",
+        justify: "center",
+        marginRight: "auto"
+    },
+    divPadding: {
+        paddingLeft: "4vw",
+        paddingRight: "4vw",
     },
     image: {
         width: "100%",

@@ -16,32 +16,56 @@ export default function ParaLayout(props) {
 
     const {image, headerString, bodyStringArray, actionString, actionUrl, imageLeft} = props
 
+    const SlideBlock = () => {
+        return (
+            <>
+                {imageLeft === false ?
+                    <Grid item xs={12} sm={12} md={6}>
+                        <Slide left>
+                            <TextBlock />
+                        </Slide>
+                    </Grid>
+                    :
+                    <Grid item xs={12} sm={12} md={6}>
+                        <Slide right>
+                            <TextBlock />
+                        </Slide>
+                    </Grid>
+                }
+            </>
+        )
+    }
     const TextBlock  = () => {
         return (
-            <Grid item xs={12} sm={12} md={6}>
-                <Slide >
-                    <div style={{marginLeft: "auto", justify: "center",  marginRight: "auto"}}>
-                        <h2 className={classNames(classes.title, classes.bodyHeaderText)}>
-                            {headerString}
-                        </h2>
-                        {bodyStringArray.map(bodyString => {
-                            return (
-                                <h4 className={classes.bodyParaText} key={bodyString}>
-                                    <b>{bodyString}</b>
-                                </h4>
-                            )
-                        })}
-                        <div>
-                            <h5 className={classNames(classes.bodyActionText, classes.inlineBlock)}>
-                                {actionString}
-                            </h5>
-                            <Icon className={classNames(classes.inlineBlock, classes.arrow)}>
-                                <KeyboardArrowRightIcon />
-                            </Icon>
-                        </div>
-                    </div>
-                </Slide>
-            </Grid>
+            <div className={classNames(classes.textDiv)}>
+                <h2 className={classNames(classes.title, classes.bodyHeaderText)}>
+                    {headerString}
+                </h2>
+                {bodyStringArray.map(bodyString => {
+                    return (
+                        <h4 className={classes.bodyParaText} key={bodyString}>
+                            <b>{bodyString}</b>
+                        </h4>
+                    )
+                })}
+                <Grid
+                    container
+                    direction={"row"}
+                    justify={"flex-start"}
+                    alignItems={"center"}
+                >
+                    <Grid item>
+                        <h5 className={classNames(classes.bodyActionText, classes.inlineBlock)}>
+                            {actionString}
+                        </h5>
+                    </Grid>
+                    <Grid item>
+                        <Icon className={classes.arrow}>
+                            <KeyboardArrowRightIcon />
+                        </Icon>
+                    </Grid>
+                </Grid>
+            </div>
         )
     }
 
@@ -49,10 +73,7 @@ export default function ParaLayout(props) {
         return (
             <Grid item xs={12} sm={12} md={6}>
                 <div
-                    className={classNames({
-                        [classes.image]: true,
-                        [classes["darkColor"]]: true
-                    })}
+                    className={classNames(classes.image, classes.darkColor)}
                     style={{
                         backgroundImage: "url(" + image + ")",
                     }}
@@ -68,15 +89,16 @@ export default function ParaLayout(props) {
             direction="row"
             justify="center"
             alignItems="center"
+            className={classes.divPadding}
         >
             {imageLeft === true ?
                 <>
                     <ImageBlock />
-                    <TextBlock />
+                    <SlideBlock />
                 </>
                 :
                 <>
-                    <TextBlock />
+                    <SlideBlock />
                     <ImageBlock />
                 </>
             }

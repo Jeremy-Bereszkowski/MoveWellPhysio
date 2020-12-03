@@ -1,4 +1,4 @@
-import {comanyName, image1, image2, image3, image4} from "../global"
+import {companyName, image1, image2, image3, image4} from "../global"
 
 import Para1Image from "../../img/physio/clients/client_11.jpg";
 import Para2Image from "../../img/physio/clients/client.jpg"
@@ -7,7 +7,7 @@ const LandingData = {
     carousel: [
         [
             image1,
-            comanyName + " Physiotherapy",
+            companyName + " Physiotherapy",
             "Active, goal-focused physiotherapy",
             "Book Online",
         ],
@@ -32,7 +32,7 @@ const LandingData = {
     ],
     para1: {
         image: Para1Image,
-        header: "What it means to move well",
+        header: "What it means to " + companyName,
         body: [
             "You want to exercise throughout your life. Exercise is a modality for a healthy and happy life.",
             "Your treatment is improving your capacity to do the exercise and movement that's important to you.",
@@ -43,14 +43,14 @@ const LandingData = {
     },
     para2: {
         image: Para2Image,
-        header: "About " + comanyName,
+        header: "About " + companyName,
         body: [
             "We're experts in physiotherapy and exercise.",
             "We take care to understand you first, designing your recovery around your needs and fitness goals.",
-            comanyName + " uses an active style of treatment that prioritises pain relief through improved function.",
+            companyName + " uses an active style of treatment that prioritises pain relief through improved function.",
             "Our team believes in the value of helping you develop a lifestyle that prevents pain.",
         ],
-        action: "More About " + comanyName,
+        action: "More About " + companyName,
     }
 }
 

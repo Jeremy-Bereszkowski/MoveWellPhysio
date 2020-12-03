@@ -22,7 +22,7 @@ const HeaderLinkData = [
             },
             {
                 core: {
-                    key: "PHYSIO-LEAD REHABILITATION CLASSES",
+                    key: "PHYSIO-LED REHABILITATION CLASSES",
                     link: URL.PHYSIO_LEAD_REHAB,
                 },
             },

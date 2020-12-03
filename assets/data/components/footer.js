@@ -1,8 +1,8 @@
-import {address1, address2} from "../global";
+import {address1, address2, companyName} from "../global";
 
 const FooterData = {
     core: {
-        header: "MoveWell Physiotherapy",
+        header: companyName + " Physiotherapy",
         address1: address1,
         address2: address2,
     },

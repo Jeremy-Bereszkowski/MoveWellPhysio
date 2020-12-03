@@ -1,5 +1,7 @@
 /* Global variables */
-const comanyName = "MoveWell"
+const companyName = "MoveWell"
+
+const headerString = companyName + " Physiotherapy"
 
 const address1 = "181 Bay Street"
 const address2 = "Brighton, VIC, 3188"
@@ -24,7 +26,9 @@ import FocusedGroupBackground from "../img/physio/sign.jpg";
 import ProfessionalMentorBackground from "../img/physio/balls_weights.jpg";
 
 export {
-    comanyName,
+    headerString,
+
+    companyName,
     address1,
     address2,
     email,

@@ -16,6 +16,7 @@ import URL from "../../assets/strings/urls";
 import Logo from "../../assets/img/logos/1x/Asset 1mdpi.png"
 
 import styles from "./headerStyles";
+import LandingHeaderLinks from "./HeaderLinks";
 const useStyles = makeStyles(styles);
 
 export default function Header(props) {
@@ -57,7 +58,7 @@ export default function Header(props) {
       setLogoClass({height: "auto", width: "18vw", minWidth: "150px"})
     }
   };
-  const { color, links, brand, fixed, absolute } = props;
+  const { color, fixed, absolute } = props;
   const appBarClasses = classNames({
     [classes.appBar]: true,
     [classes[color]]: color,
@@ -73,7 +74,7 @@ export default function Header(props) {
           </Link>
         </Button>
         <Hidden smDown implementation="css" className={classes.hidden}>
-          <div className={classes.collapse}>{links}</div>
+          <div className={classes.collapse}>{<LandingHeaderLinks />}</div>
         </Hidden>
         <Hidden mdUp>
           <IconButton
@@ -103,7 +104,7 @@ export default function Header(props) {
           >
             <Close />
           </IconButton>
-          <div className={classes.appResponsive}>{links}</div>
+          <div className={classes.appResponsive}>{<LandingHeaderLinks />}</div>
         </Drawer>
       </Hidden>
     </AppBar>
@@ -126,8 +127,6 @@ Header.propTypes = {
     "rose",
     "dark"
   ]),
-  links: PropTypes.node,
-  brand: PropTypes.string,
   fixed: PropTypes.bool,
   absolute: PropTypes.bool,
   // this will cause the sidebar to change the color from

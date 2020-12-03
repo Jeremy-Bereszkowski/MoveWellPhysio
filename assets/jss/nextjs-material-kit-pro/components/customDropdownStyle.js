@@ -34,8 +34,6 @@ const customDropdownStyle = theme => ({
         willChange: "none !important",
         "& > div": {
           boxShadow: "none !important",
-          marginLeft: "1.5rem",
-          marginRight: "1.5rem",
           transition: "none !important",
           marginTop: "0px !important",
           marginBottom: "5px !important",
@@ -51,14 +49,14 @@ const customDropdownStyle = theme => ({
     color: "transparent",
   },
   innerManager: {
-    display: "block",
+    /*display: "block",*/
     "& > div > button,& > div > a": {
       margin: "0px !important",
       color: "inherit !important",
       padding: "10px 20px !important",
       "& > span:first-child": {
         width: "100%",
-        justifyContent: "flex-start"
+        justifyContent: "center"
       }
     }
   },
@@ -77,13 +75,12 @@ const customDropdownStyle = theme => ({
     top: "100%",
     zIndex: "1000",
     minWidth: "160px",
-    padding: "5px 0",
-    margin: "2px 0 0",
+    padding: " 0",
+    margin: "0 0",
     fontSize: "14px",
     textAlign: "left",
     listStyle: "none",
     backgroundColor: Colours.dark,
-    backgroundClip: "padding-box"
   },
   menuList: {
     padding: "0"
@@ -121,11 +118,11 @@ const customDropdownStyle = theme => ({
   darkHover: {
     "&:hover": {
       boxShadow:
-        "0 4px 20px 0px rgba(" +
-        hexToRgb(blackColor) +
-        ", 0.14), 0 7px 10px -5px rgba(" +
-        hexToRgb(grayColor[9]) +
-        ", 0.4)",
+          "0 4px 20px 0px rgba(" +
+          hexToRgb(blackColor) +
+          ", 0.14), 0 7px 10px -5px rgba(" +
+          hexToRgb(grayColor[9]) +
+          ", 0.4)",
       backgroundColor: grayColor[9],
       color: whiteColor
     }
@@ -223,14 +220,13 @@ const customDropdownStyle = theme => ({
   noLiPadding: {
     padding: "0"
   },
-    button: {
+  button: {
     backgroundColor: "transparent",
     minHeight: "auto",
     minWidth: "auto",
     color: whiteColor,
     border: "none",
     borderRadius: "3px",
-    position: "relative",
     padding: "12px 30px",
     margin: ".3125rem 1px",
     fontSize: "12px",
@@ -278,7 +274,9 @@ const customDropdownStyle = theme => ({
       verticalAlign: "middle"
     },
   },
-
+  underline: {
+    borderBottom: "5px solid " + Colours.green,
+  }
 });
 
 export default customDropdownStyle;

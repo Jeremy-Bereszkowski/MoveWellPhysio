@@ -20,7 +20,6 @@ const styles = theme => ({
                     content: '""',
                     display: "block",
                     height: "1px",
-                    marginLeft: "15px",
                     backgroundColor: grayColor[14]
                 }
             }

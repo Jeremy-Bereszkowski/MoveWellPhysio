@@ -4,7 +4,8 @@ const styles = {
     bodyText: {
         ...smallFont,
         fontWeight: "200",
-        textAlign: "left"
+        textAlign: "left",
+        lineHeight: "inherit"
     },
     leftMargin: {
         paddingLeft: "2vw",

@@ -21,13 +21,13 @@ export default function ParaLayout(props) {
             <>
                 {imageLeft === false ?
                     <Grid item xs={12} sm={12} md={6}>
-                        <Slide left>
+                        <Slide left cascade>
                             <TextBlock />
                         </Slide>
                     </Grid>
                     :
                     <Grid item xs={12} sm={12} md={6}>
-                        <Slide right>
+                        <Slide left cascade>
                             <TextBlock />
                         </Slide>
                     </Grid>

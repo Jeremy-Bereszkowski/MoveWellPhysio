@@ -8,8 +8,10 @@ import CircularProgress from "@material-ui/core/CircularProgress";
 import {
   infoColor,
   whiteColor,
-  title
+  title, hexToRgb, blackColor
 } from "assets/jss/nextjs-material-kit-pro.js";
+
+const background = "/physio/layout.jpg"
 
 const useStyles = makeStyles({
   progress: {
@@ -18,13 +20,16 @@ const useStyles = makeStyles({
     height: "6rem !important"
   },
   wrapperDiv: {
-    margin: "100px auto",
-    padding: "0px",
-    maxWidth: "360px",
+    backgroundImage: "url("+background+")",
+    margin: "0",
+    padding: "0",
     textAlign: "center",
-    position: "relative",
-    zIndex: "9999",
-    top: "0"
+    position: "absolute",
+    zIndex: "0",
+    top: "0",
+    height: "100%",
+    width: "100%",
+    backgroundSize: "cover"
   },
   iconWrapper: {
     display: "block"
@@ -32,13 +37,30 @@ const useStyles = makeStyles({
   title: {
     ...title,
     color: whiteColor
-  }
+  },
+  filter: {},
+  imageTint: {
+    backgroundSize: "contain",
+    "&:before": {
+      background: "rgba(" + hexToRgb(blackColor) + ", 0.5)"
+    },
+    "&:after,&:before": {
+      position: "absolute",
+      zIndex: "1",
+      width: "100%",
+      height: "100%",
+      display: "block",
+      left: "0",
+      top: "0",
+      content: "''"
+    }
+  },
 });
 
 export default function PageChange(props) {
   const classes = useStyles();
   return (
-    <div>
+    <div className={classes.imageTint}>
       <div className={classes.wrapperDiv}>
         <div className={classes.iconWrapper}>
           <CircularProgress className={classes.progress} />

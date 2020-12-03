@@ -1,10 +1,8 @@
 import React from "react";
-// nodejs library that concatenates classes
 import classNames from "classnames";
-// nodejs library to set properties for components
 import PropTypes from "prop-types";
+import {useRouter} from "next/router";
 
-// @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
 import MenuItem from "@material-ui/core/MenuItem";
 import MenuList from "@material-ui/core/MenuList";
@@ -13,16 +11,16 @@ import Paper from "@material-ui/core/Paper";
 import Grow from "@material-ui/core/Grow";
 import Divider from "@material-ui/core/Divider";
 import Popper from "@material-ui/core/Popper";
-// core components
-/*import Button from "components/CustomButtons/Button.js";*/
-
-import styles from "assets/jss/nextjs-material-kit-pro/components/customDropdownStyle.js";
 import Button from "@material-ui/core/Button";
 
+import styles from "assets/jss/nextjs-material-kit-pro/components/customDropdownStyle.js";
+import URL from "../../assets/strings/urls";
 const useStyles = makeStyles(styles);
 
 export default function CustomDropdown(props) {
   const [anchorEl, setAnchorEl] = React.useState(null);
+
+  const router = useRouter()
 
   const handleClick = event => {
     if (anchorEl && anchorEl.contains(event.target)) {
@@ -71,6 +69,22 @@ export default function CustomDropdown(props) {
     [classes.noLiPadding]: noLiPadding,
     [classes.dropdownItemRTL]: rtlActive
   });
+
+
+  var buttonStyles
+
+  switch (router.pathname) {
+    case URL.PHYSIOTHERAPY:
+    case URL.PHYSIO_LEAD_REHAB:
+    case URL.FOCUSED_GROUP_EXERCISE:
+    case URL.PROFESSIONAL_MENTORING:
+      buttonStyles = classNames(classes.button, classes.underline)
+      console.log(router.pathname, URL.PHYSIO_LEAD_REHAB)
+    default:
+      buttonStyles = classes.button
+      console.log(router.pathname)
+  }
+
   const dropDownMenu = (
       <MenuList role="menu" className={classes.menuList}>
         {dropdownHeader !== undefined ? (
@@ -120,8 +134,9 @@ export default function CustomDropdown(props) {
       <div className={innerDropDown ? classes.innerManager : classes.manager}>
         <div className={buttonText !== undefined ? "" : classes.target}>
           <Button
-              className={classes.button}
+              className={buttonStyles}
               onClick={handleClick}
+              fullWidth
           >
             {buttonIcon !== undefined ? (
                 <props.buttonIcon className={classes.buttonIcon} />

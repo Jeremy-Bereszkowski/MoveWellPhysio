@@ -122,6 +122,7 @@ export default function CustomDropdown(props) {
           <Button
               className={classes.button}
               onClick={handleClick}
+              fullWidth
           >
             {buttonIcon !== undefined ? (
                 <props.buttonIcon className={classes.buttonIcon} />

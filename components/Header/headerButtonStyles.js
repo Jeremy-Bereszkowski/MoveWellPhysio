@@ -7,7 +7,6 @@ const styles = theme => ({
         color: "inherit",
         position: "relative",
         display: "block",
-        width: "auto",
         margin: "0",
         padding: "0",
         [theme.breakpoints.down("sm")]: {
@@ -18,7 +17,7 @@ const styles = theme => ({
             width: "100%",
             "&:not(:last-child)": {
                 "&:after": {
-                    width: "calc(100% - 30px)",
+                    /*width: "calc(100% - 30px)",*/
                     content: '""',
                     display: "block",
                     height: "1px",
@@ -26,13 +25,13 @@ const styles = theme => ({
                     backgroundColor: grayColor[14]
                 }
             }
-        }
+        },
     },
     button: {
         color: whiteColor,
         backgroundColor: "transparent",
         minHeight: "auto",
-        minWidth: "auto",
+        width: "fill",
         border: "none",
         borderRadius: "3px",
         position: "relative",
@@ -64,6 +63,9 @@ const styles = theme => ({
                 ", 0.2)"
         },
     },
+    underline: {
+        borderBottom: "5px solid " + Colours.green,
+    }
 })
 
 export default styles

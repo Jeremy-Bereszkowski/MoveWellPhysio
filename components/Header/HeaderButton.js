@@ -1,6 +1,8 @@
 import React from "react";
 import Link from "next/link";
+import {useRouter} from "next/router";
 import PropTypes from "prop-types"
+import classNames from "classnames";
 
 import {makeStyles} from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
@@ -14,10 +16,18 @@ export default function HeaderButton(props) {
 
     const {element, onClick} = props
 
+    const router = useRouter()
+
+    const buttonStyles = element.core.link === router.pathname ?
+        classNames(classes.button, classes.underline)
+        :
+        classes.button
+
+
     return (
         <ListItem className={classes.listItem}>
             <Link href={element.core.link} as={element.core.as}>
-                <Button className={classes.button} onClick={onClick}>
+                <Button className={buttonStyles} onClick={onClick} fullWidth>
                     {element.core.key}
                 </Button>
             </Link>

@@ -1,5 +1,4 @@
 import {blackColor, grayColor, hexToRgb, title, whiteColor} from "../../assets/jss/nextjs-material-kit-pro";
-import image1 from "../../assets/img/physio/layout_1.jpg";
 import Colours from "../../assets/strings/colours";
 import {greenHrThick, parallaxHeaderText} from "../../assets/jss/coreStyles";
 
@@ -73,7 +72,6 @@ const landingPageCarouselStyle = {
         },
     },
     imageStyle: {
-        backgroundImage: "url(" + image1 + ")",
         backgroundSize: "cover",
         backgroundPosition: "top center",
         height: "100vh",

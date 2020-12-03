@@ -23,7 +23,6 @@ export default function HeaderButton(props) {
         :
         classes.button
 
-
     return (
         <ListItem className={classes.listItem}>
             <Link href={element.core.link} as={element.core.as}>

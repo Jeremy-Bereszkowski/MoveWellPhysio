@@ -1,6 +1,6 @@
 import {AboutBackground, companyName} from "../global"
-import YashaHeadshot from "../../img/physio/yasha_headshot.jpg";
-import ChrisHeadshot from "../../img/physio/chris headshot.jpg";
+const YashaHeadshot = "/physio/yasha_headshot.jpg";
+const ChrisHeadshot = "/physio/chris headshot.jpg";
 
 const AboutData = {
     core: {

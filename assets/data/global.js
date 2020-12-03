@@ -9,21 +9,24 @@ const address2 = "Brighton, VIC, 3188"
 const email = "hello@movewellmelbourne.com"
 
 /* Landing Carousel images */
-import image1 from "../img/physio/layout_1.jpg";
-import image2 from "../img/physio/reformer.jpg";
-import image3 from "../img/physio/ring_reformer.jpg";
-import image4 from "../img/physio/redcord.jpg";
+const image1 = "/physio/layout_1.jpg";
+const image2 = "/physio/reformer.jpg";
+const image3 = "/physio/ring_reformer.jpg";
+const image4 = "/physio/redcord.jpg";
 
 /* Main Page Backgrounds */
-import AboutBackground from "../img/physio/sign.jpg";
-import BookBackground from "../img/physio/sign.jpg";
-import ContactBackground from "../img/physio/layout_2.jpg";
+const AboutBackground = "/physio/sign.jpg";
+const BookBackground = "/physio/sign.jpg";
+const ContactBackground = "/physio/layout_2.jpg";
 
 /* Services Page Backgrounds */
-import PhysiotherapyBackground from "../img/physio/outside.jpg";
-import PhysioLedRehabBackground from "../img/physio/sign.jpg";
-import FocusedGroupBackground from "../img/physio/sign.jpg";
-import ProfessionalMentorBackground from "../img/physio/balls_weights.jpg";
+const PhysiotherapyBackground = "/physio/outside.jpg";
+const PhysioLedRehabBackground = "/physio/sign.jpg";
+const FocusedGroupBackground = "/physio/sign.jpg";
+const ProfessionalMentorBackground = "/physio/balls_weights.jpg";
+
+/* 404 Background */
+const m404Background = "/physio/bikes_weights.jpg";
 
 export {
     headerString,
@@ -47,4 +50,5 @@ export {
     FocusedGroupBackground,
     ProfessionalMentorBackground,
 
+    m404Background,
 }

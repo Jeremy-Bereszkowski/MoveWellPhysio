@@ -5,7 +5,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
 
-import image from "assets/img/physio/bikes_weights.jpg";
+import {m404Background} from "../assets/data/global";
 
 import errorPageStyle from "assets/jss/nextjs-material-kit-pro/pages/errorPageStyles.js";
 const useStyles = makeStyles(errorPageStyle);
@@ -21,7 +21,7 @@ export default function ErrorPage({ ...rest }) {
             <div
                 className={classes.pageHeader}
                 style={{
-                    backgroundImage: "url(" + image + ")",
+                    backgroundImage: "url(" + m404Background + ")",
                     backgroundSize: "cover",
                     backgroundPosition: "top center"
                 }}

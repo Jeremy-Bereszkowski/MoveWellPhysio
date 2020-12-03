@@ -223,7 +223,7 @@ const customDropdownStyle = theme => ({
   noLiPadding: {
     padding: "0"
   },
-  button: {
+    button: {
     backgroundColor: "transparent",
     minHeight: "auto",
     minWidth: "auto",

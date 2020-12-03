@@ -29,6 +29,7 @@ export default function LandingPage(props) {
                 >
                     <Grid item xs={12} sm={12} md={12} lg={12}>
                         <ParaLayout image={LandingData.para1.image} headerString={LandingData.para1.header} bodyStringArray={LandingData.para1.body} actionString={LandingData.para1.action} actionUrl={URL.PHYSIOTHERAPY} imageLeft={false}/>
+                        Test
                     </Grid>
                     <Grid item xs={12} sm={12} md={12} lg={12}>
                         <hr size={30} className={classes.hr}/>

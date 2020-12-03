@@ -38,7 +38,7 @@ export default function ParaLayout(props) {
     const TextBlock  = () => {
         return (
             <div className={classNames(classes.textDiv)}>
-                <h2 className={classNames(classes.title, classes.bodyHeaderText)}>
+                <h2 className={classes.bodyHeaderText}>
                     {headerString}
                 </h2>
                 {bodyStringArray.map(bodyString => {

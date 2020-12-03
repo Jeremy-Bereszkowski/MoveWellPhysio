@@ -7,26 +7,30 @@ import {Grid} from "@material-ui/core";
 import styles from "./greenHeaderBlackBodyStyles";
 const useStyles = makeStyles(styles);
 
-export default function GreenGeaderBlackBody(props) {
+export default function GreenHeaderBlackBody(props) {
     const classes = useStyles();
 
     const {header, body} = props
 
     return (
         <>
-            <Grid
-                container
-                spacing={4}
-                direction={"row"}
-                justify={"center"}
-                alignContent={"center"}
-            >
-                <Grid item>
-                    <h2 className={classes.greenHeaderText}>
-                        {header}
-                    </h2>
+            {
+                !header ? null :
+                <Grid
+                    container
+                    spacing={4}
+                    direction={"row"}
+                    justify={"center"}
+                    alignContent={"center"}
+                >
+
+                    <Grid item>
+                        <h2 className={classes.greenHeaderText}>
+                            {header}
+                        </h2>
+                    </Grid>
                 </Grid>
-            </Grid>
+            }
             <Grid
                 container
                 spacing={4}
@@ -50,7 +54,7 @@ export default function GreenGeaderBlackBody(props) {
     )
 }
 
-GreenGeaderBlackBody.propTypes = {
+GreenHeaderBlackBody.propTypes = {
     header: PropTypes.string,
     body: PropTypes.array,
 }

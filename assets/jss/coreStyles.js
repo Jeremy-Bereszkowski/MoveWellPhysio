@@ -1,9 +1,12 @@
 import Colours from "../strings/colours";
 import {blackColor, hexToRgb, title, whiteColor} from "./nextjs-material-kit-pro";
 
+const extraSmallFont = {
+    fontSize: "calc(14px + (16 - 14) * ((100vw - 300px) / (1600 - 300)))"
+}
+
 const smallFont = {
     fontSize: "calc(16px + (20 - 16) * ((100vw - 300px) / (1600 - 300)))"
-
 }
 
 const mediumFont = {
@@ -88,6 +91,7 @@ const greenHrThick = {
 }
 
 export {
+    extraSmallFont,
     smallFont,
     mediumFont,
     largeFont,

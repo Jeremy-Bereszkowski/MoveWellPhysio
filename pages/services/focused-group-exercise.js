@@ -11,6 +11,7 @@ import TopText from "../../pages-sections/services/focused-group-page/TopText";
 import BottomText from "../../pages-sections/services/focused-group-page/BottomText";
 
 import styles from "../../assets/jss/pages/services/focusedGroupStyles";
+import {Grid} from "@material-ui/core";
 const useStyles = makeStyles(styles);
 
 export default function FocusedGroupExercise(props) {
@@ -19,8 +20,20 @@ export default function FocusedGroupExercise(props) {
     return (
         <ParallaxLayout parallaxImage={FocusedGroupData.core.parallaxImage} parallaxHeader={FocusedGroupData.core.parallaxHeader} parallaxBody={FocusedGroupData.core.parallaxBody}>
             <MainContainerLayout maxWidth={"lg"}>
-                <TopText/>
-                <BottomText />
+                <Grid
+                    container
+                    spacing={2}
+                    direction={"column"}
+                    alignContent={"center"}
+                    justify={"center"}
+                >
+                    <Grid item>
+                        <TopText/>
+                    </Grid>
+                    <Grid item>
+                        <BottomText />
+                    </Grid>
+                </Grid>
             </MainContainerLayout>
         </ParallaxLayout>
     )

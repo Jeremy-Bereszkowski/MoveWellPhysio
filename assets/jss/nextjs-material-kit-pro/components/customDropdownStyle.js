@@ -274,7 +274,9 @@ const customDropdownStyle = theme => ({
       verticalAlign: "middle"
     },
   },
-
+  underline: {
+    borderBottom: "5px solid " + Colours.green,
+  }
 });
 
 export default customDropdownStyle;

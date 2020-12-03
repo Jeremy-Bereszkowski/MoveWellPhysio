@@ -16,16 +16,17 @@ export default function Day(props) {
     return (
         <Grid
             container
+            spacing={2}
             direction={"row"}
             justify={"space-between"}
-            alignContent={"flex-start"}
+            alignContent={"center"}
         >
-            <Grid item sm={6}>
-                <h4 className={className(classes.bodyText, classes.leftMargin)}>
+            <Grid item>
+                <h4 className={className(classes.bodyText)}>
                     {dayText}:
                 </h4>
             </Grid>
-            <Grid item sm={6}>
+            <Grid item>
                 <h4 className={classes.bodyText}>
                     {hoursText}
                 </h4>

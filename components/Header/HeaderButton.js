@@ -12,12 +12,12 @@ const useStyles = makeStyles(styles);
 export default function HeaderButton(props) {
     const classes = useStyles();
 
-    const {element} = props
+    const {element, onClick} = props
 
     return (
         <ListItem className={classes.listItem}>
             <Link href={element.core.link} as={element.core.as}>
-                <Button className={classes.button}>
+                <Button className={classes.button} onClick={onClick}>
                     {element.core.key}
                 </Button>
             </Link>
@@ -27,4 +27,5 @@ export default function HeaderButton(props) {
 
 HeaderButton.propTypes = {
     element: PropTypes.object,
+    onClick: PropTypes.func,
 }

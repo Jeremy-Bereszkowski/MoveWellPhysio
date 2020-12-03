@@ -16,7 +16,7 @@ import URL from "../../assets/strings/urls";
 import Logo from "../../assets/img/logos/1x/Asset 1mdpi.png"
 
 import styles from "./headerStyles";
-import LandingHeaderLinks from "./HeaderLinks";
+import HeaderLinks from "./HeaderLinks";
 const useStyles = makeStyles(styles);
 
 export default function Header(props) {
@@ -74,7 +74,7 @@ export default function Header(props) {
           </Link>
         </Button>
         <Hidden smDown implementation="css" className={classes.hidden}>
-          <div className={classes.collapse}>{<LandingHeaderLinks />}</div>
+          <div className={classes.collapse}>{<HeaderLinks onClick={handleDrawerToggle}/>}</div>
         </Hidden>
         <Hidden mdUp>
           <IconButton
@@ -104,7 +104,7 @@ export default function Header(props) {
           >
             <Close />
           </IconButton>
-          <div className={classes.appResponsive}>{<LandingHeaderLinks />}</div>
+          <div className={classes.appResponsive}>{<HeaderLinks onClick={handleDrawerToggle}/>}</div>
         </Drawer>
       </Hidden>
     </AppBar>

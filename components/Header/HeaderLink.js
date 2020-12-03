@@ -14,15 +14,15 @@ const useStyles = makeStyles(styles);
 export default function HeaderLink(props) {
     const classes = useStyles();
 
-    const {element} = props
+    const {element, onClick} = props
 
     if (element.sub === undefined) {
         return (
-            <HeaderButton element={element} />
+            <HeaderButton element={element} onClick={onClick}/>
         )
     } else {
         const subLinks = element.sub.map((ele) => {
-            return <HeaderButton element={ele} />
+            return <HeaderButton element={ele} onClick={onClick }/>
         })
 
         return (
@@ -45,4 +45,5 @@ export default function HeaderLink(props) {
 
 HeaderLink.propTypes = {
     element: PropTypes.object,
+    onClick: PropTypes.func,
 }

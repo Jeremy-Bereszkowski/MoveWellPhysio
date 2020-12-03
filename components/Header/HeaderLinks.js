@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types"
 
 import { makeStyles } from "@material-ui/core/styles";
 import List from "@material-ui/core/List";
@@ -9,6 +10,8 @@ import HeaderLinkData from "../../assets/data/components/header";
 const useStyles = makeStyles(styles);
 
 export default function HeaderLinks(props) {
+  const {onClick} = props
+
   const easeInOutQuad = (t, b, c, d) => {
     t /= d / 2;
     if (t < 1) return (c / 2) * t * t + b;
@@ -54,10 +57,14 @@ export default function HeaderLinks(props) {
         {
           HeaderLinkData.map(element => {
             return (
-                <HeaderLink element={element} />
+                <HeaderLink element={element} onClick={onClick}/>
             )
           })
         }
       </List>
   );
+}
+
+HeaderLinks.propTypes = {
+  onClick: PropTypes.func,
 }

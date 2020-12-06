@@ -39,7 +39,7 @@ export default function Day(props) {
                     </Grid>
                     <Grid item>
                         <h4 className={classes.bodyText}>
-                            -
+                            {" - "}
                         </h4>
                     </Grid>
                     <Grid item>

@@ -28,7 +28,7 @@ export default function LandingPage(props) {
                     justify={"center"}
                 >
                     <Grid item xs={12} sm={12} md={12} lg={12}>
-                        <ParaLayout image={LandingData.para1.image} headerString={LandingData.para1.header} bodyStringArray={LandingData.para1.body} actionString={LandingData.para1.action} actionUrl={URL.PHYSIOTHERAPY} imageLeft={false}/>
+                        <ParaLayout actionUrl={"physio"} image={LandingData.para1.image} headerString={LandingData.para1.header} bodyStringArray={LandingData.para1.body} actionString={LandingData.para1.action} actionUrl={URL.PHYSIOTHERAPY} imageLeft={false}/>
                     </Grid>
                     <Grid item xs={12} sm={12} md={12} lg={12}>
                         <hr size={30} className={classes.hr}/>
@@ -40,7 +40,7 @@ export default function LandingPage(props) {
                         <hr size={30} className={classes.hr}/>
                     </Grid>
                     <Grid item xs={12} sm={12} md={12} lg={12}>
-                        <ParaLayout image={LandingData.para2.image} headerString={LandingData.para2.header} bodyStringArray={LandingData.para2.body} actionString={LandingData.para2.action} actionUrl={URL.ABOUT} imageLeft={true}/>
+                        <ParaLayout actionUrl={"about"} image={LandingData.para2.image} headerString={LandingData.para2.header} bodyStringArray={LandingData.para2.body} actionString={LandingData.para2.action} actionUrl={URL.ABOUT} imageLeft={true}/>
                     </Grid>
                 </Grid>
             </MainContainerLayout>

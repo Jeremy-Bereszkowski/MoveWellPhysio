@@ -9,12 +9,15 @@ import Icon from "@material-ui/core/Icon";
 import KeyboardArrowRightIcon from "@material-ui/icons/KeyboardArrowRight";
 
 import styles from "./paraLayoutStyles";
+import Link from "next/link";
 const useStyles = makeStyles(styles);
 
 export default function ParaLayout(props) {
     const classes = useStyles();
 
     const {image, headerString, bodyStringArray, actionString, actionUrl, imageLeft} = props
+
+    const href = actionUrl === "about" ? "/about" : "services/physiotherapy"
 
     const SlideBlock = () => {
         return (
@@ -55,9 +58,11 @@ export default function ParaLayout(props) {
                     alignItems={"center"}
                 >
                     <Grid item>
-                        <h5 className={classNames(classes.bodyActionText, classes.inlineBlock)}>
-                            {actionString}
-                        </h5>
+                        <Link href={href}>
+                            <h5 className={classNames(classes.bodyActionText, classes.inlineBlock)}>
+                                {actionString}
+                            </h5>
+                        </Link>
                     </Grid>
                     <Grid item>
                         <Icon className={classes.arrow}>

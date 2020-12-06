@@ -12,6 +12,7 @@ import ParaLayout from "../pages-sections/landing-page/ParaLayout";
 import LandingData from "../assets/data/pages/landing-data";
 
 import landingStyle from "assets/jss/pages/landingPage";
+import URL from "../assets/strings/urls";
 const useStyles = makeStyles(landingStyle);
 
 export default function LandingPage(props) {
@@ -28,7 +29,7 @@ export default function LandingPage(props) {
                     justify={"center"}
                 >
                     <Grid item xs={12} sm={12} md={12} lg={12}>
-                        <ParaLayout actionUrl={"physio"} image={LandingData.para1.image} headerString={LandingData.para1.header} bodyStringArray={LandingData.para1.body} actionString={LandingData.para1.action} actionUrl={URL.PHYSIOTHERAPY} imageLeft={false}/>
+                        <ParaLayout actionUrl={URL.PHYSIOTHERAPY} image={LandingData.para1.image} headerString={LandingData.para1.header} bodyStringArray={LandingData.para1.body} actionString={LandingData.para1.action} actionUrl={URL.PHYSIOTHERAPY} imageLeft={false}/>
                     </Grid>
                     <Grid item xs={12} sm={12} md={12} lg={12}>
                         <hr size={30} className={classes.hr}/>
@@ -40,7 +41,7 @@ export default function LandingPage(props) {
                         <hr size={30} className={classes.hr}/>
                     </Grid>
                     <Grid item xs={12} sm={12} md={12} lg={12}>
-                        <ParaLayout actionUrl={"about"} image={LandingData.para2.image} headerString={LandingData.para2.header} bodyStringArray={LandingData.para2.body} actionString={LandingData.para2.action} actionUrl={URL.ABOUT} imageLeft={true}/>
+                        <ParaLayout actionUrl={URL.ABOUT} image={LandingData.para2.image} headerString={LandingData.para2.header} bodyStringArray={LandingData.para2.body} actionString={LandingData.para2.action} actionUrl={URL.ABOUT} imageLeft={true}/>
                     </Grid>
                 </Grid>
             </MainContainerLayout>

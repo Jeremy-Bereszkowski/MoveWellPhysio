@@ -11,7 +11,7 @@ const useStyles = makeStyles(styles);
 export default function Day(props) {
     const classes = useStyles();
 
-    const {dayText, hoursText} = props
+    const {dayText, openTime, closeTime} = props
 
     return (
         <Grid
@@ -19,7 +19,7 @@ export default function Day(props) {
             spacing={2}
             direction={"row"}
             justify={"space-between"}
-            alignContent={"center"}
+            alignContent={"stretch"}
         >
             <Grid item>
                 <h4 className={className(classes.bodyText)}>
@@ -27,9 +27,29 @@ export default function Day(props) {
                 </h4>
             </Grid>
             <Grid item>
-                <h4 className={classes.bodyText}>
-                    {hoursText}
-                </h4>
+                <Grid
+                    container
+                    spacing={2}
+                    direction={"row"}
+                    justify={"space-between"}
+                    alignContent={"stretch"}
+                >
+                    <Grid item>
+                        <h4 className={classes.bodyText}>
+                            {openTime}
+                        </h4>
+                    </Grid>
+                    <Grid item>
+                        <h4 className={classes.bodyText}>
+                            -
+                        </h4>
+                    </Grid>
+                    <Grid item>
+                        <h4 className={classes.bodyText}>
+                            {closeTime}
+                        </h4>
+                    </Grid>
+                </Grid>
             </Grid>
         </Grid>
     )
@@ -37,5 +57,6 @@ export default function Day(props) {
 
 Day.propTypes = {
     dayText: PropTypes.string,
-    hoursText: PropTypes.string,
+    openTime: PropTypes.string,
+    closeTime: PropTypes.string,
 }

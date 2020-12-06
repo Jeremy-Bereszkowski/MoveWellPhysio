@@ -29,10 +29,9 @@ export default function Day(props) {
             <Grid item>
                 <Grid
                     container
-                    spacing={2}
                     direction={"row"}
                     justify={"flex-end"}
-                    alignContent={"stretch"}
+                    alignContent={"center"}
                 >
                     <Grid item>
                         <h4 className={classes.bodyText}>

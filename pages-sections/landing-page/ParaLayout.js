@@ -60,15 +60,21 @@ export default function ParaLayout(props) {
                 >
                     <Grid item>
                         <Link href={actionUrl}>
-                            <h5 className={classNames(classes.bodyActionText, classes.inlineBlock)}>
-                                {actionString}
-                            </h5>
+                            <a>
+                                <h5 className={classNames(classes.bodyActionText, classes.inlineBlock)}>
+                                    {actionString}
+                                </h5>
+                            </a>
                         </Link>
                     </Grid>
                     <Grid item>
-                        <Icon className={classes.arrow}>
-                            <KeyboardArrowRightIcon />
-                        </Icon>
+                        <Link href={actionUrl}>
+                            <a>
+                                <Icon className={classes.arrow}>
+                                    <KeyboardArrowRightIcon />
+                                </Icon>
+                            </a>
+                        </Link>
                     </Grid>
                 </Grid>
             </div>

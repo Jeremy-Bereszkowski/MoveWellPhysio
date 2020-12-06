@@ -8,6 +8,7 @@ import Button from "@material-ui/core/Button";
 import LandingData from "../../assets/data/pages/landing-data";
 
 import carouselStyle from "./landingPageCarouselStyle";
+import classNames from "classnames";
 const useStyles = makeStyles(carouselStyle);
 
 export default function LandingPageCarousel(props) {
@@ -19,6 +20,25 @@ export default function LandingPageCarousel(props) {
         slidesToShow: 1,
         slidesToScroll: 1,
         autoplay: true
+    };
+
+    let windowScrollTop = 0;
+    const [transform, setTransform] = React.useState(
+        "translate3d(0," + windowScrollTop + "px,0)"
+    );
+    React.useEffect(() => {
+        if (window.innerWidth >= 768) {
+            window.addEventListener("scroll", resetTransform);
+        }
+        return function cleanup() {
+            if (window.innerWidth >= 768) {
+                window.removeEventListener("scroll", resetTransform);
+            }
+        };
+    });
+    const resetTransform = () => {
+        var windowScrollTop = window.pageYOffset / 3;
+        setTransform("translate3d(0," + windowScrollTop + "px,0)");
     };
 
     function Slide(image, header, body, buttonText) {
@@ -62,12 +82,14 @@ export default function LandingPageCarousel(props) {
     }
 
     return (
-        <Carousel {...settings}>
-            {LandingData.carousel.map(elements => {
-                return(
-                    Slide(elements[0], elements[1], elements[2], elements[3])
-                )
-            })}
-        </Carousel>
+        <div style={{transform: transform}}>
+            <Carousel {...settings}>
+                {LandingData.carousel.map(elements => {
+                    return(
+                        Slide(elements[0], elements[1], elements[2], elements[3])
+                    )
+                })}
+            </Carousel>
+        </div>
     )
 }

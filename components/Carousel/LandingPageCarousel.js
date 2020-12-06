@@ -24,7 +24,7 @@ export default function LandingPageCarousel(props) {
     function Slide(image, header, body, buttonText) {
         return (
             <div className={classes.imageTint} key={header}>
-                <img src={image} alt={header + " Slide"} className={classes.imageStyle}/>
+                <div style={{backgroundImage: "url(" + image + ")"}} className={classes.imageStyle}/>
                 <Grid
                     container
                     direction={"column"}

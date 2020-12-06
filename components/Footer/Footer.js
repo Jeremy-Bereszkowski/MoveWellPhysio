@@ -24,6 +24,7 @@ export default function Footer() {
         <footer className={footerClasses}>
             <Grid
                 container
+                spacing={3}
                 direction={"row"}
                 justify={"center"}
                 alignContent={"center"}

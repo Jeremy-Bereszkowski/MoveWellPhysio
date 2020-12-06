@@ -48,7 +48,7 @@ const ContactData = {
         header: "Contact",
         telephone: {
             header: "Telephone",
-            value: "9503 8223"
+            value: "(03) 9503 8223"
         },
         email: {
             header: "Email",

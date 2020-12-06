@@ -18,7 +18,7 @@ export default function LandingPageCarousel(props) {
         speed: 500,
         slidesToShow: 1,
         slidesToScroll: 1,
-        autoplay: false
+        autoplay: true
     };
 
     function Slide(image, header, body, buttonText) {

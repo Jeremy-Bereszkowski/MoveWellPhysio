@@ -44,7 +44,6 @@ const landingPageCarouselStyle = {
         position: "relative",
         padding: "12px 30px",
         margin: ".7125rem 1px",
-        marginTop: "25px",
         fontSize: "12px",
         fontWeight: "400",
         textTransform: "uppercase",

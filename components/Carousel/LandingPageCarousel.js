@@ -41,7 +41,7 @@ export default function LandingPageCarousel(props) {
         setTransform("translate3d(0," + windowScrollTop + "px,0)");
     };
 
-    function Slide(image, header, body, buttonText) {
+    function Slide(image, header, body, buttonText, href) {
         return (
             <div className={classes.imageTint} key={header}>
                 <div style={{backgroundImage: "url(" + image + ")"}} className={classes.imageStyle}/>
@@ -70,7 +70,7 @@ export default function LandingPageCarousel(props) {
                         null
                     }
                     <Grid item>
-                        <Button className={classes.button}>
+                        <Button className={classes.button} href={href}>
                             <p>
                                 <b>{buttonText}</b>
                             </p>
@@ -86,7 +86,7 @@ export default function LandingPageCarousel(props) {
             <Carousel {...settings}>
                 {LandingData.carousel.map(elements => {
                     return(
-                        Slide(elements[0], elements[1], elements[2], elements[3])
+                        Slide(elements[0], elements[1], elements[2], elements[3], elements[4])
                     )
                 })}
             </Carousel>

@@ -22,7 +22,7 @@ export default function HeaderLink(props) {
         )
     } else {
         const subLinks = element.sub.map((ele) => {
-            return <HeaderButton element={ele} onClick={onClick }/>
+            return <HeaderButton element={ele} onClick={onClick}/>
         })
 
         return (

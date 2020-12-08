@@ -49,7 +49,7 @@ const HeaderLinkData = [
     {
         core: {
             key: "Book Online",
-            link: URL.BOOK,
+            href: "https://movewell-physiotherapy-melbourne.au2.cliniko.com/bookings"
         },
     },
     {

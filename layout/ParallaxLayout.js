@@ -4,10 +4,32 @@ import PropTypes from "prop-types"
 import {makeStyles} from "@material-ui/core/styles"
 import Grid from "@material-ui/core/Grid";
 
-import Parallax from "../Parallax/Parallax";
+import Parallax from "components/Parallax/Parallax";
 
-import style from "./ParallaxLayoutStyles"
-const useStyles = makeStyles(style)
+import {whiteColor} from "assets/jss/nextjs-material-kit-pro";
+import {greenHrThick, parallaxHeaderText} from "assets/jss/coreStyles";
+
+const useStyles = makeStyles({
+    container: {
+        color: whiteColor,
+        paddingRight: "15px",
+        paddingLeft: "15px",
+        marginRight: "auto",
+        marginLeft: "auto",
+        width: "100%",
+        maxWidth: "60%",
+        zIndex: "2"
+    },
+    title: {
+        ...parallaxHeaderText,
+    },
+    titleSubHeading: {
+        textAlign: "center"
+    },
+    greenHr: {
+        ...greenHrThick,
+    },
+})
 
 export default function ParallaxLayout(props) {
     const classes = useStyles()

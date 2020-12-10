@@ -11,7 +11,6 @@ const smallFont = {
 
 const mediumFont = {
     fontSize: "calc(20px + (30 - 20) * ((100vw - 300px) / (1600 - 300)))"
-
 }
 
 const largeFont = {

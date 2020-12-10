@@ -28,6 +28,7 @@ export default function Day(props) {
             <Grid item>
                 <Grid
                     container
+                    spacing={2}
                     direction={"row"}
                     justify={"flex-end"}
                     alignContent={"center"}
@@ -39,7 +40,7 @@ export default function Day(props) {
                     </Grid>
                     <Grid item>
                         <h4 className={classes.bodyText}>
-                            {" - "}
+                            {"-"}
                         </h4>
                     </Grid>
                     <Grid item>

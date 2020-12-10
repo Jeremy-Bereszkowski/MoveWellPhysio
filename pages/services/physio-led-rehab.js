@@ -2,8 +2,8 @@ import React from "react";
 
 import {Grid} from "@material-ui/core";
 
-import ParallaxLayout from "../../components/Layout/ParallaxLayout";
-import MainContainerLayout from "../../components/Layout/MainContainerLayout";
+import ParallaxLayout from "../../layout/ParallaxLayout";
+import MainContainerLayout from "../../layout/MainContainerLayout";
 import GreenHeaderBlackBody from "../../components/TextBlocks/GreenHeaderBlackBody";
 
 import PhysioLedRehabData from "../../assets/data/pages/services/physioLedRehab";

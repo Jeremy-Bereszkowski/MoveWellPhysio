@@ -2,8 +2,8 @@ import React from "react";
 
 import {makeStyles} from "@material-ui/core/styles";
 
-import ParallaxLayout from "../../components/Layout/ParallaxLayout";
-import MainContainerLayout from "../../components/Layout/MainContainerLayout";
+import ParallaxLayout from "../../layout/ParallaxLayout";
+import MainContainerLayout from "../../layout/MainContainerLayout";
 
 import FocusedGroupData from "../../assets/data/pages/services/focusedGroup";
 

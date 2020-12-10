@@ -12,43 +12,26 @@ import styles from "assets/jss/nextjs-material-kit-pro/components/parallaxStyle.
 const useStyles = makeStyles(styles);
 
 export default function Parallax(props) {
-  let windowScrollTop = 0;
-  const [transform, setTransform] = React.useState(
-    "translate3d(0," + windowScrollTop + "px,0)"
-  );
-  React.useEffect(() => {
-    if (window.innerWidth >= 768) {
-      window.addEventListener("scroll", resetTransform);
-    }
-    return function cleanup() {
-      if (window.innerWidth >= 768) {
-        window.removeEventListener("scroll", resetTransform);
-      }
-    };
-  });
-  const resetTransform = () => {
-    var windowScrollTop = window.pageYOffset / 3;
-    setTransform("translate3d(0," + windowScrollTop + "px,0)");
-  };
   const { filter, className, children, style, image, small } = props;
   const classes = useStyles();
+
   const parallaxClasses = classNames({
     [classes.parallax]: true,
     [classes[filter + "Color"]]: filter !== undefined,
     [classes.small]: small,
     [className]: className !== undefined
   });
+
   return (
-    <div
-      className={parallaxClasses}
-      style={{
-        ...style,
-        backgroundImage: "url(" + image + ")",
-        transform: transform
-      }}
-    >
-      {children}
-    </div>
+      <div
+          className={parallaxClasses}
+          style={{
+            ...style,
+            backgroundImage: "url(" + image + ")",
+          }}
+      >
+        {children}
+      </div>
   );
 }
 

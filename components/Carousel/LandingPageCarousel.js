@@ -105,7 +105,7 @@ const useStyles = makeStyles({
 export default function LandingPageCarousel(props) {
     const classes = useStyles();
     const settings = {
-        dots: false,
+        dots: true,
         infinite: true,
         speed: 2500,
         slidesToShow: 1,
@@ -143,7 +143,7 @@ export default function LandingPageCarousel(props) {
                     }
                     <Grid item>
                         <Button className={classes.button} href={href}>
-                            <p>
+                            <p style={{margin: 0, padding: 2}}>
                                 <b>{buttonText}</b>
                             </p>
                         </Button>

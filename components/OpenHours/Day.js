@@ -26,7 +26,12 @@ export default function Day(props) {
                 </h4>
             </Grid>
             <Grid item>
-                <Grid
+                        <h4 className={classes.bodyText}>
+                            {openTime}
+                            {"  -  "}
+                            {closeTime}
+                        </h4>
+                {/*<Grid
                     container
                     spacing={2}
                     direction={"row"}
@@ -34,21 +39,16 @@ export default function Day(props) {
                     alignContent={"center"}
                 >
                     <Grid item>
+                    </Grid>*/}
+                    {/*<Grid item>
                         <h4 className={classes.bodyText}>
-                            {openTime}
                         </h4>
                     </Grid>
                     <Grid item>
                         <h4 className={classes.bodyText}>
-                            {"-"}
                         </h4>
-                    </Grid>
-                    <Grid item>
-                        <h4 className={classes.bodyText}>
-                            {closeTime}
-                        </h4>
-                    </Grid>
-                </Grid>
+                    </Grid>*/}
+                {/*</Grid>*/}
             </Grid>
         </Grid>
     )

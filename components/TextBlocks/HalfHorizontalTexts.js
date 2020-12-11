@@ -26,7 +26,7 @@ export default function HalfHorizontalTexts(props) {
             container
             direction={"row"}
             justify={"space-between"}
-            alignContent={"flex-start"}
+            alignContent={"stretch"}
         >
             <Grid item>
                 <h4 className={className(classes.bodyText)}>

@@ -5,13 +5,21 @@ import className from "classnames"
 import {makeStyles} from "@material-ui/core/styles";
 import {Grid} from "@material-ui/core";
 
-import styles from "./halfHorizontalTextsStyles";
-const useStyles = makeStyles(styles);
+import {smallFont} from "assets/jss/coreStyles";
 
-export default function Day(props) {
+const useStyles = makeStyles({
+    bodyText: {
+        ...smallFont,
+        fontWeight: "200",
+        textAlign: "left",
+        lineHeight: "inherit"
+    },
+});
+
+export default function HalfHorizontalTexts(props) {
     const classes = useStyles();
 
-    const {dayText, hoursText} = props
+    const {leftText, rightText} = props
 
     return (
         <Grid
@@ -22,19 +30,19 @@ export default function Day(props) {
         >
             <Grid item>
                 <h4 className={className(classes.bodyText)}>
-                    {dayText}:
+                    {leftText}:
                 </h4>
             </Grid>
             <Grid item>
                 <h4 className={classes.bodyText}>
-                    {hoursText}
+                    {rightText}
                 </h4>
             </Grid>
         </Grid>
     )
 }
 
-Day.propTypes = {
-    dayText: PropTypes.string,
-    hoursText: PropTypes.string,
+HalfHorizontalTexts.propTypes = {
+    leftText: PropTypes.string,
+    rightText: PropTypes.string,
 }

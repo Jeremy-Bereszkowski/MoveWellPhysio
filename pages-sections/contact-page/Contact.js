@@ -16,8 +16,8 @@ export default function OpeningHours() {
         <Grid
             container
             direction={"column"}
-            justify={"flex-start"}
-            alignContent={"center"}
+            justify={"center"}
+            alignContent={"stretch"}
         >
             <Grid item>
                 <h2 className={classes.greenHeaderText}>
@@ -25,10 +25,10 @@ export default function OpeningHours() {
                 </h2>
             </Grid>
             <Grid item>
-                <HalfHorizontalTexts dayText={ContactData.contact.telephone.header} hoursText={ContactData.contact.telephone.value} />
+                <HalfHorizontalTexts leftText={ContactData.contact.telephone.header} rightText={ContactData.contact.telephone.value} />
             </Grid>
             <Grid item>
-                <HalfHorizontalTexts dayText={ContactData.contact.email.header} hoursText={ContactData.contact.email.data} />
+                <HalfHorizontalTexts leftText={ContactData.contact.email.header} rightText={ContactData.contact.email.data} />
             </Grid>
         </Grid>
     )

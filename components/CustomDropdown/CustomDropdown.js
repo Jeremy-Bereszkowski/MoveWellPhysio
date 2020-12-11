@@ -82,7 +82,6 @@ export default function CustomDropdown(props) {
       console.log(router.pathname, URL.PHYSIO_LEAD_REHAB)
     default:
       buttonStyles = classes.button
-      console.log(router.pathname)
   }
 
   const dropDownMenu = (

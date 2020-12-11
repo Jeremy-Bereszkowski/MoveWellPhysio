@@ -4,7 +4,7 @@ import classNames from "classnames";
 import {makeStyles} from "@material-ui/core/styles";
 import {Grid} from "@material-ui/core";
 
-import Button from "../CustomButtons/Button";
+import FooterButton from "../Buttons/FooterButton";
 
 import FooterData from "../../assets/data/components/footer";
 import AJAXLogo from "../../assets/img/logos/AJAX.png"
@@ -54,7 +54,7 @@ export default function Footer() {
                 <Grid item xs={12} sm={12} md={4} className={classes.rightItem}>
                     <ul style={{padding: 0}}>
                         <li>
-                            <Button
+                            <FooterButton
                                 href="https://www.facebook.com/movewellmelbourne"
                                 target="_blank"
                                 color="white"
@@ -62,10 +62,10 @@ export default function Footer() {
                                 simple
                             >
                                 <i className="fab fa-facebook" />
-                            </Button>
+                            </FooterButton>
                         </li>
                         <li>
-                            <Button
+                            <FooterButton
                                 href="https://www.instagram.com/movewellmelbourne/"
                                 target="_blank"
                                 color="white"
@@ -73,7 +73,7 @@ export default function Footer() {
                                 simple
                             >
                                 <i className="fab fa-instagram" />
-                            </Button>
+                            </FooterButton>
                         </li>
                     </ul>
                 </Grid>

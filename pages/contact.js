@@ -17,7 +17,7 @@ export default function ContactPage(props) {
             <MainContainerLayout>
                 <Grid
                     container
-                    spacing={3}
+                    spacing={5}
                     direction={"row"}
                     justify={"center"}
                     alignContent={"center"}

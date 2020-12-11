@@ -3,12 +3,13 @@ import Carousel from "react-slick";
 
 import {Grid} from "@material-ui/core";
 import {makeStyles} from "@material-ui/core/styles";
-import Button from "@material-ui/core/Button";
 
 import LandingData from "assets/data/pages/landing-data";
-import {blackColor, grayColor, hexToRgb, whiteColor} from "assets/jss/nextjs-material-kit-pro";
+import {blackColor, hexToRgb} from "assets/jss/nextjs-material-kit-pro";
 import {greenHrThick, parallaxHeaderText} from "assets/jss/coreStyles";
 import Colours from "assets/strings/colours";
+
+import BlockButton from "../Buttons/BlockButton";
 
 const useStyles = makeStyles({
     filter: {},
@@ -41,42 +42,6 @@ const useStyles = makeStyles({
         ...parallaxHeaderText,
         marginLeft: "15%",
         marginRight: "15%",
-    },
-    button: {
-        backgroundColor: Colours.green,
-        minHeight: "auto",
-        minWidth: "auto",
-        color: whiteColor,
-        border: "none",
-        borderRadius: "3px",
-        position: "relative",
-        padding: "12px 30px",
-        margin: ".7125rem 1px",
-        fontSize: "12px",
-        fontWeight: "400",
-        textTransform: "uppercase",
-        letterSpacing: "0",
-        willChange: "box-shadow, transform",
-        transition:
-            "box-shadow 0.2s cubic-bezier(0.4, 0, 1, 1), background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1)",
-        lineHeight: "1.42857143",
-        textAlign: "center",
-        whiteSpace: "nowrap",
-        verticalAlign: "middle",
-        touchAction: "manipulation",
-        cursor: "pointer",
-        "&:hover": {
-            color: whiteColor,
-            backgroundColor: grayColor[0],
-            boxShadow:
-                "0 14px 26px -12px rgba(" +
-                hexToRgb(grayColor[0]) +
-                ", 0.42), 0 4px 23px 0px rgba(" +
-                hexToRgb(blackColor) +
-                ", 0.12), 0 8px 10px -5px rgba(" +
-                hexToRgb(grayColor[0]) +
-                ", 0.2)"
-        },
     },
     imageStyle: {
         backgroundSize: "cover",
@@ -113,7 +78,44 @@ export default function LandingPageCarousel(props) {
         autoplay: true
     };
 
-    function Slide(image, header, body, buttonText, href) {
+    function Buttons(href1, href2, buttonText1, buttonText2) {
+        if (href2 === undefined) {
+            return (
+                <BlockButton color={"green"} href={href1}>
+                    <p style={{margin: 0, padding: 2}}>
+                        <b>{buttonText1}</b>
+                    </p>
+                </BlockButton>
+            )
+        } else {
+            return (
+                <Grid
+                    container
+                    spacing={2}
+                    direction={"row"}
+                    justify={"center"}
+                    alignContent={"center"}
+                >
+                    <Grid item>
+                        <BlockButton color={"green"} href={href1}>
+                            <p style={{margin: 0, padding: 2}}>
+                                <b>{buttonText1}</b>
+                            </p>
+                        </BlockButton>
+                    </Grid>
+                    <Grid item>
+                        <BlockButton color={"dark"} href={href2}>
+                            <p style={{margin: 0, padding: 2}}>
+                                <b>{buttonText2}</b>
+                            </p>
+                        </BlockButton>
+                    </Grid>
+                </Grid>
+            )
+        }
+    }
+
+    function Slide(image, header, body, href1, buttonText1, href2, buttonText2) {
         return (
             <div className={classes.imageTint} key={header}>
                 <div style={{backgroundImage: "url(" + image + ")"}} className={classes.imageStyle}/>
@@ -142,11 +144,7 @@ export default function LandingPageCarousel(props) {
                         null
                     }
                     <Grid item>
-                        <Button className={classes.button} href={href}>
-                            <p style={{margin: 0, padding: 2}}>
-                                <b>{buttonText}</b>
-                            </p>
-                        </Button>
+                        {Buttons(href1, href2, buttonText1, buttonText2)}
                     </Grid>
                 </Grid>
             </div>
@@ -157,7 +155,7 @@ export default function LandingPageCarousel(props) {
         <Carousel {...settings}>
             {LandingData.carousel.map(elements => {
                 return(
-                    Slide(elements[0], elements[1], elements[2], elements[3], elements[4])
+                    Slide(elements[0], elements[1], elements[2], elements[3], elements[4], elements[5], elements[6])
                 )
             })}
         </Carousel>

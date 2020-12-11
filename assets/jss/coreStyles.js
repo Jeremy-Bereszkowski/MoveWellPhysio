@@ -14,7 +14,7 @@ const mediumFont = {
 }
 
 const largeFont = {
-    fontSize: "calc(30px + (56 - 30) * ((100vw - 300px) / (1600 - 300)))"
+    fontSize: "calc(36px + (56 - 36) * ((100vw - 300px) / (1600 - 300)))"
 }
 
 const parallaxHeaderText = {

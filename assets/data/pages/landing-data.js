@@ -9,26 +9,28 @@ const LandingData = {
             image1,
             companyName + " Physiotherapy",
             "Active, goal-focused physiotherapy",
-            "Book Online",
-            "https://movewell-physiotherapy-melbourne.au2.cliniko.com/bookings"
+            "https://movewell-physiotherapy-melbourne.au2.cliniko.com/bookings",
+            "Book a Consult",
+            "https://movewell-physiotherapy-melbourne.au2.cliniko.com/bookings",
+            "Book a Class",
         ],
         [
             image2,
             "Freedom from acute pain",
-            0,
             "LEARN HOW",
+            0,
         ],
         [
             image3,
             "Return to optimal sports performance",
-            0,
             "LEARN HOW",
+            0,
         ],
         [
             image4,
             "Improving function from ongoing pain",
-            0,
             "LEARN HOW",
+            0,
         ],
     ],
     para1: {

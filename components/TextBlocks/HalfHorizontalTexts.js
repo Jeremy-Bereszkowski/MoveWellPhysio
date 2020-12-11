@@ -24,7 +24,6 @@ export default function HalfHorizontalTexts(props) {
     return (
         <Grid
             container
-            spacing={2}
             direction={"row"}
             justify={"space-between"}
             alignContent={"stretch"}

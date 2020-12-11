@@ -7,8 +7,17 @@ import CardHeader from "./CardHeader";
 import CardBody from "./CardBody";
 import Card from "./Card";
 
-import styles from "./employeeProfileCardStyles";
-const useStyles = makeStyles(styles);
+const useStyles = makeStyles({
+    textStyle: {
+        marginLeft: "20%",
+        marginRight: "20%"
+    },
+    card2: {
+        marginTop: "0",
+        marginBottom: "0",
+        padding: "0",
+    }
+});
 
 export default function EmployeeProfileCard(props) {
     const classes = useStyles();

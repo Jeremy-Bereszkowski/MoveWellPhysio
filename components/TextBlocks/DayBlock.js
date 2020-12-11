@@ -16,34 +16,37 @@ const useStyles = makeStyles({
     },
 });
 
-export default function HalfHorizontalTexts(props) {
+export default function DayBlock(props) {
     const classes = useStyles();
 
-    const {leftText, rightText} = props
+    const {dayText, openTime, closeTime} = props
 
     return (
         <Grid
             container
-            spacing={2}
             direction={"row"}
             justify={"space-between"}
             alignContent={"stretch"}
         >
             <Grid item>
                 <h4 className={className(classes.bodyText)}>
-                    {leftText}:
+                    {dayText}
+                    {":"}
                 </h4>
             </Grid>
             <Grid item>
                 <h4 className={classes.bodyText}>
-                    {rightText}
+                    {openTime}
+                    {"  -  "}
+                    {closeTime}
                 </h4>
             </Grid>
         </Grid>
     )
 }
 
-HalfHorizontalTexts.propTypes = {
-    leftText: PropTypes.string,
-    rightText: PropTypes.string,
+DayBlock.propTypes = {
+    dayText: PropTypes.string,
+    openTime: PropTypes.string,
+    closeTime: PropTypes.string,
 }

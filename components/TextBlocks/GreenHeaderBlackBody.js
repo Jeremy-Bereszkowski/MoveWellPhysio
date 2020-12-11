@@ -4,8 +4,24 @@ import PropTypes from "prop-types"
 import {makeStyles} from "@material-ui/core/styles";
 import {Grid} from "@material-ui/core";
 
-import styles from "./greenHeaderBlackBodyStyles";
-const useStyles = makeStyles(styles);
+import {bodyHeaderText, bodyParaText} from "assets/jss/coreStyles";
+
+const useStyles = makeStyles({
+    greenHeaderText: {
+        ...bodyHeaderText,
+        textAlign: "center",
+        marginLeft: "5vw",
+        marginRight: "5vw",
+    },
+    blackBodyText: {
+        ...bodyParaText,
+        marginLeft: "7vw",
+        marginRight: "7vw",
+        marginTop: "1vh",
+        marginBottom: "1vh",
+        textAlign: "left",
+    },
+});
 
 export default function GreenHeaderBlackBody(props) {
     const classes = useStyles();
@@ -16,20 +32,20 @@ export default function GreenHeaderBlackBody(props) {
         <>
             {
                 !header ? null :
-                <Grid
-                    container
-                    spacing={4}
-                    direction={"row"}
-                    justify={"center"}
-                    alignContent={"center"}
-                >
+                    <Grid
+                        container
+                        spacing={4}
+                        direction={"row"}
+                        justify={"center"}
+                        alignContent={"center"}
+                    >
 
-                    <Grid item>
-                        <h2 className={classes.greenHeaderText}>
-                            {header}
-                        </h2>
+                        <Grid item>
+                            <h2 className={classes.greenHeaderText}>
+                                {header}
+                            </h2>
+                        </Grid>
                     </Grid>
-                </Grid>
             }
             <Grid
                 container

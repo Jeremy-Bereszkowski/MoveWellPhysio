@@ -18,8 +18,8 @@ const useStyles = makeStyles({
         margin: "0",
         paddingTop: "2vh",
         paddingBottom: "3vh",
-        paddingLeft: "5vw",
-        paddingRight: "5vw",
+        paddingLeft: "2vw",
+        paddingRight: "2vw",
     }
 })
 

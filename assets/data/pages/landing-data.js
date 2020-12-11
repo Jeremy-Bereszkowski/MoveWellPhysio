@@ -17,20 +17,23 @@ const LandingData = {
         [
             image2,
             "Freedom from acute pain",
-            "LEARN HOW",
+            "",
             0,
+            "LEARN HOW",
         ],
         [
             image3,
             "Return to optimal sports performance",
-            "LEARN HOW",
+            "",
             0,
+            "LEARN HOW",
         ],
         [
             image4,
             "Improving function from ongoing pain",
-            "LEARN HOW",
+            "",
             0,
+            "LEARN HOW",
         ],
     ],
     para1: {

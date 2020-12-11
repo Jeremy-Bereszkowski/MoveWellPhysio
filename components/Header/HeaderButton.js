@@ -43,11 +43,6 @@ export default function HeaderButton(props) {
 
     return (
         <ListItem className={classes.listItem}>
-            {/*<Link href={element.core.link} as={element.core.as}>
-                <Button className={buttonStyles} onClick={onClick} fullWidth>
-                    {element.core.key}
-                </Button>
-            </Link>*/}
             {
                 element.core.link === undefined ? null : <InternalLink/>
             }

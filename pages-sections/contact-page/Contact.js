@@ -17,7 +17,7 @@ export default function OpeningHours() {
             container
             direction={"column"}
             justify={"flex-start"}
-            alignContent={"stretch"}
+            alignContent={"center"}
         >
             <Grid item>
                 <h2 className={classes.greenHeaderText}>

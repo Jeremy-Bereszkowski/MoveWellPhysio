@@ -26,7 +26,7 @@ const LandingData = {
         ],
         [
             image4,
-            "Improve strength and conditioning",
+            "Improving function from ongoing pain",
             0,
             "LEARN HOW",
         ],

@@ -1,6 +1,5 @@
 import React from "react";
 import PropTypes from "prop-types"
-import className from "classnames"
 
 import {makeStyles} from "@material-ui/core/styles";
 import {Grid} from "@material-ui/core";
@@ -14,6 +13,10 @@ const useStyles = makeStyles({
         textAlign: "left",
         lineHeight: "inherit"
     },
+    sideMargins: {
+        paddingLeft: "3.5vw",
+        paddingRight: "3.5vw",
+    }
 });
 
 export default function HalfHorizontalTexts(props) {
@@ -27,9 +30,10 @@ export default function HalfHorizontalTexts(props) {
             direction={"row"}
             justify={"space-between"}
             alignContent={"stretch"}
+            className={classes.sideMargins}
         >
             <Grid item>
-                <h4 className={className(classes.bodyText)}>
+                <h4 className={classes.bodyText}>
                     {leftText}:
                 </h4>
             </Grid>

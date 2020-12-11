@@ -22,8 +22,8 @@ export default function OpeningHours() {
         <Grid
             container
             direction={"column"}
-            justify={"flex-start"}
-            alignContent={"center"}
+            justify={"center"}
+            alignContent={"stretch"}
         >
             <Grid item>
                 <h2 className={classes.greenHeaderText}>

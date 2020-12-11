@@ -14,7 +14,7 @@ import ContactData from "../assets/data/pages/contact";
 export default function ContactPage(props) {
     return (
         <ParallaxLayout parallaxImage={ContactData.core.parallaxImage} parallaxHeader={ContactData.core.parallaxHeader}>
-            <MainContainerLayout maxWidth={"lg"}>
+            <MainContainerLayout>
                 <Grid
                     container
                     spacing={3}

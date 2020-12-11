@@ -12,7 +12,7 @@ import Clients from "../../pages-sections/services/physio-led-rehab-page/Clients
 export default function PhysioLedRehab(props) {
     return (
         <ParallaxLayout parallaxImage={PhysioLedRehabData.core.parallaxImage} parallaxHeader={PhysioLedRehabData.core.parallaxHeader} parallaxBody={PhysioLedRehabData.core.parallaxBody}>
-            <MainContainerLayout maxWidth={"lg"}>
+            <MainContainerLayout>
                 <Grid
                     container
                     spacing={4}

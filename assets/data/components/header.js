@@ -48,9 +48,23 @@ const HeaderLinkData = [
     },
     {
         core: {
-            key: "Book Online",
-            href: "https://movewell-physiotherapy-melbourne.au2.cliniko.com/bookings"
+            key: "Book",
+            link: "",
         },
+        sub: [
+            {
+                core: {
+                    key: "Consults",
+                    href: "https://movewell-physiotherapy-melbourne.au2.cliniko.com/bookings"
+                },
+            },
+            {
+                core: {
+                    key: "Group Sessions",
+                    href: ""
+                },
+            },
+        ],
     },
     {
         core: {

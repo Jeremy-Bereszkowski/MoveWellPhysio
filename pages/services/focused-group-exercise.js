@@ -19,7 +19,7 @@ export default function FocusedGroupExercise(props) {
 
     return (
         <ParallaxLayout parallaxImage={FocusedGroupData.core.parallaxImage} parallaxHeader={FocusedGroupData.core.parallaxHeader} parallaxBody={FocusedGroupData.core.parallaxBody}>
-            <MainContainerLayout maxWidth={"lg"}>
+            <MainContainerLayout>
                 <Grid
                     container
                     spacing={2}

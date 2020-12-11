@@ -21,7 +21,7 @@ export default function LandingPage(props) {
     return (
         <div>
             <LandingPageCarousel/>
-            <MainContainerLayout maxWidth={"lg"}>
+            <MainContainerLayout>
                 <Grid
                     container
                     direction={"row"}

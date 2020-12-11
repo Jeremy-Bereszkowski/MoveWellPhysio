@@ -16,7 +16,7 @@ export default function Physiotherapy({...rest}) {
 
     return (
         <ParallaxLayout parallaxImage={ProfessionalMentoringData.core.parallaxImage} parallaxHeader={ProfessionalMentoringData.core.parallaxHeader} parallaxBody={ProfessionalMentoringData.core.parallaxBody}>
-            <MainContainerLayout maxWidth={"lg"}>
+            <MainContainerLayout>
                 <GreenGeaderBlackBody  body={ProfessionalMentoringData.body.strings}/>
             </MainContainerLayout>
         </ParallaxLayout>

@@ -19,7 +19,7 @@ export default function Physiotherapy(props) {
 
     return (
         <ParallaxLayout parallaxImage={AboutData.core.parallaxImage} parallaxHeader={AboutData.core.parallaxHeader} parallaxBody={AboutData.core.parallaxBody}>
-            <MainContainerLayout maxWidth={"lg"}>
+            <MainContainerLayout>
                 <Grid
                     container
                     direction={"column"}

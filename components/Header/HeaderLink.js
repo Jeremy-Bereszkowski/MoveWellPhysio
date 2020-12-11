@@ -31,7 +31,7 @@ export default function HeaderLink(props) {
                     noLiPadding
                     navDropdown
                     hoverColor={"dark"}
-                    buttonText="Services"
+                    buttonText={element.core.key}
                     buttonProps={{
                         className: classes.navLink,
                         color: Colours.green

@@ -3,16 +3,21 @@ import React from "react";
 import {makeStyles} from "@material-ui/core/styles";
 import {Grid} from "@material-ui/core";
 
-import MainContainerLayout from "../layout/MainContainerLayout";
-import ParallaxLayout from "../layout/ParallaxLayout";
+import MainContainerLayout from "layouts/MainContainerLayout";
+import ParallaxLayout from "layouts/ParallaxLayout";
 
-import TopText from "../pages-sections/about-page/TopText";
-import BottomProfiles from "../pages-sections/about-page/BottomProfiles";
+import TopText from "pages-sections/about-page/TopText";
+import BottomProfiles from "pages-sections/about-page/BottomProfiles";
 
-import AboutData from "../assets/data/pages/about";
+import AboutData from "assets/data/pages/about";
 
-import styles from "../assets/jss/pages/about";
-const useStyles = makeStyles(styles);
+const useStyles = makeStyles({
+    hr: {
+        marginTop: "5vh",
+        marginBottom: "5vh",
+        borderTop: "2px solid black"
+    },
+});
 
 export default function Physiotherapy(props) {
     const classes = useStyles();

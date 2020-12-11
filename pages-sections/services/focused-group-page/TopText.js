@@ -1,7 +1,8 @@
 import React from "react";
 
-import FocusedGroupData from "../../../assets/data/pages/services/focusedGroup";
-import GreenGeaderBlackBody from "../../../components/TextBlocks/GreenHeaderBlackBody";
+import FocusedGroupData from "assets/data/pages/services/focusedGroup";
+
+import GreenGeaderBlackBody from "components/TextBlocks/GreenHeaderBlackBody";
 
 export default function TopText(props) {
     return (

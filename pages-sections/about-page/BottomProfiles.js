@@ -3,12 +3,20 @@ import React from "react";
 import {Grid} from "@material-ui/core";
 import {makeStyles} from "@material-ui/core/styles";
 
-import EmployeeProfileCard from "../../components/Card/EmployeeProfileCard";
+import EmployeeProfileCard from "components/Card/EmployeeProfileCard";
 
-import AboutData from "../../assets/data/pages/about";
+import {bodyHeaderText} from "assets/jss/coreStyles";
+import AboutData from "assets/data/pages/about";
 
-import styles from "./bottomProfilesStyles";
-const useStyles = makeStyles(styles);
+const useStyles = makeStyles({
+    greenHeaderText: {
+        ...bodyHeaderText,
+        marginTop: "-2vh",
+    },
+    flexBox: {
+        display: "flex"
+    }
+});
 
 export default function BottomProfiles(props) {
     const classes = useStyles();

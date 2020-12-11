@@ -1,47 +1,16 @@
 import React from "react";
 import PropTypes from "prop-types"
-import className from "classnames"
 
-import {makeStyles} from "@material-ui/core/styles";
-import {Grid} from "@material-ui/core";
-
-import {smallFont} from "assets/jss/coreStyles";
-
-const useStyles = makeStyles({
-    bodyText: {
-        ...smallFont,
-        fontWeight: "200",
-        textAlign: "left",
-        lineHeight: "inherit"
-    },
-});
+import HalfHorizontalTexts from "./HalfHorizontalTexts";
 
 export default function DayBlock(props) {
-    const classes = useStyles();
-
     const {dayText, openTime, closeTime} = props
 
+    const leftText = dayText + ":"
+    const rightText = openTime + "  -  " + closeTime
+
     return (
-        <Grid
-            container
-            direction={"row"}
-            justify={"space-between"}
-            alignContent={"stretch"}
-        >
-            <Grid item>
-                <h4 className={className(classes.bodyText)}>
-                    {dayText}
-                    {":"}
-                </h4>
-            </Grid>
-            <Grid item>
-                <h4 className={classes.bodyText}>
-                    {openTime}
-                    {"  -  "}
-                    {closeTime}
-                </h4>
-            </Grid>
-        </Grid>
+        <HalfHorizontalTexts leftText={leftText} rightText={rightText}/>
     )
 }
 

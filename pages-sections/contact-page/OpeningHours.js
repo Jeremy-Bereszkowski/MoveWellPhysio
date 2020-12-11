@@ -3,12 +3,17 @@ import React from "react";
 import {makeStyles} from "@material-ui/core/styles";
 import {Grid} from "@material-ui/core";
 
-import DayBlock from "../../components/TextBlocks/DayBlock";
+import DayBlock from "components/TextBlocks/DayBlock";
 
-import ContactData from "../../assets/data/pages/contact";
+import ContactData from "assets/data/pages/contact";
+import {bodyHeaderText} from "assets/jss/coreStyles";
 
-import styles from "./openingHoursStyles";
-const useStyles = makeStyles(styles);
+const useStyles = makeStyles({
+    greenHeaderText: {
+        ...bodyHeaderText,
+        textAlign: "center",
+    },
+});
 
 export default function OpeningHours() {
     const classes = useStyles();

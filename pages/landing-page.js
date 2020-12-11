@@ -4,7 +4,7 @@ import {Grid} from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 
 import LandingPageCarousel from "../components/Carousel/LandingPageCarousel";
-import MainContainerLayout from "../layout/MainContainerLayout";
+import MainContainerLayout from "../layouts/MainContainerLayout";
 
 import IntroVideo from "../pages-sections/landing-page/IntroVideo";
 import ParaLayout from "../pages-sections/landing-page/ParaLayout";

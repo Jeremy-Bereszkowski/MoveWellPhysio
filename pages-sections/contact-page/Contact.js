@@ -3,11 +3,32 @@ import React from "react";
 import {makeStyles} from "@material-ui/core/styles";
 import {Grid} from "@material-ui/core";
 
-import ContactData from "../../assets/data/pages/contact";
-import HalfHorizontalTexts from "../../components/TextBlocks/HalfHorizontalTexts";
+import HalfHorizontalTexts from "components/TextBlocks/HalfHorizontalTexts";
 
-import styles from "./contactStyles";
-const useStyles = makeStyles(styles);
+import {bodyHeaderText, bodyParaText} from "assets/jss/coreStyles";
+import ContactData from "assets/data/pages/contact";
+
+const useStyles = makeStyles({
+    greenHeaderText: {
+        ...bodyHeaderText,
+        textAlign: "center",
+    },
+    blackBodyText: {
+        ...bodyParaText,
+        marginTop: "0",
+        marginBottom: "0",
+        textAlign: "center",
+    },
+    addressNoteText: {
+        marginTop: "40px",
+        marginBottom: "20px",
+    },
+    mapContainer: {
+        position: "relative",
+        height: "25vh",
+        width: "100%"
+    }
+});
 
 export default function OpeningHours() {
     const classes = useStyles();

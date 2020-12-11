@@ -2,8 +2,8 @@ import React from "react";
 
 import {makeStyles} from "@material-ui/core/styles";
 
-import MainContainerLayout from "../../layout/MainContainerLayout";
-import ParallaxLayout from "../../layout/ParallaxLayout";
+import MainContainerLayout from "../../layouts/MainContainerLayout";
+import ParallaxLayout from "../../layouts/ParallaxLayout";
 
 import ProfessionalMentoringData from "../../assets/data/pages/services/professionalMentoring";
 

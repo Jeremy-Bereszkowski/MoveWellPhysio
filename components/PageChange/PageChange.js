@@ -11,7 +11,7 @@ import {
   title, hexToRgb, blackColor
 } from "assets/jss/nextjs-material-kit-pro.js";
 
-const background = "/physio/layout.jpg"
+const background = "/physio/layouts.jpg"
 
 const useStyles = makeStyles({
   progress: {

@@ -1,6 +1,6 @@
 import React from "react";
 
-import ParallaxLayout from "../layout/ParallaxLayout";
+import ParallaxLayout from "../layouts/ParallaxLayout";
 import BooktData from "../assets/data/pages/book";
 
 export default function Book(props) {

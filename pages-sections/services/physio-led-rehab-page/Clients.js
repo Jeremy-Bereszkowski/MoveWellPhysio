@@ -3,11 +3,19 @@ import React from "react";
 import {Grid} from "@material-ui/core";
 import {makeStyles} from "@material-ui/core/styles";
 
-import PhysioLedRehabData from "../../../assets/data/pages/services/physioLedRehab";
-import PhysioLedRehabBlock from "../../../components/TextBlocks/PhysioLedRehabBlock";
+import {bodyHeaderText} from "assets/jss/coreStyles";
+import PhysioLedRehabData from "assets/data/pages/services/physioLedRehab";
 
-import styles from './clientsStyles'
-const useStyles = makeStyles(styles);
+import PhysioLedRehabBlock from "components/TextBlocks/PhysioLedRehabBlock";
+
+const useStyles = makeStyles({
+    greenHeaderText: {
+        ...bodyHeaderText,
+        textAlign: "center",
+        marginLeft: "5vw",
+        marginRight: "5vw",
+    },
+});
 
 export default function Clients(props) {
     const classes = useStyles();

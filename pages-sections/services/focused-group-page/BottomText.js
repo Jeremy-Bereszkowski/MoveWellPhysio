@@ -3,10 +3,37 @@ import React from "react";
 import {Grid} from "@material-ui/core";
 import {makeStyles} from "@material-ui/core/styles";
 
-import FocusedGroupData from "../../../assets/data/pages/services/focusedGroup";
+import {bodyHeaderText, bodyParaText} from "assets/jss/coreStyles";
+import FocusedGroupData from "assets/data/pages/services/focusedGroup";
 
-import styles from "../../../assets/jss/pages/services/professionalMentoringStyles";
-const useStyles = makeStyles(styles);
+const useStyles = makeStyles({
+    marginTop: {
+        marginTop: "4vh"
+    },
+    greenHeaderText: {
+        ...bodyHeaderText,
+        textAlign: "center",
+        paddingLeft: "10vw",
+        paddingRight: "10vw",
+    },
+    blackSubHeaderText: {
+        ...bodyParaText,
+        marginLeft: "7vw",
+        marginRight: "7vw",
+        marginTop: "1vh",
+        marginBottom: "1vh",
+        textAlign: "left",
+        fontWeight: "800",
+    },
+    blackParaText: {
+        ...bodyParaText,
+        marginLeft: "7vw",
+        marginRight: "7vw",
+        marginTop: "1vh",
+        marginBottom: "1vh",
+        textAlign: "left",
+    },
+});
 
 export default function BottomText(props) {
     const classes = useStyles();

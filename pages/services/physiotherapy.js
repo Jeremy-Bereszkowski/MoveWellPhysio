@@ -5,8 +5,8 @@ import {makeStyles} from "@material-ui/core/styles";
 import {Grid} from "@material-ui/core";
 import Button from "@material-ui/core/Button";
 
-import MainContainerLayout from "../../layout/MainContainerLayout";
-import ParallaxLayout from "../../layout/ParallaxLayout";
+import MainContainerLayout from "../../layouts/MainContainerLayout";
+import ParallaxLayout from "../../layouts/ParallaxLayout";
 
 import PhysiotherapyData from "../../assets/data/pages/services/physiotherapy";
 

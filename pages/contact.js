@@ -2,14 +2,14 @@ import React from "react";
 
 import {Grid} from "@material-ui/core";
 
-import MainContainerLayout from "../layout/MainContainerLayout";
-import ParallaxLayout from "../layout/ParallaxLayout";
+import MainContainerLayout from "layouts/MainContainerLayout";
+import ParallaxLayout from "layouts/ParallaxLayout";
 
-import OpeningHours from "../pages-sections/contact-page/OpeningHours";
-import Address from "../pages-sections/contact-page/Address";
-import Contact from "../pages-sections/contact-page/Contact";
+import OpeningHours from "pages-sections/contact-page/OpeningHours";
+import Address from "pages-sections/contact-page/Address";
+import Contact from "pages-sections/contact-page/Contact";
 
-import ContactData from "../assets/data/pages/contact";
+import ContactData from "assets/data/pages/contact";
 
 export default function ContactPage(props) {
     return (
@@ -17,7 +17,6 @@ export default function ContactPage(props) {
             <MainContainerLayout>
                 <Grid
                     container
-                    spacing={5}
                     direction={"row"}
                     justify={"center"}
                     alignContent={"center"}

@@ -30,7 +30,7 @@ export default function Day(props) {
                     container
                     spacing={2}
                     direction={"row"}
-                    justify={"flex-end"}
+                    justify={"center"}
                     alignContent={"center"}
                 >
                     <Grid item>

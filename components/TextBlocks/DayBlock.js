@@ -6,7 +6,7 @@ import HalfHorizontalTexts from "./HalfHorizontalTexts";
 export default function DayBlock(props) {
     const {dayText, openTime, closeTime} = props
 
-    const leftText = dayText + ":"
+    const leftText = dayText
     const rightText = openTime + "  -  " + closeTime
 
     return (

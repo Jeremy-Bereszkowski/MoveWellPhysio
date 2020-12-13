@@ -11,7 +11,6 @@ import BottomProfiles from "pages-sections/about-page/BottomProfiles";
 
 import AboutData from "assets/data/pages/about";
 import ColumnLayout from "../layouts/ColumnLayout";
-import HeaderFooterLayout from "../layouts/HeaderFooterLayout";
 
 const useStyles = makeStyles({
     hr: {
@@ -25,29 +24,27 @@ export default function Physiotherapy(props) {
     const classes = useStyles();
 
     return (
-        <HeaderFooterLayout>
-            <ParallaxLayout parallaxImage={AboutData.core.parallaxImage} parallaxHeader={AboutData.core.parallaxHeader} parallaxBody={AboutData.core.parallaxBody}>
-                <MainContainerLayout>
-                    <ColumnLayout>
-                        <Grid
-                            container
-                            direction={"column"}
-                            justify={"center"}
-                            alignContent={"center"}
-                        >
-                            <Grid item>
-                                <TopText />
-                            </Grid>
-                            <Grid item>
-                                <hr size={30} className={classes.hr}/>
-                            </Grid>
-                            <Grid item>
-                                <BottomProfiles />
-                            </Grid>
+        <ParallaxLayout parallaxImage={AboutData.core.parallaxImage} parallaxHeader={AboutData.core.parallaxHeader} parallaxBody={AboutData.core.parallaxBody}>
+            <MainContainerLayout>
+                <ColumnLayout>
+                    <Grid
+                        container
+                        direction={"column"}
+                        justify={"center"}
+                        alignContent={"center"}
+                    >
+                        <Grid item>
+                            <TopText />
                         </Grid>
-                    </ColumnLayout>
-                </MainContainerLayout>
-            </ParallaxLayout>
-        </HeaderFooterLayout>
+                        <Grid item>
+                            <hr size={30} className={classes.hr}/>
+                        </Grid>
+                        <Grid item>
+                            <BottomProfiles />
+                        </Grid>
+                    </Grid>
+                </ColumnLayout>
+            </MainContainerLayout>
+        </ParallaxLayout>
     )
 }

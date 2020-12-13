@@ -14,7 +14,6 @@ import {blackHrThin} from "assets/jss/coreStyles";
 import LandingData from "assets/data/pages/landing-data";
 import URL from "assets/strings/urls";
 import ColumnLayout from "../layouts/ColumnLayout";
-import HeaderFooterLayout from "../layouts/HeaderFooterLayout";
 
 const useStyles = makeStyles({
     hr: {
@@ -26,7 +25,7 @@ export default function LandingPage(props) {
     const classes = useStyles();
 
     return (
-        <HeaderFooterLayout>
+        <>
             <LandingPageCarousel/>
             <MainContainerLayout>
                 <ColumnLayout>
@@ -54,6 +53,6 @@ export default function LandingPage(props) {
                     </Grid>
                 </ColumnLayout>
             </MainContainerLayout>
-        </HeaderFooterLayout>
+        </>
     )
 }

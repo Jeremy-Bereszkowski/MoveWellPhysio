@@ -3,9 +3,8 @@ import React from "react";
 import {Grid} from "@material-ui/core";
 import {makeStyles} from "@material-ui/core/styles";
 
-import {bodyHeaderText, bodyParaText} from "assets/jss/coreStyles";
+import {bodyHeaderText, bodyParaText1} from "assets/jss/coreStyles";
 import FocusedGroupData from "assets/data/pages/services/focusedGroup";
-import {bodyParaText1} from "../../../assets/jss/coreStyles";
 
 const useStyles = makeStyles({
     marginTop: {

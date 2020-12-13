@@ -7,22 +7,25 @@ import MainContainerLayout from "../../layouts/MainContainerLayout";
 import GreenHeaderBlackBody from "../../components/TextBlocks/GreenHeaderBlackBody";
 
 import PhysioLedRehabData from "../../assets/data/pages/services/physioLedRehab";
+import ColumnLayout from "../../layouts/ColumnLayout";
 
 export default function PhysioLedRehab(props) {
     return (
         <ParallaxLayout parallaxImage={PhysioLedRehabData.core.parallaxImage} parallaxHeader={PhysioLedRehabData.core.parallaxHeader} parallaxBody={PhysioLedRehabData.core.parallaxBody}>
             <MainContainerLayout>
-                <Grid
-                    container
-                    spacing={4}
-                    direction={"column"}
-                    justify={"center"}
-                    alignContent={"center"}
-                >
-                    <Grid item>
-                        <GreenHeaderBlackBody header={PhysioLedRehabData.top.header} body={PhysioLedRehabData.top.body}/>
+                <ColumnLayout>
+                    <Grid
+                        container
+                        spacing={4}
+                        direction={"column"}
+                        justify={"center"}
+                        alignContent={"center"}
+                    >
+                        <Grid item>
+                            <GreenHeaderBlackBody header={PhysioLedRehabData.top.header} body={PhysioLedRehabData.top.body}/>
+                        </Grid>
                     </Grid>
-                </Grid>
+                </ColumnLayout>
             </MainContainerLayout>
         </ParallaxLayout>
     )

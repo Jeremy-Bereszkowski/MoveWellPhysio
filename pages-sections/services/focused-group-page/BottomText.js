@@ -5,6 +5,7 @@ import {makeStyles} from "@material-ui/core/styles";
 
 import {bodyHeaderText, bodyParaText} from "assets/jss/coreStyles";
 import FocusedGroupData from "assets/data/pages/services/focusedGroup";
+import {bodyParaText1} from "../../../assets/jss/coreStyles";
 
 const useStyles = makeStyles({
     marginTop: {
@@ -17,7 +18,7 @@ const useStyles = makeStyles({
         paddingRight: "10vw",
     },
     blackSubHeaderText: {
-        ...bodyParaText,
+        ...bodyParaText1,
         marginLeft: "7vw",
         marginRight: "7vw",
         marginTop: "1vh",
@@ -26,7 +27,7 @@ const useStyles = makeStyles({
         fontWeight: "800",
     },
     blackParaText: {
-        ...bodyParaText,
+        ...bodyParaText1,
         marginLeft: "7vw",
         marginRight: "7vw",
         marginTop: "1vh",

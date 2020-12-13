@@ -6,7 +6,7 @@ import {makeStyles} from "@material-ui/core/styles";
 
 import LandingData from "assets/data/pages/landing-data";
 import {blackColor, hexToRgb} from "assets/jss/nextjs-material-kit-pro";
-import {greenHrThick, parallaxHeaderText} from "assets/jss/coreStyles";
+import {greenHrThick, parallaxHeaderText, parallaxSubHeaderText} from "assets/jss/coreStyles";
 import Colours from "assets/strings/colours";
 
 import BlockButton from "../Buttons/BlockButton";
@@ -66,8 +66,7 @@ const useStyles = makeStyles({
         marginRight: "15%",
     },
     titleSubHeading: {
-        textAlign: "center",
-        color: Colours.white,
+        ...parallaxSubHeaderText,
     },
 });
 

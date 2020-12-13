@@ -5,16 +5,15 @@ import {Grid} from "@material-ui/core";
 
 import HalfHorizontalTexts from "components/TextBlocks/HalfHorizontalTexts";
 
-import {bodyHeaderText, bodyParaText} from "assets/jss/coreStyles";
+import {bodyHeaderText, bodyParaText1} from "assets/jss/coreStyles";
 import ContactData from "assets/data/pages/contact";
 
 const useStyles = makeStyles({
     greenHeaderText: {
         ...bodyHeaderText,
-        textAlign: "center",
     },
     blackBodyText: {
-        ...bodyParaText,
+        ...bodyParaText1,
         marginTop: "0",
         marginBottom: "0",
         textAlign: "center",

@@ -6,13 +6,14 @@ const headerString = companyName + " Physiotherapy"
 const address1 = "181 Bay Street"
 const address2 = "Brighton, VIC, 3188"
 
+const phone = "(03) 9503 8223"
 const email = "hello@movewellmelbourne.com"
 
 /* Landing Carousel Backgrounds */
 const image1 = "/physio/layout_1.jpg";
-const image2 = "/physio/reformer.jpg";
-const image3 = "/physio/ring_reformer.jpg";
-const image4 = "/physio/redcord.jpg";
+const image2 = "/physio/clients/client.jpg";
+const image3 = "/physio/clients/client_21.jpg";
+const image4 = "/physio/clients/client_29.jpg";
 
 /* Main Page Backgrounds */
 const AboutBackground = "/physio/sign.jpg";
@@ -22,7 +23,7 @@ const ContactBackground = "/physio/layout_2.jpg";
 
 /* Services Page Backgrounds */
 const PhysiotherapyBackground = "/physio/clients/client_26.jpg";
-const PhysioLedRehabBackground = "/physio/clients/client_21.jpg";
+const PhysioLedRehabBackground = "/physio/clients/client_3.jpg";
 const FocusedGroupBackground = "/physio/clients/client_39.jpg";
 const ProfessionalMentorBackground = "/physio/clients/client_42.jpg";
 
@@ -35,6 +36,7 @@ export {
     companyName,
     address1,
     address2,
+    phone,
     email,
 
     image1,

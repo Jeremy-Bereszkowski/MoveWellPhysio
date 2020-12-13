@@ -3,7 +3,7 @@ import React from "react";
 import {Grid} from "@material-ui/core";
 import {makeStyles} from "@material-ui/core/styles";
 
-import {bodyParaText} from "assets/jss/coreStyles";
+import {bodyParaText1} from "assets/jss/coreStyles";
 import AboutData from "assets/data/pages/about";
 
 const useStyles = makeStyles({
@@ -12,13 +12,9 @@ const useStyles = makeStyles({
         marginBottom: "-5px"
     },
     bodyParaText: {
-        ...bodyParaText,
-        marginLeft: "4vw",
-        marginRight: "4vw",
-        marginTop: "2vh",
-        marginBottom: "2vh",
+        ...bodyParaText1,
+        margin: "2vh 4vw",
         padding: "0",
-        textAlign: "left",
     },
 });
 

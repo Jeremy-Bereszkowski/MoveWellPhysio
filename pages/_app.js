@@ -4,20 +4,20 @@ import App from "next/app";
 import Head from "next/head";
 import Router from "next/router";
 
+import LandingHeader from "components/Header/Header";
+import Footer from "components/Footer/Footer";
 import PageChange from "components/PageChange/PageChange.js";
-import Footer from "../components/Footer/Footer";
-import LandingHeader from "../components/Header/Header";
 
+import {headerString} from "assets/data/global";
 import "assets/scss/nextjs-material-kit-pro.scss?v=1.1.0";
 import "assets/css/react-demo.css";
 import "animate.css/animate.min.css";
-import {headerString} from "../assets/data/global";
 
 Router.events.on("routeChangeStart", url => {
     console.log(`Loading: ${url}`);
     document.body.classList.add("body-page-transition");
     ReactDOM.render(
-        <PageChange path={url} />,
+        <PageChange />,
         document.getElementById("page-transition")
     );
 });
@@ -45,7 +45,7 @@ export default class MyApp extends App {
         const { Component, pageProps } = this.props;
 
         return (
-            <React.Fragment>
+            <>
                 <Head>
                     <title>{headerString}</title>
                 </Head>
@@ -57,10 +57,9 @@ export default class MyApp extends App {
                         color: "dark"
                     }}
                 />
-                {/*{children}*/}
                 <Component {...pageProps} />
                 <Footer />
-            </React.Fragment>
+            </>
         );
     }
 }

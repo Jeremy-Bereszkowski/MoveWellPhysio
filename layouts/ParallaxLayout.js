@@ -8,6 +8,7 @@ import Parallax from "components/Parallax/Parallax";
 
 import {whiteColor} from "assets/jss/nextjs-material-kit-pro";
 import {greenHrThick, parallaxHeaderText} from "assets/jss/coreStyles";
+import {parallaxSubHeaderText} from "../assets/jss/coreStyles";
 
 const useStyles = makeStyles({
     container: {
@@ -26,7 +27,8 @@ const useStyles = makeStyles({
         minHeight: "32px",
     },
     titleSubHeading: {
-        textAlign: "center"
+        ...parallaxSubHeaderText,
+        margin: "0",
     },
     greenHr: {
         ...greenHrThick,

@@ -3,7 +3,8 @@ import {TestimonialBackground} from "../global";
 const TestimonialData = {
     core: {
         parallaxImage: TestimonialBackground,
-        parallaxHeader: "Customer Testimonials",
+        parallaxHeader: "Testimonials",
+        parallaxBody: "Hear what our clients have to say",
     },
 }
 

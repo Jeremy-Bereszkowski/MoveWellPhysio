@@ -12,7 +12,6 @@ import ContactData from "assets/data/pages/contact";
 const useStyles = makeStyles({
     greenHeaderText: {
         ...bodyHeaderText,
-        textAlign: "center",
     },
     blackBodyText: {
         fontWeight: "200",

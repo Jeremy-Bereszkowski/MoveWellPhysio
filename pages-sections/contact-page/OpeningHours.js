@@ -11,7 +11,6 @@ import {bodyHeaderText} from "assets/jss/coreStyles";
 const useStyles = makeStyles({
     greenHeaderText: {
         ...bodyHeaderText,
-        textAlign: "center",
     },
 });
 

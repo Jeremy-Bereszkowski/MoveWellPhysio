@@ -1,4 +1,4 @@
-import {ContactBackground, address1, address2, email} from "../global";
+import {ContactBackground, address1, address2, email, phone} from "../global";
 
 const ContactData = {
     core: {
@@ -48,7 +48,7 @@ const ContactData = {
         header: "Contact",
         telephone: {
             header: "Telephone",
-            value: "(03) 9503 8223"
+            value: phone
         },
         email: {
             header: "Email",

@@ -17,8 +17,8 @@ const useStyles = makeStyles({
         ...bodyParaText,
         marginLeft: "7vw",
         marginRight: "7vw",
-        marginTop: "1vh",
-        marginBottom: "1vh",
+        marginTop: "clamp(4px, 1vh, 8px)",
+        marginBottom: "clamp(4px, 1vh, 8px)",
         textAlign: "left",
     },
 });

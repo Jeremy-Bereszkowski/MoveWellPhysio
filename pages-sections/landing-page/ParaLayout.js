@@ -9,7 +9,7 @@ import Grid from "@material-ui/core/Grid";
 import Icon from "@material-ui/core/Icon";
 import KeyboardArrowRightIcon from "@material-ui/icons/KeyboardArrowRight";
 
-import {bodyActionText, bodyHeaderText, bodyParaText} from "assets/jss/coreStyles";
+import {bodyActionText, bodyHeaderText, bodyParaText1} from "assets/jss/coreStyles";
 import {blackColor, hexToRgb} from "assets/jss/nextjs-material-kit-pro";
 
 const useStyles = makeStyles({
@@ -21,7 +21,7 @@ const useStyles = makeStyles({
         textAlign: "left",
     },
     bodyParaText: {
-        ...bodyParaText,
+        ...bodyParaText1,
         marginLeft: "2px",
     },
     bodyActionText: {
@@ -115,7 +115,7 @@ export default function ParaLayout(props) {
                 {bodyStringArray.map(bodyString => {
                     return (
                         <h4 className={classes.bodyParaText} key={bodyString}>
-                            <b>{bodyString}</b>
+                            {bodyString}
                         </h4>
                     )
                 })}

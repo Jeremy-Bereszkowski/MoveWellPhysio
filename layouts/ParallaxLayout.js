@@ -22,6 +22,8 @@ const useStyles = makeStyles({
     },
     title: {
         ...parallaxHeaderText,
+        marginTop: "30px",
+        minHeight: "32px",
     },
     titleSubHeading: {
         textAlign: "center"

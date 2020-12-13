@@ -16,6 +16,7 @@ const image4 = "/physio/redcord.jpg";
 
 /* Main Page Backgrounds */
 const AboutBackground = "/physio/sign.jpg";
+const TestimonialBackground = "/physio/layout_1.jpg";
 const BookBackground = "/physio/front_desk.jpg";
 const ContactBackground = "/physio/layout_2.jpg";
 
@@ -42,6 +43,7 @@ export {
     image4,
 
     AboutBackground,
+    TestimonialBackground,
     BookBackground,
     ContactBackground,
 

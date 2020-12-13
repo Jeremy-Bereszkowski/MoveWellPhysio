@@ -98,96 +98,6 @@ const useStyles = makeStyles({
       color: whiteColor,
       background: "transparent",
       boxShadow: "none"
-    },
-    "&$primary": {
-      "&,&:focus,&:hover,&:visited": {
-        color: primaryColor[0]
-      }
-    },
-    "&$info": {
-      "&,&:focus,&:hover,&:visited": {
-        color: infoColor[0]
-      }
-    },
-    "&$success": {
-      "&,&:focus,&:hover,&:visited": {
-        color: successColor[0]
-      }
-    },
-    "&$warning": {
-      "&,&:focus,&:hover,&:visited": {
-        color: warningColor[0]
-      }
-    },
-    "&$rose": {
-      "&,&:focus,&:hover,&:visited": {
-        color: roseColor[0]
-      }
-    },
-    "&$danger": {
-      "&,&:focus,&:hover,&:visited": {
-        color: dangerColor[0]
-      }
-    },
-    "&$twitter": {
-      "&,&:focus,&:hover,&:visited": {
-        color: twitterColor
-      }
-    },
-    "&$facebook": {
-      "&,&:focus,&:hover,&:visited": {
-        color: facebookColor
-      }
-    },
-    "&$google": {
-      "&,&:focus,&:hover,&:visited": {
-        color: googleColor
-      }
-    },
-    "&$linkedin": {
-      "&,&:focus,&:hover,&:visited": {
-        color: linkedinColor
-      }
-    },
-    "&$pinterest": {
-      "&,&:focus,&:hover,&:visited": {
-        color: pinterestColor
-      }
-    },
-    "&$youtube": {
-      "&,&:focus,&:hover,&:visited": {
-        color: youtubeColor
-      }
-    },
-    "&$tumblr": {
-      "&,&:focus,&:hover,&:visited": {
-        color: tumblrColor
-      }
-    },
-    "&$github": {
-      "&,&:focus,&:hover,&:visited": {
-        color: grayColor[8]
-      }
-    },
-    "&$behance": {
-      "&,&:focus,&:hover,&:visited": {
-        color: behanceColor
-      }
-    },
-    "&$dribbble": {
-      "&,&:focus,&:hover,&:visited": {
-        color: dribbbleColor
-      }
-    },
-    "&$reddit": {
-      "&,&:focus,&:hover,&:visited": {
-        color: redditColor
-      }
-    },
-    "&$instagram": {
-      "&,&:focus,&:hover,&:visited": {
-        color: instagramColor
-      }
     }
   },
   justIcon: {
@@ -197,36 +107,6 @@ const useStyles = makeStyles({
     height: "41px",
     minWidth: "41px",
     width: "41px",
-    "& .fab,& .fas,& .far,& .fal,& svg,& .material-icons": {
-      marginRight: "0px"
-    },
-    "&$lg": {
-      height: "57px",
-      minWidth: "57px",
-      width: "57px",
-      lineHeight: "56px",
-      "& .fab,& .fas,& .far,& .fal,& .material-icons": {
-        fontSize: "32px",
-        lineHeight: "56px"
-      },
-      "& svg": {
-        width: "32px",
-        height: "32px"
-      }
-    },
-    "&$sm": {
-      height: "30px",
-      minWidth: "30px",
-      width: "30px",
-      "& .fab,& .fas,& .far,& .fal,& .material-icons": {
-        fontSize: "17px",
-        lineHeight: "29px"
-      },
-      "& svg": {
-        width: "17px",
-        height: "17px"
-      }
-    }
   },
 });
 
@@ -237,7 +117,7 @@ const FooterButton = React.forwardRef((props, ref) => {
   const btnClasses = classNames({
     [classes.button]: true,
     [classes["white"]]: true,
-    [classes.simple]: true,
+    [classes.simple]: "true",
     [classes.justIcon]: true,
   });
 

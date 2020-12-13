@@ -45,8 +45,8 @@ const useStyles = makeStyles(theme => ({
             backgroundColor: grayColor[3]
         },
         "&:hover,&:focus": {
-            color: grayColor[3],
-            backgroundColor: Colours.green,
+            color: Colours.green,
+            backgroundColor: whiteColor,
             boxShadow:
                 "0 14px 26px -12px rgba(" +
                 hexToRgb(grayColor[0]) +

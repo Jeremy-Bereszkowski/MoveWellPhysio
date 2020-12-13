@@ -10,6 +10,8 @@ import {greenHrThick, parallaxHeaderText} from "assets/jss/coreStyles";
 import Colours from "assets/strings/colours";
 
 import BlockButton from "../Buttons/BlockButton";
+import BookConsultButton from "../Buttons/BookConsultButton";
+import BookGroupClassButton from "../Buttons/BookGroupClassButton";
 
 const useStyles = makeStyles({
     filter: {},
@@ -40,6 +42,8 @@ const useStyles = makeStyles({
     },
     title: {
         ...parallaxHeaderText,
+        marginTop: "30px",
+        minHeight: "32px",
         marginLeft: "15%",
         marginRight: "15%",
     },
@@ -97,18 +101,10 @@ export default function LandingPageCarousel(props) {
                     alignContent={"center"}
                 >
                     <Grid item>
-                        <BlockButton color={"green"} href={href1}>
-                            <p style={{margin: 0, padding: 2}}>
-                                <b>{buttonText1}</b>
-                            </p>
-                        </BlockButton>
+                        <BookConsultButton />
                     </Grid>
                     <Grid item>
-                        <BlockButton color={"dark"} href={href2}>
-                            <p style={{margin: 0, padding: 2}}>
-                                <b>{buttonText2}</b>
-                            </p>
-                        </BlockButton>
+                        <BookGroupClassButton />
                     </Grid>
                 </Grid>
             )

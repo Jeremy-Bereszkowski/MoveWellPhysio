@@ -22,8 +22,6 @@ const parallaxHeaderText = {
     ...largeFont,
     display: "inline-block",
     position: "relative",
-    marginTop: "30px",
-    minHeight: "32px",
     color: whiteColor,
     textDecoration: "none",
     textTransform: "uppercase",

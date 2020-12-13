@@ -15,7 +15,7 @@ import {headerString} from "../assets/data/global";
 
 Router.events.on("routeChangeStart", url => {
     console.log(`Loading: ${url}`);
-    document.body.classList.add("body-data-transition");
+    document.body.classList.add("body-page-transition");
     ReactDOM.render(
         <PageChange path={url} />,
         document.getElementById("page-transition")
@@ -23,11 +23,11 @@ Router.events.on("routeChangeStart", url => {
 });
 Router.events.on("routeChangeComplete", () => {
     ReactDOM.unmountComponentAtNode(document.getElementById("page-transition"));
-    document.body.classList.remove("body-data-transition");
+    document.body.classList.remove("body-page-transition");
 });
 Router.events.on("routeChangeError", () => {
     ReactDOM.unmountComponentAtNode(document.getElementById("page-transition"));
-    document.body.classList.remove("body-data-transition");
+    document.body.classList.remove("body-page-transition");
 });
 
 export default class MyApp extends App {
@@ -49,16 +49,7 @@ export default class MyApp extends App {
                 <Head>
                     <title>{headerString}</title>
                 </Head>
-                <LandingHeader
-                    color="transparent"
-                    fixed
-                    changeColorOnScroll={{
-                        height: 25,
-                        color: "dark"
-                    }}
-                />
                 <Component {...pageProps} />
-                <Footer />
             </React.Fragment>
         );
     }

@@ -32,13 +32,13 @@ const HeaderLinkData = [
                     link: URL.FOCUSED_GROUP_EXERCISE,
                 },
             },
-            {
-                core: {
-                    key: "PROFESSIONAL MENTORING",
-                    link: URL.PROFESSIONAL_MENTORING,
-                },
-            }
         ]
+    },
+    {
+        core: {
+            key: "Testimonials",
+            link: URL.TESTIMONIALS,
+        },
     },
     {
         core: {

@@ -7,7 +7,6 @@ import MainContainerLayout from "../../layouts/MainContainerLayout";
 import GreenHeaderBlackBody from "../../components/TextBlocks/GreenHeaderBlackBody";
 
 import PhysioLedRehabData from "../../assets/data/pages/services/physioLedRehab";
-import Clients from "../../pages-sections/services/physio-led-rehab-page/Clients";
 
 export default function PhysioLedRehab(props) {
     return (
@@ -22,9 +21,6 @@ export default function PhysioLedRehab(props) {
                 >
                     <Grid item>
                         <GreenHeaderBlackBody header={PhysioLedRehabData.top.header} body={PhysioLedRehabData.top.body}/>
-                    </Grid>
-                    <Grid item>
-                        <Clients />
                     </Grid>
                 </Grid>
             </MainContainerLayout>

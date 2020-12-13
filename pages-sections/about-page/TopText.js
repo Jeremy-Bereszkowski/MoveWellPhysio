@@ -15,6 +15,9 @@ const useStyles = makeStyles({
         ...bodyParaText,
         marginLeft: "4vw",
         marginRight: "4vw",
+        marginTop: "2vh",
+        marginBottom: "2vh",
+        padding: "0",
         textAlign: "left",
     },
 });
@@ -25,9 +28,9 @@ export default function TopText(props) {
     return(
         <Grid
             container
-            direction={"row"}
-            alignItems={"center"}
-            justify={"center"}
+            direction={"column"}
+            alignContent={"center"}
+            justify={"flex-start"}
         >
             {AboutData.top.map(element => {
                 return (

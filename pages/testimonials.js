@@ -31,7 +31,7 @@ export default function Function(props) {
                         tabs={[
                             {
                                 tabButton: PhysioLedRehabData.clients.clients[0].buttonHeader,
-                                tabContent:<PhysioLedRehabBlock
+                                tabContent: <PhysioLedRehabBlock
                                     right
                                     header={PhysioLedRehabData.clients.clients[0].buttonContent.header}
                                     para={PhysioLedRehabData.clients.clients[0].buttonContent.para}
@@ -43,7 +43,7 @@ export default function Function(props) {
                             },
                             {
                                 tabButton: PhysioLedRehabData.clients.clients[1].buttonHeader,
-                                tabContent:<PhysioLedRehabBlock
+                                tabContent: <PhysioLedRehabBlock
                                     right
                                     header={PhysioLedRehabData.clients.clients[1].buttonContent.header}
                                     para={PhysioLedRehabData.clients.clients[1].buttonContent.para}
@@ -55,7 +55,7 @@ export default function Function(props) {
                             },
                             {
                                 tabButton: PhysioLedRehabData.clients.clients[2].buttonHeader,
-                                tabContent:<PhysioLedRehabBlock
+                                tabContent: <PhysioLedRehabBlock
                                     right
                                     header={PhysioLedRehabData.clients.clients[2].buttonContent.header}
                                     para={PhysioLedRehabData.clients.clients[2].buttonContent.para}

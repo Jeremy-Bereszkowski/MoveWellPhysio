@@ -17,14 +17,16 @@ const useStyles = makeStyles(theme => ({}))
 export default function Function(props) {
     const classes = useStyles()
 
+    const smContainer = 3, lgContainer = 9
+
     return (
         <ParallaxLayout parallaxImage={TestimonialData.core.parallaxImage} parallaxHeader={TestimonialData.core.parallaxHeader} parallaxBody={TestimonialData.core.parallaxBody}>
             <MainContainerLayout>
                 <ColumnLayout>
                     <NavPills
                         horizontal={{
-                            tabsGrid: { xs: 12, sm: 2, md: 2 },
-                            contentGrid: { xs: 12, sm: 10, md: 10 }
+                            tabsGrid: { xs: 12, sm: smContainer, md: smContainer },
+                            contentGrid: { xs: 12, sm: lgContainer, md: lgContainer }
                         }}
                         tabs={[
                             {

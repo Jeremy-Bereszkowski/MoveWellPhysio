@@ -19,6 +19,7 @@ import {
     whiteColor
 } from "../../assets/jss/nextjs-material-kit-pro";
 import Colours from "../../assets/strings/colours";
+import {extraSmallFont} from "../../assets/jss/coreStyles";
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -51,16 +52,23 @@ const useStyles = makeStyles(theme => ({
         textAlign: "center",
         transition: "all .3s",
         padding: "10px 15px",
-        color: grayColor[15],
-        height: "auto",
+        color: whiteColor,
+        backgroundColor: grayColor[10],
+        height: "clamp(20px, 6vh, 62px)",
         opacity: "1",
         maxWidth: "100%",
         margin: "0 5px",
         minHeight: "unset",
         lineHeight: "24px",
         textTransform: "uppercase",
-        fontSize: "12px",
-        fontWeight: "500"
+        fontSize: extraSmallFont,
+        fontWeight: "500",
+        boxShadow:
+            "0 4px 20px 0px rgba(" +
+            hexToRgb(blackColor) +
+            ", 0.14), 0 7px 10px -5px rgba(" +
+            hexToRgb(grayColor[10]) +
+            ", 0.4)"
     },
     pillsWithIcons: {
         borderRadius: "4px"
@@ -103,6 +111,9 @@ const useStyles = makeStyles(theme => ({
     },
     tabLabelContainer: {
         padding: "unset !important"
+    },
+    label: {
+        fontSize: "50px"
     }
 }));
 

@@ -67,9 +67,11 @@ export default function HeaderButton(props) {
     const InternalLink = () => {
         return (
             <Link href={element.core.link} as={element.core.as}>
-                <Button className={buttonStyles} onClick={onClick} fullWidth>
-                    {element.core.key}
-                </Button>
+                <a>
+                    <Button className={buttonStyles} onClick={onClick} fullWidth>
+                        {element.core.key}
+                    </Button>
+                </a>
             </Link>
         )
     }

@@ -2,7 +2,7 @@ import {companyName, image1, image2, image3, image4} from "../global"
 import URL from "../../strings/urls";
 
 const Para1Image = "/physio/clients/client_11.jpg";
-const Para2Image = "/physio/clients/client.jpg"
+const Para2Image = "/physio/clients/client_51.jpg"
 
 const LandingData = {
     carousel: [

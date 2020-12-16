@@ -9,6 +9,7 @@ import HeaderLink from "./HeaderLink";
 import {blackColor, grayColor, hexToRgb, mlAuto, whiteColor} from "assets/jss/nextjs-material-kit-pro";
 import HeaderLinkData from "assets/data/components/header";
 import Colours from "assets/strings/colours";
+import Grid from "@material-ui/core/Grid";
 
 const useStyles = makeStyles(theme => ({
   list: {
@@ -71,7 +72,7 @@ const useStyles = makeStyles(theme => ({
 }));
 
 export default function HeaderLinks(props) {
-  const {onClick} = props
+  const {onClick, vertical} = props
 
   const easeInOutQuad = (t, b, c, d) => {
     t /= d / 2;
@@ -114,18 +115,46 @@ export default function HeaderLinks(props) {
 
   const classes = useStyles();
   return (
-      <div className={mlAuto}>
+      <>
         {
-          HeaderLinkData.map(element => {
-            return (
-                <HeaderLink element={element} onClick={onClick}/>
-            )
-          })
+          vertical === true ?
+              <Grid
+                  container
+                  direction={"column"}
+                  alignContent={"stretch"}
+                  alignItems={"stretch"}
+                  justify={"center"}
+              >
+                {
+                  HeaderLinkData.map(element => {
+                    return (
+                        <Grid item>
+                          <HeaderLink vertical element={element} onClick={onClick}/>
+                        </Grid>
+                    )
+                  })
+                }
+              </Grid>
+              :
+              <div className={classes.mlAuto}>
+                {
+                  HeaderLinkData.map(element => {
+                    return (
+                        <HeaderLink element={element} onClick={onClick}/>
+                    )
+                  })
+                }
+              </div>
         }
-      </div>
+      </>
   );
+}
+
+HeaderLinks.defaultProps = {
+  vertical: false,
 }
 
 HeaderLinks.propTypes = {
   onClick: PropTypes.func,
+  vertical: PropTypes.bool,
 }

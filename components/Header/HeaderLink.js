@@ -1,8 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types"
+import classNames from "classnames"
 
 import {makeStyles} from "@material-ui/core/styles";
-import ListItem from "@material-ui/core/ListItem";
 
 import HeaderButton from "./HeaderButton";
 import CustomDropdown from "components/CustomDropdown/CustomDropdown";
@@ -75,16 +75,21 @@ const useStyles = makeStyles(theme => ({
             }
         }
     },
+    vertical: {
+        width: "-webkit-fill-available",
+    }
 }));
 
 export default function HeaderLink(props) {
     const classes = useStyles();
 
-    const {element, onClick} = props
+    const {element, onClick, vertical} = props
+
+    const listClasses = vertical ? classNames(classes.listItem, classes.vertical) : classes.listItem
 
     if (element.sub === undefined) {
         return (
-            <div className={classes.listItem}>
+            <div className={listClasses}>
                 <HeaderButton element={element} onClick={onClick}/>
             </div>
         )
@@ -94,7 +99,7 @@ export default function HeaderLink(props) {
         })
 
         return (
-            <div className={classes.listItem}>
+            <div className={listClasses}>
                 <CustomDropdown
                     noLiPadding
                     navDropdown
@@ -114,4 +119,5 @@ export default function HeaderLink(props) {
 HeaderLink.propTypes = {
     element: PropTypes.object,
     onClick: PropTypes.func,
+    vertical: PropTypes.bool,
 }

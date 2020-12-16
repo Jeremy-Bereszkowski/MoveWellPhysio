@@ -79,7 +79,7 @@ const useStyles = makeStyles(theme => ({
 export default function HeaderButton(props) {
     const classes = useStyles();
 
-    const {element, onClick} = props
+    const {element, onClick, isList} = props
 
     const router = useRouter()
 
@@ -106,19 +106,47 @@ export default function HeaderButton(props) {
         )
     }
 
+    const ListBlock = () => {
+        return (
+            <ListItem className={classes.listItem}>
+                {
+                    element.core.link === undefined ? null : <InternalLink/>
+                }
+                {
+                    element.core.href === undefined ? null : <ExternalLink/>
+                }
+            </ListItem>
+        )
+    }
+
+    const Block = () => {
+        return (
+            <div className={classes.listItem}>
+                {
+                    element.core.link === undefined ? null : <InternalLink/>
+                }
+                {
+                    element.core.href === undefined ? null : <ExternalLink/>
+                }
+            </div>
+        )
+    }
+
     return (
-        <ListItem className={classes.listItem}>
+        <>
             {
-                element.core.link === undefined ? null : <InternalLink/>
+                isList === true ? <ListBlock /> : <Block />
             }
-            {
-                element.core.href === undefined ? null : <ExternalLink/>
-            }
-        </ListItem>
+        </>
     )
+}
+
+HeaderButton.defaultProps = {
+    isList: true
 }
 
 HeaderButton.propTypes = {
     element: PropTypes.object,
     onClick: PropTypes.func,
+    isList: PropTypes.bool,
 }

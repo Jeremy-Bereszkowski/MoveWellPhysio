@@ -62,9 +62,9 @@ export default function BottomText(props) {
                 alignContent={"center"}
             >
                 {
-                    FocusedGroupData.bottom.body.map(element => {
+                    FocusedGroupData.bottom.body.map((element, key) => {
                         return (
-                            <Grid item key={element}>
+                            <Grid item key={element + " " + key}>
                                 {
                                     element.header === undefined ?
                                         null

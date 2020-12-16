@@ -6,6 +6,7 @@ import {makeStyles} from "@material-ui/core/styles";
 import CardHeader from "./CardHeader";
 import CardBody from "./CardBody";
 import Card from "./Card";
+import Grid from "@material-ui/core/Grid";
 
 const useStyles = makeStyles({
     textStyle: {
@@ -27,18 +28,20 @@ export default function EmployeeProfileCard(props) {
     return (
         <Card plain className={classes.card2}>
             <CardHeader image plain>
-                <img
-                    src={employeeImage}
-                    alt={employeeName + "_headshot"}
-                    style={{width: "60%", height: "auto", marginLeft: "20%", marginRight: "20%"}}
-                />
-                <div
-                    style={{
-                        backgroundImage:
-                            "url('https://s3.amazonaws.com/creativetim_bucket/products/217/original/opt_mk_nextjs_thumbnail.jpg?1525851474')",
-                        opacity: "1"
-                    }}
-                />
+                <Grid
+                    container
+                    direction={"column"}
+                    justify={"center"}
+                    alignContent={"center"}
+                >
+                    <Grid item>
+                        <img
+                            src={employeeImage}
+                            alt={employeeName + "_headshot"}
+                            style={{width: "auto", height: "45vh"}}
+                        />
+                    </Grid>
+                </Grid>
             </CardHeader>
             <CardBody plain>
                 <h4 className={classes.textStyle}>

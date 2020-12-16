@@ -6,35 +6,11 @@ import classNames from "classnames";
 
 import {makeStyles} from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
-import ListItem from "@material-ui/core/ListItem";
 
 import {blackColor, grayColor, hexToRgb, whiteColor} from "assets/jss/nextjs-material-kit-pro";
 import Colours from "assets/strings/colours";
 
 const useStyles = makeStyles(theme => ({
-    listItem: {
-        float: "left",
-        color: "inherit",
-        position: "relative",
-        display: "block",
-        margin: "0",
-        padding: "0",
-        [theme.breakpoints.down("sm")]: {
-            "& ul": {
-                maxHeight: "300px",
-                overflow: "scroll"
-            },
-            width: "100%",
-            "&:not(:last-child)": {
-                "&:after": {
-                    content: '""',
-                    display: "block",
-                    height: "1px",
-                    backgroundColor: grayColor[14]
-                }
-            }
-        },
-    },
     button: {
         color: whiteColor,
         backgroundColor: "transparent",
@@ -79,7 +55,7 @@ const useStyles = makeStyles(theme => ({
 export default function HeaderButton(props) {
     const classes = useStyles();
 
-    const {element, onClick, isList} = props
+    const {element, onClick} = props
 
     const router = useRouter()
 
@@ -106,47 +82,19 @@ export default function HeaderButton(props) {
         )
     }
 
-    const ListBlock = () => {
-        return (
-            <ListItem className={classes.listItem}>
-                {
-                    element.core.link === undefined ? null : <InternalLink/>
-                }
-                {
-                    element.core.href === undefined ? null : <ExternalLink/>
-                }
-            </ListItem>
-        )
-    }
-
-    const Block = () => {
-        return (
-            <div className={classes.listItem}>
-                {
-                    element.core.link === undefined ? null : <InternalLink/>
-                }
-                {
-                    element.core.href === undefined ? null : <ExternalLink/>
-                }
-            </div>
-        )
-    }
-
     return (
         <>
             {
-                isList === true ? <ListBlock /> : <Block />
+                element.core.link === undefined ? null : <InternalLink/>
+            }
+            {
+                element.core.href === undefined ? null : <ExternalLink/>
             }
         </>
     )
 }
 
-HeaderButton.defaultProps = {
-    isList: true
-}
-
 HeaderButton.propTypes = {
     element: PropTypes.object,
     onClick: PropTypes.func,
-    isList: PropTypes.bool,
 }

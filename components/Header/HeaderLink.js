@@ -90,7 +90,7 @@ export default function HeaderLink(props) {
     if (element.sub === undefined) {
         return (
             <div className={listClasses}>
-                <HeaderButton isList element={element} onClick={onClick}/>
+                <HeaderButton element={element} onClick={onClick}/>
             </div>
         )
     } else {

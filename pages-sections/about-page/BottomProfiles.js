@@ -24,6 +24,7 @@ export default function BottomProfiles(props) {
     return(
         <Grid
             container
+            spacing={2}
             direction={"row"}
             justify={"center"}
             alignContent={"center"}
@@ -44,11 +45,11 @@ export default function BottomProfiles(props) {
                             return (
                                 <Grid
                                     item
-                                    md={6} xl={6}
+                                    md={4} xl={4}
                                     className={classes.flexBox}
                                     key={element}
                                 >
-                                    <EmployeeProfileCard employeeName={element[0]} employeePosition={element[1]} employeeDescription={element[2]} employeeImage={element[3]}/>
+                                    <EmployeeProfileCard employeeName={element.name} employeePosition={element.title} employeeDescription={element.description} employeeImage={element.image}/>
                                 </Grid>
                             )
                         })

@@ -145,9 +145,6 @@ export default function Footer() {
                             <FooterButton
                                 href="https://www.facebook.com/movewellmelbourne"
                                 target="_blank"
-                                color="white"
-                                justIcon
-                                simple
                             >
                                 <i className="fab fa-facebook" />
                             </FooterButton>
@@ -156,9 +153,6 @@ export default function Footer() {
                             <FooterButton
                                 href="https://www.instagram.com/movewellmelbourne/"
                                 target="_blank"
-                                color="white"
-                                justIcon
-                                simple
                             >
                                 <i className="fab fa-instagram" />
                             </FooterButton>

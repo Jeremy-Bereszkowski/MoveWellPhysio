@@ -84,7 +84,9 @@ export default function HeaderLink(props) {
 
     if (element.sub === undefined) {
         return (
-            <HeaderButton element={element} onClick={onClick}/>
+            <div className={classes.listItem}>
+                <HeaderButton element={element} onClick={onClick}/>
+            </div>
         )
     } else {
         const subLinks = element.sub.map((ele) => {
@@ -92,7 +94,7 @@ export default function HeaderLink(props) {
         })
 
         return (
-            <ListItem className={classes.listItem}>
+            <div className={classes.listItem}>
                 <CustomDropdown
                     noLiPadding
                     navDropdown
@@ -104,7 +106,7 @@ export default function HeaderLink(props) {
                     }}
                     dropdownList={subLinks}
                 />
-            </ListItem>
+            </div>
         )
     }
 }

@@ -10,16 +10,13 @@ import { makeStyles } from "@material-ui/core/styles";
 import Tab from "@material-ui/core/Tab";
 import Tabs from "@material-ui/core/Tabs";
 import Grid from "@material-ui/core/Grid";
+
 import {
-    blackColor, dangerColor, grayColor, hexToRgb,
-    infoColor,
-    primaryColor, roseColor,
-    successColor,
-    warningColor,
+    blackColor, grayColor, hexToRgb,
     whiteColor
-} from "../../assets/jss/nextjs-material-kit-pro";
-import Colours from "../../assets/strings/colours";
-import {extraSmallFont} from "../../assets/jss/coreStyles";
+} from "assets/jss/nextjs-material-kit-pro";
+import {extraSmallFont} from "assets/jss/coreStyles";
+import Colours from "assets/strings/colours";
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -160,7 +157,6 @@ export default function NavPills(props) {
             {...icon}
             classes={{
               root: pillsClasses,
-              label: classes.label,
               selected: classes["green"]
             }}
           />

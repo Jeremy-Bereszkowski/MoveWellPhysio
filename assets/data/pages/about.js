@@ -1,6 +1,7 @@
 import {AboutBackground, companyName} from "../global"
-const YashaHeadshot = "/physio/yasha_headshot.jpg";
-const ChrisHeadshot = "/physio/chris headshot.jpg";
+const YashaHeadshot = "/physio/headshot_yasha.jpg";
+const ChrisHeadshot = "/physio/headshot_chris.jpg";
+const ShannonHeadshot = "/physio/headshot_shannon.jpg";
 
 const AboutData = {
     core: {
@@ -17,18 +18,25 @@ const AboutData = {
     employee: {
         header: "Our Team",
         employees: [
-            [
-                "Yasha Gurevitch",
-                "Principle Physiotherapist",
-                "YASHAS DESCRIPTION HERE",
-                YashaHeadshot,
-            ],
-            [
-                "Chris",
-                "Personal Trainer",
-                "CHRIS DESCRIPTION HERE",
-                ChrisHeadshot,
-            ],
+            {
+                name: "Yasha Gurevitch",
+                title: "Principle Physiotherapist",
+                description: "Yasha completed his Bachelor of Applied Science and Masters of Physiotherapy at La Trobe Bendigo. Yasha’s clinical interest involve management of complex musculoskeletal conditions, sports physiotherapy and injury prevention. Yasha has been involved in a variety of different sports settings including soccer, basketball and is currently the head physiotherapist at AJAX football club. A passion for ongoing education and knowledge translation Yasha has delivered presentations on injury prevention to variety of different sports clubs and Lectures at La Trobe university on musculoskeletal physiotherapy. With a strong focus on being patient centred, Yasha works closely with his patients to achieve their goals.",
+                image: YashaHeadshot,
+            },
+            {
+                name: "Chris",
+                title: "Personal Trainer",
+                description: "Chris has been working as a group class instructor and personal trainer for over 6 years. He loves helping those who are new to training and want to learn how to exercise safely and effectively. He enjoys helping client with any goals they have and loves to do some one on one boxing classes. \n" +
+                "To keep fit, Chris plays Ice Hockey, Football and does some weight training with friends.",
+                image: ChrisHeadshot,
+            },
+            {
+                name: "Shannon Petropoulos",
+                title: "Personal Trainer/Class Instructor",
+                description: "Shannon Description",
+                image: ShannonHeadshot,
+            },
         ]
     },
 }

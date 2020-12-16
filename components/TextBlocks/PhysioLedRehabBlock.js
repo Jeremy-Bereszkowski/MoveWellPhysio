@@ -125,7 +125,7 @@ export default function PhysioLedRehabBlock(props) {
                         >
                             {clientPara.map(bodyString => {
                                 return (
-                                    <Grid item>
+                                    <Grid item key={bodyString}>
                                         <h5 className={classes.clientParaText} key={bodyString}>
                                             <b>{bodyString}</b>
                                         </h5>
@@ -143,7 +143,7 @@ export default function PhysioLedRehabBlock(props) {
         <Grid
             container
             spacing={1}
-            direction="direction"
+            direction="column"
             justify="flex-start"
             alignContent="flex-start"
             alignItems="flex-start"
@@ -156,7 +156,7 @@ export default function PhysioLedRehabBlock(props) {
             </Grid>
             {para.map(bodyString => {
                 return (
-                    <Grid item>
+                    <Grid item key={bodyString}>
                         <h5 className={classes.bodyParaText} key={bodyString}>
                             {bodyString}
                         </h5>
@@ -168,8 +168,8 @@ export default function PhysioLedRehabBlock(props) {
                     container
                     spacing={3}
                     direction="row"
-                    justify="flex-start"
-                    alignItems="flex-start"
+                    justify="center"
+                    alignItems="center"
                     alignContent={"flex-start"}
                     className={classes.divHeader}
                 >

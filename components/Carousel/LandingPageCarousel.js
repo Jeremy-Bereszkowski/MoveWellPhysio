@@ -7,7 +7,6 @@ import {makeStyles} from "@material-ui/core/styles";
 import LandingData from "assets/data/pages/landing-data";
 import {blackColor, hexToRgb} from "assets/jss/nextjs-material-kit-pro";
 import {greenHrThick, parallaxHeaderText, parallaxSubHeaderText} from "assets/jss/coreStyles";
-import Colours from "assets/strings/colours";
 
 import BlockButton from "../Buttons/BlockButton";
 import BookConsultButton from "../Buttons/BookConsultButton";
@@ -68,6 +67,10 @@ const useStyles = makeStyles({
     titleSubHeading: {
         ...parallaxSubHeaderText,
     },
+    buttonText: {
+        margin: 0,
+        padding: 2
+    }
 });
 
 export default function LandingPageCarousel(props) {
@@ -81,12 +84,12 @@ export default function LandingPageCarousel(props) {
         autoplay: true
     };
 
-    function Buttons(href1, href2, buttonText1, buttonText2) {
-        if (href2 === undefined) {
+    function Buttons(href, buttonText) {
+        if (href !== "landing") {
             return (
-                <BlockButton color={"green"} href={href1}>
-                    <p style={{margin: 0, padding: 2}}>
-                        <b>{buttonText1}</b>
+                <BlockButton color={"green"} href={href}>
+                    <p className={classes.buttonText}>
+                        <b>{buttonText}</b>
                     </p>
                 </BlockButton>
             )
@@ -110,7 +113,7 @@ export default function LandingPageCarousel(props) {
         }
     }
 
-    function Slide(image, header, body, href1, buttonText1, href2, buttonText2) {
+    function Slide(image, header, body, href, buttonText) {
         return (
             <div className={classes.imageTint} key={header}>
                 <div style={{backgroundImage: "url(" + image + ")"}} className={classes.imageStyle}/>
@@ -139,7 +142,7 @@ export default function LandingPageCarousel(props) {
                         null
                     }
                     <Grid item>
-                        {Buttons(href1, href2, buttonText1, buttonText2)}
+                        {Buttons(href, buttonText)}
                     </Grid>
                 </Grid>
             </div>
@@ -148,9 +151,9 @@ export default function LandingPageCarousel(props) {
 
     return (
         <Carousel {...settings}>
-            {LandingData.carousel.map(elements => {
+            {LandingData.carousel.map(element => {
                 return(
-                    Slide(elements[0], elements[1], elements[2], elements[3], elements[4], elements[5], elements[6])
+                    Slide(element.image, element.header, element.body, element.href, element.buttonText)
                 )
             })}
         </Carousel>

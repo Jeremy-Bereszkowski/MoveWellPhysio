@@ -126,9 +126,9 @@ export default function HeaderLinks(props) {
                   justify={"center"}
               >
                 {
-                  HeaderLinkData.map(element => {
+                  HeaderLinkData.map((element, key) => {
                     return (
-                        <Grid item>
+                        <Grid item key={key}>
                           <HeaderLink vertical element={element} onClick={onClick}/>
                         </Grid>
                     )
@@ -138,9 +138,9 @@ export default function HeaderLinks(props) {
               :
               <div className={classes.mlAuto}>
                 {
-                  HeaderLinkData.map(element => {
+                  HeaderLinkData.map((element, key) => {
                     return (
-                        <HeaderLink element={element} onClick={onClick}/>
+                        <HeaderLink element={element} onClick={onClick} key={key}/>
                     )
                   })
                 }

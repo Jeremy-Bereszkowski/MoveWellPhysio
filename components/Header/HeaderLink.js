@@ -83,13 +83,13 @@ const useStyles = makeStyles(theme => ({
 export default function HeaderLink(props) {
     const classes = useStyles();
 
-    const {element, onClick, vertical} = props
+    const {element, onClick, vertical, keyV} = props
 
     const listClasses = vertical ? classNames(classes.listItem, classes.vertical) : classes.listItem
 
     if (element.sub === undefined) {
         return (
-            <div className={listClasses}>
+            <div className={listClasses} key={keyV}>
                 <HeaderButton element={element} onClick={onClick}/>
             </div>
         )
@@ -99,7 +99,7 @@ export default function HeaderLink(props) {
         })
 
         return (
-            <div className={listClasses}>
+            <div className={listClasses} key={keyV}>
                 <CustomDropdown
                     noLiPadding
                     navDropdown
@@ -120,4 +120,5 @@ HeaderLink.propTypes = {
     element: PropTypes.object,
     onClick: PropTypes.func,
     vertical: PropTypes.bool,
+    keyV: PropTypes.string,
 }

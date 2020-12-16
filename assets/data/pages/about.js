@@ -1,7 +1,7 @@
 import {AboutBackground, companyName} from "../global"
-const YashaHeadshot = "/physio/headshot_yasha.jpg";
-const ChrisHeadshot = "/physio/headshot_chris.jpg";
-const ShannonHeadshot = "/physio/headshot_shannon.jpg";
+const YashaHeadshot = "/physio/team/headshot_yasha.jpg";
+const ChrisHeadshot = "/physio/team/headshot_chris.jpg";
+const ShannonHeadshot = "/physio/team/headshot_shannon.jpg";
 
 const AboutData = {
     core: {

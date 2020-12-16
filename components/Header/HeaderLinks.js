@@ -114,7 +114,7 @@ export default function HeaderLinks(props) {
 
   const classes = useStyles();
   return (
-      <>
+      <div className={mlAuto}>
         {
           HeaderLinkData.map(element => {
             return (
@@ -122,7 +122,7 @@ export default function HeaderLinks(props) {
             )
           })
         }
-      </>
+      </div>
   );
 }
 

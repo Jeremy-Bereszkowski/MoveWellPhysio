@@ -7,7 +7,6 @@ import LooksOneIcon from '@material-ui/icons/LooksOne';
 import LooksTwoIcon from '@material-ui/icons/LooksTwo';
 import Looks3Icon from '@material-ui/icons/Looks3';
 import Looks4Icon from '@material-ui/icons/Looks4';
-import Looks5Icon from '@material-ui/icons/Looks5';
 import Grid from "@material-ui/core/Grid";
 
 import BookConsultButton from "components/Buttons/BookConsultButton";
@@ -72,48 +71,41 @@ export default function TimelineBlock(props) {
                                 case 3:
                                     icon = <Looks4Icon/>
                                     break
-                                case 4:
-                                    icon = <Looks5Icon/>
-                                    break
                             }
 
                             return (
-                                <>
+                                <React.Fragment key={key}>
                                     {
                                         key % 2 === 0 ?
-                                            <React.Fragment key={key}>
-                                                <VerticalTimelineElement
-                                                    className="vertical-timeline-element--work"
-                                                    contentStyle={{ backgroundColor: Colours.green, color: Colours.white }}
-                                                    contentArrowStyle={{ borderRight: '7px solid ' + Colours.green }}
-                                                    iconStyle={{ background: Colours.darkGrey, color: Colours.white }}
-                                                    icon={icon}
-                                                    key={key}
-                                                >
-                                                    <h3 className="vertical-timeline-element-title">{ele.header}</h3>
-                                                    <p>
-                                                        {ele.body}
-                                                    </p>
-                                                </VerticalTimelineElement>
-                                            </React.Fragment>
+                                            <VerticalTimelineElement
+                                                className="vertical-timeline-element--work"
+                                                contentStyle={{ backgroundColor: Colours.green, color: Colours.white }}
+                                                contentArrowStyle={{ borderRight: '7px solid ' + Colours.green }}
+                                                iconStyle={{ background: Colours.darkGrey, color: Colours.white }}
+                                                icon={icon}
+                                                key={key}
+                                            >
+                                                <h3 className="vertical-timeline-element-title">{ele.header}</h3>
+                                                <p>
+                                                    {ele.body}
+                                                </p>
+                                            </VerticalTimelineElement>
                                             :
-                                            <React.Fragment key={key}>
-                                                <VerticalTimelineElement
-                                                    className="vertical-timeline-element--work"
-                                                    contentStyle={{ backgroundColor: Colours.darkGrey, color: Colours.white }}
-                                                    contentArrowStyle={{ borderRight: '7px solid ' + Colours.darkGrey }}
-                                                    iconStyle={{ background: Colours.green, color: Colours.white }}
-                                                    icon={icon}
-                                                    key={key}
-                                                >
-                                                    <h3 className="vertical-timeline-element-title">{ele.header}</h3>
-                                                    <p>
-                                                        {ele.body}
-                                                    </p>
-                                                </VerticalTimelineElement>
-                                            </React.Fragment>
+                                            <VerticalTimelineElement
+                                                className="vertical-timeline-element--work"
+                                                contentStyle={{ backgroundColor: Colours.darkGrey, color: Colours.white }}
+                                                contentArrowStyle={{ borderRight: '7px solid ' + Colours.darkGrey }}
+                                                iconStyle={{ background: Colours.green, color: Colours.white }}
+                                                icon={icon}
+                                                key={key}
+                                            >
+                                                <h3 className="vertical-timeline-element-title">{ele.header}</h3>
+                                                <p>
+                                                    {ele.body}
+                                                </p>
+                                            </VerticalTimelineElement>
                                     }
-                                </>
+                                </React.Fragment>
                             )
                         })
                     }

@@ -247,19 +247,19 @@ export default function Header(props) {
     const windowsScrollTop = window.pageYOffset;
     if (windowsScrollTop > changeColorOnScroll.height) {
       document.body
-        .getElementsByTagName("header")[0]
-        .classList.remove(classes[color]);
+          .getElementsByTagName("header")[0]
+          .classList.remove(classes[color]);
       document.body
-        .getElementsByTagName("header")[0]
-        .classList.add(classes[changeColorOnScroll.color]);
+          .getElementsByTagName("header")[0]
+          .classList.add(classes[changeColorOnScroll.color]);
       setLogoClass({height: "auto", width: "5vw", minWidth: "150px"})
     } else {
       document.body
-        .getElementsByTagName("header")[0]
-        .classList.add(classes[color]);
+          .getElementsByTagName("header")[0]
+          .classList.add(classes[color]);
       document.body
-        .getElementsByTagName("header")[0]
-        .classList.remove(classes[changeColorOnScroll.color]);
+          .getElementsByTagName("header")[0]
+          .classList.remove(classes[changeColorOnScroll.color]);
       setLogoClass({height: "auto", width: "18vw", minWidth: "150px"})
     }
   };
@@ -271,48 +271,50 @@ export default function Header(props) {
     [classes.fixed]: fixed
   });
   return (
-    <AppBar className={appBarClasses}>
-      <div className={classes.container}>
-        <Button className={classes.title}>
-          <Link href={URL.LANDING_PAGE} as={URL.ROOT}>
-            <img src={Logo} style={logoClass}/>
-          </Link>
-        </Button>
-        <Hidden mdDown implementation="css" className={classes.hidden}>
-          <div className={classes.collapse}>{<HeaderLinks onClick={handleDrawerToggle}/>}</div>
-        </Hidden>
-        <Hidden lgUp>
-          <IconButton
-            color="inherit"
-            aria-label="open drawer"
-            onClick={handleDrawerToggle}
+      <AppBar className={appBarClasses}>
+        <div className={classes.container}>
+          <Button className={classes.title}>
+            <Link href={URL.LANDING_PAGE} as={URL.ROOT}>
+              <a>
+                <img src={Logo} style={logoClass}/>
+              </a>
+            </Link>
+          </Button>
+          <Hidden mdDown implementation="css" className={classes.hidden}>
+            <div className={classes.collapse}>{<HeaderLinks onClick={handleDrawerToggle}/>}</div>
+          </Hidden>
+          <Hidden lgUp>
+            <IconButton
+                color="inherit"
+                aria-label="open drawer"
+                onClick={handleDrawerToggle}
+            >
+              <Menu />
+            </IconButton>
+          </Hidden>
+        </div>
+        <Hidden lgUp implementation="js">
+          <Drawer
+              variant="temporary"
+              anchor={"right"}
+              open={mobileOpen}
+              classes={{
+                paper: classes.drawerPaper
+              }}
+              onClose={handleDrawerToggle}
           >
-            <Menu />
-          </IconButton>
+            <IconButton
+                color="inherit"
+                aria-label="open drawer"
+                onClick={handleDrawerToggle}
+                className={classes.closeButtonDrawer}
+            >
+              <Close />
+            </IconButton>
+            <div className={classes.appResponsive}>{<HeaderLinks vertical onClick={handleDrawerToggle}/>}</div>
+          </Drawer>
         </Hidden>
-      </div>
-      <Hidden lgUp implementation="js">
-        <Drawer
-          variant="temporary"
-          anchor={"right"}
-          open={mobileOpen}
-          classes={{
-            paper: classes.drawerPaper
-          }}
-          onClose={handleDrawerToggle}
-        >
-          <IconButton
-            color="inherit"
-            aria-label="open drawer"
-            onClick={handleDrawerToggle}
-            className={classes.closeButtonDrawer}
-          >
-            <Close />
-          </IconButton>
-          <div className={classes.appResponsive}>{<HeaderLinks vertical onClick={handleDrawerToggle}/>}</div>
-        </Drawer>
-      </Hidden>
-    </AppBar>
+      </AppBar>
   );
 }
 

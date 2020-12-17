@@ -13,7 +13,7 @@ const useStyles = makeStyles(theme => ({
 
 const data = {
     buttonText: "Book A Class",
-    href: URL.CLINIKO,
+    href: URL.MIND_BODY,
 }
 
 export default function BookGroupClassButton(props) {

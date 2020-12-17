@@ -4,13 +4,12 @@ import Carousel from "react-slick";
 import {Grid} from "@material-ui/core";
 import {makeStyles} from "@material-ui/core/styles";
 
+import BlockButton from "components/Buttons/BlockButton";
+import BookingButtonsGroup from "components/Buttons/BookingButtonsGroup";
+
 import LandingData from "assets/data/pages/landing-data";
 import {blackColor, hexToRgb} from "assets/jss/nextjs-material-kit-pro";
 import {greenHrThick, parallaxHeaderText, parallaxSubHeaderText} from "assets/jss/coreStyles";
-
-import BlockButton from "../Buttons/BlockButton";
-import BookConsultButton from "../Buttons/BookConsultButton";
-import BookGroupClassButton from "../Buttons/BookGroupClassButton";
 
 const useStyles = makeStyles({
     filter: {},
@@ -95,20 +94,7 @@ export default function LandingPageCarousel(props) {
             )
         } else {
             return (
-                <Grid
-                    container
-                    spacing={2}
-                    direction={"row"}
-                    justify={"center"}
-                    alignContent={"center"}
-                >
-                    <Grid item>
-                        <BookConsultButton />
-                    </Grid>
-                    <Grid item>
-                        <BookGroupClassButton />
-                    </Grid>
-                </Grid>
+                <BookingButtonsGroup />
             )
         }
     }

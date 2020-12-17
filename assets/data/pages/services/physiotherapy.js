@@ -64,10 +64,6 @@ const PhysiotherapyData = {
             {
                 header: "4. Action Plan",
                 body: "We create a tailored plan to improve the function that will relieve your pain, Including implementation, education and any need for ongoing support.",
-            },
-            {
-                header: "5. Book",
-                body: "",
             }
         ]
     }

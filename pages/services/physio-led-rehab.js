@@ -16,7 +16,7 @@ export default function PhysioLedRehab(props) {
                 <ColumnLayout>
                     <Grid
                         container
-                        spacing={4}
+                        spacing={6}
                         direction={"column"}
                         justify={"center"}
                         alignContent={"center"}

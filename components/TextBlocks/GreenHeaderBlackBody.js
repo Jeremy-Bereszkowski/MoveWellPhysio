@@ -34,7 +34,7 @@ export default function GreenHeaderBlackBody(props) {
                 !header ? null :
                     <Grid
                         container
-                        spacing={4}
+                        spacing={6}
                         direction={"row"}
                         justify={"center"}
                         alignContent={"center"}

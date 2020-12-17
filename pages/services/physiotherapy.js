@@ -17,6 +17,7 @@ import {bodyHeaderText, bodyParaText1} from "assets/jss/coreStyles";
 import {blackColor, grayColor, hexToRgb, whiteColor} from "assets/jss/nextjs-material-kit-pro";
 import PhysiotherapyData from "assets/data/pages/services/physiotherapy";
 import Colours from "assets/strings/colours";
+import TimelineBlock from "../../pages-sections/services/physiotherapy/TimelineBlock";
 
 const useStyles = makeStyles({
     hr: {
@@ -86,6 +87,9 @@ export default function Physiotherapy({...rest}) {
                     >
                         <Grid item>
                             <GreenHeaderBlackBody header={PhysiotherapyData.howPhysioCanHelp.header} body={PhysiotherapyData.howPhysioCanHelp.para}/>
+                        </Grid>
+                        <Grid item>
+                            <TimelineBlock />
                         </Grid>
                         <Grid item>
                             <CommonInjuriesBlock image={PhysiotherapyData.commonInjuries.image} header={PhysiotherapyData.commonInjuries.header} body={PhysiotherapyData.commonInjuries.body} />

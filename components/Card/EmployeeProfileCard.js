@@ -44,15 +44,24 @@ export default function EmployeeProfileCard(props) {
                 </Grid>
             </CardHeader>
             <CardBody plain>
-                <h4 className={classes.textStyle}>
-                    {employeeName}
-                </h4>
-                <h6 className={classes.textStyle}>
-                    {employeePosition}
-                </h6>
-                <p className={classes.textStyle}>
-                    {employeeDescription}
-                </p>
+                <Grid
+                    container
+                    direction={"column"}
+                    justify={"center"}
+                    alignContent={"stretch"}
+                >
+                    <Grid item>
+                        <h4 className={classes.textStyle}>
+                            {employeeName}
+                        </h4>
+                        <h6 className={classes.textStyle}>
+                            {employeePosition}
+                        </h6>
+                        <p className={classes.textStyle}>
+                            {employeeDescription}
+                        </p>
+                    </Grid>
+                </Grid>
             </CardBody>
         </Card>
     )

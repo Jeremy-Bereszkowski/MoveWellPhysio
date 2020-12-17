@@ -41,7 +41,7 @@ export default function ParallaxLayout(props) {
     const {children, parallaxImage, parallaxHeader, parallaxBody} = props
 
     return (
-        <div>
+        <>
             <Parallax image={parallaxImage} filter="dark">
                 <div className={classes.container}>
                     <Grid
@@ -72,7 +72,7 @@ export default function ParallaxLayout(props) {
                 </div>
             </Parallax>
             {children}
-        </div>
+        </>
     )
 }
 

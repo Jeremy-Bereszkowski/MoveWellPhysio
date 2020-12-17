@@ -1,18 +1,22 @@
 import React from "react";
-import classNames from "classnames";
 
 import {makeStyles} from "@material-ui/core/styles";
 import {Grid} from "@material-ui/core";
-import Button from "@material-ui/core/Button";
 
-import MainContainerLayout from "../../layouts/MainContainerLayout";
-import ParallaxLayout from "../../layouts/ParallaxLayout";
+import ParallaxLayout from "layouts/ParallaxLayout";
+import MainContainerLayout from "layouts/MainContainerLayout";
+import ColumnLayout from "layouts/ColumnLayout";
 
-import PhysiotherapyData from "../../assets/data/pages/services/physiotherapy";
+import CommonInjuriesBlock from "pages-sections/services/physiotherapy/CommonInjuriesBlock";
+
+import GreenHeaderBlackBody from "components/TextBlocks/GreenHeaderBlackBody";
+import BookConsultButton from "components/Buttons/BookConsultButton";
+import BookGroupClassButton from "components/Buttons/BookGroupClassButton";
 
 import {bodyHeaderText, bodyParaText1} from "assets/jss/coreStyles";
-import Colours from "assets/strings/colours";
 import {blackColor, grayColor, hexToRgb, whiteColor} from "assets/jss/nextjs-material-kit-pro";
+import PhysiotherapyData from "assets/data/pages/services/physiotherapy";
+import Colours from "assets/strings/colours";
 
 const useStyles = makeStyles({
     hr: {
@@ -71,66 +75,43 @@ export default function Physiotherapy({...rest}) {
 
     return (
         <ParallaxLayout parallaxImage={PhysiotherapyData.core.parallaxImage} parallaxHeader={PhysiotherapyData.core.parallaxHeader} parallaxBody={PhysiotherapyData.core.parallaxBody}>
-            {/*<MainContainerLayout maxWidth={"lg"}>
-                <Grid
-                    container
-                    direction={"row"}
-                    justify={"center"}
-                    alignContent={"center"}
-                >
-                    <Grid item>
-                        <h2 className={classes.greenHeaderText}>
-                            How physiotherapy can help
-                        </h2>
+            <MainContainerLayout>
+                <ColumnLayout>
+                    <Grid
+                        container
+                        spacing={4}
+                        direction={"column"}
+                        justify={"center"}
+                        alignContent={"center"}
+                    >
+                        <Grid item>
+                            <GreenHeaderBlackBody header={PhysiotherapyData.howPhysioCanHelp.header} body={PhysiotherapyData.howPhysioCanHelp.para}/>
+                        </Grid>
+                        <Grid item>
+                            <CommonInjuriesBlock image={PhysiotherapyData.commonInjuries.image} header={PhysiotherapyData.commonInjuries.header} body={PhysiotherapyData.commonInjuries.body} />
+                        </Grid>
+                        <Grid item>
+                            <GreenHeaderBlackBody header={PhysiotherapyData.howToGetStarted.header} body={PhysiotherapyData.howToGetStarted.para}/>
+                        </Grid>
+                        <Grid item>
+                            <Grid
+                                container
+                                spacing={2}
+                                direction={"row"}
+                                justify={"center"}
+                                alignContent={"center"}
+                            >
+                                <Grid item>
+                                    <BookConsultButton />
+                                </Grid>
+                                <Grid item>
+                                    <BookGroupClassButton />
+                                </Grid>
+                            </Grid>
+                        </Grid>
                     </Grid>
-                    <Grid item>
-                        <h4 className={classes.blackBodyText}>
-                            Physiotherapy treats pain. But it is also an approach to preventing injury, achieving higher performance and maintaining a healthy physical lifestyle.
-                        </h4>
-                    </Grid>
-                    <Grid item>
-                        <h4 className={classes.blackBodyText}>
-                            You don’t need a doctor’s referral to get professional help with your pain.
-                        </h4>
-                    </Grid>
-                    <Grid item>
-                        <div style={{marginTop: "4vh", position: "absolute", left: "50%", transform: "translateX(-50%)"}}>
-                            <Button className={classes.button}>
-                                <p>
-                                    <b>
-                                        Book A consult
-                                    </b>
-                                </p>
-                            </Button>
-                        </div>
-                    </Grid>
-                    <Grid item md={10} xl={10}>
-                        <hr size={30} className={classes.hr}/>
-                    </Grid>
-                </Grid>
-                <Grid
-                    container
-                    direction={"row"}
-                    justify={"center"}
-                    alignContent={"center"}
-                    style={{display: "flex"}}
-                >
-                    <Grid item md={10} xl={10}>
-                        <hr size={30} className={classes.hr}/>
-                    </Grid>
-                </Grid>
-                <Grid
-                    container
-                    direction={"row"}
-                    justify={"center"}
-                    alignContent={"center"}
-                    style={{display: "flex"}}
-                >
-                    <Grid item md={10} xl={10}>
-                        <hr size={30} className={classes.hr}/>
-                    </Grid>
-                </Grid>
-            </MainContainerLayout>*/}
+                </ColumnLayout>
+            </MainContainerLayout>
         </ParallaxLayout>
     )
 }

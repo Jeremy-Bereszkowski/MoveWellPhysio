@@ -4,14 +4,7 @@ import PropTypes from "prop-types";
 
 import { makeStyles } from "@material-ui/core/styles";
 
-import {
-  blackColor, dangerColor,
-  hexToRgb,
-  infoColor,
-  primaryColor,
-  roseColor,
-  successColor, warningColor
-} from "../../assets/jss/nextjs-material-kit-pro";
+import {blackColor, hexToRgb} from "assets/jss/nextjs-material-kit-pro";
 
 const useStyles = makeStyles({
   parallax: {
@@ -31,29 +24,6 @@ const useStyles = makeStyles({
   darkColor: {
     "&:before": {
       background: "rgba(" + hexToRgb(blackColor) + ", 0.5)"
-    },
-    "&:after,&:before": {
-      position: "absolute",
-      zIndex: "1",
-      width: "100%",
-      height: "100%",
-      display: "block",
-      left: "0",
-      top: "0",
-      content: "''"
-    }
-  },
-  infoColor: {
-    "&:before": {
-      background: "rgba(" + hexToRgb(blackColor) + ", 0.5)"
-    },
-    "&:after": {
-      background:
-          "linear-gradient(60deg,rgba(" +
-          hexToRgb(infoColor[6]) +
-          ",.56),rgba(" +
-          hexToRgb(infoColor[7]) +
-          ",.95))"
     },
     "&:after,&:before": {
       position: "absolute",

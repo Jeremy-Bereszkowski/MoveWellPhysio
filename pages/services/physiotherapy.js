@@ -86,10 +86,10 @@ export default function Physiotherapy({...rest}) {
                         alignContent={"center"}
                     >
                         <Grid item>
-                            <GreenHeaderBlackBody header={PhysiotherapyData.howPhysioCanHelp.header} body={PhysiotherapyData.howPhysioCanHelp.para}/>
+                            <TimelineBlock header={PhysiotherapyData.timelineBlock.header} body={PhysiotherapyData.timelineBlock.body} />
                         </Grid>
                         <Grid item>
-                            <TimelineBlock />
+                            <GreenHeaderBlackBody header={PhysiotherapyData.howPhysioCanHelp.header} body={PhysiotherapyData.howPhysioCanHelp.para}/>
                         </Grid>
                         <Grid item>
                             <CommonInjuriesBlock image={PhysiotherapyData.commonInjuries.image} header={PhysiotherapyData.commonInjuries.header} body={PhysiotherapyData.commonInjuries.body} />

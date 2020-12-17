@@ -45,6 +45,31 @@ const PhysiotherapyData = {
             "Postural",
             "And More...",
         ],
+    },
+    timelineBlock: {
+        header: "In your first appointment",
+        body: [
+            {
+                header: "1. Comprehensive assessment",
+                body: "Your physiotherapist will listen to your history and concern, examine your pain and understand your intention for seeking help.",
+            },
+            {
+                header: "2. Diagnosis",
+                body: "Matching your story to the presentation of your symptoms, we will help you understand the cause of your pain.",
+            },
+            {
+                header: "3. Recovery time",
+                body: "Informed by your diagnosis, we will discuss the time required to relieve pain and achieve your identified goal.",
+            },
+            {
+                header: "4. Action Plan",
+                body: "We create a tailored plan to improve the function that will relieve your pain, Including implementation, education and any need for ongoing support.",
+            },
+            {
+                header: "5. Book",
+                body: "",
+            }
+        ]
     }
 }
 

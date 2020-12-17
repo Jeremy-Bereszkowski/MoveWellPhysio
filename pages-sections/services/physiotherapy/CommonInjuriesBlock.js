@@ -1,15 +1,16 @@
 import React from 'react'
 import PropTypes from "prop-types"
+import classNames from "classnames";
 
 import {makeStyles} from "@material-ui/core/styles"
-import {blackColor, hexToRgb, whiteColor} from "../../../assets/jss/nextjs-material-kit-pro";
-import classNames from "classnames";
 import Grid from "@material-ui/core/Grid";
-import {bodyHeaderText, bodyParaText1, smallFont} from "../../../assets/jss/coreStyles";
+
+import {blackColor, hexToRgb, whiteColor} from "assets/jss/nextjs-material-kit-pro";
+import {bodyHeaderText, bodyParaText1} from "assets/jss/coreStyles";
 
 const useStyles = makeStyles(theme => ({
     parallax: {
-        height: "35vh",
+        height: "45vh",
         maxHeight: "500px",
         overflow: "hidden",
         position: "relative",
@@ -63,8 +64,6 @@ const useStyles = makeStyles(theme => ({
         position: "absolute",
     },
     container: {
-        paddingRight: "15px",
-        paddingLeft: "15px",
         marginRight: "auto",
         marginLeft: "auto",
         width: "100%",
@@ -110,7 +109,7 @@ export default function CommonInjuriesBlock(props) {
                             {
                                 body.map((ele, key) => {
                                     return (
-                                        <Grid md={3} sm={6} item key={key}>
+                                        <Grid md={3} sm={3} item key={key}>
                                             <h4 className={classes.bodyText}>
                                                 {ele}
                                             </h4>

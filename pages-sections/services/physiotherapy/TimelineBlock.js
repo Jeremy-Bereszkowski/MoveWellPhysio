@@ -111,22 +111,6 @@ export default function TimelineBlock(props) {
                     }
                 </VerticalTimeline>
             </Grid>
-            <Grid item>
-                <Grid
-                    container
-                    spacing={2}
-                    direction={"row"}
-                    justify={"center"}
-                    alignContent={"center"}
-                >
-                    <Grid item>
-                        <BookConsultButton />
-                    </Grid>
-                    <Grid item>
-                        <BookGroupClassButton />
-                    </Grid>
-                </Grid>
-            </Grid>
         </Grid>
     )
 }

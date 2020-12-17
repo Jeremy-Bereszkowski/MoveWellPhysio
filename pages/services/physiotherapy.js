@@ -26,7 +26,7 @@ export default function Physiotherapy({...rest}) {
                 <ColumnLayout>
                     <Grid
                         container
-                        spacing={4}
+                        spacing={8}
                         direction={"column"}
                         justify={"center"}
                         alignContent={"center"}

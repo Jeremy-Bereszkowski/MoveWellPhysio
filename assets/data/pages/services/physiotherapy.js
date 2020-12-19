@@ -25,7 +25,7 @@ const PhysiotherapyData = {
         ],
     },
     commonInjuries: {
-        image: "/physio/layout.jpg",
+        image: "/physio/clients/client_42.jpg",
         header: "Common injuries we treat",
         body: [
             "Sports Injuries",
@@ -63,7 +63,7 @@ const PhysiotherapyData = {
             },
             {
                 header: "4. Action Plan",
-                body: "We create a tailored plan to improve the function that will relieve your pain, Including implementation, education and any need for ongoing support.",
+                body: "We design a tailored plan that helps relieve your pain, improve function and allow you to achieve your goals.",
             }
         ]
     }

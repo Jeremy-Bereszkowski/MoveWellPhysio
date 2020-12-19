@@ -8,7 +8,7 @@ import Button from "@material-ui/core/Button";
 import {blackColor, grayColor, hexToRgb, whiteColor} from "assets/jss/nextjs-material-kit-pro";
 import Colours from "assets/strings/colours";
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles({
     button: {
         minHeight: "auto",
         minWidth: "auto",
@@ -23,7 +23,7 @@ const useStyles = makeStyles(theme => ({
         border: "none",
         borderRadius: "3px",
         position: "relative",
-        padding: "12px 30px",
+        padding: "8px 30px",
         margin: ".3125rem 1px",
         fontSize: "12px",
         fontWeight: "400",
@@ -60,12 +60,12 @@ const useStyles = makeStyles(theme => ({
     },
     green: {
         "&,&:focus,&:hover": {
-            color: whiteColor,
-            backgroundColor: Colours.green,
+            color: whiteColor + " !important",
+            backgroundColor: Colours.green + " !important",
         },
         "&:hover,&:focus": {
-            color: Colours.green,
-            backgroundColor: Colours.white,
+            color: Colours.green + " !important",
+            backgroundColor: Colours.white + " !important",
             boxShadow:
                 "0 14px 26px -12px rgba(" +
                 hexToRgb(grayColor[0]) +
@@ -76,9 +76,9 @@ const useStyles = makeStyles(theme => ({
                 ", 0.2)"
         }
     },
-}))
+})
 
-const BlockButton = React.forwardRef((props, ref) => {
+const ThinButton = React.forwardRef((props, ref) => {
     const {children, color, ...rest} = props
     const classes = useStyles()
 
@@ -91,7 +91,7 @@ const BlockButton = React.forwardRef((props, ref) => {
     )
 })
 
-BlockButton.propTypes = {
+ThinButton.propTypes = {
     children: PropTypes.node,
     color: PropTypes.oneOf([
         "green",
@@ -99,4 +99,4 @@ BlockButton.propTypes = {
     ])
 };
 
-export default BlockButton
+export default ThinButton

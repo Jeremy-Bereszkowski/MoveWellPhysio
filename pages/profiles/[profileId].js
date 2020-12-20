@@ -12,6 +12,7 @@ import Card from "components/Card/Card";
 import CardBody from "components/Card/CardBody";
 
 import ProfileData from "assets/data/pages/profiles/[profileId]";
+import {blackColor, hexToRgb} from "../../assets/jss/nextjs-material-kit-pro";
 
 const useStyles = makeStyles(theme => ({
     textStyle: {
@@ -24,7 +25,15 @@ const useStyles = makeStyles(theme => ({
         padding: "0",
     },
     image: {
-        marginLeft: "40px"
+        marginLeft: "40px",
+        boxShadow:
+            "0 10px 30px -12px rgba(" +
+            hexToRgb(blackColor) +
+            ", 0.42), 0 4px 25px 0px rgba(" +
+            hexToRgb(blackColor) +
+            ", 0.12), 0 8px 10px -5px rgba(" +
+            hexToRgb(blackColor) +
+            ", 0.2)"
     }
 }))
 
@@ -64,8 +73,8 @@ export default function Profile(props) {
                             </h2>
                         </Grid>
                         <Grid item>
-                            <h4 className={classes.textStyle}>
-                                {profile.position}
+                            <h4>
+                                {profile.title}
                             </h4>
                         </Grid>
                         <Grid item>

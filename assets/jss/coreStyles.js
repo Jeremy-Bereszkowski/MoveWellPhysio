@@ -2,19 +2,19 @@ import Colours from "../strings/colours";
 import {blackColor, grayColor, hexToRgb, title, whiteColor} from "./nextjs-material-kit-pro";
 
 const extraSmallFont = {
-    fontSize: "calc(16px + (20 - 16) * ((100vw - 300px) / (1600 - 300)))"
+    fontSize: "calc(16px + (20 - 16) * ((100vw - 300px) / (3000 - 300)))"
 }
 
 const smallFont = {
-    fontSize: "calc(16px + (20 - 16) * ((100vw - 300px) / (1600 - 300)))"
+    fontSize: "calc(16px + (20 - 16) * ((100vw - 300px) / (3000 - 300)))"
 }
 
 const mediumFont = {
-    fontSize: "calc(20px + (30 - 20) * ((100vw - 300px) / (1600 - 300)))"
+    fontSize: "calc(20px + (30 - 20) * ((100vw - 300px) / (3000 - 300)))"
 }
 
 const largeFont = {
-    fontSize: "calc(36px + (56 - 36) * ((100vw - 300px) / (1600 - 300)))"
+    fontSize: "calc(36px + (56 - 36) * ((100vw - 300px) / (3000 - 300)))"
 }
 
 const parallaxHeaderText = {

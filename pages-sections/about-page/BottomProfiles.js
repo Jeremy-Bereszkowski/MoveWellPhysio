@@ -27,7 +27,7 @@ export default function BottomProfiles(props) {
             justify={"center"}
             alignContent={"center"}
         >
-            <Grid item>
+            <Grid item md={12}>
                 <h2 className={classes.greenHeaderText}>
                     {AboutData.employee.header}
                 </h2>

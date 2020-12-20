@@ -22,10 +22,9 @@ const useStyles = makeStyles({
     }
 });
 
-const EmployeeProfileCard = React.forwardRef((props, ref) => {
+export default function EmployeeProfileCard(props) {
     const classes = useStyles();
-
-    const {employeeName, employeePosition, employeeDescription, employeeImage} = props
+    const {employee} = props
 
     return (
         <Card plain className={classes.card2}>
@@ -38,8 +37,8 @@ const EmployeeProfileCard = React.forwardRef((props, ref) => {
                 >
                     <Grid item>
                         <img
-                            src={employeeImage}
-                            alt={employeeName + "_headshot"}
+                            src={employee.image}
+                            alt={employee.name + "_headshot"}
                             style={{width: "auto", height: "45vh"}}
                         />
                     </Grid>
@@ -54,33 +53,25 @@ const EmployeeProfileCard = React.forwardRef((props, ref) => {
                 >
                     <Grid item>
                         <h4 className={classes.textStyle}>
-                            {employeeName}
+                            {employee.name}
                         </h4>
                         <h6 className={classes.textStyle}>
-                            {employeePosition}
+                            {employee.title}
                         </h6>
-                        <Link href={ref} passHref>
+                        <Link href={employee.link} passHref>
                             <ThinButton color={"dark"}>
                                 <p style={{margin: 0, padding: 0}}>
                                     + View
                                 </p>
                             </ThinButton>
                         </Link>
-                        {/*<p className={classes.textStyle}>
-                            {employeeDescription}
-                        </p>*/}
                     </Grid>
                 </Grid>
             </CardBody>
         </Card>
     )
-})
-
-EmployeeProfileCard.propTypes = {
-    employeeName: PropTypes.string,
-    employeePosition: PropTypes.string,
-    employeeDescription: PropTypes.string,
-    employeeImage: PropTypes.string,
 }
 
-export default EmployeeProfileCard
+EmployeeProfileCard.propTypes = {
+    employee: PropTypes.object,
+}

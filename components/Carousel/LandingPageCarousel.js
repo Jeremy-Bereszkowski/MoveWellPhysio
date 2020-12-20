@@ -78,7 +78,8 @@ export default function LandingPageCarousel(props) {
     const settings = {
         dots: true,
         infinite: true,
-        speed: 5000,
+        speed: 2000,
+        autoplaySpeed: 5000,
         slidesToShow: 1,
         slidesToScroll: 1,
         autoplay: true

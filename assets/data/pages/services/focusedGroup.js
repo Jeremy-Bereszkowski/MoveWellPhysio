@@ -4,7 +4,6 @@ const FocusedGroupData = {
     core: {
         parallaxImage: FocusedGroupBackground,
         parallaxHeader: "Focused Group Exercise",
-        /*parallaxBody: "Coming soon",*/
         parallaxBody: "Group sessions targeting specific areas of the body and function",
     },
     top: {
@@ -14,6 +13,23 @@ const FocusedGroupData = {
             "Sessions are designed by a physiotherapist to improve full body function through joint and bone health, cardiovascular fitness, mobility and balance.",
             "We provide a workout that is challenging and refreshing, helping you build structured exercise into your lifestyle.",
         ]
+    },
+    middle: {
+        header: "Our Classes",
+        body: [
+            {
+                header: "Muscle Toning",
+                body: "To begin, we recommend a Physiotherapy consultation to discuss your history, needs and goals to ensure we set you on the right path."
+            },
+            {
+                header: "Stronger Bones",
+                body: "Having a consultation first allows us to assess your strength, and develop a plan of the sessions best suited to improve your function."
+            },
+            {
+                header: "Healthier Joints",
+                body: companyName + " has all the equipment required for the sessions. Just wear activewear and bring a towel. Water is available here, but we recommend bringing a water bottle too."
+            },
+        ],
     },
     bottom: {
         header: "Booking Details",

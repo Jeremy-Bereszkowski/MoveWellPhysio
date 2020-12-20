@@ -20,7 +20,9 @@ const PhysiotherapyData = {
             "We offer consultations on weekdays between {insert time} and on weekends between {insert time}.",
             "All our professionals offer face-to-face or Telehealth appointments from the comfort of your home. We also offer online Physiotherapist-led Pilates " +
             "classes using basic equipment you’ll find at home.",
+            "We design a tailored [;an that helps relieve your pain, improve function and allow you to achieve your goals.",
             "Physiotherapy is able to be claimed on private health insurance.",
+            "We accept private health insurance, WorkCover claims, NDIS, TAC and Medicare.",
             "Book online below to get started or contact us for more details.",
         ],
     },

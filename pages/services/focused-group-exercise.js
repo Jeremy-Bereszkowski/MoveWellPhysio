@@ -5,15 +5,16 @@ import {Grid} from "@material-ui/core";
 
 import ParallaxLayout from "layouts/ParallaxLayout";
 import MainContainerLayout from "layouts/MainContainerLayout";
+import ColumnLayout from "layouts/ColumnLayout";
 
 import TopText from "pages-sections/services/focused-group-page/TopText";
+import MiddleText from "pages-sections/services/focused-group-page/MiddleText";
 import BottomText from "pages-sections/services/focused-group-page/BottomText";
 
 import BookConsultButton from "components/Buttons/BookConsultButton";
 import BookGroupClassButton from "components/Buttons/BookGroupClassButton";
 
 import FocusedGroupData from "assets/data/pages/services/focusedGroup";
-import ColumnLayout from "../../layouts/ColumnLayout";
 
 const useStyles = makeStyles({});
 
@@ -33,6 +34,9 @@ export default function FocusedGroupExercise(props) {
                     >
                         <Grid item>
                             <TopText/>
+                        </Grid>
+                        <Grid item>
+                            <MiddleText />
                         </Grid>
                         <Grid item>
                             <BottomText />

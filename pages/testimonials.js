@@ -30,41 +30,41 @@ export default function Function(props) {
                         }}
                         tabs={[
                             {
-                                tabButton: PhysioLedRehabData.clients.clients[0].buttonHeader,
+                                tabButton: TestimonialData.testimonials.clients[0].buttonHeader,
                                 tabContent: <PhysioLedRehabBlock
                                     right
-                                    header={PhysioLedRehabData.clients.clients[0].buttonContent.header}
-                                    para={PhysioLedRehabData.clients.clients[0].buttonContent.para}
-                                    clientImage={PhysioLedRehabData.clients.clients[0].buttonContent.clientImage}
-                                    clientName={PhysioLedRehabData.clients.clients[0].buttonContent.clientName}
-                                    clientAge={PhysioLedRehabData.clients.clients[0].buttonContent.clientAge}
-                                    clientPara={PhysioLedRehabData.clients.clients[0].buttonContent.clientPara}
+                                    header={TestimonialData.testimonials.clients[0].buttonContent.header}
+                                    para={TestimonialData.testimonials.clients[0].buttonContent.para}
+                                    clientImage={TestimonialData.testimonials.clients[0].buttonContent.clientImage}
+                                    clientName={TestimonialData.testimonials.clients[0].buttonContent.clientName}
+                                    clientAge={TestimonialData.testimonials.clients[0].buttonContent.clientAge}
+                                    clientPara={TestimonialData.testimonials.clients[0].buttonContent.clientPara}
                                 />
                             },
                             {
-                                tabButton: PhysioLedRehabData.clients.clients[1].buttonHeader,
+                                tabButton: TestimonialData.testimonials.clients[1].buttonHeader,
                                 tabContent: <PhysioLedRehabBlock
                                     right
-                                    header={PhysioLedRehabData.clients.clients[1].buttonContent.header}
-                                    para={PhysioLedRehabData.clients.clients[1].buttonContent.para}
-                                    clientImage={PhysioLedRehabData.clients.clients[1].buttonContent.clientImage}
-                                    clientName={PhysioLedRehabData.clients.clients[1].buttonContent.clientName}
-                                    clientAge={PhysioLedRehabData.clients.clients[1].buttonContent.clientAge}
-                                    clientPara={PhysioLedRehabData.clients.clients[1].buttonContent.clientPara}
+                                    header={TestimonialData.testimonials.clients[1].buttonContent.header}
+                                    para={TestimonialData.testimonials.clients[1].buttonContent.para}
+                                    clientImage={TestimonialData.testimonials.clients[1].buttonContent.clientImage}
+                                    clientName={TestimonialData.testimonials.clients[1].buttonContent.clientName}
+                                    clientAge={TestimonialData.testimonials.clients[1].buttonContent.clientAge}
+                                    clientPara={TestimonialData.testimonials.clients[1].buttonContent.clientPara}
                                 />
                             },
                             {
-                                tabButton: PhysioLedRehabData.clients.clients[2].buttonHeader,
+                                tabButton: TestimonialData.testimonials.clients[2].buttonHeader,
                                 tabContent: <PhysioLedRehabBlock
                                     right
-                                    header={PhysioLedRehabData.clients.clients[2].buttonContent.header}
-                                    para={PhysioLedRehabData.clients.clients[2].buttonContent.para}
-                                    clientImage={PhysioLedRehabData.clients.clients[2].buttonContent.clientImage}
-                                    clientName={PhysioLedRehabData.clients.clients[2].buttonContent.clientName}
-                                    clientAge={PhysioLedRehabData.clients.clients[2].buttonContent.clientAge}
-                                    clientPara={PhysioLedRehabData.clients.clients[2].buttonContent.clientPara}
+                                    header={TestimonialData.testimonials.clients[2].buttonContent.header}
+                                    para={TestimonialData.testimonials.clients[2].buttonContent.para}
+                                    clientImage={TestimonialData.testimonials.clients[2].buttonContent.clientImage}
+                                    clientName={TestimonialData.testimonials.clients[2].buttonContent.clientName}
+                                    clientAge={TestimonialData.testimonials.clients[2].buttonContent.clientAge}
+                                    clientPara={TestimonialData.testimonials.clients[2].buttonContent.clientPara}
                                 />
-                            }
+                            },
                         ]}
                     />
                 </ColumnLayout>

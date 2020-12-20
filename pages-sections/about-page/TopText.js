@@ -1,11 +1,22 @@
-import {Grid} from "@material-ui/core";
 import React from "react";
+
+import {Grid} from "@material-ui/core";
 import {makeStyles} from "@material-ui/core/styles";
 
-import AboutData from "../../assets/data/pages/about";
+import {bodyParaText1} from "assets/jss/coreStyles";
+import AboutData from "assets/data/pages/about";
 
-import styles from "./topTextStyles";
-const useStyles = makeStyles(styles);
+const useStyles = makeStyles({
+    gridSpacing: {
+        marginTop: "-5px",
+        marginBottom: "-5px"
+    },
+    bodyParaText: {
+        ...bodyParaText1,
+        margin: "2vh 4vw",
+        padding: "0",
+    },
+});
 
 export default function TopText(props) {
     const classes = useStyles();
@@ -13,9 +24,9 @@ export default function TopText(props) {
     return(
         <Grid
             container
-            direction={"row"}
-            alignItems={"center"}
-            justify={"center"}
+            direction={"column"}
+            alignContent={"center"}
+            justify={"flex-start"}
         >
             {AboutData.top.map(element => {
                 return (

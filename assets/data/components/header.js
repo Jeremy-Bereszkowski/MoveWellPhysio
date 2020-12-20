@@ -32,13 +32,13 @@ const HeaderLinkData = [
                     link: URL.FOCUSED_GROUP_EXERCISE,
                 },
             },
-            {
-                core: {
-                    key: "PROFESSIONAL MENTORING",
-                    link: URL.PROFESSIONAL_MENTORING,
-                },
-            }
         ]
+    },
+    {
+        core: {
+            key: "Testimonials",
+            link: URL.TESTIMONIALS,
+        },
     },
     {
         core: {
@@ -48,9 +48,23 @@ const HeaderLinkData = [
     },
     {
         core: {
-            key: "Book Online",
-            link: URL.BOOK,
+            key: "Book",
+            link: "",
         },
+        sub: [
+            {
+                core: {
+                    key: "Consults",
+                    href: "https://movewell-physiotherapy-melbourne.au2.cliniko.com/bookings"
+                },
+            },
+            {
+                core: {
+                    key: "Group Sessions",
+                    href: ""
+                },
+            },
+        ],
     },
     {
         core: {

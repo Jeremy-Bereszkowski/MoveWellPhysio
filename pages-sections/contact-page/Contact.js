@@ -3,12 +3,31 @@ import React from "react";
 import {makeStyles} from "@material-ui/core/styles";
 import {Grid} from "@material-ui/core";
 
-import Day from "../../components/OpenHours/Day";
+import HalfHorizontalTexts from "components/TextBlocks/HalfHorizontalTexts";
 
-import ContactData from "../../assets/data/pages/contact";
+import {bodyHeaderText, bodyParaText1} from "assets/jss/coreStyles";
+import ContactData from "assets/data/pages/contact";
 
-import styles from "./contactStyles";
-const useStyles = makeStyles(styles);
+const useStyles = makeStyles({
+    greenHeaderText: {
+        ...bodyHeaderText,
+    },
+    blackBodyText: {
+        ...bodyParaText1,
+        marginTop: "0",
+        marginBottom: "0",
+        textAlign: "center",
+    },
+    addressNoteText: {
+        marginTop: "40px",
+        marginBottom: "20px",
+    },
+    mapContainer: {
+        position: "relative",
+        height: "25vh",
+        width: "100%"
+    }
+});
 
 export default function OpeningHours() {
     const classes = useStyles();
@@ -17,8 +36,8 @@ export default function OpeningHours() {
         <Grid
             container
             direction={"column"}
-            justify={"flex-start"}
-            alignContent={"center"}
+            justify={"center"}
+            alignContent={"stretch"}
         >
             <Grid item>
                 <h2 className={classes.greenHeaderText}>
@@ -26,10 +45,10 @@ export default function OpeningHours() {
                 </h2>
             </Grid>
             <Grid item>
-                <Day dayText={ContactData.contact.telephone.header} hoursText={ContactData.contact.telephone.value} />
+                <HalfHorizontalTexts leftText={ContactData.contact.telephone.header} rightText={ContactData.contact.telephone.value} />
             </Grid>
             <Grid item>
-                <Day dayText={ContactData.contact.email.header} hoursText={ContactData.contact.email.data} />
+                <HalfHorizontalTexts leftText={ContactData.contact.email.header} rightText={ContactData.contact.email.data} />
             </Grid>
         </Grid>
     )

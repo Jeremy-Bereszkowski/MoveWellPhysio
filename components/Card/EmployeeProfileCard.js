@@ -1,54 +1,77 @@
 import React from "react";
+import Link from "next/link";
 import PropTypes from "prop-types"
 
 import {makeStyles} from "@material-ui/core/styles";
+import Grid from "@material-ui/core/Grid";
+
+import ThinButton from "components/Buttons/ThinButton";
 
 import CardHeader from "./CardHeader";
 import CardBody from "./CardBody";
 import Card from "./Card";
 
-import styles from "./employeeProfileCardStyles";
-const useStyles = makeStyles(styles);
+const useStyles = makeStyles({
+    textStyle: {
+        textAlign: "left",
+    },
+    card2: {
+        marginTop: "0",
+        marginBottom: "0",
+        padding: "0",
+    }
+});
 
 export default function EmployeeProfileCard(props) {
     const classes = useStyles();
-
-    const {employeeName, employeePosition, employeeDescription, employeeImage} = props
+    const {employee} = props
 
     return (
         <Card plain className={classes.card2}>
             <CardHeader image plain>
-                <img
-                    src={employeeImage}
-                    alt={employeeName + "_headshot"}
-                    style={{width: "60%", height: "auto", marginLeft: "20%", marginRight: "20%"}}
-                />
-                <div
-                    style={{
-                        backgroundImage:
-                            "url('https://s3.amazonaws.com/creativetim_bucket/products/217/original/opt_mk_nextjs_thumbnail.jpg?1525851474')",
-                        opacity: "1"
-                    }}
-                />
+                <Grid
+                    container
+                    direction={"column"}
+                    justify={"center"}
+                    alignContent={"center"}
+                >
+                    <Grid item>
+                        <img
+                            src={employee.image}
+                            alt={employee.name + "_headshot"}
+                            style={{width: "auto", height: "45vh"}}
+                        />
+                    </Grid>
+                </Grid>
             </CardHeader>
             <CardBody plain>
-                <h4 className={classes.textStyle}>
-                    {employeeName}
-                </h4>
-                <h6 className={classes.textStyle}>
-                    {employeePosition}
-                </h6>
-                <p className={classes.textStyle}>
-                    {employeeDescription}
-                </p>
+                <Grid
+                    container
+                    direction="column"
+                    justify="flex-start"
+                    alignItems="stretch"
+                >
+                    <Grid item>
+                        <h4 className={classes.textStyle}>
+                            {employee.name}
+                        </h4>
+                        <h6 className={classes.textStyle}>
+                            {employee.title}
+                        </h6>
+                        <Link href={employee.link} passHref>
+                            <ThinButton color={"dark"}>
+                                <p style={{margin: 0, padding: 0}}>
+                                    + View
+                                </p>
+                            </ThinButton>
+                        </Link>
+                    </Grid>
+                </Grid>
             </CardBody>
         </Card>
     )
 }
 
 EmployeeProfileCard.propTypes = {
-    employeeName: PropTypes.string,
-    employeePosition: PropTypes.string,
-    employeeDescription: PropTypes.string,
-    employeeImage: PropTypes.string,
+    employee: PropTypes.object,
 }

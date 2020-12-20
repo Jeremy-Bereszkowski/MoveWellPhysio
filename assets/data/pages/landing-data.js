@@ -1,34 +1,39 @@
 import {companyName, image1, image2, image3, image4} from "../global"
+import URL from "../../strings/urls";
 
 const Para1Image = "/physio/clients/client_11.jpg";
-const Para2Image = "/physio/clients/client.jpg"
+const Para2Image = "/physio/clients/client_51.jpg"
 
 const LandingData = {
     carousel: [
-        [
-            image1,
-            companyName + " Physiotherapy",
-            "Active, goal-focused physiotherapy",
-            "Book Online",
-        ],
-        [
-            image2,
-            "Freedom from acute pain",
-            0,
-            "LEARN HOW",
-        ],
-        [
-            image3,
-            "Return to optimal sports performance",
-            0,
-            "LEARN HOW",
-        ],
-        [
-            image4,
-            "Improve strength and conditioning",
-            0,
-            "LEARN HOW",
-        ],
+        {
+            image: image1,
+            header: companyName +" Physiotherapy",
+            body: "Active, goal-focused physiotherapy",
+            href: "landing",
+            buttonText: ""
+        },
+        {
+            image: image2,
+            header: "Freedom from acute pain",
+            body: "",
+            href: URL.PHYSIOTHERAPY,
+            buttonText: "LEARN HOW",
+        },
+        {
+            image: image3,
+            header: "Return to optimal sports performance",
+            body: "",
+            href: URL.PHYSIOTHERAPY,
+            buttonText: "LEARN HOW",
+        },
+        {
+            image: image4,
+            header: "Improving function from ongoing pain",
+            body: "",
+            href: URL.PHYSIOTHERAPY,
+            buttonText: "LEARN HOW",
+        },
     ],
     para1: {
         image: Para1Image,

@@ -4,14 +4,102 @@ import classNames from "classnames";
 import {makeStyles} from "@material-ui/core/styles";
 import {Grid} from "@material-ui/core";
 
-import Button from "../CustomButtons/Button";
+import FooterButton from "components/Buttons/FooterButton";
 
-import FooterData from "../../assets/data/components/footer";
-import AJAXLogo from "../../assets/img/logos/AJAX.png"
-import MaccabiLogo from "../../assets/img/logos/MacabbiCricket.jpg"
+import {grayColor, hexToRgb, whiteColor} from "assets/jss/nextjs-material-kit-pro";
+import FooterData from "assets/data/components/footer";
+import Colours from "assets/strings/colours";
+import AJAXLogo from "assets/img/logos/AJAX.png"
+import MaccabiLogo from "assets/img/logos/MacabbiCricket.jpg"
 
-import styles from "./footerStyles";
-const useStyles = makeStyles(styles);
+const useStyles = makeStyles({
+    footer: {
+        paddingTop: "20px",
+        paddingBottom: "20px",
+        paddingRight: "15px",
+        paddingLeft: "15px",
+        marginRight: "auto",
+        marginLeft: "auto",
+        width: "100%",
+        "& ul": {
+            marginTop: "auto",
+            marginBottom: "auto"
+        },
+        "& ul li": {
+            display: "inline-block",
+        },
+        "& h4, & h5": {
+            color: whiteColor,
+            textDecoration: "none"
+        },
+    },
+    footerBrand: {
+        color: Colours.green,
+        fontFamily: "Roboto Slab,Times New Roman,serif",
+        margin: "0",
+    },
+    leftItem: {
+        marginTop: "auto",
+        marginBottom: "auto",
+        justifyContent: "center",
+        alignItems: "center",
+        paddingLeft: "1vw",
+        paddingRight: "1vw",
+        display: "flex",
+        minWidth: "33%",
+    },
+    centerItem: {
+        justifyContent: "center",
+        alignItems: "center",
+        paddingLeft: "1vw",
+        paddingRight: "1vw",
+        minWidth: "33%",
+    },
+    rightItem: {
+        minWidth: "33%",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        paddingLeft: "1vw",
+        paddingRight: "1vw",
+    },
+    supporterLogo: {
+        height: "80px",
+        width: "auto",
+        display: "inline",
+        marginLeft: "10px",
+        marginRight: "10px"
+    },
+    dark: {
+        background:
+            "radial-gradient(ellipse at center," +
+            grayColor[4] +
+            " 0," +
+            grayColor[5] +
+            " 100%)",
+        backgroundSize: "550% 450%",
+        color: whiteColor,
+        "& p": {
+            color: grayColor[0]
+        },
+        "& i": {
+            color: whiteColor
+        },
+        "& a": {
+            color: whiteColor,
+            opacity: ".86",
+            "&:visited": {
+                color: whiteColor
+            },
+            "&:focus, &:hover": {
+                opacity: 1
+            }
+        },
+        "& hr": {
+            borderColor: "rgba(" + hexToRgb(whiteColor) + ",0.2)"
+        }
+    }
+});
 
 export default function Footer() {
     const classes = useStyles();
@@ -24,6 +112,7 @@ export default function Footer() {
         <footer className={footerClasses}>
             <Grid
                 container
+                spacing={3}
                 direction={"row"}
                 justify={"center"}
                 alignContent={"center"}
@@ -53,26 +142,20 @@ export default function Footer() {
                 <Grid item xs={12} sm={12} md={4} className={classes.rightItem}>
                     <ul style={{padding: 0}}>
                         <li>
-                            <Button
+                            <FooterButton
                                 href="https://www.facebook.com/movewellmelbourne"
                                 target="_blank"
-                                color="white"
-                                justIcon
-                                simple
                             >
                                 <i className="fab fa-facebook" />
-                            </Button>
+                            </FooterButton>
                         </li>
                         <li>
-                            <Button
+                            <FooterButton
                                 href="https://www.instagram.com/movewellmelbourne/"
                                 target="_blank"
-                                color="white"
-                                justIcon
-                                simple
                             >
                                 <i className="fab fa-instagram" />
-                            </Button>
+                            </FooterButton>
                         </li>
                     </ul>
                 </Grid>

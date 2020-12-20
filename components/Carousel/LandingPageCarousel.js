@@ -3,28 +3,110 @@ import Carousel from "react-slick";
 
 import {Grid} from "@material-ui/core";
 import {makeStyles} from "@material-ui/core/styles";
-import Button from "@material-ui/core/Button";
 
-import LandingData from "../../assets/data/pages/landing-data";
+import BlockButton from "components/Buttons/BlockButton";
+import BookingButtonsGroup from "components/Buttons/BookingButtonsGroup";
 
-import carouselStyle from "./landingPageCarouselStyle";
-const useStyles = makeStyles(carouselStyle);
+import LandingData from "assets/data/pages/landing-data";
+import {blackColor, hexToRgb} from "assets/jss/nextjs-material-kit-pro";
+import {greenHrThick, parallaxHeaderText, parallaxSubHeaderText} from "assets/jss/coreStyles";
+import Link from "next/link";
+
+const useStyles = makeStyles({
+    filter: {},
+    imageTint: {
+        backgroundSize: "contain",
+        "&:before": {
+            background: "rgba(" + hexToRgb(blackColor) + ", 0.5)"
+        },
+        "&:after,&:before": {
+            position: "absolute",
+            zIndex: "1",
+            width: "100%",
+            height: "100%",
+            display: "block",
+            left: "0",
+            top: "0",
+            content: "''"
+        }
+    },
+    imageText: {
+        position: "absolute",
+        height: "100vh",
+        width: "100vw",
+        zIndex: "10",
+        marginTop: "-60vh",
+        textAlign: "center",
+        display: "block!important",
+    },
+    title: {
+        ...parallaxHeaderText,
+        marginTop: "30px",
+        minHeight: "32px",
+        marginLeft: "15%",
+        marginRight: "15%",
+    },
+    imageStyle: {
+        backgroundSize: "cover",
+        backgroundPosition: "top center",
+        height: "100vh",
+        maxHeight: "1600px",
+        minWidth: "100%",
+        position: "relative",
+        margin: "0",
+        padding: "0",
+        border: "0",
+        display: "flex",
+        alignItems: "center",
+    },
+    greenHr: {
+        ...greenHrThick,
+        marginLeft: "15%",
+        marginRight: "15%",
+    },
+    titleSubHeading: {
+        ...parallaxSubHeaderText,
+    },
+    buttonText: {
+        margin: 0,
+        padding: 2
+    }
+});
 
 export default function LandingPageCarousel(props) {
     const classes = useStyles();
     const settings = {
-        dots: false,
+        dots: true,
         infinite: true,
-        speed: 500,
+        speed: 2000,
+        autoplaySpeed: 5000,
         slidesToShow: 1,
         slidesToScroll: 1,
-        autoplay: false
+        autoplay: true
     };
 
-    function Slide(image, header, body, buttonText) {
+    function Buttons(href, buttonText) {
+        if (href !== "landing") {
+            return (
+                <Link href={href} passHref>
+                    <BlockButton color={"green"}>
+                        <p className={classes.buttonText}>
+                            <b>{buttonText}</b>
+                        </p>
+                    </BlockButton>
+                </Link>
+            )
+        } else {
+            return (
+                <BookingButtonsGroup />
+            )
+        }
+    }
+
+    function Slide(image, header, body, href, buttonText) {
         return (
             <div className={classes.imageTint} key={header}>
-                <img src={image} alt={header + " Slide"} className={classes.imageStyle}/>
+                <div style={{backgroundImage: "url(" + image + ")"}} className={classes.imageStyle}/>
                 <Grid
                     container
                     direction={"column"}
@@ -50,11 +132,7 @@ export default function LandingPageCarousel(props) {
                         null
                     }
                     <Grid item>
-                        <Button className={classes.button}>
-                            <p>
-                                <b>{buttonText}</b>
-                            </p>
-                        </Button>
+                        {Buttons(href, buttonText)}
                     </Grid>
                 </Grid>
             </div>
@@ -63,9 +141,9 @@ export default function LandingPageCarousel(props) {
 
     return (
         <Carousel {...settings}>
-            {LandingData.carousel.map(elements => {
+            {LandingData.carousel.map(element => {
                 return(
-                    Slide(elements[0], elements[1], elements[2], elements[3])
+                    Slide(element.image, element.header, element.body, element.href, element.buttonText)
                 )
             })}
         </Carousel>

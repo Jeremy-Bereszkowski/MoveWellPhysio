@@ -1,6 +1,4 @@
-import {AboutBackground, companyName} from "../global"
-const YashaHeadshot = "/physio/yasha_headshot.jpg";
-const ChrisHeadshot = "/physio/chris headshot.jpg";
+import {AboutBackground, companyName, Employees} from "../global"
 
 const AboutData = {
     core: {
@@ -16,20 +14,7 @@ const AboutData = {
     ],
     employee: {
         header: "Our Team",
-        employees: [
-            [
-                "Yasha Gurevitch",
-                "Principle Physiotherapist",
-                "YASHAS DESCRIPTION HERE",
-                YashaHeadshot,
-            ],
-            [
-                "Chris",
-                "Personal Trainer",
-                "CHRIS DESCRIPTION HERE",
-                ChrisHeadshot,
-            ],
-        ]
+        employees: Employees
     },
 }
 

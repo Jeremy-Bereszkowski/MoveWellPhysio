@@ -1,4 +1,4 @@
-import {ContactBackground, address1, address2, email} from "../global";
+import {ContactBackground, address1, address2, email, phone} from "../global";
 
 const ContactData = {
     core: {
@@ -9,23 +9,33 @@ const ContactData = {
         header: "Opening Hours",
         monday: [
             "Monday",
-            "8am - 6pm"
+            "7:30am",
+            "7:30pm"
         ],
         tuesday: [
             "Tuesday",
-            "8am - 6pm"
+            "7:30am",
+            "7:30pm"
         ],
         wednesday: [
             "Wednesday",
-            "8am - 6pm"
+            "7:30am",
+            "7:30pm"
         ],
         thursday: [
             "Thursday",
-            "8am - 6pm"
+            "7:30am",
+            "6:30pm"
         ],
         friday: [
             "Friday",
-            "8am - 6pm"
+            "7:30am",
+            "6:30pm"
+        ],
+        saturday: [
+            "Saturday",
+            "7:30am",
+            "12:00pm"
         ]
     },
     address: {
@@ -38,7 +48,7 @@ const ContactData = {
         header: "Contact",
         telephone: {
             header: "Telephone",
-            value: "9503 8223"
+            value: phone
         },
         email: {
             header: "Email",

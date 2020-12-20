@@ -13,9 +13,276 @@ import Divider from "@material-ui/core/Divider";
 import Popper from "@material-ui/core/Popper";
 import Button from "@material-ui/core/Button";
 
-import styles from "assets/jss/nextjs-material-kit-pro/components/customDropdownStyle.js";
 import URL from "../../assets/strings/urls";
-const useStyles = makeStyles(styles);
+import {
+  blackColor, dangerBoxShadow, dangerColor,
+  defaultFont,
+  grayColor,
+  hexToRgb, infoBoxShadow, infoColor, primaryBoxShadow,
+  primaryColor, roseBoxShadow, roseColor, successBoxShadow, successColor, warningBoxShadow, warningColor,
+  whiteColor
+} from "../../assets/jss/nextjs-material-kit-pro";
+import Colours from "../../assets/strings/colours";
+
+const useStyles = makeStyles(theme => ({
+  popperClose: {
+    pointerEvents: "none",
+    display: "none !important"
+  },
+  popperNav: {
+    [theme.breakpoints.down("sm")]: {
+      "&, &$popperResponsive": {
+        position: "static !important",
+        left: "unset !important",
+        top: "unset !important",
+        transform: "none !important",
+        willChange: "none !important",
+        "& > div": {
+          boxShadow: "none !important",
+          transition: "none !important",
+          marginTop: "0px !important",
+          marginBottom: "5px !important",
+          padding: "0px !important"
+        }
+      }
+    }
+  },
+  manager: {
+    "& > div > button:first-child > span:first-child, & > div > a:first-child > span:first-child": {
+      width: "100%"
+    },
+    color: "transparent",
+  },
+  innerManager: {
+    /*display: "block",*/
+    "& > div > button,& > div > a": {
+      margin: "0px !important",
+      color: "inherit !important",
+      padding: "10px 20px !important",
+      "& > span:first-child": {
+        width: "100%",
+        justifyContent: "center"
+      }
+    }
+  },
+  target: {
+    "& > button:first-child > span:first-child, & > a:first-child > span:first-child": {
+      display: "inline-block"
+    },
+    "& $caret": {
+      marginLeft: "0px"
+    }
+  },
+  dropdown: {
+    borderRadius: "3px",
+    border: "0",
+    boxShadow: "0 2px 5px 0 rgba(" + hexToRgb(blackColor) + ", 0.26)",
+    top: "100%",
+    zIndex: "1000",
+    minWidth: "160px",
+    padding: " 0",
+    margin: "0 0",
+    fontSize: "14px",
+    textAlign: "left",
+    listStyle: "none",
+    backgroundColor: Colours.dark,
+  },
+  menuList: {
+    padding: "0"
+  },
+  popperResponsive: {
+    zIndex: "1200",
+    position: "absolute !important",
+    [theme.breakpoints.down("sm")]: {
+      zIndex: "1640",
+      float: "none",
+      width: "auto",
+      marginTop: "0",
+      backgroundColor: "transparent",
+      border: "0",
+      boxShadow: "none",
+      color: "black"
+    }
+  },
+  dropdownItem: {
+    ...defaultFont,
+    fontSize: "13px",
+    padding: "10px 20px",
+    margin: "0 auto",
+    borderRadius: "2px",
+    position: "relative",
+    transition: "all 150ms linear",
+    display: "block",
+    clear: "both",
+    fontWeight: "400",
+    height: "100%",
+    color: grayColor[8],
+    whiteSpace: "nowrap",
+    minHeight: "unset"
+  },
+  darkHover: {
+    "&:hover": {
+      boxShadow:
+          "0 4px 20px 0px rgba(" +
+          hexToRgb(blackColor) +
+          ", 0.14), 0 7px 10px -5px rgba(" +
+          hexToRgb(grayColor[9]) +
+          ", 0.4)",
+      backgroundColor: grayColor[9],
+      color: whiteColor
+    }
+  },
+  primaryHover: {
+    "&:hover": {
+      backgroundColor: primaryColor[0],
+      color: whiteColor,
+      ...primaryBoxShadow
+    }
+  },
+  infoHover: {
+    "&:hover": {
+      backgroundColor: infoColor[0],
+      color: whiteColor,
+      ...infoBoxShadow
+    }
+  },
+  successHover: {
+    "&:hover": {
+      backgroundColor: successColor[0],
+      color: whiteColor,
+      ...successBoxShadow
+    }
+  },
+  warningHover: {
+    "&:hover": {
+      backgroundColor: warningColor[0],
+      color: whiteColor,
+      ...warningBoxShadow
+    }
+  },
+  dangerHover: {
+    "&:hover": {
+      backgroundColor: dangerColor[0],
+      color: whiteColor,
+      ...dangerBoxShadow
+    }
+  },
+  roseHover: {
+    "&:hover": {
+      backgroundColor: roseColor[0],
+      color: whiteColor,
+      ...roseBoxShadow
+    }
+  },
+  dropdownItemRTL: {
+    textAlign: "right"
+  },
+  dropdownDividerItem: {
+    margin: "5px 0",
+    backgroundColor: "rgba(" + hexToRgb(blackColor) + ", 0.12)",
+    height: "1px",
+    overflow: "hidden"
+  },
+  buttonIcon: {
+    width: "20px",
+    height: "20px"
+  },
+  caret: {
+    transition: "all 150ms ease-in",
+    display: "inline-block",
+    width: "0",
+    height: "0",
+    marginLeft: "4px",
+    verticalAlign: "middle",
+    borderTop: "4px solid",
+    borderRight: "4px solid transparent",
+    borderLeft: "4px solid transparent"
+  },
+  caretActive: {
+    transform: "rotate(180deg)"
+  },
+  caretDropup: {
+    transform: "rotate(180deg)"
+  },
+  caretRTL: {
+    marginRight: "4px"
+  },
+  dropdownHeader: {
+    display: "block",
+    padding: "0.1875rem 1.25rem",
+    fontSize: "0.75rem",
+    lineHeight: "1.428571",
+    color: grayColor[10],
+    whiteSpace: "nowrap",
+    fontWeight: "inherit",
+    marginTop: "10px",
+    minHeight: "24px",
+    "&:hover,&:focus": {
+      backgroundColor: "transparent",
+      cursor: "auto"
+    }
+  },
+  noLiPadding: {
+    padding: "0"
+  },
+  button: {
+    backgroundColor: "transparent",
+    minHeight: "auto",
+    minWidth: "auto",
+    color: whiteColor,
+    border: "none",
+    borderRadius: "3px",
+    padding: "12px 30px",
+    margin: ".3125rem 1px",
+    fontSize: "12px",
+    fontWeight: "400",
+    textTransform: "uppercase",
+    letterSpacing: "0",
+    willChange: "box-shadow, transform",
+    transition:
+        "box-shadow 0.2s cubic-bezier(0.4, 0, 1, 1), background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1)",
+    lineHeight: "1.42857143",
+    textAlign: "center",
+    whiteSpace: "nowrap",
+    verticalAlign: "middle",
+    touchAction: "manipulation",
+    cursor: "pointer",
+    "&:hover": {
+      color: whiteColor,
+      backgroundColor: Colours.green,
+      boxShadow:
+          "0 14px 26px -12px rgba(" +
+          hexToRgb(grayColor[0]) +
+          ", 0.42), 0 4px 23px 0px rgba(" +
+          hexToRgb(blackColor) +
+          ", 0.12), 0 8px 10px -5px rgba(" +
+          hexToRgb(grayColor[0]) +
+          ", 0.2)"
+    },
+    "& .fab,& .fas,& .far,& .fal,& .material-icons": {
+      position: "relative",
+      display: "inline-block",
+      top: "0",
+      marginTop: "-1em",
+      marginBottom: "-1em",
+      fontSize: "1.1rem",
+      marginRight: "4px",
+      verticalAlign: "middle"
+    },
+    "& svg": {
+      position: "relative",
+      display: "inline-block",
+      top: "0",
+      width: "18px",
+      height: "18px",
+      marginRight: "4px",
+      verticalAlign: "middle"
+    },
+  },
+  underline: {
+    borderBottom: "5px solid " + Colours.green,
+  }
+}));
 
 export default function CustomDropdown(props) {
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -82,7 +349,6 @@ export default function CustomDropdown(props) {
       console.log(router.pathname, URL.PHYSIO_LEAD_REHAB)
     default:
       buttonStyles = classes.button
-      console.log(router.pathname)
   }
 
   const dropDownMenu = (

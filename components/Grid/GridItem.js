@@ -12,7 +12,6 @@ const styles = {
     minHeight: "1px",
     paddingRight: "15px",
     paddingLeft: "15px"
-    /* flexBasis: "auto" */
   }
 };
 

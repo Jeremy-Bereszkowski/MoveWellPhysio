@@ -4,12 +4,33 @@ import classNames from "classnames";
 import {makeStyles} from "@material-ui/core/styles";
 import {Grid} from "@material-ui/core";
 
-import ContactData from "../../assets/data/pages/contact";
+import MapContainer from "util/google";
 
-import MapContainer from "../../util/google";
+import {bodyHeaderText} from "assets/jss/coreStyles";
+import ContactData from "assets/data/pages/contact";
 
-import styles from "./addressStyles";
-const useStyles = makeStyles(styles);
+const useStyles = makeStyles({
+    greenHeaderText: {
+        ...bodyHeaderText,
+    },
+    blackBodyText: {
+        fontWeight: "200",
+        lineHeight: "3vh",
+        fontSize: "calc(16px + (20 - 16) * ((100vw - 300px) / (1600 - 300)))",
+        margin: "0",
+        padding: "0",
+        textAlign: "center"
+    },
+    addressNoteText: {
+        marginTop: "40px",
+        marginBottom: "20px",
+    },
+    mapContainer: {
+        position: "relative",
+        height: "25vh",
+        width: "100%"
+    }
+});
 
 export default function OpeningHours() {
     const classes = useStyles();

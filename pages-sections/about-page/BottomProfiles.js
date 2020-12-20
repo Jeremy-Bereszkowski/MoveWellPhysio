@@ -3,12 +3,18 @@ import React from "react";
 import {Grid} from "@material-ui/core";
 import {makeStyles} from "@material-ui/core/styles";
 
-import EmployeeProfileCard from "../../components/Card/EmployeeProfileCard";
+import EmployeeProfileCard from "components/Card/EmployeeProfileCard";
 
-import AboutData from "../../assets/data/pages/about";
+import {bodyHeaderText} from "assets/jss/coreStyles";
+import AboutData from "assets/data/pages/about";
+import URL from "../../assets/strings/urls";
 
-import styles from "./bottomProfilesStyles";
-const useStyles = makeStyles(styles);
+const useStyles = makeStyles({
+    greenHeaderText: {
+        ...bodyHeaderText,
+        marginTop: "-2vh",
+    },
+});
 
 export default function BottomProfiles(props) {
     const classes = useStyles();
@@ -16,11 +22,12 @@ export default function BottomProfiles(props) {
     return(
         <Grid
             container
+            spacing={2}
             direction={"row"}
             justify={"center"}
             alignContent={"center"}
         >
-            <Grid item>
+            <Grid item md={12}>
                 <h2 className={classes.greenHeaderText}>
                     {AboutData.employee.header}
                 </h2>
@@ -28,19 +35,15 @@ export default function BottomProfiles(props) {
             <Grid item>
                 <Grid
                     container
+                    spacing={2}
                     justify={"center"}
                     alignContent={"center"}
                 >
                     {
-                        AboutData.employee.employees.map(element => {
+                        AboutData.employee.employees.map((element, key) => {
                             return (
-                                <Grid
-                                    item
-                                    md={6} xl={6}
-                                    className={classes.flexBox}
-                                    key={element}
-                                >
-                                    <EmployeeProfileCard employeeName={element[0]} employeePosition={element[1]} employeeDescription={element[2]} employeeImage={element[3]}/>
+                                <Grid item md={4} xl={4} key={key}>
+                                    <EmployeeProfileCard employee={element}/>
                                 </Grid>
                             )
                         })

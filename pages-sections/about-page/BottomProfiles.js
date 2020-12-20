@@ -7,15 +7,13 @@ import EmployeeProfileCard from "components/Card/EmployeeProfileCard";
 
 import {bodyHeaderText} from "assets/jss/coreStyles";
 import AboutData from "assets/data/pages/about";
+import URL from "../../assets/strings/urls";
 
 const useStyles = makeStyles({
     greenHeaderText: {
         ...bodyHeaderText,
         marginTop: "-2vh",
     },
-    flexBox: {
-        display: "flex"
-    }
 });
 
 export default function BottomProfiles(props) {
@@ -37,19 +35,15 @@ export default function BottomProfiles(props) {
             <Grid item>
                 <Grid
                     container
+                    spacing={2}
                     justify={"center"}
                     alignContent={"center"}
                 >
                     {
                         AboutData.employee.employees.map((element, key) => {
                             return (
-                                <Grid
-                                    item
-                                    md={4} xl={4}
-                                    className={classes.flexBox}
-                                    key={element + " " + key}
-                                >
-                                    <EmployeeProfileCard employeeName={element.name} employeePosition={element.title} employeeDescription={element.description} employeeImage={element.image}/>
+                                <Grid item md={4} xl={4} key={key}>
+                                    <EmployeeProfileCard employee={element}/>
                                 </Grid>
                             )
                         })

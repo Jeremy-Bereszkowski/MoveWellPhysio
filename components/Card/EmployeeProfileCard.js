@@ -1,17 +1,19 @@
 import React from "react";
+import Link from "next/link";
 import PropTypes from "prop-types"
 
 import {makeStyles} from "@material-ui/core/styles";
+import Grid from "@material-ui/core/Grid";
+
+import ThinButton from "components/Buttons/ThinButton";
 
 import CardHeader from "./CardHeader";
 import CardBody from "./CardBody";
 import Card from "./Card";
-import Grid from "@material-ui/core/Grid";
 
 const useStyles = makeStyles({
     textStyle: {
-        marginLeft: "20%",
-        marginRight: "20%"
+        textAlign: "left",
     },
     card2: {
         marginTop: "0",
@@ -22,8 +24,7 @@ const useStyles = makeStyles({
 
 export default function EmployeeProfileCard(props) {
     const classes = useStyles();
-
-    const {employeeName, employeePosition, employeeDescription, employeeImage} = props
+    const {employee} = props
 
     return (
         <Card plain className={classes.card2}>
@@ -36,8 +37,8 @@ export default function EmployeeProfileCard(props) {
                 >
                     <Grid item>
                         <img
-                            src={employeeImage}
-                            alt={employeeName + "_headshot"}
+                            src={employee.image}
+                            alt={employee.name + "_headshot"}
                             style={{width: "auto", height: "45vh"}}
                         />
                     </Grid>
@@ -46,20 +47,24 @@ export default function EmployeeProfileCard(props) {
             <CardBody plain>
                 <Grid
                     container
-                    direction={"column"}
-                    justify={"center"}
-                    alignContent={"stretch"}
+                    direction="column"
+                    justify="flex-start"
+                    alignItems="stretch"
                 >
                     <Grid item>
                         <h4 className={classes.textStyle}>
-                            {employeeName}
+                            {employee.name}
                         </h4>
                         <h6 className={classes.textStyle}>
-                            {employeePosition}
+                            {employee.title}
                         </h6>
-                        <p className={classes.textStyle}>
-                            {employeeDescription}
-                        </p>
+                        <Link href={employee.link} passHref>
+                            <ThinButton color={"dark"}>
+                                <p style={{margin: 0, padding: 0}}>
+                                    + View
+                                </p>
+                            </ThinButton>
+                        </Link>
                     </Grid>
                 </Grid>
             </CardBody>
@@ -68,8 +73,5 @@ export default function EmployeeProfileCard(props) {
 }
 
 EmployeeProfileCard.propTypes = {
-    employeeName: PropTypes.string,
-    employeePosition: PropTypes.string,
-    employeeDescription: PropTypes.string,
-    employeeImage: PropTypes.string,
+    employee: PropTypes.object,
 }

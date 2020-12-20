@@ -4,6 +4,7 @@ import {makeStyles} from "@material-ui/core/styles"
 import {Grid} from "@material-ui/core";
 import BookConsultButton from "./BookConsultButton";
 import BookGroupClassButton from "./BookGroupClassButton";
+import Link from "next/link";
 
 const useStyles = makeStyles(theme => ({}))
 

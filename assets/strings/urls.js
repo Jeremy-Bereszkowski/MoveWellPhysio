@@ -6,6 +6,12 @@ const URL = {
     CONTACT: "/contact",
     BOOK: "/book",
 
+    /*EMPLOYEE PROFILE*/
+    PROFILE: "/profiles",
+    PROFILE_YASHA: "/profiles/yasha",
+    PROFILE_CHRIS: "/profiles/chris",
+    PROFILE_SHANNON: "/profiles/shannon",
+
     /*SERVICES*/
     PHYSIOTHERAPY: "/services/physiotherapy",
     PHYSIO_LEAD_REHAB: "/services/physio-led-rehab",

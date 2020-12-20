@@ -1,4 +1,8 @@
 /* Global variables */
+import URL from "../strings/urls";
+
+
+/*Company Information*/
 const companyName = "MoveWell"
 
 const headerString = companyName + " Physiotherapy"
@@ -8,6 +12,8 @@ const address2 = "Brighton, VIC, 3188"
 
 const phone = "(03) 9503 8223"
 const email = "hello@movewellmelbourne.com"
+
+
 
 /* Landing Carousel Backgrounds */
 const image1 = "/physio/layout_1.jpg";
@@ -19,6 +25,7 @@ const image4 = "/physio/clients/client_29.jpg";
 const AboutBackground = "/physio/sign.jpg";
 const TestimonialBackground = "/physio/layout_1.jpg";
 const ContactBackground = "/physio/front_desk.jpg";
+const EmployeeProfileBackground = "/physio/sign.jpg";
 
 /* Services Page Backgrounds */
 const PhysiotherapyBackground = "/physio/clients/client_26.jpg";
@@ -27,6 +34,41 @@ const FocusedGroupBackground = "/physio/clients/client_39.jpg";
 
 /* 404 Background */
 const m404Background = "/physio/bikes_weights.jpg";
+
+
+
+/*Employee Data*/
+const YashaHeadshot = "/physio/team/headshot_yasha.jpg";
+const ChrisHeadshot = "/physio/team/headshot_chris.jpg";
+const ShannonHeadshot = "/physio/team/headshot_shannon.jpg";
+
+const Employees = [
+    {
+        id: "yasha",
+        name: "Yasha Gurevitch",
+        title: "Principle Physiotherapist",
+        description: "Yasha completed his Bachelor of Applied Science and Masters of Physiotherapy at La Trobe Bendigo. Yasha’s clinical interest involve management of complex musculoskeletal conditions, sports physiotherapy and injury prevention. Yasha has been involved in a variety of different sports settings including soccer, basketball and is currently the head physiotherapist at AJAX football club. A passion for ongoing education and knowledge translation Yasha has delivered presentations on injury prevention to variety of different sports clubs and Lectures at La Trobe university on musculoskeletal physiotherapy. With a strong focus on being patient centred, Yasha works closely with his patients to achieve their goals.",
+        image: YashaHeadshot,
+        link: URL.PROFILE_YASHA,
+    },
+    {
+        id: "chris",
+        name: "Chris",
+        title: "Personal Trainer",
+        description: "Chris has been working as a group class instructor and personal trainer for over 6 years. He loves helping those who are new to training and want to learn how to exercise safely and effectively. He enjoys helping client with any goals they have and loves to do some one on one boxing classes. \n" +
+            "To keep fit, Chris plays Ice Hockey, Football and does some weight training with friends.",
+        image: ChrisHeadshot,
+        link: URL.PROFILE_CHRIS,
+    },
+    {
+        id: "shanon",
+        name: "Shannon Petropoulos",
+        title: "Personal Trainer/Class Instructor",
+        description: "Shannon Description",
+        image: ShannonHeadshot,
+        link: URL.PROFILE_SHANNON,
+    },
+]
 
 export {
     headerString,
@@ -45,10 +87,13 @@ export {
     AboutBackground,
     TestimonialBackground,
     ContactBackground,
+    EmployeeProfileBackground,
 
     PhysiotherapyBackground,
     PhysioLedRehabBackground,
     FocusedGroupBackground,
 
     m404Background,
+
+    Employees,
 }

@@ -1,3 +1,9 @@
+/*
+* Header Links
+* Returns list of buttons and sub-buttons for header component
+* Can return list either vertically or horizontally
+* */
+
 import React from "react";
 import PropTypes from "prop-types"
 
@@ -53,7 +59,7 @@ export default function HeaderLinks(props) {
   );
 }
 
-HeaderLinks.defaultProps = {
+HeaderLinks.defaultProp = {
   vertical: false,
 }
 

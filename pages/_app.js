@@ -49,14 +49,7 @@ export default class MyApp extends App {
                 <Head>
                     <title>{headerString}</title>
                 </Head>
-                <LandingHeader
-                    color="transparent"
-                    fixed
-                    changeColorOnScroll={{
-                        height: 25,
-                        color: "dark"
-                    }}
-                />
+                <LandingHeader />
                 <Component {...pageProps} />
                 <Footer />
             </>

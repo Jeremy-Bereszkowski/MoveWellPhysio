@@ -1,6 +1,6 @@
 const URL = {
     ROOT: "/",
-    LANDING_PAGE: "/landing-data",
+    LANDING_PAGE: "/landing-page",
     TESTIMONIALS: "/testimonials",
     ABOUT: "/about",
     CONTACT: "/contact",

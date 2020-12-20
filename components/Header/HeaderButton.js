@@ -1,3 +1,8 @@
+/*
+* Header Button
+* Singular button can be rendered as internal link or external href
+* */
+
 import React from "react";
 import Link from "next/link";
 import {useRouter} from "next/router";
@@ -26,8 +31,7 @@ const useStyles = makeStyles(theme => ({
         textTransform: "uppercase",
         letterSpacing: "0",
         willChange: "box-shadow, transform",
-        transition:
-            "box-shadow 0.2s cubic-bezier(0.4, 0, 1, 1), background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1)",
+        transition: "box-shadow 0.2s cubic-bezier(0.4, 0, 1, 1), background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1)",
         lineHeight: "1.42857143",
         textAlign: "center",
         whiteSpace: "nowrap",
@@ -54,9 +58,7 @@ const useStyles = makeStyles(theme => ({
 
 export default function HeaderButton(props) {
     const classes = useStyles();
-
     const {element, onClick} = props
-
     const router = useRouter()
 
     const buttonStyles = element.core.link === router.pathname ?

@@ -4,6 +4,7 @@ import { useRouter } from 'next/router'
 import {makeStyles} from "@material-ui/core/styles"
 import Grid from "@material-ui/core/Grid";
 
+import HeaderFooterLayout from "layouts/HeaderFooterLayout";
 import MainContainerLayout from "layouts/MainContainerLayout";
 import ColumnLayout from "layouts/ColumnLayout";
 import ParallaxLayout from "layouts/ParallaxLayout";
@@ -11,8 +12,8 @@ import ParallaxLayout from "layouts/ParallaxLayout";
 import Card from "components/Card/Card";
 import CardBody from "components/Card/CardBody";
 
+import {blackColor, hexToRgb} from "assets/jss/nextjs-material-kit-pro";
 import ProfileData from "assets/data/pages/profiles/[profileId]";
-import {blackColor, hexToRgb} from "../../assets/jss/nextjs-material-kit-pro";
 
 const useStyles = makeStyles(theme => ({
     textStyle: {
@@ -89,12 +90,14 @@ export default function Profile(props) {
     }
 
     return (
-        <ParallaxLayout parallaxImage={ProfileData.core.parallaxImage} parallaxHeader={ProfileData.core.parallaxHeader} parallaxBody={ProfileData.core.parallaxBody}>
-            <MainContainerLayout>
-                <ColumnLayout>
-                    <ProfileCard profile={GetProfileData(router.query.profileId)}/>
-                </ColumnLayout>
-            </MainContainerLayout>
-        </ParallaxLayout>
+        <HeaderFooterLayout>
+            <ParallaxLayout parallaxImage={ProfileData.core.parallaxImage} parallaxHeader={ProfileData.core.parallaxHeader} parallaxBody={ProfileData.core.parallaxBody}>
+                <MainContainerLayout>
+                    <ColumnLayout>
+                        <ProfileCard profile={GetProfileData(router.query.profileId)}/>
+                    </ColumnLayout>
+                </MainContainerLayout>
+            </ParallaxLayout>
+        </HeaderFooterLayout>
     )
 }

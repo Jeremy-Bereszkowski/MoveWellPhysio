@@ -5,7 +5,9 @@ import { makeStyles } from "@material-ui/core/styles";
 
 import LandingPageCarousel from "components/Carousel/LandingPageCarousel";
 
+import HeaderFooterLayout from "layouts/HeaderFooterLayout";
 import MainContainerLayout from "layouts/MainContainerLayout";
+import ColumnLayout from "layouts/ColumnLayout";
 
 import IntroVideo from "pages-sections/landing-page/IntroVideo";
 import ParaLayout from "pages-sections/landing-page/ParaLayout";
@@ -13,7 +15,6 @@ import ParaLayout from "pages-sections/landing-page/ParaLayout";
 import {blackHrThin} from "assets/jss/coreStyles";
 import LandingData from "assets/data/pages/landing-data";
 import URL from "assets/strings/urls";
-import ColumnLayout from "../layouts/ColumnLayout";
 
 const useStyles = makeStyles({
     hr: {
@@ -25,7 +26,7 @@ export default function LandingPage(props) {
     const classes = useStyles();
 
     return (
-        <>
+        <HeaderFooterLayout>
             <LandingPageCarousel/>
             <MainContainerLayout>
                 <ColumnLayout>
@@ -53,6 +54,6 @@ export default function LandingPage(props) {
                     </Grid>
                 </ColumnLayout>
             </MainContainerLayout>
-        </>
+        </HeaderFooterLayout>
     )
 }

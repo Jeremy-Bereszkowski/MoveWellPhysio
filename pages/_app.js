@@ -4,8 +4,6 @@ import App from "next/app";
 import Head from "next/head";
 import Router from "next/router";
 
-import LandingHeader from "components/Header/Header";
-import Footer from "components/Footer/Footer";
 import PageChange from "components/PageChange/PageChange.js";
 
 import {headerString} from "assets/data/global";
@@ -49,9 +47,7 @@ export default class MyApp extends App {
                 <Head>
                     <title>{headerString}</title>
                 </Head>
-                <LandingHeader />
                 <Component {...pageProps} />
-                <Footer />
             </>
         );
     }

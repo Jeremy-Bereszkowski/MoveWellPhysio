@@ -58,5 +58,8 @@
   "optionalDependencies": {
     "@types/googlemaps": "3.39.4",
     "@types/markerclustererplus": "2.1.33"
+  },
+  "devDependencies": {
+    "react-device-detect": "^1.15.0"
   }
 }

@@ -1,5 +1,9 @@
 const URL = {
+    /*CORE*/
     ROOT: "/",
+    ERROR: "/404",
+
+    /*MAIN*/
     LANDING_PAGE: "/landing-page",
     TESTIMONIALS: "/testimonials",
     ABOUT: "/about",

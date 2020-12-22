@@ -34,10 +34,8 @@ const useStyles = makeStyles(theme => ({
 
 export default function TimelineBlock(props) {
     const classes = useStyles()
-
     const {header, body} = props
-
-    const animate = useIsTouchDevice() ? false : true
+    const animate = useIsTouchDevice()
 
     return (
         <Grid

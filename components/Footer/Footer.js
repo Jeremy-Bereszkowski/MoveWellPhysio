@@ -35,7 +35,6 @@ const useStyles = makeStyles({
     },
     footerBrand: {
         color: Colours.green,
-        fontFamily: "Roboto Slab,Times New Roman,serif",
         margin: "0",
     },
     leftItem: {

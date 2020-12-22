@@ -9,8 +9,7 @@ import Looks3Icon from '@material-ui/icons/Looks3';
 import Looks4Icon from '@material-ui/icons/Looks4';
 import Grid from "@material-ui/core/Grid";
 
-import BookConsultButton from "components/Buttons/BookConsultButton";
-import BookGroupClassButton from "components/Buttons/BookGroupClassButton";
+import useIsTouchDevice from "util/device-detect";
 
 import {grayColor} from "assets/jss/nextjs-material-kit-pro";
 import {bodyHeaderText} from "assets/jss/coreStyles";
@@ -53,7 +52,7 @@ export default function TimelineBlock(props) {
                 </h2>
             </Grid>
             <Grid item>
-                <VerticalTimeline animate={animate}>
+                <VerticalTimeline animate={!animate}>
                     {
                         body.map((ele, key) => {
                             let icon

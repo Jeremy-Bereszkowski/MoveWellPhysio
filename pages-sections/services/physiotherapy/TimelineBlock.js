@@ -37,6 +37,8 @@ export default function TimelineBlock(props) {
 
     const {header, body} = props
 
+    const animate = useIsTouchDevice() ? false : true
+
     return (
         <Grid
             container
@@ -53,7 +55,7 @@ export default function TimelineBlock(props) {
                 </h2>
             </Grid>
             <Grid item>
-                <VerticalTimeline>
+                <VerticalTimeline animate={animate}>
                     {
                         body.map((ele, key) => {
                             let icon

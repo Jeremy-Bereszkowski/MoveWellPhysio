@@ -39,7 +39,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "next dev -p 3005",
+    "dev": "next dev -p 3001",
     "build": "next build",
     "start": "next start",
     "install:clean": "rm -rf node_modules/ && rm -rf package-lock.json && rm -rf .next/ && npm install && npm run dev",

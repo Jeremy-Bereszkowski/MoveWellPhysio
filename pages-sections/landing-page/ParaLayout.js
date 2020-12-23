@@ -74,12 +74,9 @@ const useStyles = makeStyles({
             content: "''"
         }
     },
-    rightPad: {
+    pad: {
         padding: "2vw",
     },
-    leftPad: {
-        paddingLeft: "2vw"
-    }
 });
 
 export default function ParaLayout(props) {
@@ -155,14 +152,14 @@ export default function ParaLayout(props) {
             justify="center"
             alignItems="center"
         >
-            <Grid item xs={12} sm={12} md={6} className={classes.rightPad}>
+            <Grid item xs={12} sm={12} md={6} className={classes.pad}>
                 {
                     imageLeft === true ?
                         <ImageBlock /> :
                         <TextBlock imageLeft={imageLeft}/>
                 }
             </Grid>
-            <Grid item xs={12} sm={12} md={6} className={classes.rightPad}>
+            <Grid item xs={12} sm={12} md={6} className={classes.pad}>
                 {
                     imageLeft === false ?
                         <ImageBlock /> :

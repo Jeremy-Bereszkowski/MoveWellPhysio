@@ -21,6 +21,9 @@ const useStyles = makeStyles({
         marginBottom: "clamp(4px, 1vh, 8px)",
         textAlign: "left",
     },
+    pad: {
+        padding: "2vw",
+    },
 });
 
 export default function GreenHeaderBlackBody(props) {
@@ -29,44 +32,51 @@ export default function GreenHeaderBlackBody(props) {
     const {header, body} = props
 
     return (
-        <>
-            {
-                !header ? null :
-                    <Grid
-                        container
-                        spacing={6}
-                        direction={"row"}
-                        justify={"center"}
-                        alignContent={"center"}
-                    >
-
-                        <Grid item>
-                            <h2 className={classes.greenHeaderText}>
-                                {header}
-                            </h2>
-                        </Grid>
-                    </Grid>
-            }
-            <Grid
-                container
-                spacing={4}
-                direction={"row"}
-                justify={"flex-start"}
-                alignContent={"center"}
-            >
+        <Grid
+            container
+            direction={"column"}
+            justify={"center"}
+            alignItems={"stretch"}
+        >
+            <Grid item className={classes.pad}>
                 {
-                    body.map(element => {
-                        return (
-                            <Grid item key={element}>
-                                <h4 className={classes.blackBodyText}>
-                                    {element}
-                                </h4>
+                    !header ? null :
+                        <Grid
+                            container
+                            direction={"row"}
+                            justify={"center"}
+                            alignContent={"center"}
+                        >
+
+                            <Grid item>
+                                <h2 className={classes.greenHeaderText}>
+                                    {header}
+                                </h2>
                             </Grid>
-                        )
-                    })
+                        </Grid>
                 }
             </Grid>
-        </>
+            <Grid item className={classes.pad}>
+                <Grid
+                    container
+                    direction={"row"}
+                    justify={"flex-start"}
+                    alignContent={"center"}
+                >
+                    {
+                        body.map(element => {
+                            return (
+                                <Grid item key={element}>
+                                    <h4 className={classes.blackBodyText}>
+                                        {element}
+                                    </h4>
+                                </Grid>
+                            )
+                        })
+                    }
+                </Grid>
+            </Grid>
+        </Grid>
     )
 }
 

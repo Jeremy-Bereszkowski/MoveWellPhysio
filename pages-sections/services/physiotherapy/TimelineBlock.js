@@ -20,7 +20,8 @@ import 'react-vertical-timeline-component/style.min.css';
 const useStyles = makeStyles(theme => ({
     border: {
         border: "solid 3px " + Colours.green,
-        marginTop: "2.2rem"
+        marginTop: "2.2rem",
+        marginBottom: "2.2rem",
     },
     headerText: {
         ...bodyHeaderText,

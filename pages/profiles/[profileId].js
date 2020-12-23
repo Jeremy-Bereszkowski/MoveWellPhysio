@@ -67,7 +67,7 @@ export default function Profile(props) {
                             <img
                                 src={profile.image}
                                 alt={profile.name + "_headshot"}
-                                style={{width: "80%", height: "auto"}}
+                                style={{width: "60%", height: "auto"}}
                                 className={classes.image}
                             />
                         </Grid>

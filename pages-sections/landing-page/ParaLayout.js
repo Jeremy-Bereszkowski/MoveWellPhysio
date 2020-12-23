@@ -33,14 +33,6 @@ const useStyles = makeStyles({
     arrow: {
         marginBottom: "-6px",
     },
-    textDiv: {
-        marginLeft: "auto",
-        justify: "center",
-        marginRight: "auto"
-    },
-    divPadding: {
-        padding: "0 4vw",
-    },
     image: {
         width: "100%",
         height: "60vh",
@@ -78,60 +70,65 @@ const useStyles = makeStyles({
             top: "0",
             content: "''"
         }
+    },
+    rightPad: {
+        paddingRight: "2vw"
+    },
+    leftPad: {
+        paddingLeft: "2vw"
     }
 });
 
 export default function ParaLayout(props) {
     const classes = useStyles();
     const {image, headerString, bodyStringArray, actionString, actionUrl, imageLeft} = props
-
-
+    const padding = imageLeft ? classes.leftPad : classes.rightPad
 
     const TextBlock  = () => {
         return (
-            <div className={classNames(classes.textDiv)}>
-                <Slide left={!imageLeft} cascade>
+            <Slide left={!imageLeft} cascade={!imageLeft}>
+                <div>
                     <h2 className={classes.bodyHeaderText}>
                         {headerString}
                     </h2>
-                    <div>
-                        {
-                            bodyStringArray.map((bodyString, key) => {
-                                return (
-                                    <h4 className={classes.bodyParaText} key={key}>
-                                        {bodyString}
-                                    </h4>
-                                )
-                            })
-                        }
-                    </div>
-                    <Grid
-                        container
-                        direction={"row"}
-                        justify={"flex-start"}
-                        alignItems={"center"}
-                    >
-                        <Grid item>
-                            <Link href={actionUrl}>
-                                <a>
-                                    <h5 className={classNames(classes.bodyActionText, classes.inlineBlock)}>
-                                        {actionString}
-                                    </h5>
-                                </a>
-                            </Link>
-                        </Grid>
-                        <Grid item>
-                            <Link href={actionUrl}>
-                                <a>
-                                    <Icon className={classes.arrow}>
-                                        <KeyboardArrowRightIcon />
-                                    </Icon>
-                                </a>
-                            </Link>
-                        </Grid>
+                </div>
+                <div>
+                    {
+                        bodyStringArray.map((bodyString, key) => {
+                            return (
+                                <h4 className={classes.bodyParaText} key={key}>
+                                    {bodyString}
+                                </h4>
+                            )
+                        })
+                    }
+                </div>
+                <Grid
+                    container
+                    direction={"row"}
+                    justify={"flex-start"}
+                    alignItems={"center"}
+                >
+                    <Grid item>
+                        <Link href={actionUrl}>
+                            <a>
+                                <h5 className={classNames(classes.bodyActionText, classes.inlineBlock)}>
+                                    {actionString}
+                                </h5>
+                            </a>
+                        </Link>
                     </Grid>
-                </Slide>
-            </div>
+                    <Grid item>
+                        <Link href={actionUrl}>
+                            <a>
+                                <Icon className={classes.arrow}>
+                                    <KeyboardArrowRightIcon />
+                                </Icon>
+                            </a>
+                        </Link>
+                    </Grid>
+                </Grid>
+            </Slide>
         )
     }
 
@@ -152,16 +149,15 @@ export default function ParaLayout(props) {
             direction="row"
             justify="center"
             alignItems="center"
-            className={classes.divPadding}
         >
-            <Grid item xs={12} sm={12} md={6}>
+            <Grid item xs={12} sm={12} md={6} className={padding}>
                 {
                     imageLeft === true ?
                         <ImageBlock /> :
                         <TextBlock />
                 }
             </Grid>
-            <Grid item xs={12} sm={12} md={6}>
+            <Grid item xs={12} sm={12} md={6} className={padding}>
                 {
                     imageLeft === false ?
                         <ImageBlock /> :

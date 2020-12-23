@@ -20,6 +20,9 @@ const useStyles = makeStyles({
     hr: {
         ...blackHrThin,
     },
+    padding: {
+        padding: "4vh 0",
+    }
 });
 
 export default function LandingPage(props) {
@@ -32,23 +35,23 @@ export default function LandingPage(props) {
                 <ColumnLayout>
                     <Grid
                         container
-                        direction={"row"}
-                        alignContent={"center"}
+                        direction={"column"}
                         justify={"center"}
+                        alignItems="stretch"
                     >
-                        <Grid item xs={12} sm={12} md={12} lg={12}>
+                        <Grid item className={classes.padding}>
                             <ParaLayout actionUrl={URL.PHYSIOTHERAPY} image={LandingData.para1.image} headerString={LandingData.para1.header} bodyStringArray={LandingData.para1.body} actionString={LandingData.para1.action} actionUrl={URL.PHYSIOTHERAPY} imageLeft={false}/>
                         </Grid>
-                        <Grid item xs={12} sm={12} md={12} lg={12}>
+                        <Grid item className={classes.padding}>
                             <hr size={30} className={classes.hr}/>
                         </Grid>
-                        <Grid item xs={12} sm={12} md={12} lg={12}>
+                        <Grid item className={classes.padding}>
                             <IntroVideo />
                         </Grid>
-                        <Grid item xs={12} sm={12} md={12} lg={12}>
+                        <Grid item className={classes.padding}>
                             <hr size={30} className={classes.hr}/>
                         </Grid>
-                        <Grid item xs={12} sm={12} md={12} lg={12}>
+                        <Grid item className={classes.padding}>
                             <ParaLayout actionUrl={URL.ABOUT} image={LandingData.para2.image} headerString={LandingData.para2.header} bodyStringArray={LandingData.para2.body} actionString={LandingData.para2.action} actionUrl={URL.ABOUT} imageLeft={true}/>
                         </Grid>
                     </Grid>

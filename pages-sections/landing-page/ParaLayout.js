@@ -84,103 +84,85 @@ const useStyles = makeStyles({
 
 export default function ParaLayout(props) {
     const classes = useStyles();
-
     const {image, headerString, bodyStringArray, actionString, actionUrl, imageLeft} = props
 
-    const SlideBlock = () => {
-        return (
-            <>
-                {imageLeft === false ?
-                    <Grid item xs={12} sm={12} md={6}>
-                        <Slide left cascade>
-                            <TextBlock />
-                        </Slide>
-                    </Grid>
-                    :
-                    <Grid item xs={12} sm={12} md={6}>
-                        <Slide left>
-                            <TextBlock />
-                        </Slide>
-                    </Grid>
-                }
-            </>
-        )
-    }
     const TextBlock  = () => {
         return (
-            <div className={classNames(classes.textDiv)}>
-                <h2 className={classes.bodyHeaderText}>
-                    {headerString}
-                </h2>
-                {bodyStringArray.map(bodyString => {
-                    return (
-                        <h4 className={classes.bodyParaText} key={bodyString}>
-                            {bodyString}
-                        </h4>
-                    )
-                })}
-                <Grid
-                    container
-                    direction={"row"}
-                    justify={"flex-start"}
-                    alignItems={"center"}
-                >
-                    <Grid item>
-                        <Link href={actionUrl}>
-                            <a>
-                                <h5 className={classNames(classes.bodyActionText, classes.inlineBlock)}>
-                                    {actionString}
-                                </h5>
-                            </a>
-                        </Link>
+            <Slide left={!imageLeft} cascade={true}>
+                {/*<div className={classNames(classes.textDiv)}>*/}
+                    <h2 className={classes.bodyHeaderText}>
+                        {headerString}
+                    </h2>
+                    {bodyStringArray.map(bodyString => {
+                        return (
+                            <h4 className={classes.bodyParaText} key={bodyString}>
+                                {bodyString}
+                            </h4>
+                        )
+                    })}
+                    <Grid
+                        container
+                        direction={"row"}
+                        justify={"flex-start"}
+                        alignItems={"center"}
+                    >
+                        <Grid item>
+                            <Link href={actionUrl}>
+                                <a>
+                                    <h5 className={classNames(classes.bodyActionText, classes.inlineBlock)}>
+                                        {actionString}
+                                    </h5>
+                                </a>
+                            </Link>
+                        </Grid>
+                        <Grid item>
+                            <Link href={actionUrl}>
+                                <a>
+                                    <Icon className={classes.arrow}>
+                                        <KeyboardArrowRightIcon />
+                                    </Icon>
+                                </a>
+                            </Link>
+                        </Grid>
                     </Grid>
-                    <Grid item>
-                        <Link href={actionUrl}>
-                            <a>
-                                <Icon className={classes.arrow}>
-                                    <KeyboardArrowRightIcon />
-                                </Icon>
-                            </a>
-                        </Link>
-                    </Grid>
-                </Grid>
-            </div>
+                {/*</div>*/}
+            </Slide>
         )
     }
 
     const ImageBlock = () => {
         return (
-            <Grid item xs={12} sm={12} md={6}>
-                <div
-                    className={classNames(classes.image, classes.darkColor)}
-                    style={{
-                        backgroundImage: "url(" + image + ")",
-                    }}
-                />
-            </Grid>
+            <div
+                className={classNames(classes.image, classes.darkColor)}
+                style={{
+                    backgroundImage: "url(" + image + ")",
+                }}
+            />
         )
     }
 
     return (
         <Grid
             container
-            spacing={4}
             direction="row"
             justify="center"
             alignItems="center"
             className={classes.divPadding}
         >
-            {imageLeft === true ?
-                <>
-                    <ImageBlock />
-                    <SlideBlock />
-                </>
-                :
-                <>
-                    <SlideBlock />
-                    <ImageBlock />
-                </>
-            }
+            <Grid item xs={12} sm={12} md={6}>
+                {
+                    imageLeft === true ?
+                        <ImageBlock /> :
+                        <TextBlock />
+                }
+            </Grid>
+            <Grid item xs={12} sm={12} md={6}>
+                {
+                    imageLeft === false ?
+                        <ImageBlock /> :
+                        <TextBlock />
+                }
+            </Grid>
         </Grid>
     )
 }

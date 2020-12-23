@@ -8,7 +8,7 @@ const companyName = "MoveWell"
 const headerString = companyName + " Physiotherapy"
 
 const address1 = "181 Bay Street"
-const address2 = "Brighton, VIC, 3188"
+const address2 = "Brighton, VIC, 3186"
 
 const phone = "0490 842 380"
 const email = "hello@movewellmelbourne.com"
@@ -57,8 +57,8 @@ const Employees = [
     },
     {
         id: ChrisId,
-        name: "Chris",
-        title: "Personal Trainer",
+        name: "Chris Knight",
+        title: "Personal Trainer/Class Instructor",
         description: "Chris has been working as a group class instructor and personal trainer for over 6 years. He loves helping those who are new to training and want to learn how to exercise safely and effectively. He enjoys helping client with any goals they have and loves to do some one on one boxing classes. \n" +
             "To keep fit, Chris plays Ice Hockey, Football and does some weight training with friends.",
         image: ChrisHeadshot,

@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from "prop-types"
 
 import {makeStyles} from "@material-ui/core/styles"
 import BlockButton from "./BlockButton";
@@ -18,12 +19,21 @@ const data = {
 
 export default function BookConsultButton(props) {
     const classes = useStyles()
+    const {color} = props
 
     return (
-        <BlockButton color={"green"} href={data.href}>
+        <BlockButton color={color} href={data.href}>
             <p className={classes.para}>
                 <b>{data.buttonText}</b>
             </p>
         </BlockButton>
     )
+}
+
+BookConsultButton.defaultProps = {
+    color: "green"
+}
+
+BookConsultButton.propTypes = {
+    color: PropTypes.string,
 }

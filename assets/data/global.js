@@ -10,7 +10,7 @@ const headerString = companyName + " Physiotherapy"
 const address1 = "181 Bay Street"
 const address2 = "Brighton, VIC, 3188"
 
-const phone = "(03) 9503 8223"
+const phone = "0490 842 380"
 const email = "hello@movewellmelbourne.com"
 
 
@@ -24,7 +24,7 @@ const image4 = "/physio/clients/client_29.jpg";
 /* Main Page Backgrounds */
 const AboutBackground = "/physio/sign.jpg";
 const TestimonialBackground = "/physio/layout_1.jpg";
-const ContactBackground = "/physio/front_desk.jpg";
+const ContactBackground = "/physio/reception.jpg";
 const EmployeeProfileBackground = "/physio/sign.jpg";
 
 /* Services Page Backgrounds */

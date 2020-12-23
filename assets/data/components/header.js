@@ -36,14 +36,14 @@ const HeaderLinkData = [
     },
     {
         core: {
-            key: "Testimonials",
-            link: URL.TESTIMONIALS,
+            key: "About",
+            link: URL.ABOUT,
         },
     },
     {
         core: {
-            key: "About",
-            link: URL.ABOUT,
+            key: "Testimonials",
+            link: URL.TESTIMONIALS,
         },
     },
     {

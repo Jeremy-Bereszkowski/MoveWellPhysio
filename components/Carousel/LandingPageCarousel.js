@@ -11,6 +11,7 @@ import LandingData from "assets/data/pages/landing-data";
 import {blackColor, hexToRgb} from "assets/jss/nextjs-material-kit-pro";
 import {greenHrThick, parallaxHeaderText, parallaxSubHeaderText} from "assets/jss/coreStyles";
 import Link from "next/link";
+import BookConsultButton from "../Buttons/BookConsultButton";
 
 const useStyles = makeStyles({
     filter: {},
@@ -89,11 +90,23 @@ export default function LandingPageCarousel(props) {
         if (href !== "landing") {
             return (
                 <Link href={href} passHref>
-                    <BlockButton color={"green"}>
-                        <p className={classes.buttonText}>
-                            <b>{buttonText}</b>
-                        </p>
-                    </BlockButton>
+                    <Grid
+                        container
+                        direction={"row"}
+                        justify={"center"}
+                        alignItems={"center"}
+                    >
+                        <Grid item>
+                            <BlockButton color={"green"}>
+                                <p className={classes.buttonText}>
+                                    <b>{buttonText}</b>
+                                </p>
+                            </BlockButton>
+                        </Grid>
+                        <Grid item>
+                            <BookConsultButton color={"dark"}/>
+                        </Grid>
+                    </Grid>
                 </Link>
             )
         } else {

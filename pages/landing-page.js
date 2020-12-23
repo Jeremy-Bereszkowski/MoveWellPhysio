@@ -45,12 +45,12 @@ export default function LandingPage(props) {
                         <Grid item className={classes.padding}>
                             <hr size={30} className={classes.hr}/>
                         </Grid>
-                        <Grid item className={classes.padding}>
+                        {/*<Griland item className={classes.padding}>
                             <IntroVideo />
-                        </Grid>
+                        </Griland>
                         <Grid item className={classes.padding}>
                             <hr size={30} className={classes.hr}/>
-                        </Grid>
+                        </Grid>*/}
                         <Grid item className={classes.padding}>
                             <ParaLayout actionUrl={URL.ABOUT} image={LandingData.para2.image} headerString={LandingData.para2.header} bodyStringArray={LandingData.para2.body} actionString={LandingData.para2.action} actionUrl={URL.ABOUT} imageLeft={true}/>
                         </Grid>

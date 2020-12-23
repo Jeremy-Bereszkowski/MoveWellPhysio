@@ -58,22 +58,6 @@ const useStyles = makeStyles({
             hexToRgb(blackColor) +
             ", 0.2)",
     },
-    filter: {},
-    darkColor: {
-        "&:before": {
-            background: "rgba(" + hexToRgb(blackColor) + ", 0.5)"
-        },
-        "&:after,&:before": {
-            position: "absolute",
-            zIndex: "1",
-            width: "100%",
-            height: "100%",
-            display: "block",
-            left: "0",
-            top: "0",
-            content: "''"
-        }
-    },
     pad: {
         padding: "2vw",
     },
@@ -137,7 +121,7 @@ export default function ParaLayout(props) {
     const ImageBlock = () => {
         return (
             <div
-                className={classNames(classes.image, classes.darkColor)}
+                className={classNames(classes.image)}
                 style={{
                     backgroundImage: "url(" + image + ")",
                 }}

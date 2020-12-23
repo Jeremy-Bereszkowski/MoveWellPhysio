@@ -79,10 +79,6 @@ const useStyles = makeStyles({
             ", 0.12), 0 8px 10px -5px rgba(" +
             hexToRgb(blackColor) +
             ", 0.2)",
-    },
-    filter: {},
-    darkColor: {
-        ...darkColor
     }
 });
 
@@ -93,7 +89,7 @@ export default function PhysioLedRehabBlock(props) {
     const ImageBlock = () => {
         return (
             <Grid item xs={12} sm={12} md={6}>
-                <div className={classNames(classes.image, classes.darkColor)}>
+                <div className={classes.image}>
                     <img src={clientImage} className={classNames(classes.image)}/>
                 </div>
             </Grid>

@@ -49,7 +49,7 @@ const ShannonHeadshot = "/physio/team/headshot_shannon.jpg";
 const Employees = [
     {
         id: YashaId,
-        name: "Yasha Gurevitch",
+        name: "Yasha Gurevich",
         title: "Principle Physiotherapist",
         description: "Yasha completed his Bachelor of Applied Science and Masters of Physiotherapy at La Trobe Bendigo. Yasha’s clinical interest involve management of complex musculoskeletal conditions, sports physiotherapy and injury prevention. Yasha has been involved in a variety of different sports settings including soccer, basketball and is currently the head physiotherapist at AJAX football club. A passion for ongoing education and knowledge translation Yasha has delivered presentations on injury prevention to variety of different sports clubs and Lectures at La Trobe university on musculoskeletal physiotherapy. With a strong focus on being patient centred, Yasha works closely with his patients to achieve their goals.",
         image: YashaHeadshot,

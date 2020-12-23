@@ -52,7 +52,6 @@ export default function Function(props) {
             <Grid item>
                 <Grid
                     container
-                    spacing={4}
                     direction={"row"}
                     justify={"flex-start"}
                     alignContent={"center"}

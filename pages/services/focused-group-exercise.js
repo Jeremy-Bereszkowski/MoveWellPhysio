@@ -12,8 +12,7 @@ import TopText from "pages-sections/services/focused-group-page/TopText";
 import MiddleText from "pages-sections/services/focused-group-page/MiddleText";
 import BottomText from "pages-sections/services/focused-group-page/BottomText";
 
-import BookConsultButton from "components/Buttons/BookConsultButton";
-import BookGroupClassButton from "components/Buttons/BookGroupClassButton";
+import BookingButtonsGroup from "components/Buttons/BookingButtonsGroup";
 
 import FocusedGroupData from "assets/data/pages/services/focusedGroup";
 
@@ -29,7 +28,6 @@ export default function FocusedGroupExercise(props) {
                     <ColumnLayout>
                         <Grid
                             container
-                            spacing={2}
                             direction={"column"}
                             alignContent={"center"}
                             justify={"center"}
@@ -44,20 +42,7 @@ export default function FocusedGroupExercise(props) {
                                 <BottomText />
                             </Grid>
                             <Grid item>
-                                <Grid
-                                    container
-                                    spacing={2}
-                                    direction={"row"}
-                                    justify={"center"}
-                                    alignContent={"center"}
-                                >
-                                    <Grid item>
-                                        <BookConsultButton />
-                                    </Grid>
-                                    <Grid item>
-                                        <BookGroupClassButton />
-                                    </Grid>
-                                </Grid>
+                                <BookingButtonsGroup />
                             </Grid>
                         </Grid>
                     </ColumnLayout>

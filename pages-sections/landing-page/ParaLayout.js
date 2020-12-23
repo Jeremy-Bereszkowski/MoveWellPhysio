@@ -11,6 +11,7 @@ import KeyboardArrowRightIcon from "@material-ui/icons/KeyboardArrowRight";
 
 import {bodyActionText, bodyHeaderText, bodyParaText1} from "assets/jss/coreStyles";
 import {blackColor, hexToRgb} from "assets/jss/nextjs-material-kit-pro";
+import Colours from "../../assets/strings/colours";
 
 const useStyles = makeStyles({
     title: {
@@ -32,6 +33,7 @@ const useStyles = makeStyles({
     },
     arrow: {
         marginBottom: "-6px",
+        color: Colours.green,
     },
     image: {
         width: "100%",

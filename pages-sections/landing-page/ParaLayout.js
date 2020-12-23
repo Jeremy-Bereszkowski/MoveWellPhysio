@@ -12,6 +12,7 @@ import KeyboardArrowRightIcon from "@material-ui/icons/KeyboardArrowRight";
 import {bodyActionText, bodyHeaderText, bodyParaText1} from "assets/jss/coreStyles";
 import {blackColor, hexToRgb} from "assets/jss/nextjs-material-kit-pro";
 import Colours from "../../assets/strings/colours";
+import useIsTouchDevice from "../../util/device-detect";
 
 const useStyles = makeStyles({
     title: {
@@ -74,7 +75,7 @@ const useStyles = makeStyles({
         }
     },
     rightPad: {
-        paddingRight: "2vw"
+        padding: "2vw",
     },
     leftPad: {
         paddingLeft: "2vw"
@@ -86,9 +87,11 @@ export default function ParaLayout(props) {
     const {image, headerString, bodyStringArray, actionString, actionUrl, imageLeft} = props
     const padding = imageLeft ? classes.leftPad : classes.rightPad
 
-    const TextBlock  = () => {
+    const TextBlock  = ({imageLeft}) => {
+        const animation = (useIsTouchDevice() || !imageLeft)
+
         return (
-            <Slide left={!imageLeft} cascade={!imageLeft}>
+            <Slide left={animation} cascade={animation}>
                 <div>
                     <h2 className={classes.bodyHeaderText}>
                         {headerString}
@@ -152,18 +155,18 @@ export default function ParaLayout(props) {
             justify="center"
             alignItems="center"
         >
-            <Grid item xs={12} sm={12} md={6} className={padding}>
+            <Grid item xs={12} sm={12} md={6} className={classes.rightPad}>
                 {
                     imageLeft === true ?
                         <ImageBlock /> :
-                        <TextBlock />
+                        <TextBlock imageLeft={imageLeft}/>
                 }
             </Grid>
-            <Grid item xs={12} sm={12} md={6} className={padding}>
+            <Grid item xs={12} sm={12} md={6} className={classes.rightPad}>
                 {
                     imageLeft === false ?
                         <ImageBlock /> :
-                        <TextBlock />
+                        <TextBlock imageLeft={imageLeft}/>
                 }
             </Grid>
         </Grid>

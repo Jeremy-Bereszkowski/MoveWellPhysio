@@ -346,7 +346,6 @@ export default function CustomDropdown(props) {
     case URL.FOCUSED_GROUP_EXERCISE:
     case URL.PROFESSIONAL_MENTORING:
       buttonStyles = classNames(classes.button, classes.underline)
-      console.log(router.pathname, URL.PHYSIO_LEAD_REHAB)
     default:
       buttonStyles = classes.button
   }

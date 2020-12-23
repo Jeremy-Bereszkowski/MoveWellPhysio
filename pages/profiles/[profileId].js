@@ -18,7 +18,7 @@ import ProfileData from "assets/data/pages/profiles/[profileId]";
 const useStyles = makeStyles(theme => ({
     textStyle: {
         textAlign: "left",
-        maxWidth: "50%"
+        maxWidth: "550px"
     },
     card2: {
         marginTop: "0",
@@ -35,6 +35,9 @@ const useStyles = makeStyles(theme => ({
             ", 0.12), 0 8px 10px -5px rgba(" +
             hexToRgb(blackColor) +
             ", 0.2)"
+    },
+    pad: {
+        padding: "2vw",
     }
 }))
 
@@ -64,7 +67,7 @@ export default function Profile(props) {
                             <img
                                 src={profile.image}
                                 alt={profile.name + "_headshot"}
-                                style={{width: "auto", height: "75vh"}}
+                                style={{width: "80%", height: "auto"}}
                                 className={classes.image}
                             />
                         </Grid>

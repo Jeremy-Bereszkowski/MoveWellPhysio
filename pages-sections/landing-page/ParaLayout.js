@@ -39,8 +39,7 @@ const useStyles = makeStyles({
         marginRight: "auto"
     },
     divPadding: {
-        paddingLeft: "4vw",
-        paddingRight: "4vw",
+        padding: "0 4vw",
     },
     image: {
         width: "100%",
@@ -86,20 +85,26 @@ export default function ParaLayout(props) {
     const classes = useStyles();
     const {image, headerString, bodyStringArray, actionString, actionUrl, imageLeft} = props
 
+
+
     const TextBlock  = () => {
         return (
-            <Slide left={!imageLeft} cascade={true}>
-                {/*<div className={classNames(classes.textDiv)}>*/}
+            <div className={classNames(classes.textDiv)}>
+                <Slide left={!imageLeft} cascade>
                     <h2 className={classes.bodyHeaderText}>
                         {headerString}
                     </h2>
-                    {bodyStringArray.map(bodyString => {
-                        return (
-                            <h4 className={classes.bodyParaText} key={bodyString}>
-                                {bodyString}
-                            </h4>
-                        )
-                    })}
+                    <div>
+                        {
+                            bodyStringArray.map((bodyString, key) => {
+                                return (
+                                    <h4 className={classes.bodyParaText} key={key}>
+                                        {bodyString}
+                                    </h4>
+                                )
+                            })
+                        }
+                    </div>
                     <Grid
                         container
                         direction={"row"}
@@ -125,8 +130,8 @@ export default function ParaLayout(props) {
                             </Link>
                         </Grid>
                     </Grid>
-                {/*</div>*/}
-            </Slide>
+                </Slide>
+            </div>
         )
     }
 

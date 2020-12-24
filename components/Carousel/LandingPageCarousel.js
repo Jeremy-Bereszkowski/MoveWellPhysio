@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import Carousel from "react-slick";
 
 import {Grid} from "@material-ui/core";
@@ -6,12 +7,11 @@ import {makeStyles} from "@material-ui/core/styles";
 
 import BlockButton from "components/Buttons/BlockButton";
 import BookingButtonsGroup from "components/Buttons/BookingButtonsGroup";
+import BookConsultButton from "components/Buttons/BookConsultButton";
 
-import LandingData from "assets/data/pages/landing-data";
 import {blackColor, hexToRgb} from "assets/jss/nextjs-material-kit-pro";
 import {greenHrThick, parallaxHeaderText, parallaxSubHeaderText} from "assets/jss/coreStyles";
-import Link from "next/link";
-import BookConsultButton from "../Buttons/BookConsultButton";
+import LandingData from "assets/data/pages/landing-data";
 
 const useStyles = makeStyles({
     filter: {},
@@ -71,6 +71,9 @@ const useStyles = makeStyles({
     buttonText: {
         margin: 0,
         padding: 2
+    },
+    pad: {
+        padding: "1vw"
     }
 });
 
@@ -89,25 +92,25 @@ export default function LandingPageCarousel(props) {
     function Buttons(href, buttonText) {
         if (href !== "landing") {
             return (
-                <Link href={href} passHref>
-                    <Grid
-                        container
-                        direction={"row"}
-                        justify={"center"}
-                        alignItems={"center"}
-                    >
-                        <Grid item>
+                <Grid
+                    container
+                    direction={"row"}
+                    justify={"center"}
+                    alignItems={"center"}
+                >
+                    <Grid item className={classes.pad}>
+                        <Link href={href} passHref>
                             <BlockButton color={"green"}>
                                 <p className={classes.buttonText}>
                                     <b>{buttonText}</b>
                                 </p>
                             </BlockButton>
-                        </Grid>
-                        <Grid item>
-                            <BookConsultButton color={"dark"}/>
-                        </Grid>
+                        </Link>
                     </Grid>
-                </Link>
+                    <Grid item className={classes.pad}>
+                        <BookConsultButton color={"dark"}/>
+                    </Grid>
+                </Grid>
             )
         } else {
             return (
@@ -154,11 +157,13 @@ export default function LandingPageCarousel(props) {
 
     return (
         <Carousel {...settings}>
-            {LandingData.carousel.map(element => {
-                return(
-                    Slide(element.image, element.header, element.body, element.href, element.buttonText)
-                )
-            })}
+            {
+                LandingData.carousel.map(element => {
+                    return(
+                        Slide(element.image, element.header, element.body, element.href, element.buttonText)
+                    )
+                })
+            }
         </Carousel>
     )
 }

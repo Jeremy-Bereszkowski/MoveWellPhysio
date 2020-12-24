@@ -51,7 +51,11 @@ const Employees = [
         id: YashaId,
         name: "Yasha Gurevich",
         title: "Principle Physiotherapist",
-        description: "Yasha completed his Bachelor of Applied Science and Masters of Physiotherapy at La Trobe Bendigo. Yasha’s clinical interest involve management of complex musculoskeletal conditions, sports physiotherapy and injury prevention. Yasha has been involved in a variety of different sports settings including soccer, basketball and is currently the head physiotherapist at AJAX football club. A passion for ongoing education and knowledge translation Yasha has delivered presentations on injury prevention to variety of different sports clubs and Lectures at La Trobe university on musculoskeletal physiotherapy. With a strong focus on being patient centred, Yasha works closely with his patients to achieve their goals.",
+        description: "Yasha completed his Bachelor of Applied Science and Masters of Physiotherapy at La Trobe Bendigo. " +
+            "Yasha’s clinical interest involve management of complex musculoskeletal conditions, sports physiotherapy and injury prevention. " +
+            "Yasha has been involved in a variety of different sports settings including soccer, basketball and is currently the head physiotherapist at AJAX football club. " +
+            "A passion for ongoing education and knowledge translation Yasha has delivered presentations on injury prevention to variety of different sports clubs and Lectures at La Trobe university on musculoskeletal physiotherapy. " +
+            "With a strong focus on being patient centred, Yasha works closely with his patients to achieve their goals.",
         image: YashaHeadshot,
         link: URL.PROFILE_YASHA,
     },
@@ -59,7 +63,9 @@ const Employees = [
         id: ChrisId,
         name: "Chris Knight",
         title: "Personal Trainer/Class Instructor",
-        description: "Chris has been working as a group class instructor and personal trainer for over 6 years. He loves helping those who are new to training and want to learn how to exercise safely and effectively. He enjoys helping client with any goals they have and loves to do some one on one boxing classes. \n" +
+        description: "Chris has been working as a group class instructor and personal trainer for over 6 years. " +
+            "He loves helping those who are new to training and want to learn how to exercise safely and effectively. " +
+            "He enjoys helping client with any goals they have and loves to do some one on one boxing classes. \n" +
             "To keep fit, Chris plays Ice Hockey, Football and does some weight training with friends.",
         image: ChrisHeadshot,
         link: URL.PROFILE_CHRIS,
@@ -68,7 +74,11 @@ const Employees = [
         id: ShannonId,
         name: "Shannon Petropoulos",
         title: "Personal Trainer/Class Instructor",
-        description: "Shannon Description",
+        description: "Fitness has been a priority in my life since I can remember. That then grew into a passion to share “My Passion” with others. " +
+            "I have been a PT and fitness instructor since 2002. Training people on the hills of Bondi Beach to the parks and gyms around my hometown of Melbourne. " +
+            "I train most days, I love seafood and I love a glass of wine. I’m also a mum to 3 1/2 year old. " +
+            "I am realistic. I exercise with both weights and cardio each day, to feel fit and stay strong and therefore I encourage my clients to do this this also. " +
+            "I am really looking forward to this next adventure with Yasha at "+companyName+" Melbourne, moving closer to our physical goals and enjoying the ride along the way.",
         image: ShannonHeadshot,
         link: URL.PROFILE_SHANNON,
     },

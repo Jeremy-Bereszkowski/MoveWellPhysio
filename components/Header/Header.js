@@ -15,8 +15,10 @@ import Hidden from "@material-ui/core/Hidden";
 import Drawer from "@material-ui/core/Drawer";
 import Menu from "@material-ui/icons/Menu";
 import Close from "@material-ui/icons/Close";
+import Grid from "@material-ui/core/Grid";
 
 import HeaderLinks from "./HeaderLinks";
+import SocialButtonGroup from "../Buttons/SocialButtonGroup";
 
 import {
   blackColor, boxShadow,
@@ -25,6 +27,7 @@ import {
 } from "assets/jss/nextjs-material-kit-pro";
 import Colours from "assets/strings/colours";
 import URL from "assets/strings/urls";
+import HeaderData from "assets/data/components/header";
 import Logo from "assets/img/logos/1x/Asset 1mdpi.png"
 
 const useStyles = makeStyles(theme => ({
@@ -32,7 +35,7 @@ const useStyles = makeStyles(theme => ({
     display: "flex",
     border: "0",
     borderRadius: "3px",
-    padding: "0.625rem 0",
+    padding: "0 0 0.625rem 0",
     marginBottom: "20px",
     color: grayColor[15],
     width: "100%",
@@ -53,10 +56,9 @@ const useStyles = makeStyles(theme => ({
     position: "fixed"
   },
   container: {
-    paddingRight: "15px",
-    paddingLeft: "15px",
-    marginRight: "4%",
-    marginLeft: "4%",
+    paddingRight: "1.5vw",
+    paddingLeft: "1.5vw",
+    paddingTop: "15px",
     width: "100%",
     minHeight: "50px",
     alignItems: "center",
@@ -87,7 +89,6 @@ const useStyles = makeStyles(theme => ({
   transparent: {
     backgroundColor: "transparent !important",
     boxShadow: "none",
-    paddingTop: "25px",
     color: whiteColor
   },
   dark: {
@@ -202,48 +203,72 @@ export default function Header(props) {
 
   return (
       <AppBar className={appBarClasses}>
-        <div className={classes.container}>
-          <Button className={classes.title}>
-            <Link href={URL.LANDING_PAGE} as={URL.ROOT}>
-              <a>
-                <img src={Logo} style={logoClass}/>
-              </a>
-            </Link>
-          </Button>
-          <Hidden mdDown implementation="css" className={classes.hidden}>
-            <div className={classes.collapse}>{<HeaderLinks onClick={handleDrawerToggle}/>}</div>
-          </Hidden>
-          <Hidden lgUp>
-            <IconButton
-                color="inherit"
-                aria-label="open drawer"
-                onClick={handleDrawerToggle}
+        <Grid
+            container
+            direction={"column"}
+            justify={"center"}
+            alignItems={"stretch"}
+        >
+          <Grid item style={{backgroundColor: "white"}}>
+            <Grid
+                container
+                direction={"row"}
+                justify={"center"}
+                alignItems={"center"}
             >
-              <Menu />
-            </IconButton>
-          </Hidden>
-        </div>
-        <Hidden lgUp implementation="js">
-          <Drawer
-              variant="temporary"
-              anchor={"right"}
-              open={mobileOpen}
-              classes={{
-                paper: classes.drawerPaper
-              }}
-              onClose={handleDrawerToggle}
-          >
-            <IconButton
-                color="inherit"
-                aria-label="open drawer"
-                onClick={handleDrawerToggle}
-                className={classes.closeButtonDrawer}
-            >
-              <Close />
-            </IconButton>
-            <div className={classes.appResponsive}>{<HeaderLinks vertical onClick={handleDrawerToggle}/>}</div>
-          </Drawer>
-        </Hidden>
+              <Grid item style={{paddingRight: "1vw", color: "black"}}>
+                {HeaderData.bannerText}
+              </Grid>
+              <Grid item style={{paddingRight: "18px"}}>
+                <SocialButtonGroup color={"black"}/>
+              </Grid>
+            </Grid>
+          </Grid>
+          <Grid item>
+            <div className={classes.container}>
+              <Button className={classes.title}>
+                <Link href={URL.LANDING_PAGE} as={URL.ROOT}>
+                  <a>
+                    <img src={Logo} style={logoClass}/>
+                  </a>
+                </Link>
+              </Button>
+              <Hidden mdDown implementation="css" className={classes.hidden}>
+                <div className={classes.collapse}>{<HeaderLinks onClick={handleDrawerToggle}/>}</div>
+              </Hidden>
+              <Hidden lgUp>
+                <IconButton
+                    color="inherit"
+                    aria-label="open drawer"
+                    onClick={handleDrawerToggle}
+                >
+                  <Menu />
+                </IconButton>
+              </Hidden>
+            </div>
+            <Hidden lgUp implementation="js">
+              <Drawer
+                  variant="temporary"
+                  anchor={"right"}
+                  open={mobileOpen}
+                  classes={{
+                    paper: classes.drawerPaper
+                  }}
+                  onClose={handleDrawerToggle}
+              >
+                <IconButton
+                    color="inherit"
+                    aria-label="open drawer"
+                    onClick={handleDrawerToggle}
+                    className={classes.closeButtonDrawer}
+                >
+                  <Close />
+                </IconButton>
+                <div className={classes.appResponsive}>{<HeaderLinks vertical onClick={handleDrawerToggle}/>}</div>
+              </Drawer>
+            </Hidden>
+          </Grid>
+        </Grid>
       </AppBar>
   );
 }

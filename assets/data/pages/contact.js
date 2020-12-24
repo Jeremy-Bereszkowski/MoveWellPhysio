@@ -47,7 +47,7 @@ const ContactData = {
     contact: {
         header: "Contact",
         telephone: {
-            header: "Telephone",
+            header: "Phone",
             value: phone
         },
         email: {

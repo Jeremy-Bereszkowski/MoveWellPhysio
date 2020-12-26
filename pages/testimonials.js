@@ -15,6 +15,10 @@ import TestimonialData from "assets/data/pages/testimonials";
 const useStyles = makeStyles(theme => ({}))
 
 export default function Function(props) {
+    React.useEffect(() => {
+        window.scrollTo(0, 0);
+        document.body.scrollTop = 0;
+    });
     const classes = useStyles()
 
     const smContainer = 3, lgContainer = 9

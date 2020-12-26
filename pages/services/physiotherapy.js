@@ -19,6 +19,10 @@ import PhysiotherapyData from "assets/data/pages/services/physiotherapy";
 const useStyles = makeStyles({});
 
 export default function Physiotherapy({...rest}) {
+    React.useEffect(() => {
+        window.scrollTo(0, 0);
+        document.body.scrollTop = 0;
+    });
     const classes = useStyles();
 
     return (

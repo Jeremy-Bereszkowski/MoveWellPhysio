@@ -44,6 +44,10 @@ const useStyles = makeStyles({
 });
 
 export default function PhysioLedRehab(props) {
+    React.useEffect(() => {
+        window.scrollTo(0, 0);
+        document.body.scrollTop = 0;
+    });
     const classes = useStyles();
 
     return (

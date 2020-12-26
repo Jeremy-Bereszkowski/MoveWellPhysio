@@ -42,6 +42,10 @@ const useStyles = makeStyles(theme => ({
 }))
 
 export default function Profile(props) {
+    React.useEffect(() => {
+        window.scrollTo(0, 0);
+        document.body.scrollTop = 0;
+    });
     const router = useRouter()
     const classes = useStyles()
 

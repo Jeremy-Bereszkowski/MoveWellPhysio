@@ -9,7 +9,6 @@ import HeaderFooterLayout from "layouts/HeaderFooterLayout";
 import MainContainerLayout from "layouts/MainContainerLayout";
 import ColumnLayout from "layouts/ColumnLayout";
 
-import IntroVideo from "pages-sections/landing-page/IntroVideo";
 import ParaLayout from "pages-sections/landing-page/ParaLayout";
 
 import {blackHrThin} from "assets/jss/coreStyles";
@@ -26,6 +25,10 @@ const useStyles = makeStyles({
 });
 
 export default function LandingPage(props) {
+    React.useEffect(() => {
+        window.scrollTo(0, 0);
+        document.body.scrollTop = 0;
+    });
     const classes = useStyles();
 
     return (

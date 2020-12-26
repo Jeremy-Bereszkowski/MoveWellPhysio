@@ -13,6 +13,11 @@ import Contact from "pages-sections/contact-page/Contact";
 import ContactData from "assets/data/pages/contact";
 
 export default function ContactPage(props) {
+    React.useEffect(() => {
+        window.scrollTo(0, 0);
+        document.body.scrollTop = 0;
+    });
+
     return (
         <HeaderFooterLayout>
             <ParallaxLayout parallaxImage={ContactData.core.parallaxImage} parallaxHeader={ContactData.core.parallaxHeader}>

@@ -19,6 +19,10 @@ import FocusedGroupData from "assets/data/pages/services/focusedGroup";
 const useStyles = makeStyles({});
 
 export default function FocusedGroupExercise(props) {
+    React.useEffect(() => {
+        window.scrollTo(0, 0);
+        document.body.scrollTop = 0;
+    });
     const classes = useStyles();
 
     return (

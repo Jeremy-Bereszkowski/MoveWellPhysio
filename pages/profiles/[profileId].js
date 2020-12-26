@@ -1,5 +1,4 @@
 import React from 'react'
-import { useRouter } from 'next/router'
 
 import {makeStyles} from "@material-ui/core/styles"
 import Grid from "@material-ui/core/Grid";
@@ -41,14 +40,18 @@ const useStyles = makeStyles(theme => ({
     }
 }))
 
-export default function Profile(props) {
-    React.useEffect(() => {
-        window.scrollTo(0, 0);
-        document.body.scrollTop = 0;
-    });
-    const router = useRouter()
-    const classes = useStyles()
+export async function getStaticPaths() {
+    const paths = ProfileData.employees.map((ele) => ({
+        params: { profileId: ele.id },
+    }))
 
+    return {
+        paths: paths,
+        fallback: false
+    };
+}
+
+export async function getStaticProps({params}) {
     function GetProfileData(profileId){
         return ProfileData.employees.find(function(employee) {
             if (employee.id === profileId) {
@@ -56,6 +59,20 @@ export default function Profile(props) {
             }
         })
     }
+
+    return {
+        props: {
+            data: GetProfileData(params.profileId)
+        },
+    }
+}
+
+export default function Profile(props) {
+    React.useEffect(() => {
+        window.scrollTo(0, 0);
+        document.body.scrollTop = 0;
+    });
+    const classes = useStyles()
 
     const ProfileCard = ({profile}) => {
         return (
@@ -101,7 +118,7 @@ export default function Profile(props) {
             <ParallaxLayout parallaxImage={ProfileData.core.parallaxImage} parallaxHeader={ProfileData.core.parallaxHeader} parallaxBody={ProfileData.core.parallaxBody}>
                 <MainContainerLayout>
                     <ColumnLayout>
-                        <ProfileCard profile={GetProfileData(router.query.profileId)}/>
+                        <ProfileCard profile={props.data}/>
                     </ColumnLayout>
                 </MainContainerLayout>
             </ParallaxLayout>

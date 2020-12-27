@@ -8,7 +8,7 @@ import {blackColor, hexToRgb} from "assets/jss/nextjs-material-kit-pro";
 
 const useStyles = makeStyles({
   parallax: {
-    height: "100vh",
+    height: "95vh",
     maxHeight: "1600px",
     overflow: "hidden",
     position: "relative",

@@ -60,6 +60,7 @@
     "@types/markerclustererplus": "2.1.33"
   },
   "devDependencies": {
+    "gsap": "^3.5.1",
     "react-device-detect": "^1.15.0"
   }
 }

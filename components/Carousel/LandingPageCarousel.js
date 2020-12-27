@@ -50,7 +50,7 @@ const useStyles = makeStyles({
     imageStyle: {
         backgroundSize: "cover",
         backgroundPosition: "top center",
-        height: "100vh",
+        height: "95vh",
         maxHeight: "1600px",
         minWidth: "100%",
         position: "relative",

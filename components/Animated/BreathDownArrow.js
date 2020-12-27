@@ -1,6 +1,5 @@
 import React from 'react'
 import gsap from "gsap"
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import {makeStyles} from "@material-ui/core/styles"
 import ArrowDownwardIcon from "@material-ui/icons/ArrowDownward";

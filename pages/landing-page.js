@@ -10,11 +10,13 @@ import MainContainerLayout from "layouts/MainContainerLayout";
 import ColumnLayout from "layouts/ColumnLayout";
 
 import ParaLayout from "pages-sections/landing-page/ParaLayout";
+import InstagramFeed from "pages-sections/landing-page/InstagramFeed";
+
+import fire from "util/firebase";
 
 import {blackHrThin} from "assets/jss/coreStyles";
 import LandingData from "assets/data/pages/landing-data";
 import URL from "assets/strings/urls";
-import InstagramFeed from "../pages-sections/landing-page/InstagramFeed";
 
 const useStyles = makeStyles({
     hr: {
@@ -26,15 +28,20 @@ const useStyles = makeStyles({
 });
 
 export async function getServerSideProps(context) {
-    const images = await getProperty("d489ada0-4823-11eb-b40c-ff2113f4abea")
+    const images = await fire
+        .firestore()
+        .collection('instagram-feed')
+        .doc('64XLivCrKJcYk5smMeZm')
+        .get()
+        .then(doc => doc.data())
+        .catch(err => err)
 
     return {
         props: {
-
+            images
         }
     }
 }
-
 
 
 export default function LandingPage(props) {
@@ -65,7 +72,10 @@ export default function LandingPage(props) {
                             <ParaLayout actionUrl={URL.ABOUT} image={LandingData.para2.image} headerString={LandingData.para2.header} bodyStringArray={LandingData.para2.body} actionString={LandingData.para2.action} actionUrl={URL.ABOUT} imageLeft={true}/>
                         </Grid>
                         <Grid item className={classes.padding}>
-                            <InstagramFeed />
+                            <hr size={30} className={classes.hr}/>
+                        </Grid>
+                        <Grid item className={classes.padding}>
+                            <InstagramFeed images={props.images.images}/>
                         </Grid>
                     </Grid>
                 </ColumnLayout>

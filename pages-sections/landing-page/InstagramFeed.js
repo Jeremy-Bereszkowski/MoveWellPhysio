@@ -18,7 +18,6 @@ export default function InstagramFeed(props) {
             <InstagramEmbed
                 url={url}
                 clientAccessToken='404339417505644|0aef5f40ac92bce3716cf3c18c99d328'
-                maxWidth={150}
                 hideCaption={true}
                 containerTagName='div'
                 protocol=''

@@ -34,15 +34,16 @@ export default function InstagramFeed(props) {
     return (
         <Grid
             container
-            spacing={2}
             direction={"row"}
             alignItems={"center"}
             justify={"space-between"}
         >
             {
                 images.map((ele, key) => (
-                    <Grid item xs={12} md={4} key={key}>
-                        <ImageBlock url={ele}/>
+                    <Grid item xs={12} sm={6} md={4} key={key}>
+                        <div style={{padding: "5px"}}>
+                            <ImageBlock url={ele}/>
+                        </div>
                     </Grid>
                 ))
             }

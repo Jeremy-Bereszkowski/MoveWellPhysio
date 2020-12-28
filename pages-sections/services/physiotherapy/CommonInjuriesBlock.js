@@ -7,6 +7,7 @@ import Grid from "@material-ui/core/Grid";
 
 import {blackColor, hexToRgb, whiteColor} from "assets/jss/nextjs-material-kit-pro";
 import {bodyHeaderText, bodyParaText1} from "assets/jss/coreStyles";
+import useIsTouchDevice from "../../../util/device-detect";
 
 const useStyles = makeStyles(theme => ({
     parallax: {
@@ -17,7 +18,7 @@ const useStyles = makeStyles(theme => ({
         backgroundPosition: "50%",
         backgroundSize: "cover",
         margin: "0",
-        padding: "0",
+        padding: "5px",
         border: "0",
         display: "flex",
         alignItems: "center",
@@ -69,6 +70,10 @@ const useStyles = makeStyles(theme => ({
         width: "100%",
         zIndex: "2"
     },
+    extraHeight: {
+        height: "85vh",
+        maxHeight: "100vh",
+    }
 }))
 
 export default function CommonInjuriesBlock(props) {
@@ -79,6 +84,7 @@ export default function CommonInjuriesBlock(props) {
     const parallaxClasses = classNames({
         [classes.parallax]: true,
         [classes["darkColor"]]: true,
+        [classes.extraHeight]: useIsTouchDevice()
     });
 
     return (

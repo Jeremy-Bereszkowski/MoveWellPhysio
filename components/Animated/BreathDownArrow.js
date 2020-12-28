@@ -4,8 +4,6 @@ import gsap from "gsap"
 import {makeStyles} from "@material-ui/core/styles"
 import ArrowDownwardIcon from "@material-ui/icons/ArrowDownward";
 
-import {grayColor} from "assets/jss/nextjs-material-kit-pro";
-
 const useStyles = makeStyles(theme => ({
     iconStyle: {
         width: "4vh",
@@ -18,7 +16,6 @@ const useStyles = makeStyles(theme => ({
         color: "transparent"
     }
 }))
-
 
 export default function BreathDownArrow() {
     const classes = useStyles()
@@ -37,7 +34,6 @@ export default function BreathDownArrow() {
     }
 
     React.useEffect(() => {
-        //animate text
         textIntro(intro)
     }, [])
 

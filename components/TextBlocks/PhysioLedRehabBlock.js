@@ -57,10 +57,10 @@ const useStyles = makeStyles({
         paddingRight: "1vw",
     },
     image: {
+        width: "auto",
         maxWidth: "100%",
-        width: "100%",
-        height: "auto",
-        maxHeight: "1600px",
+        height: "800px",
+        maxHeight: "800px",
         position: "relative",
         marginRight: "-40vw",
         backgroundPosition: "50%",
@@ -89,8 +89,8 @@ export default function PhysioLedRehabBlock(props) {
     const ImageBlock = () => {
         return (
             <Grid item xs={12} sm={12} md={6}>
-                <div className={classes.image}>
-                    <img src={clientImage} className={classNames(classes.image)}/>
+                <div className={classes.image} style={{backgroundImage: "url("+clientImage+")"}}>
+                    {/*<img src={clientImage} className={classNames(classes.image)}/>*/}
                 </div>
             </Grid>
         )

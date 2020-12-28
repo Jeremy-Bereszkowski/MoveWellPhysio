@@ -27,6 +27,7 @@ export default function BreathDownArrow() {
 
     const textIntro = elem => {
         gsap.to(elem, 1, {
+            delay: 1,
             scale: 1.25,
             opacity: 1,
             repeat: 5,

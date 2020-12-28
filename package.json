@@ -27,6 +27,7 @@
     "react-dom": "16.13.1",
     "react-google-maps": "9.4.5",
     "react-image-gallery": "1.0.7",
+    "react-instagram-embed": "^2.0.0",
     "react-reveal": "^1.2.2",
     "react-scale-text": "^1.2.2",
     "react-slick": "0.25.2",
@@ -60,6 +61,7 @@
     "@types/markerclustererplus": "2.1.33"
   },
   "devDependencies": {
+    "firebase-admin": "^9.4.2",
     "gsap": "^3.5.1",
     "react-device-detect": "^1.15.0"
   }

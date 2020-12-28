@@ -14,6 +14,7 @@ import ParaLayout from "pages-sections/landing-page/ParaLayout";
 import {blackHrThin} from "assets/jss/coreStyles";
 import LandingData from "assets/data/pages/landing-data";
 import URL from "assets/strings/urls";
+import InstagramFeed from "../pages-sections/landing-page/InstagramFeed";
 
 const useStyles = makeStyles({
     hr: {
@@ -23,6 +24,18 @@ const useStyles = makeStyles({
         padding: "4vh 0",
     }
 });
+
+export async function getServerSideProps(context) {
+    const images = await getProperty("d489ada0-4823-11eb-b40c-ff2113f4abea")
+
+    return {
+        props: {
+
+        }
+    }
+}
+
+
 
 export default function LandingPage(props) {
     React.useEffect(() => {
@@ -50,6 +63,9 @@ export default function LandingPage(props) {
                         </Grid>
                         <Grid item className={classes.padding}>
                             <ParaLayout actionUrl={URL.ABOUT} image={LandingData.para2.image} headerString={LandingData.para2.header} bodyStringArray={LandingData.para2.body} actionString={LandingData.para2.action} actionUrl={URL.ABOUT} imageLeft={true}/>
+                        </Grid>
+                        <Grid item className={classes.padding}>
+                            <InstagramFeed />
                         </Grid>
                     </Grid>
                 </ColumnLayout>

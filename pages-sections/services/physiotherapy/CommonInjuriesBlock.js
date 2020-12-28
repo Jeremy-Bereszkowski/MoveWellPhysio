@@ -71,7 +71,7 @@ const useStyles = makeStyles(theme => ({
         zIndex: "2"
     },
     extraHeight: {
-        height: "85vh",
+        height: "75vh",
         maxHeight: "100vh",
     }
 }))

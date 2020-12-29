@@ -43,7 +43,6 @@ export async function getServerSideProps(context) {
     }
 }
 
-
 export default function LandingPage(props) {
     React.useEffect(() => {
         window.scrollTo(0, 0);

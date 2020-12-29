@@ -11,8 +11,6 @@ export default function InstagramFeed(props) {
     const classes = useStyles()
     const images = props.images
 
-    console.log(images)
-
     const ImageBlock = ({url}) => {
         return (
             <InstagramEmbed

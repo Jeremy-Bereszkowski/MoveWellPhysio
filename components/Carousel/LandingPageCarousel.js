@@ -17,6 +17,7 @@ const useStyles = makeStyles({
     filter: {},
     imageTint: {
         backgroundSize: "contain",
+        marginBottom: "-7px",
         "&:before": {
             background: "rgba(" + hexToRgb(blackColor) + ", 0.5)"
         },

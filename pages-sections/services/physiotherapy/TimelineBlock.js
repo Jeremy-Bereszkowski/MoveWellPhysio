@@ -40,7 +40,6 @@ export default function TimelineBlock(props) {
     return (
         <Grid
             container
-            spacing={2}
             direction={"column"}
             justify={"center"}
             alignContent={"center"}

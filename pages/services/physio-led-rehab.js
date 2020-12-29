@@ -15,8 +15,8 @@ import {bodyHeaderText, bodyParaText1} from "assets/jss/coreStyles";
 import PhysioLedRehabData from "assets/data/pages/services/physioLedRehab";
 
 const useStyles = makeStyles({
-    marginTop: {
-        marginTop: "4vh"
+    spacing: {
+        margin: "20px 0",
     },
     greenHeaderText: {
         ...bodyHeaderText,
@@ -61,16 +61,15 @@ export default function PhysioLedRehab(props) {
                             justify={"center"}
                             alignContent={"center"}
                         >
-                            <Grid item>
+                            <Grid item className={classes.spacing}>
                                 <GreenHeaderBlackBody header={PhysioLedRehabData.top.header} body={PhysioLedRehabData.top.body}/>
                             </Grid>
-                            <Grid item>
+                            <Grid item className={classes.spacing}>
                                 <Grid
                                     container
                                     direction={"row"}
                                     justify={"center"}
                                     alignContent={"center"}
-                                    className={classes.marginTop}
                                 >
                                     <Grid item>
                                         <h2 className={classes.greenHeaderText}>
@@ -105,7 +104,7 @@ export default function PhysioLedRehab(props) {
                                     }
                                 </Grid>
                             </Grid>
-                            <Grid item>
+                            <Grid item className={classes.spacing}>
                                 <BookingButtonsGroup />
                             </Grid>
                         </Grid>

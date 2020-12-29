@@ -1,6 +1,7 @@
 import React from "react";
 
 import {Grid} from "@material-ui/core";
+import {makeStyles} from "@material-ui/core/styles";
 
 import HeaderFooterLayout from "layouts/HeaderFooterLayout";
 import MainContainerLayout from "layouts/MainContainerLayout";
@@ -12,11 +13,18 @@ import Contact from "pages-sections/contact-page/Contact";
 
 import ContactData from "assets/data/pages/contact";
 
+const useStyles = makeStyles({
+    spacing: {
+        margin: "20px 0",
+    },
+});
+
 export default function ContactPage(props) {
     React.useEffect(() => {
         window.scrollTo(0, 0);
         document.body.scrollTop = 0;
     });
+    const classes = useStyles();
 
     return (
         <HeaderFooterLayout>
@@ -28,13 +36,13 @@ export default function ContactPage(props) {
                         justify={"center"}
                         alignContent={"center"}
                     >
-                        <Grid item sm={12} md={4}>
+                        <Grid item sm={12} md={4} className={classes.spacing}>
                             <OpeningHours />
                         </Grid>
-                        <Grid item sm={12} md={4}>
+                        <Grid item sm={12} md={4} className={classes.spacing}>
                             <Address />
                         </Grid>
-                        <Grid item sm={12} md={4}>
+                        <Grid item sm={12} md={4} className={classes.spacing}>
                             <Contact />
                         </Grid>
                     </Grid>

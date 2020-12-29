@@ -1,9 +1,9 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import InstagramEmbed from 'react-instagram-embed';
 
 import {makeStyles} from "@material-ui/core/styles"
 import Grid from "@material-ui/core/Grid";
+import Hidden from "@material-ui/core/Hidden";
 
 const useStyles = makeStyles(theme => ({}))
 
@@ -39,6 +39,7 @@ export default function InstagramFeed(props) {
         >
             {
                 images.map((ele, key) => (
+                    key === 8 ? null :
                     <Grid item xs={12} sm={6} md={4} key={key}>
                         <div style={{padding: "5px"}}>
                             <ImageBlock url={ele}/>
@@ -46,6 +47,13 @@ export default function InstagramFeed(props) {
                     </Grid>
                 ))
             }
+            <Hidden only={"sm"}>
+                <Grid item xs={12} sm={6} md={4}>
+                    <div style={{padding: "5px"}}>
+                        <ImageBlock url={images[8]}/>
+                    </div>
+                </Grid>
+            </Hidden>
         </Grid>
     )
 }

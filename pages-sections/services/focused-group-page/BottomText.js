@@ -7,9 +7,6 @@ import {bodyHeaderText, bodyParaText1} from "assets/jss/coreStyles";
 import FocusedGroupData from "assets/data/pages/services/focusedGroup";
 
 const useStyles = makeStyles({
-    marginTop: {
-        marginTop: "4vh"
-    },
     greenHeaderText: {
         ...bodyHeaderText,
         textAlign: "center",
@@ -44,7 +41,6 @@ export default function BottomText(props) {
             direction={"column"}
             justify={"center"}
             alignItems={"stretch"}
-            className={classes.marginTop}
         >
             <Grid item>
                 <Grid
@@ -52,7 +48,6 @@ export default function BottomText(props) {
                     direction={"row"}
                     justify={"center"}
                     alignContent={"center"}
-                    className={classes.marginTop}
                 >
                     <Grid item>
                         <h2 className={classes.greenHeaderText}>

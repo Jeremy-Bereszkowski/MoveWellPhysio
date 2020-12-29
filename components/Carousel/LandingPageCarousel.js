@@ -119,9 +119,9 @@ export default function LandingPageCarousel(props) {
         }
     }
 
-    function Slide(image, header, body, href, buttonText) {
+    function Slide(image, header, body, href, buttonText, key) {
         return (
-            <div className={classes.imageTint} key={header}>
+            <div className={classes.imageTint} key={key}>
                 <div style={{backgroundImage: "url(" + image + ")"}} className={classes.imageStyle}/>
                 <Grid
                     container
@@ -158,9 +158,9 @@ export default function LandingPageCarousel(props) {
     return (
         <Carousel {...settings}>
             {
-                LandingData.carousel.map(element => {
+                LandingData.carousel.map((element, key) => {
                     return(
-                        Slide(element.image, element.header, element.body, element.href, element.buttonText)
+                        Slide(element.image, element.header, element.body, element.href, element.buttonText, key)
                     )
                 })
             }

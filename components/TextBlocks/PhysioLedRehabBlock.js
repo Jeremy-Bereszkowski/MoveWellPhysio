@@ -89,9 +89,7 @@ export default function PhysioLedRehabBlock(props) {
     const ImageBlock = () => {
         return (
             <Grid item xs={12} sm={12} md={6}>
-                <div className={classes.image} style={{backgroundImage: "url("+clientImage+")"}}>
-                    {/*<img src={clientImage} className={classNames(classes.image)}/>*/}
-                </div>
+                <div className={classes.image} style={{backgroundImage: "url("+clientImage+")"}}/>
             </Grid>
         )
     }

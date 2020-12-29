@@ -1,3 +1,9 @@
+/*
+* Single Header Link
+* Renders a a button if no children
+* If children, renders dropdown list of children
+* */
+
 import React from "react";
 import PropTypes from "prop-types"
 import classNames from "classnames"

@@ -6,7 +6,11 @@ import BookConsultButton from "./BookConsultButton";
 import BookGroupClassButton from "./BookGroupClassButton";
 import Link from "next/link";
 
-const useStyles = makeStyles(theme => ({}))
+const useStyles = makeStyles(theme => ({
+    pad: {
+        padding: "1vw"
+    }
+}))
 
 export default function BookingButtonsGroup(props) {
     const classes = useStyles()
@@ -14,15 +18,14 @@ export default function BookingButtonsGroup(props) {
     return (
         <Grid
             container
-            spacing={2}
             direction={"row"}
             justify={"center"}
             alignContent={"center"}
         >
-            <Grid item>
+            <Grid item className={classes.pad}>
                 <BookConsultButton />
             </Grid>
-            <Grid item>
+            <Grid item className={classes.pad}>
                 <BookGroupClassButton />
             </Grid>
         </Grid>

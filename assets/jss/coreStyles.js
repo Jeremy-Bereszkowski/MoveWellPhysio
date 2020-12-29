@@ -19,7 +19,6 @@ const largeFont = {
 
 const parallaxHeaderText = {
     ...largeFont,
-    /*fontFamily: `"Roboto Slab", "Times New Roman", serif`,*/
     fontWeight: "700",
     color: whiteColor,
     textDecoration: "none",

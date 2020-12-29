@@ -25,18 +25,18 @@ export default function HalfHorizontalTexts(props) {
         <Grid
             container
             direction={"row"}
-            justify={"space-between"}
+            justify={"center"}
             alignContent={"stretch"}
             className={classes.sideMargins}
         >
             <Grid item>
                 <h4 className={classes.bodyText}>
-                    {leftText}:
+                    {leftText + ": " + rightText}
                 </h4>
             </Grid>
             <Grid item>
                 <h4 className={classes.bodyText}>
-                    {rightText}
+                    {/*{" " + }*/}
                 </h4>
             </Grid>
         </Grid>

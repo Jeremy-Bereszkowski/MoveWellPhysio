@@ -20,7 +20,7 @@ const PhysioLedRehabData = {
         body: [
             {
                 header: "How do I start?",
-                body: "To begin, we require you to have am initial consult with one of our physiotherapists to discuss your specific goals and design a tailored program."
+                body: "To begin, we require you to have an initial consult with one of our physiotherapists to discuss your specific goals and design a tailored program."
             },
             {
                 header: "What should I bring?",
@@ -32,11 +32,11 @@ const PhysioLedRehabData = {
             },
             {
                 header: "Timetable",
-                body: "We offer classes throughout the weekday that include morning and evening as well as Saturday morning."
+                body: "We offer classes throughout the weekday that include morning and evening as well as Saturday morning. To book a class, please see our current timetable on MindBody"
             },
             {
                 header: "How to Book",
-                body: "If you haven’t had a consultation with one of our physiotherapist, you can book a consult. If you have attended our classes before, you can join a class through Mindbody."
+                body: "If you haven’t had a consultation with one of our physiotherapist, you can book a consult. If you have attended our classes before, you can join a class through MindBody."
             },
         ]
     }

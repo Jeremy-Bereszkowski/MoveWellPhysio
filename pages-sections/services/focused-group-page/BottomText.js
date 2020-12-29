@@ -39,48 +39,56 @@ export default function BottomText(props) {
     const classes = useStyles();
 
     return (
-        <>
-            <Grid
-                container
-                spacing={4}
-                direction={"row"}
-                justify={"center"}
-                alignContent={"center"}
-                className={classes.marginTop}
-            >
-                <Grid item>
-                    <h2 className={classes.greenHeaderText}>
-                        {FocusedGroupData.bottom.header}
-                    </h2>
+        <Grid
+            container
+            direction={"column"}
+            justify={"center"}
+            alignItems={"stretch"}
+            className={classes.marginTop}
+        >
+            <Grid item>
+                <Grid
+                    container
+                    direction={"row"}
+                    justify={"center"}
+                    alignContent={"center"}
+                    className={classes.marginTop}
+                >
+                    <Grid item>
+                        <h2 className={classes.greenHeaderText}>
+                            {FocusedGroupData.bottom.header}
+                        </h2>
+                    </Grid>
                 </Grid>
             </Grid>
-            <Grid
-                container
-                spacing={4}
-                direction={"row"}
-                justify={"flex-start"}
-                alignContent={"center"}
-            >
-                {
-                    FocusedGroupData.bottom.body.map((element, key) => {
-                        return (
-                            <Grid item key={element + " " + key}>
-                                {
-                                    element.header === undefined ?
-                                        null
-                                        :
-                                        <h6 className={classes.blackSubHeaderText}>
-                                            {element.header}
-                                        </h6>
-                                }
-                                <h4 className={classes.blackParaText}>
-                                    {element.body}
-                                </h4>
-                            </Grid>
-                        )
-                    })
-                }
+            <Grid item>
+                <Grid
+                    container
+                    direction={"row"}
+                    justify={"flex-start"}
+                    alignContent={"center"}
+                >
+                    {
+                        FocusedGroupData.bottom.body.map((element, key) => {
+                            return (
+                                <Grid item key={element + " " + key}>
+                                    {
+                                        element.header === undefined ?
+                                            null
+                                            :
+                                            <h6 className={classes.blackSubHeaderText}>
+                                                {element.header}
+                                            </h6>
+                                    }
+                                    <h4 className={classes.blackParaText}>
+                                        {element.body}
+                                    </h4>
+                                </Grid>
+                            )
+                        })
+                    }
+                </Grid>
             </Grid>
-        </>
+        </Grid>
     )
 }

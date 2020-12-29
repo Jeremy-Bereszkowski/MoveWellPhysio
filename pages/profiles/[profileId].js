@@ -1,9 +1,9 @@
 import React from 'react'
-import { useRouter } from 'next/router'
 
 import {makeStyles} from "@material-ui/core/styles"
 import Grid from "@material-ui/core/Grid";
 
+import HeaderFooterLayout from "layouts/HeaderFooterLayout";
 import MainContainerLayout from "layouts/MainContainerLayout";
 import ColumnLayout from "layouts/ColumnLayout";
 import ParallaxLayout from "layouts/ParallaxLayout";
@@ -11,13 +11,13 @@ import ParallaxLayout from "layouts/ParallaxLayout";
 import Card from "components/Card/Card";
 import CardBody from "components/Card/CardBody";
 
+import {blackColor, hexToRgb} from "assets/jss/nextjs-material-kit-pro";
 import ProfileData from "assets/data/pages/profiles/[profileId]";
-import {blackColor, hexToRgb} from "../../assets/jss/nextjs-material-kit-pro";
 
 const useStyles = makeStyles(theme => ({
     textStyle: {
         textAlign: "left",
-        maxWidth: "50%"
+        maxWidth: "550px"
     },
     card2: {
         marginTop: "0",
@@ -34,13 +34,24 @@ const useStyles = makeStyles(theme => ({
             ", 0.12), 0 8px 10px -5px rgba(" +
             hexToRgb(blackColor) +
             ", 0.2)"
+    },
+    pad: {
+        padding: "2vw",
     }
 }))
 
-export default function Profile(props) {
-    const router = useRouter()
-    const classes = useStyles()
+export async function getStaticPaths() {
+    const paths = ProfileData.employees.map((ele) => ({
+        params: { profileId: ele.id },
+    }))
 
+    return {
+        paths: paths,
+        fallback: false
+    };
+}
+
+export async function getStaticProps({params}) {
     function GetProfileData(profileId){
         return ProfileData.employees.find(function(employee) {
             if (employee.id === profileId) {
@@ -48,6 +59,20 @@ export default function Profile(props) {
             }
         })
     }
+
+    return {
+        props: {
+            data: GetProfileData(params.profileId)
+        },
+    }
+}
+
+export default function Profile(props) {
+    React.useEffect(() => {
+        window.scrollTo(0, 0);
+        document.body.scrollTop = 0;
+    });
+    const classes = useStyles()
 
     const ProfileCard = ({profile}) => {
         return (
@@ -63,7 +88,7 @@ export default function Profile(props) {
                             <img
                                 src={profile.image}
                                 alt={profile.name + "_headshot"}
-                                style={{width: "auto", height: "75vh"}}
+                                style={{width: "60%", height: "auto"}}
                                 className={classes.image}
                             />
                         </Grid>
@@ -89,12 +114,14 @@ export default function Profile(props) {
     }
 
     return (
-        <ParallaxLayout parallaxImage={ProfileData.core.parallaxImage} parallaxHeader={ProfileData.core.parallaxHeader} parallaxBody={ProfileData.core.parallaxBody}>
-            <MainContainerLayout>
-                <ColumnLayout>
-                    <ProfileCard profile={GetProfileData(router.query.profileId)}/>
-                </ColumnLayout>
-            </MainContainerLayout>
-        </ParallaxLayout>
+        <HeaderFooterLayout>
+            <ParallaxLayout parallaxImage={ProfileData.core.parallaxImage} parallaxHeader={ProfileData.core.parallaxHeader} parallaxBody={ProfileData.core.parallaxBody}>
+                <MainContainerLayout>
+                    <ColumnLayout>
+                        <ProfileCard profile={props.data}/>
+                    </ColumnLayout>
+                </MainContainerLayout>
+            </ParallaxLayout>
+        </HeaderFooterLayout>
     )
 }

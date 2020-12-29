@@ -3,9 +3,8 @@ import ReactDOM from "react-dom";
 import App from "next/app";
 import Head from "next/head";
 import Router from "next/router";
+import config from 'react-reveal/globals';
 
-import LandingHeader from "components/Header/Header";
-import Footer from "components/Footer/Footer";
 import PageChange from "components/PageChange/PageChange.js";
 
 import {headerString} from "assets/data/global";
@@ -30,17 +29,10 @@ Router.events.on("routeChangeError", () => {
     document.body.classList.remove("body-page-transition");
 });
 
+/*Config for React-Reveal*/
+config({ ssrFadeout: true });
+
 export default class MyApp extends App {
-    static async getInitialProps({ Component, router, ctx }) {
-        let pageProps = {};
-
-        if (Component.getInitialProps) {
-            pageProps = await Component.getInitialProps(ctx);
-        }
-
-        return { pageProps };
-    }
-
     render() {
         const { Component, pageProps } = this.props;
 
@@ -49,16 +41,7 @@ export default class MyApp extends App {
                 <Head>
                     <title>{headerString}</title>
                 </Head>
-                <LandingHeader
-                    color="transparent"
-                    fixed
-                    changeColorOnScroll={{
-                        height: 25,
-                        color: "dark"
-                    }}
-                />
                 <Component {...pageProps} />
-                <Footer />
             </>
         );
     }

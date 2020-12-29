@@ -1,3 +1,9 @@
+/*
+* Header Links
+* Returns list of buttons and sub-buttons for header component
+* Can return list either vertically or horizontally
+* */
+
 import React from "react";
 import PropTypes from "prop-types"
 
@@ -7,7 +13,8 @@ import Grid from "@material-ui/core/Grid";
 import HeaderLink from "./HeaderLink";
 
 import {mlAuto} from "assets/jss/nextjs-material-kit-pro";
-import HeaderLinkData from "assets/data/components/header";
+import HeaderData from "assets/data/components/header";
+import SocialButtonGroup from "../Buttons/SocialButtonGroup";
 
 const useStyles = makeStyles(theme => ({
   mlAuto,
@@ -29,7 +36,7 @@ export default function HeaderLinks(props) {
                   justify={"center"}
               >
                 {
-                  HeaderLinkData.map((element, key) => {
+                  HeaderData.links.map((element, key) => {
                     return (
                         <Grid item key={key}>
                           <HeaderLink vertical element={element} onClick={onClick}/>
@@ -41,7 +48,7 @@ export default function HeaderLinks(props) {
               :
               <div className={classes.mlAuto}>
                 {
-                  HeaderLinkData.map((element, key) => {
+                  HeaderData.links.map((element, key) => {
                     return (
                         <HeaderLink element={element} onClick={onClick} key={key}/>
                     )
@@ -53,7 +60,7 @@ export default function HeaderLinks(props) {
   );
 }
 
-HeaderLinks.defaultProps = {
+HeaderLinks.defaultProp = {
   vertical: false,
 }
 

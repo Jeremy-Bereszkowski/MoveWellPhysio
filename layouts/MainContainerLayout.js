@@ -3,6 +3,9 @@ import React from "react";
 import {makeStyles} from "@material-ui/core/styles"
 
 import {grayColor} from "assets/jss/nextjs-material-kit-pro";
+import Grid from "@material-ui/core/Grid";
+
+import BreathDownArrow from "components/Animated/BreathDownArrow";
 
 const useStyles = makeStyles({
     bodyContainer: {
@@ -16,7 +19,6 @@ const useStyles = makeStyles({
     },
     main: {
         margin: "0",
-        paddingTop: "2vh",
         paddingBottom: "3vh",
         paddingLeft: "2vw",
         paddingRight: "2vw",
@@ -32,6 +34,16 @@ export default function MainContainerLayout(props) {
         <div className={classes.section}>
             <div className={classes.bodyContainer}>
                 <div className={classes.main}>
+                    <Grid
+                        container
+                        direction={"column"}
+                        justify={"center"}
+                        alignItems={"center"}
+                    >
+                        <Grid item>
+                            <BreathDownArrow/>
+                        </Grid>
+                    </Grid>
                     {children}
                 </div>
             </div>

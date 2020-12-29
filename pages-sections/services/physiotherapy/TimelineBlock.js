@@ -9,8 +9,7 @@ import Looks3Icon from '@material-ui/icons/Looks3';
 import Looks4Icon from '@material-ui/icons/Looks4';
 import Grid from "@material-ui/core/Grid";
 
-import BookConsultButton from "components/Buttons/BookConsultButton";
-import BookGroupClassButton from "components/Buttons/BookGroupClassButton";
+import useIsTouchDevice from "util/device-detect";
 
 import {grayColor} from "assets/jss/nextjs-material-kit-pro";
 import {bodyHeaderText} from "assets/jss/coreStyles";
@@ -21,7 +20,8 @@ import 'react-vertical-timeline-component/style.min.css';
 const useStyles = makeStyles(theme => ({
     border: {
         border: "solid 3px " + Colours.green,
-        marginTop: "2.2rem"
+        marginTop: "2.2rem",
+        marginBottom: "2.2rem",
     },
     headerText: {
         ...bodyHeaderText,
@@ -34,8 +34,8 @@ const useStyles = makeStyles(theme => ({
 
 export default function TimelineBlock(props) {
     const classes = useStyles()
-
     const {header, body} = props
+    const animate = useIsTouchDevice()
 
     return (
         <Grid
@@ -53,7 +53,7 @@ export default function TimelineBlock(props) {
                 </h2>
             </Grid>
             <Grid item>
-                <VerticalTimeline>
+                <VerticalTimeline animate={!animate}>
                     {
                         body.map((ele, key) => {
                             let icon

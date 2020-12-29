@@ -19,15 +19,15 @@ const FocusedGroupData = {
         body: [
             {
                 header: "Muscle Toning",
-                body: "To begin, we recommend a Physiotherapy consultation to discuss your history, needs and goals to ensure we set you on the right path."
+                body: "Full body circuit workout focusing on major muscle groups, core and cardio. This class will help improve your upper and lower body strength, getting you toned and improving your overall fitness."
             },
             {
                 header: "Stronger Bones",
-                body: "Having a consultation first allows us to assess your strength, and develop a plan of the sessions best suited to improve your function."
+                body: "This class is ideal for people who are looking to improve their bone density, postural muscles, core strength and balance. The circuit class incorporates weight bearing exercises using dumbbells, resistance bands and cable machine along with a variety of different equipment to help improve balance."
             },
             {
                 header: "Healthier Joints",
-                body: companyName + " has all the equipment required for the sessions. Just wear activewear and bring a towel. Water is available here, but we recommend bringing a water bottle too."
+                body: "This class is ideal for people who would like to improve their strength and mobility of their major joints. Using resistance bands, TRX, light dumbbells, spin bike and core exercises ensures that the muscles around your joints get stronger."
             },
         ],
     },
@@ -40,7 +40,7 @@ const FocusedGroupData = {
             },
             {
                 header: "How do I know which session is best for me?",
-                body: "Having a consultation first allows us to assess your strength, and develop a plan of the sessions best suited to improve your function."
+                body: "Having a consultation first allows us to assess your current strengths and weaknesses, from there we are able to identify a class that is best suited to improve your function."
             },
             {
                 header: "What should I bring?",
@@ -48,10 +48,10 @@ const FocusedGroupData = {
             },
             {
                 header: "Where can I book?",
-                body: "If you’re new to "+companyName+", book a consult here."
+                body: "If you’re new to "+companyName+", book a consult via the 'Book Consult' button below."
             },
             {
-                body: "Existing clients can book online or email us at "+email+" to organise your next session."
+                body: "Existing clients can book online via the 'Book Class' button below."
             },
         ]
     }

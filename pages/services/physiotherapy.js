@@ -3,6 +3,7 @@ import React from "react";
 import {makeStyles} from "@material-ui/core/styles";
 import {Grid} from "@material-ui/core";
 
+import HeaderFooterLayout from "layouts/HeaderFooterLayout";
 import ParallaxLayout from "layouts/ParallaxLayout";
 import MainContainerLayout from "layouts/MainContainerLayout";
 import ColumnLayout from "layouts/ColumnLayout";
@@ -18,37 +19,42 @@ import PhysiotherapyData from "assets/data/pages/services/physiotherapy";
 const useStyles = makeStyles({});
 
 export default function Physiotherapy({...rest}) {
+    React.useEffect(() => {
+        window.scrollTo(0, 0);
+        document.body.scrollTop = 0;
+    });
     const classes = useStyles();
 
     return (
-        <ParallaxLayout parallaxImage={PhysiotherapyData.core.parallaxImage} parallaxHeader={PhysiotherapyData.core.parallaxHeader} parallaxBody={PhysiotherapyData.core.parallaxBody}>
-            <MainContainerLayout>
-                <ColumnLayout>
-                    <Grid
-                        container
-                        spacing={8}
-                        direction={"column"}
-                        justify={"center"}
-                        alignContent={"center"}
-                    >
-                        <Grid item>
-                            <GreenHeaderBlackBody header={PhysiotherapyData.howPhysioCanHelp.header} body={PhysiotherapyData.howPhysioCanHelp.para}/>
+        <HeaderFooterLayout>
+            <ParallaxLayout parallaxImage={PhysiotherapyData.core.parallaxImage} parallaxHeader={PhysiotherapyData.core.parallaxHeader} parallaxBody={PhysiotherapyData.core.parallaxBody}>
+                <MainContainerLayout>
+                    <ColumnLayout>
+                        <Grid
+                            container
+                            direction={"column"}
+                            justify={"center"}
+                            alignContent={"center"}
+                        >
+                            <Grid item>
+                                <GreenHeaderBlackBody header={PhysiotherapyData.howPhysioCanHelp.header} body={PhysiotherapyData.howPhysioCanHelp.para}/>
+                            </Grid>
+                            <Grid item>
+                                <TimelineBlock header={PhysiotherapyData.timelineBlock.header} body={PhysiotherapyData.timelineBlock.body} />
+                            </Grid>
+                            <Grid item>
+                                <CommonInjuriesBlock image={PhysiotherapyData.commonInjuries.image} header={PhysiotherapyData.commonInjuries.header} body={PhysiotherapyData.commonInjuries.body} />
+                            </Grid>
+                            <Grid item>
+                                <GreenHeaderBlackBody header={PhysiotherapyData.howToGetStarted.header} body={PhysiotherapyData.howToGetStarted.para}/>
+                            </Grid>
+                            <Grid item>
+                                <BookingButtonsGroup />
+                            </Grid>
                         </Grid>
-                        <Grid item>
-                            <TimelineBlock header={PhysiotherapyData.timelineBlock.header} body={PhysiotherapyData.timelineBlock.body} />
-                        </Grid>
-                        <Grid item>
-                            <CommonInjuriesBlock image={PhysiotherapyData.commonInjuries.image} header={PhysiotherapyData.commonInjuries.header} body={PhysiotherapyData.commonInjuries.body} />
-                        </Grid>
-                        <Grid item>
-                            <GreenHeaderBlackBody header={PhysiotherapyData.howToGetStarted.header} body={PhysiotherapyData.howToGetStarted.para}/>
-                        </Grid>
-                        <Grid item>
-                            <BookingButtonsGroup />
-                        </Grid>
-                    </Grid>
-                </ColumnLayout>
-            </MainContainerLayout>
-        </ParallaxLayout>
+                    </ColumnLayout>
+                </MainContainerLayout>
+            </ParallaxLayout>
+        </HeaderFooterLayout>
     )
 }

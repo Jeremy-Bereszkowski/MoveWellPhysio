@@ -5,54 +5,81 @@ import { makeStyles } from "@material-ui/core/styles";
 
 import LandingPageCarousel from "components/Carousel/LandingPageCarousel";
 
+import HeaderFooterLayout from "layouts/HeaderFooterLayout";
 import MainContainerLayout from "layouts/MainContainerLayout";
+import ColumnLayout from "layouts/ColumnLayout";
 
-import IntroVideo from "pages-sections/landing-page/IntroVideo";
 import ParaLayout from "pages-sections/landing-page/ParaLayout";
+import InstagramFeed from "pages-sections/landing-page/InstagramFeed";
+
+import fire from "util/firebase";
 
 import {blackHrThin} from "assets/jss/coreStyles";
 import LandingData from "assets/data/pages/landing-data";
 import URL from "assets/strings/urls";
-import ColumnLayout from "../layouts/ColumnLayout";
 
 const useStyles = makeStyles({
     hr: {
         ...blackHrThin,
     },
+    padding: {
+        padding: "4vh 0",
+    }
 });
 
+export async function getServerSideProps(context) {
+    const images = await fire
+        .firestore()
+        .collection('instagram-feed')
+        .doc('64XLivCrKJcYk5smMeZm')
+        .get()
+        .then(doc => doc.data())
+        .catch(err => err)
+
+    return {
+        props: {
+            images
+        }
+    }
+}
+
+
 export default function LandingPage(props) {
+    React.useEffect(() => {
+        window.scrollTo(0, 0);
+        document.body.scrollTop = 0;
+    });
     const classes = useStyles();
 
     return (
-        <>
+        <HeaderFooterLayout>
             <LandingPageCarousel/>
             <MainContainerLayout>
                 <ColumnLayout>
                     <Grid
                         container
-                        direction={"row"}
-                        alignContent={"center"}
+                        direction={"column"}
                         justify={"center"}
+                        alignItems="stretch"
                     >
-                        <Grid item xs={12} sm={12} md={12} lg={12}>
+                        <Grid item className={classes.padding}>
                             <ParaLayout actionUrl={URL.PHYSIOTHERAPY} image={LandingData.para1.image} headerString={LandingData.para1.header} bodyStringArray={LandingData.para1.body} actionString={LandingData.para1.action} actionUrl={URL.PHYSIOTHERAPY} imageLeft={false}/>
                         </Grid>
-                        <Grid item xs={12} sm={12} md={12} lg={12}>
+                        <Grid item className={classes.padding}>
                             <hr size={30} className={classes.hr}/>
                         </Grid>
-                        <Grid item xs={12} sm={12} md={12} lg={12}>
-                            <IntroVideo />
-                        </Grid>
-                        <Grid item xs={12} sm={12} md={12} lg={12}>
-                            <hr size={30} className={classes.hr}/>
-                        </Grid>
-                        <Grid item xs={12} sm={12} md={12} lg={12}>
+                        <Grid item className={classes.padding}>
                             <ParaLayout actionUrl={URL.ABOUT} image={LandingData.para2.image} headerString={LandingData.para2.header} bodyStringArray={LandingData.para2.body} actionString={LandingData.para2.action} actionUrl={URL.ABOUT} imageLeft={true}/>
+                        </Grid>
+                        <Grid item className={classes.padding}>
+                            <hr size={30} className={classes.hr}/>
+                        </Grid>
+                        <Grid item className={classes.padding}>
+                            <InstagramFeed images={props.images.images}/>
                         </Grid>
                     </Grid>
                 </ColumnLayout>
             </MainContainerLayout>
-        </>
+        </HeaderFooterLayout>
     )
 }

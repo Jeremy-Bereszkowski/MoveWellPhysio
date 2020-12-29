@@ -11,6 +11,8 @@ import KeyboardArrowRightIcon from "@material-ui/icons/KeyboardArrowRight";
 
 import {bodyActionText, bodyHeaderText, bodyParaText1} from "assets/jss/coreStyles";
 import {blackColor, hexToRgb} from "assets/jss/nextjs-material-kit-pro";
+import Colours from "../../assets/strings/colours";
+import useIsTouchDevice from "../../util/device-detect";
 
 const useStyles = makeStyles({
     title: {
@@ -32,15 +34,7 @@ const useStyles = makeStyles({
     },
     arrow: {
         marginBottom: "-6px",
-    },
-    textDiv: {
-        marginLeft: "auto",
-        justify: "center",
-        marginRight: "auto"
-    },
-    divPadding: {
-        paddingLeft: "4vw",
-        paddingRight: "4vw",
+        color: Colours.green,
     },
     image: {
         width: "100%",
@@ -64,61 +58,37 @@ const useStyles = makeStyles({
             hexToRgb(blackColor) +
             ", 0.2)",
     },
-    filter: {},
-    darkColor: {
-        "&:before": {
-            background: "rgba(" + hexToRgb(blackColor) + ", 0.5)"
-        },
-        "&:after,&:before": {
-            position: "absolute",
-            zIndex: "1",
-            width: "100%",
-            height: "100%",
-            display: "block",
-            left: "0",
-            top: "0",
-            content: "''"
-        }
-    }
+    pad: {
+        padding: "2vw",
+    },
 });
 
 export default function ParaLayout(props) {
     const classes = useStyles();
-
     const {image, headerString, bodyStringArray, actionString, actionUrl, imageLeft} = props
+    const padding = imageLeft ? classes.leftPad : classes.rightPad
 
-    const SlideBlock = () => {
+    const TextBlock  = ({imageLeft}) => {
+        const animation = (useIsTouchDevice() || !imageLeft)
+
         return (
-            <>
-                {imageLeft === false ?
-                    <Grid item xs={12} sm={12} md={6}>
-                        <Slide left cascade>
-                            <TextBlock />
-                        </Slide>
-                    </Grid>
-                    :
-                    <Grid item xs={12} sm={12} md={6}>
-                        <Slide left>
-                            <TextBlock />
-                        </Slide>
-                    </Grid>
-                }
-            </>
-        )
-    }
-    const TextBlock  = () => {
-        return (
-            <div className={classNames(classes.textDiv)}>
-                <h2 className={classes.bodyHeaderText}>
-                    {headerString}
-                </h2>
-                {bodyStringArray.map(bodyString => {
-                    return (
-                        <h4 className={classes.bodyParaText} key={bodyString}>
-                            {bodyString}
-                        </h4>
-                    )
-                })}
+            <Slide left={animation} cascade={animation}>
+                <div>
+                    <h2 className={classes.bodyHeaderText}>
+                        {headerString}
+                    </h2>
+                </div>
+                <div>
+                    {
+                        bodyStringArray.map((bodyString, key) => {
+                            return (
+                                <h4 className={classes.bodyParaText} key={key}>
+                                    {bodyString}
+                                </h4>
+                            )
+                        })
+                    }
+                </div>
                 <Grid
                     container
                     direction={"row"}
@@ -144,43 +114,42 @@ export default function ParaLayout(props) {
                         </Link>
                     </Grid>
                 </Grid>
-            </div>
+            </Slide>
         )
     }
 
     const ImageBlock = () => {
         return (
-            <Grid item xs={12} sm={12} md={6}>
-                <div
-                    className={classNames(classes.image, classes.darkColor)}
-                    style={{
-                        backgroundImage: "url(" + image + ")",
-                    }}
-                />
-            </Grid>
+            <div
+                className={classNames(classes.image)}
+                style={{
+                    backgroundImage: "url(" + image + ")",
+                }}
+            />
         )
     }
 
     return (
         <Grid
             container
-            spacing={4}
             direction="row"
             justify="center"
             alignItems="center"
-            className={classes.divPadding}
         >
-            {imageLeft === true ?
-                <>
-                    <ImageBlock />
-                    <SlideBlock />
-                </>
-                :
-                <>
-                    <SlideBlock />
-                    <ImageBlock />
-                </>
-            }
+            <Grid item xs={12} sm={12} md={6} className={classes.pad}>
+                {
+                    imageLeft === true ?
+                        <ImageBlock /> :
+                        <TextBlock imageLeft={imageLeft}/>
+                }
+            </Grid>
+            <Grid item xs={12} sm={12} md={6} className={classes.pad}>
+                {
+                    imageLeft === false ?
+                        <ImageBlock /> :
+                        <TextBlock imageLeft={imageLeft}/>
+                }
+            </Grid>
         </Grid>
     )
 }

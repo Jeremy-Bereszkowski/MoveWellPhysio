@@ -1,7 +1,11 @@
+/*
+* Header Core Component
+* Defines header bar and on-scroll transition
+* */
+
 import React from "react";
 import Link from "next/link";
 import classNames from "classnames";
-import PropTypes from "prop-types";
 
 import { makeStyles } from "@material-ui/core/styles";
 import AppBar from "@material-ui/core/AppBar";
@@ -11,19 +15,19 @@ import Hidden from "@material-ui/core/Hidden";
 import Drawer from "@material-ui/core/Drawer";
 import Menu from "@material-ui/icons/Menu";
 import Close from "@material-ui/icons/Close";
+import Grid from "@material-ui/core/Grid";
 
 import HeaderLinks from "./HeaderLinks";
+import SocialButtonGroup from "../Buttons/SocialButtonGroup";
 
 import {
-  blackColor, boxShadow, dangerColor,
-  defaultFont, drawerWidth,
-  grayColor,
-  hexToRgb, infoColor,
-  primaryColor, roseColor, successColor, transition, warningColor,
-  whiteColor
+  blackColor, boxShadow,
+  defaultFont, drawerWidth, grayColor,
+  hexToRgb, transition, whiteColor,
 } from "assets/jss/nextjs-material-kit-pro";
 import Colours from "assets/strings/colours";
 import URL from "assets/strings/urls";
+import HeaderData from "assets/data/components/header";
 import Logo from "assets/img/logos/1x/Asset 1mdpi.png"
 
 const useStyles = makeStyles(theme => ({
@@ -31,7 +35,7 @@ const useStyles = makeStyles(theme => ({
     display: "flex",
     border: "0",
     borderRadius: "3px",
-    padding: "0.625rem 0",
+    padding: "0 0 0.625rem 0",
     marginBottom: "20px",
     color: grayColor[15],
     width: "100%",
@@ -48,18 +52,13 @@ const useStyles = makeStyles(theme => ({
     justifyContent: "flex-start",
     position: "relative"
   },
-  absolute: {
-    position: "absolute",
-    top: "auto"
-  },
   fixed: {
     position: "fixed"
   },
   container: {
-    paddingRight: "15px",
-    paddingLeft: "15px",
-    marginRight: "4%",
-    marginLeft: "4%",
+    paddingRight: "1.5vw",
+    paddingLeft: "1.5vw",
+    paddingTop: "15px",
     width: "100%",
     minHeight: "50px",
     alignItems: "center",
@@ -87,70 +86,9 @@ const useStyles = makeStyles(theme => ({
   appResponsive: {
     margin: "50px 10px",
   },
-  primary: {
-    backgroundColor: primaryColor[0],
-    color: whiteColor,
-    boxShadow:
-        "0 4px 20px 0px rgba(" +
-        hexToRgb(blackColor) +
-        ", 0.14), 0 7px 12px -5px rgba(" +
-        hexToRgb(primaryColor[0]) +
-        ", 0.46)"
-  },
-  info: {
-    backgroundColor: infoColor[0],
-    color: whiteColor,
-    boxShadow:
-        "0 4px 20px 0px rgba(" +
-        hexToRgb(blackColor) +
-        ", 0.14), 0 7px 12px -5px rgba(" +
-        hexToRgb(infoColor[0]) +
-        ", 0.46)"
-  },
-  success: {
-    backgroundColor: successColor[0],
-    color: whiteColor,
-    boxShadow:
-        "0 4px 20px 0px rgba(" +
-        hexToRgb(blackColor) +
-        ", 0.14), 0 7px 12px -5px rgba(" +
-        hexToRgb(successColor[0]) +
-        ", 0.46)"
-  },
-  warning: {
-    backgroundColor: warningColor[0],
-    color: whiteColor,
-    boxShadow:
-        "0 4px 20px 0px rgba(" +
-        hexToRgb(blackColor) +
-        ", 0.14), 0 7px 12px -5px rgba(" +
-        hexToRgb(warningColor[0]) +
-        ", 0.46)"
-  },
-  danger: {
-    backgroundColor: dangerColor[0],
-    color: whiteColor,
-    boxShadow:
-        "0 4px 20px 0px rgba(" +
-        hexToRgb(blackColor) +
-        ", 0.14), 0 7px 12px -5px rgba(" +
-        hexToRgb(dangerColor[0]) +
-        ", 0.46)"
-  },
-  rose: {
-    backgroundColor: roseColor[0],
-    color: whiteColor,
-    boxShadow:
-        "0 4px 20px 0px rgba(" +
-        hexToRgb(blackColor) +
-        ", 0.14), 0 7px 12px -5px rgba(" +
-        hexToRgb(roseColor[0]) +
-        ", 0.46)"
-  },
   transparent: {
     backgroundColor: "transparent !important",
     boxShadow: "none",
-    paddingTop: "25px",
     color: whiteColor
   },
   dark: {
@@ -162,19 +100,6 @@ const useStyles = makeStyles(theme => ({
         ", 0.14), 0 7px 12px -5px rgba(" +
         hexToRgb(grayColor[9]) +
         ", 0.46)"
-  },
-  white: {
-    border: "0",
-    padding: "0.625rem 0",
-    marginBottom: "20px",
-    color: grayColor[15],
-    backgroundColor: whiteColor + " !important",
-    boxShadow:
-        "0 4px 18px 0px rgba(" +
-        hexToRgb(blackColor) +
-        ", 0.12), 0 7px 10px -5px rgba(" +
-        hexToRgb(blackColor) +
-        ", 0.15)"
   },
   drawerPaper: {
     border: "none",
@@ -228,22 +153,28 @@ export default function Header(props) {
   const [mobileOpen, setMobileOpen] = React.useState(false);
   const [logoClass, setLogoClass] = React.useState({height: "auto", width: "18vw", minWidth: "150px"})
   const classes = useStyles();
+  const color = "transparent"
+  const changeColorOnScroll = {
+    height: 25,
+    color: "dark"
+  }
+
   React.useEffect(() => {
-    if (props.changeColorOnScroll) {
+    if (changeColorOnScroll) {
       window.addEventListener("scroll", headerColorChange);
     }
     return function cleanup() {
-      if (props.changeColorOnScroll) {
+      if (changeColorOnScroll) {
         window.removeEventListener("scroll", headerColorChange);
       }
     };
   });
+
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
   };
-  const headerColorChange = () => {
-    const { color, changeColorOnScroll } = props;
 
+  const headerColorChange = () => {
     const windowsScrollTop = window.pageYOffset;
     if (windowsScrollTop > changeColorOnScroll.height) {
       document.body
@@ -263,97 +194,81 @@ export default function Header(props) {
       setLogoClass({height: "auto", width: "18vw", minWidth: "150px"})
     }
   };
-  const { color, fixed, absolute } = props;
+
   const appBarClasses = classNames({
     [classes.appBar]: true,
     [classes[color]]: color,
-    [classes.absolute]: absolute,
-    [classes.fixed]: fixed
+    [classes.fixed]: true
   });
+
   return (
       <AppBar className={appBarClasses}>
-        <div className={classes.container}>
-          <Button className={classes.title}>
-            <Link href={URL.LANDING_PAGE} as={URL.ROOT}>
-              <a>
-                <img src={Logo} style={logoClass}/>
-              </a>
-            </Link>
-          </Button>
-          <Hidden mdDown implementation="css" className={classes.hidden}>
-            <div className={classes.collapse}>{<HeaderLinks onClick={handleDrawerToggle}/>}</div>
-          </Hidden>
-          <Hidden lgUp>
-            <IconButton
-                color="inherit"
-                aria-label="open drawer"
-                onClick={handleDrawerToggle}
+        <Grid
+            container
+            direction={"column"}
+            justify={"center"}
+            alignItems={"stretch"}
+        >
+          <Grid item style={{backgroundColor: "white"}}>
+            <Grid
+                container
+                direction={"row"}
+                justify={"center"}
+                alignItems={"center"}
             >
-              <Menu />
-            </IconButton>
-          </Hidden>
-        </div>
-        <Hidden lgUp implementation="js">
-          <Drawer
-              variant="temporary"
-              anchor={"right"}
-              open={mobileOpen}
-              classes={{
-                paper: classes.drawerPaper
-              }}
-              onClose={handleDrawerToggle}
-          >
-            <IconButton
-                color="inherit"
-                aria-label="open drawer"
-                onClick={handleDrawerToggle}
-                className={classes.closeButtonDrawer}
-            >
-              <Close />
-            </IconButton>
-            <div className={classes.appResponsive}>{<HeaderLinks vertical onClick={handleDrawerToggle}/>}</div>
-          </Drawer>
-        </Hidden>
+              <Grid item style={{paddingRight: "1vw", color: "black"}}>
+                {HeaderData.bannerText}
+              </Grid>
+              <Grid item style={{paddingRight: "18px"}}>
+                <SocialButtonGroup color={"black"}/>
+              </Grid>
+            </Grid>
+          </Grid>
+          <Grid item>
+            <div className={classes.container}>
+              <Button className={classes.title}>
+                <Link href={URL.LANDING_PAGE} as={URL.ROOT}>
+                  <a>
+                    <img src={Logo} style={logoClass}/>
+                  </a>
+                </Link>
+              </Button>
+              <Hidden mdDown implementation="css" className={classes.hidden}>
+                <div className={classes.collapse}>{<HeaderLinks onClick={handleDrawerToggle}/>}</div>
+              </Hidden>
+              <Hidden lgUp>
+                <IconButton
+                    color="inherit"
+                    aria-label="open drawer"
+                    onClick={handleDrawerToggle}
+                >
+                  <Menu />
+                </IconButton>
+              </Hidden>
+            </div>
+            <Hidden lgUp implementation="js">
+              <Drawer
+                  variant="temporary"
+                  anchor={"right"}
+                  open={mobileOpen}
+                  classes={{
+                    paper: classes.drawerPaper
+                  }}
+                  onClose={handleDrawerToggle}
+              >
+                <IconButton
+                    color="inherit"
+                    aria-label="open drawer"
+                    onClick={handleDrawerToggle}
+                    className={classes.closeButtonDrawer}
+                >
+                  <Close />
+                </IconButton>
+                <div className={classes.appResponsive}>{<HeaderLinks vertical onClick={handleDrawerToggle}/>}</div>
+              </Drawer>
+            </Hidden>
+          </Grid>
+        </Grid>
       </AppBar>
   );
 }
-
-Header.defaultProp = {
-  color: "white"
-};
-
-Header.propTypes = {
-  color: PropTypes.oneOf([
-    "primary",
-    "info",
-    "success",
-    "warning",
-    "danger",
-    "transparent",
-    "white",
-    "rose",
-    "dark"
-  ]),
-  fixed: PropTypes.bool,
-  absolute: PropTypes.bool,
-  // this will cause the sidebar to change the color from
-  // props.color (see above) to changeColorOnScroll.color
-  // when the window.pageYOffset is heigher or equal to
-  // changeColorOnScroll.height and then when it is smaller than
-  // changeColorOnScroll.height change it back to
-  // props.color (see above)
-  changeColorOnScroll: PropTypes.shape({
-    height: PropTypes.number.isRequired,
-    color: PropTypes.oneOf([
-      "primary",
-      "info",
-      "success",
-      "warning",
-      "danger",
-      "transparent",
-      "white",
-      "rose",
-      "dark"
-    ]).isRequired
-  })
-};

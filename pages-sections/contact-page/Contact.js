@@ -7,6 +7,7 @@ import HalfHorizontalTexts from "components/TextBlocks/HalfHorizontalTexts";
 
 import {bodyHeaderText, bodyParaText1} from "assets/jss/coreStyles";
 import ContactData from "assets/data/pages/contact";
+import {email, phone} from "../../assets/data/global";
 
 const useStyles = makeStyles({
     greenHeaderText: {
@@ -45,10 +46,10 @@ export default function OpeningHours() {
                 </h2>
             </Grid>
             <Grid item>
-                <HalfHorizontalTexts leftText={ContactData.contact.telephone.header} rightText={ContactData.contact.telephone.value} />
+                <HalfHorizontalTexts type={"phone"} leftText={ContactData.contact.telephone.header} rightText={ContactData.contact.telephone.value} />
             </Grid>
             <Grid item>
-                <HalfHorizontalTexts leftText={ContactData.contact.email.header} rightText={ContactData.contact.email.data} />
+                <HalfHorizontalTexts type={"email"} leftText={ContactData.contact.email.header} rightText={ContactData.contact.email.data} />
             </Grid>
         </Grid>
     )

@@ -88,7 +88,7 @@ export default function PhysioLedRehabBlock(props) {
 
     const ImageBlock = () => {
         return (
-            <Grid item xs={12} sm={12} md={6}>
+            <Grid item xs={12} sm={12} md={7}>
                 <div className={classes.image} style={{backgroundImage: "url("+clientImage+")"}}/>
             </Grid>
         )
@@ -96,7 +96,7 @@ export default function PhysioLedRehabBlock(props) {
 
     const TextBlock = () => {
         return (
-            <Grid item xs={12} sm={12} md={6}>
+            <Grid item xs={12} sm={12} md={5}>
                 <Grid
                     container
                     spacing={2}

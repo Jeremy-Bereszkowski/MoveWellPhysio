@@ -2,7 +2,7 @@ import {TestimonialBackground} from "../global";
 
 const client1 = "/physio/clients/client_9.jpg";
 const client2 = "/physio/clients/client_60.jpg";
-const client3 = "/physio/clients/client_20.jpg";
+const client3 = "/physio/clients/client.jpg";
 
 const TestimonialData = {
     core: {

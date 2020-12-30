@@ -153,7 +153,7 @@ const useStyles = makeStyles(theme => ({
 
 export default function Header(props) {
   const [mobileOpen, setMobileOpen] = React.useState(false);
-  const [logoClass, setLogoClass] = React.useState({height: "auto", width: "18vw", minWidth: "150px"})
+  const [logoClass, setLogoClass] = React.useState({height: "auto", width: "20vw", minWidth: "150px"})
   const classes = useStyles();
   const color = "transparent"
   const changeColorOnScroll = {

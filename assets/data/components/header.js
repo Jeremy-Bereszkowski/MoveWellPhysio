@@ -64,7 +64,7 @@ const HeaderData = {
                 {
                     core: {
                         key: "Group Sessions",
-                        href: ""
+                        href: URL.MIND_BODY,
                     },
                 },
             ],

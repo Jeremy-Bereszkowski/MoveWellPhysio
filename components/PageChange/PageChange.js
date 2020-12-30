@@ -4,14 +4,14 @@ import { makeStyles } from "@material-ui/core/styles";
 import CircularProgress from "@material-ui/core/CircularProgress";
 
 import {
-  infoColor,
   whiteColor,
   title
 } from "assets/jss/nextjs-material-kit-pro.js";
+import Colours from "../../assets/strings/colours";
 
 const useStyles = makeStyles({
   progress: {
-    color: infoColor[0],
+    color: Colours.green,
     width: "6rem !important",
     height: "6rem !important"
   },

@@ -16,7 +16,11 @@ import BookingButtonsGroup from "components/Buttons/BookingButtonsGroup";
 
 import PhysiotherapyData from "assets/data/pages/services/physiotherapy";
 
-const useStyles = makeStyles({});
+const useStyles = makeStyles({
+    spacing: {
+        margin: "20px 0",
+    },
+});
 
 export default function Physiotherapy({...rest}) {
     React.useEffect(() => {
@@ -36,19 +40,19 @@ export default function Physiotherapy({...rest}) {
                             justify={"center"}
                             alignContent={"center"}
                         >
-                            <Grid item>
+                            <Grid item className={classes.spacing}>
                                 <GreenHeaderBlackBody header={PhysiotherapyData.howPhysioCanHelp.header} body={PhysiotherapyData.howPhysioCanHelp.para}/>
                             </Grid>
-                            <Grid item>
+                            <Grid item className={classes.spacing}>
                                 <TimelineBlock header={PhysiotherapyData.timelineBlock.header} body={PhysiotherapyData.timelineBlock.body} />
                             </Grid>
-                            <Grid item>
+                            <Grid item className={classes.spacing}>
                                 <CommonInjuriesBlock image={PhysiotherapyData.commonInjuries.image} header={PhysiotherapyData.commonInjuries.header} body={PhysiotherapyData.commonInjuries.body} />
                             </Grid>
-                            <Grid item>
+                            <Grid item className={classes.spacing}>
                                 <GreenHeaderBlackBody header={PhysiotherapyData.howToGetStarted.header} body={PhysiotherapyData.howToGetStarted.para}/>
                             </Grid>
-                            <Grid item>
+                            <Grid item className={classes.spacing}>
                                 <BookingButtonsGroup />
                             </Grid>
                         </Grid>

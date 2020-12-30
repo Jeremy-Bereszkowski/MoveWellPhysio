@@ -6,9 +6,6 @@ import FocusedGroupData from "../../../assets/data/pages/services/focusedGroup";
 import {bodyHeaderText, bodyParaText1} from "../../../assets/jss/coreStyles";
 
 const useStyles = makeStyles(theme => ({
-    marginTop: {
-        marginTop: "4vh"
-    },
     greenHeaderText: {
         ...bodyHeaderText,
         textAlign: "center",

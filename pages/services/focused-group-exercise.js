@@ -16,7 +16,11 @@ import BookingButtonsGroup from "components/Buttons/BookingButtonsGroup";
 
 import FocusedGroupData from "assets/data/pages/services/focusedGroup";
 
-const useStyles = makeStyles({});
+const useStyles = makeStyles({
+    spacing: {
+        margin: "20px 0",
+    },
+});
 
 export default function FocusedGroupExercise(props) {
     React.useEffect(() => {
@@ -36,16 +40,16 @@ export default function FocusedGroupExercise(props) {
                             alignContent={"center"}
                             justify={"center"}
                         >
-                            <Grid item>
+                            <Grid item className={classes.spacing}>
                                 <TopText/>
                             </Grid>
-                            <Grid item>
+                            <Grid item className={classes.spacing}>
                                 <MiddleText />
                             </Grid>
-                            <Grid item>
+                            <Grid item className={classes.spacing}>
                                 <BottomText />
                             </Grid>
-                            <Grid item>
+                            <Grid item className={classes.spacing}>
                                 <BookingButtonsGroup />
                             </Grid>
                         </Grid>

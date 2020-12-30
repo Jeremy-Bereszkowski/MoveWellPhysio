@@ -22,7 +22,6 @@ export default function BottomProfiles(props) {
     return(
         <Grid
             container
-            spacing={2}
             direction={"row"}
             justify={"center"}
             alignContent={"center"}
@@ -35,7 +34,6 @@ export default function BottomProfiles(props) {
             <Grid item>
                 <Grid
                     container
-                    spacing={2}
                     justify={"center"}
                     alignContent={"center"}
                 >

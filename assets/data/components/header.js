@@ -2,7 +2,7 @@ import {phone} from "../global";
 import URL from "../../strings/urls";
 
 const HeaderData = {
-    bannerText: "Phone: " + phone,
+    bannerText: "Phone: ",
     links: [
         {
             core: {

@@ -15,7 +15,7 @@ export default function InstagramFeed(props) {
         return (
             <InstagramEmbed
                 url={url}
-                clientAccessToken='404339417505644|0aef5f40ac92bce3716cf3c18c99d328'
+                clientAccessToken={process.env.NEXT_PUBLIC_FACEBOOK_KEY}
                 hideCaption={true}
                 containerTagName='div'
                 protocol=''

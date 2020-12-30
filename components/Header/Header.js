@@ -28,7 +28,7 @@ import {
 import Colours from "assets/strings/colours";
 import URL from "assets/strings/urls";
 import HeaderData from "assets/data/components/header";
-import Logo from "assets/img/logos/1x/Asset 1mdpi.png"
+import Logo from "assets/img/logos/move-well-logo.png"
 import {phone} from "../../assets/data/global";
 import PhoneLink from "../Links/Phone";
 

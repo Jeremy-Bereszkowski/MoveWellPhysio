@@ -29,6 +29,8 @@ import Colours from "assets/strings/colours";
 import URL from "assets/strings/urls";
 import HeaderData from "assets/data/components/header";
 import Logo from "assets/img/logos/1x/Asset 1mdpi.png"
+import {phone} from "../../assets/data/global";
+import PhoneLink from "../Links/Phone";
 
 const useStyles = makeStyles(theme => ({
   appBar: {
@@ -217,7 +219,7 @@ export default function Header(props) {
                 alignItems={"center"}
             >
               <Grid item style={{paddingRight: "1vw", color: "black"}}>
-                {HeaderData.bannerText}
+                {HeaderData.bannerText}<PhoneLink text={phone}/>
               </Grid>
               <Grid item style={{paddingRight: "18px"}}>
                 <SocialButtonGroup color={"black"}/>

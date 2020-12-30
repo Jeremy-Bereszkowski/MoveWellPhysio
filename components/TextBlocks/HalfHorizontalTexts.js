@@ -5,6 +5,8 @@ import {makeStyles} from "@material-ui/core/styles";
 import {Grid} from "@material-ui/core";
 
 import {bodyParaText2} from "assets/jss/coreStyles";
+import PhoneLink from "../Links/Phone";
+import EmailLink from "../Links/Email";
 
 const useStyles = makeStyles({
     bodyText: {
@@ -19,7 +21,7 @@ const useStyles = makeStyles({
 export default function HalfHorizontalTexts(props) {
     const classes = useStyles();
 
-    const {leftText, rightText} = props
+    const {leftText, rightText, type} = props
 
     return (
         <Grid
@@ -30,20 +32,28 @@ export default function HalfHorizontalTexts(props) {
             className={classes.sideMargins}
         >
             <Grid item>
-                <h4 className={classes.bodyText}>
-                    {leftText + ": " + rightText}
-                </h4>
-            </Grid>
-            <Grid item>
-                <h4 className={classes.bodyText}>
-                    {/*{" " + }*/}
-                </h4>
+                {type ?
+                    <h4 className={classes.bodyText}>
+                        {leftText + ": "}
+                        {type==="phone" ? <PhoneLink text={rightText}/> : null}
+                        {type==="email" ? <EmailLink text={rightText}/> : null}
+                    </h4>
+                    :
+                    <h4 className={classes.bodyText}>
+                        {leftText + ": " + rightText}
+                    </h4>
+                }
             </Grid>
         </Grid>
     )
 }
 
 HalfHorizontalTexts.propTypes = {
-    leftText: PropTypes.string,
-    rightText: PropTypes.string,
+    leftText: PropTypes.string.isRequired,
+    rightText: PropTypes.string.isRequired,
+    ref: PropTypes.string,
+    type: PropTypes.oneOf([
+        "phone",
+        "email"
+    ])
 }

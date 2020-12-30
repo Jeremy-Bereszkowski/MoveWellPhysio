@@ -20,10 +20,6 @@ export default function InstagramFeed(props) {
                 containerTagName='div'
                 protocol=''
                 injectScript
-                onLoading={() => {}}
-                onSuccess={() => {}}
-                onAfterRender={() => {}}
-                onFailure={() => {}}
             />
         )
     }
@@ -35,16 +31,14 @@ export default function InstagramFeed(props) {
             alignItems={"center"}
             justify={"space-between"}
         >
-            {
-                images.map((ele, key) => (
-                    key === 8 ? null :
+            {images.map((ele, key) => (
+                key === 8 ? null :
                     <Grid item xs={12} sm={6} md={4} key={key}>
                         <div style={{padding: "5px"}}>
                             <ImageBlock url={ele}/>
                         </div>
                     </Grid>
-                ))
-            }
+            ))}
             <Hidden only={"sm"}>
                 <Grid item xs={12} sm={6} md={4}>
                     <div style={{padding: "5px"}}>

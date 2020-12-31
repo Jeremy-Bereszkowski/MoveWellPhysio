@@ -58,13 +58,13 @@ const HeaderData = {
                 {
                     core: {
                         key: "Consults",
-                        href: "https://movewell-physiotherapy-melbourne.au2.cliniko.com/bookings"
+                        href: URL.CLINIKO,
                     },
                 },
                 {
                     core: {
                         key: "Group Sessions",
-                        href: URL.MIND_BODY,
+                        href: URL.CLINIKO,
                     },
                 },
             ],

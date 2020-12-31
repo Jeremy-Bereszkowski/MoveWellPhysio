@@ -24,7 +24,6 @@ const URL = {
 
     /* EXTERNAL */
     CLINIKO: "https://movewell-physiotherapy-melbourne.au2.cliniko.com/bookings",
-    MIND_BODY: "https://clients.mindbodyonline.com/classic/ws?studioid=824964&stype=-7&sView=week&sLoc=1&date=01/04/21",
 }
 
 export default URL

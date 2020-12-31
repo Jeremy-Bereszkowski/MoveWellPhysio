@@ -1,4 +1,3 @@
-import {phone} from "../global";
 import URL from "../../strings/urls";
 
 const HeaderData = {

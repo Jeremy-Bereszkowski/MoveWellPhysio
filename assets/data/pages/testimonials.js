@@ -52,7 +52,7 @@ const TestimonialData = {
                 },
             },
             {
-                buttonHeader: "Gabriella (52)",
+                buttonHeader: "Lauren (52)",
                 buttonContent: {
                     header: "Relieving pain from persistent conditions",
                     para: [
@@ -63,7 +63,7 @@ const TestimonialData = {
                         "",
                     ],
                     clientImage: client3,
-                    clientName: "Gabriella",
+                    clientName: "Lauren",
                     clientAge: "52",
                     clientPara: [
                         "Having severe spinal degeneration and high risk of being wheelchair bound, after seeing Yash I have finally become strong, fit and functional.",

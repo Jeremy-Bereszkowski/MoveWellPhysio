@@ -12,6 +12,7 @@ import "assets/scss/nextjs-material-kit-pro.scss?v=1.1.0";
 import "assets/css/react-demo.css";
 import "animate.css/animate.min.css";
 
+
 Router.events.on("routeChangeStart", url => {
     console.log(`Loading: ${url}`);
     document.body.classList.add("body-page-transition");

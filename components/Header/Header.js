@@ -218,10 +218,10 @@ export default function Header(props) {
                 justify={"center"}
                 alignItems={"center"}
             >
-              <Grid item style={{paddingRight: "1vw", color: "black"}}>
+              <Grid item style={{padding: "0 12px", color: "black"}}>
                 {HeaderData.bannerText}<PhoneLink text={phone}/>
               </Grid>
-              <Grid item style={{paddingRight: "18px"}}>
+              <Grid item>
                 <SocialButtonGroup color={"black"}/>
               </Grid>
             </Grid>

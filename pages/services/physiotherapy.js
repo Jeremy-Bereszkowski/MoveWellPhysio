@@ -15,6 +15,8 @@ import GreenHeaderBlackBody from "components/TextBlocks/GreenHeaderBlackBody";
 import BookingButtonsGroup from "components/Buttons/BookingButtonsGroup";
 
 import PhysiotherapyData from "assets/data/pages/services/physiotherapy";
+import BookConsultButton from "../../components/Buttons/BookConsultButton";
+import BookGroupClassButton from "../../components/Buttons/BookGroupClassButton";
 
 const useStyles = makeStyles({
     spacing: {
@@ -53,7 +55,16 @@ export default function Physiotherapy({...rest}) {
                                 <GreenHeaderBlackBody header={PhysiotherapyData.howToGetStarted.header} body={PhysiotherapyData.howToGetStarted.para}/>
                             </Grid>
                             <Grid item className={classes.spacing}>
-                                <BookingButtonsGroup />
+                                <Grid
+                                    container
+                                    direction={"row"}
+                                    justify={"center"}
+                                    alignContent={"center"}
+                                >
+                                    <Grid item className={classes.pad}>
+                                        <BookConsultButton />
+                                    </Grid>
+                                </Grid>
                             </Grid>
                         </Grid>
                     </ColumnLayout>

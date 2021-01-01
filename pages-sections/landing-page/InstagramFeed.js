@@ -29,10 +29,7 @@ export default function InstagramFeed(props) {
                 'display_biography': false,
                 'display_gallery': true,
                 'display_captions': false,
-                'callback': (ret) => {
-                    console.log(ret)
-                    setLoading(false)
-                },
+                'callback': () => setLoading(false),
                 'styling': true,
                 'items': 9,
                 'items_per_row': 3,

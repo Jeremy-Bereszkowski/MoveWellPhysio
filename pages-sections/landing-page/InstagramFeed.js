@@ -1,51 +1,60 @@
 import React from 'react'
-import InstagramEmbed from 'react-instagram-embed';
 
 import {makeStyles} from "@material-ui/core/styles"
 import Grid from "@material-ui/core/Grid";
-import Hidden from "@material-ui/core/Hidden";
+import CircularProgress from "@material-ui/core/CircularProgress";
 
-const useStyles = makeStyles(theme => ({}))
+import Instagram from "util/InstagramFeed"
+
+import Colours from "assets/strings/colours";
+
+const useStyles = makeStyles(theme => ({
+    progress: {
+        color: Colours.green,
+        width: "6rem !important",
+        height: "6rem !important"
+    },
+}))
 
 export default function InstagramFeed(props) {
     const classes = useStyles()
-    const images = props.images
+    const [loading, setLoading] = React.useState(true)
 
-    const ImageBlock = ({url}) => {
-        return (
-            <InstagramEmbed
-                url={url}
-                clientAccessToken={process.env.NEXT_PUBLIC_FACEBOOK_KEY}
-                hideCaption={true}
-                containerTagName='div'
-                protocol=''
-                injectScript
-            />
-        )
-    }
+    React.useEffect(() => {
+        if (loading) {
+            new Instagram({
+                'username': 'movewellmelbourne',
+                'container': document.getElementById("instagram-feed"),
+                'display_profile': false,
+                'display_biography': false,
+                'display_gallery': true,
+                'display_captions': false,
+                'callback': (ret) => {
+                    console.log(ret)
+                    setLoading(false)
+                },
+                'styling': true,
+                'items': 9,
+                'items_per_row': 3,
+                'margin': 1,
+                'lazy_load': true
+            })
+        }
+    })
 
     return (
         <Grid
             container
             direction={"row"}
             alignItems={"center"}
-            justify={"space-between"}
+            justify={"center"}
         >
-            {images.map((ele, key) => (
-                key === 8 ? null :
-                    <Grid item xs={12} sm={6} md={4} key={key}>
-                        <div style={{padding: "5px"}}>
-                            <ImageBlock url={ele}/>
-                        </div>
-                    </Grid>
-            ))}
-            <Hidden only={"sm"}>
-                <Grid item xs={12} sm={6} md={4}>
-                    <div style={{padding: "5px"}}>
-                        <ImageBlock url={images[8]}/>
-                    </div>
-                </Grid>
-            </Hidden>
+            {
+                !loading ? null : <Grid item><CircularProgress className={classes.progress}/></Grid>
+            }
+            <Grid item>
+                <div id={"instagram-feed"}/>
+            </Grid>
         </Grid>
     )
 }

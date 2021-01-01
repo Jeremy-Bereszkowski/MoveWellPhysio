@@ -12,8 +12,6 @@ import ColumnLayout from "layouts/ColumnLayout";
 import ParaLayout from "pages-sections/landing-page/ParaLayout";
 import InstagramFeed from "pages-sections/landing-page/InstagramFeed";
 
-import fire from "util/firebase";
-
 import {blackHrThin} from "assets/jss/coreStyles";
 import LandingData from "assets/data/pages/landing-data";
 import URL from "assets/strings/urls";
@@ -26,22 +24,6 @@ const useStyles = makeStyles({
         padding: "4vh 0",
     }
 });
-
-export async function getServerSideProps(context) {
-    const images = await fire
-        .firestore()
-        .collection('instagram-feed')
-        .doc('64XLivCrKJcYk5smMeZm')
-        .get()
-        .then(doc => doc.data())
-        .catch(err => err)
-
-    return {
-        props: {
-            images
-        }
-    }
-}
 
 export default function LandingPage(props) {
     React.useEffect(() => {
@@ -74,7 +56,7 @@ export default function LandingPage(props) {
                             <hr size={30} className={classes.hr}/>
                         </Grid>
                         <Grid item className={classes.padding}>
-                            <InstagramFeed images={props.images.images}/>
+                            <InstagramFeed/>
                         </Grid>
                     </Grid>
                 </ColumnLayout>

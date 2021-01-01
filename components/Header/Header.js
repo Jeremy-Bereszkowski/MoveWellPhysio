@@ -218,7 +218,7 @@ export default function Header(props) {
                 justify={"center"}
                 alignItems={"center"}
             >
-              <Grid item style={{color: "black"}}>
+              <Grid item style={{padding: "0 12px", color: "black"}}>
                 {HeaderData.bannerText}<PhoneLink text={phone}/>
               </Grid>
               <Grid item>

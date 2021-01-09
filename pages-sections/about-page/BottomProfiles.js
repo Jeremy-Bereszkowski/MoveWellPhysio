@@ -40,7 +40,7 @@ export default function BottomProfiles(props) {
                     {
                         AboutData.employee.employees.map((element, key) => {
                             return (
-                                <Grid item md={4} xl={4} key={key}>
+                                <Grid item sm={7} md={7} lg={4} key={key}>
                                     <EmployeeProfileCard employee={element}/>
                                 </Grid>
                             )

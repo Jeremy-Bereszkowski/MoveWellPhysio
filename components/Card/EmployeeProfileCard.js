@@ -18,7 +18,7 @@ const useStyles = makeStyles({
     card2: {
         marginTop: "0",
         marginBottom: "0",
-        padding: "0",
+        padding: "14px",
     }
 });
 

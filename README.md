@@ -24,10 +24,10 @@ Production deployments are triggered by committing/merging to the ```deploy``` b
 
 The following is a list of production domains: 
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [https://movewellmelbourne.com.au/](https://movewellmelbourne.com.au/)
+- [https://movewellmelbourne.com.au/](https://movewellmelbourne.com.au/)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [https://movewellmelbourne.online/](https://movewellmelbourne.online/)
+- [https://movewellmelbourne.online/](https://movewellmelbourne.online/)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [https://move-well-physio.vercel.app/](https://move-well-physio.vercel.app/)
+- [https://move-well-physio.vercel.app/](https://move-well-physio.vercel.app/)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [https://move-well-physio-git-deploy.bereszkowski.vercel.app/](https://move-well-physio-git-deploy.bereszkowski.vercel.app/)
+- [https://move-well-physio-git-deploy.bereszkowski.vercel.app/](https://move-well-physio-git-deploy.bereszkowski.vercel.app/)

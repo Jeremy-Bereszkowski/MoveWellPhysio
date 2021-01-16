@@ -113,6 +113,7 @@ export default function ErrorPage({ ...rest }) {
         document.body.scrollTop = 0;
     });
     const classes = useStyles();
+
     return (
         <HeaderFooterLayout>
             <div

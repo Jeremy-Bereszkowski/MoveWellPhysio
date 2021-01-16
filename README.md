@@ -16,7 +16,7 @@ yarn dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-##Deployment
+## Deployment
 
 Vercel CI/CD Pipeline automatically deploys all GitHub commits to the ```s3539822/web-resume-jeremy-bereszkowski``` repo.
 

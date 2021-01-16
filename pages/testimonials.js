@@ -1,7 +1,5 @@
 import React from 'react'
 
-import {makeStyles} from "@material-ui/core/styles"
-
 import HeaderFooterLayout from "layouts/HeaderFooterLayout";
 import ParallaxLayout from "layouts/ParallaxLayout";
 import MainContainerLayout from "layouts/MainContainerLayout";
@@ -12,14 +10,11 @@ import PhysioLedRehabBlock from "components/TextBlocks/PhysioLedRehabBlock";
 
 import TestimonialData from "assets/data/pages/testimonials";
 
-const useStyles = makeStyles(theme => ({}))
-
 export default function Function(props) {
     React.useEffect(() => {
         window.scrollTo(0, 0);
         document.body.scrollTop = 0;
     });
-    const classes = useStyles()
 
     const smContainer = 3, lgContainer = 9
 

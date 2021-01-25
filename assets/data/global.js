@@ -50,7 +50,7 @@ const Employees = [
     {
         id: YashaId,
         name: "Yasha Gurevich",
-        title: "Principle Physiotherapist",
+        title: "Principal Physiotherapist",
         description: "Yasha completed his Bachelor of Applied Science and Masters of Physiotherapy at La Trobe Bendigo. " +
             "Yasha’s clinical interest involve management of complex musculoskeletal conditions, sports physiotherapy and injury prevention. " +
             "Yasha has been involved in a variety of different sports settings including soccer, basketball and is currently the head physiotherapist at AJAX football club. " +

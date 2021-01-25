@@ -12,11 +12,9 @@ import CommonInjuriesBlock from "pages-sections/services/physiotherapy/CommonInj
 import TimelineBlock from "pages-sections/services/physiotherapy/TimelineBlock";
 
 import GreenHeaderBlackBody from "components/TextBlocks/GreenHeaderBlackBody";
-import BookingButtonsGroup from "components/Buttons/BookingButtonsGroup";
 
 import PhysiotherapyData from "assets/data/pages/services/physiotherapy";
 import BookConsultButton from "../../components/Buttons/BookConsultButton";
-import BookGroupClassButton from "../../components/Buttons/BookGroupClassButton";
 
 const useStyles = makeStyles({
     spacing: {

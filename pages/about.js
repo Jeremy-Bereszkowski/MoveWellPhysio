@@ -21,7 +21,7 @@ const useStyles = makeStyles({
     },
 });
 
-export default function Physiotherapy(props) {
+export default function AboutPage(props) {
     React.useEffect(() => {
         window.scrollTo(0, 0);
         document.body.scrollTop = 0;

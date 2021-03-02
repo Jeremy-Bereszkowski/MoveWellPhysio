@@ -5,7 +5,6 @@ const URL = {
 
     /*MAIN*/
     LANDING_PAGE: "/landing-page",
-    TESTIMONIALS: "/testimonials",
     ABOUT: "/about",
     CONTACT: "/contact",
     BOOK: "/book",

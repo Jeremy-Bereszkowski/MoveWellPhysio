@@ -44,12 +44,6 @@ const HeaderData = {
         },
         {
             core: {
-                key: "Testimonials",
-                link: URL.TESTIMONIALS,
-            },
-        },
-        {
-            core: {
                 key: "Book",
                 link: "",
             },

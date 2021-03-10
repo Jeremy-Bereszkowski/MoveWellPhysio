@@ -29,7 +29,7 @@ import Colours from "assets/strings/colours";
 import URL from "assets/strings/urls";
 import HeaderData from "assets/data/components/header";
 import Logo from "assets/img/logos/move-well-logo.png"
-import {phone} from "../../assets/data/global";
+import {phone_string} from "../../assets/data/global";
 import PhoneLink from "../Links/Phone";
 
 const useStyles = makeStyles(theme => ({
@@ -219,7 +219,7 @@ export default function Header(props) {
                 alignItems={"center"}
             >
               <Grid item style={{padding: "0 12px", color: "black"}}>
-                {HeaderData.bannerText}<PhoneLink text={phone}/>
+                {HeaderData.bannerText}<PhoneLink text={phone_string}/>
               </Grid>
               <Grid item>
                 <SocialButtonGroup color={"black"}/>

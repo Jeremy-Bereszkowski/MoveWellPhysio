@@ -7,7 +7,6 @@ import HalfHorizontalTexts from "components/TextBlocks/HalfHorizontalTexts";
 
 import {bodyHeaderText, bodyParaText1} from "assets/jss/coreStyles";
 import ContactData from "assets/data/pages/contact";
-import {email, phone} from "../../assets/data/global";
 
 const useStyles = makeStyles({
     greenHeaderText: {

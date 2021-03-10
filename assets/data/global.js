@@ -10,7 +10,8 @@ const headerString = companyName + " Physiotherapy"
 const address1 = "181 Bay Street"
 const address2 = "Brighton, VIC, 3186"
 
-const phone = "0490 842 380"
+const phone = "+61490842380"
+const phone_string = "(+61) 0490 842 380"
 const email = "hello@movewellmelbourne.com"
 
 
@@ -91,6 +92,7 @@ export {
     address1,
     address2,
     phone,
+    phone_string,
     email,
 
     image1,

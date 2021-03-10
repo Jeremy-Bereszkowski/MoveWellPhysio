@@ -1,4 +1,4 @@
-import {phone, PhysiotherapyBackground} from "../../global";
+import {phone_string, PhysiotherapyBackground} from "../../global";
 
 const PhysiotherapyData = {
     core: {
@@ -22,7 +22,7 @@ const PhysiotherapyData = {
             "We design a tailored plan that helps relieve your pain, improve function and allow you to achieve your goals.",
             "Physiotherapy is able to be claimed on private health insurance.",
             "We accept private health insurance, WorkCover claims, NDIS, TAC and Medicare.",
-            "Book online below to get started or contact us on "+phone+" for more details.",
+            "Book online below to get started or contact us on "+phone_string+" for more details.",
         ],
     },
     commonInjuries: {

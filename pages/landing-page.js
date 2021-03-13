@@ -15,6 +15,7 @@ import InstagramFeed from "pages-sections/landing-page/InstagramFeed";
 import {blackHrThin} from "assets/jss/coreStyles";
 import LandingData from "assets/data/pages/landing-data";
 import URL from "assets/strings/urls";
+import {Helmet} from "react-helmet";
 
 const useStyles = makeStyles({
     hr: {
@@ -34,6 +35,9 @@ export default function LandingPage(props) {
 
     return (
         <HeaderFooterLayout>
+            <Helmet>
+                <script src="" crossOrigin></script>
+            </Helmet>
             <LandingPageCarousel/>
             <MainContainerLayout>
                 <ColumnLayout>

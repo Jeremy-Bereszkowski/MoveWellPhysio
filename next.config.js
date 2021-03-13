@@ -8,15 +8,15 @@ module.exports = withPlugins([[withSass], [withImages], [withCSS]], {
   webpack(config, options) {
     config.resolve.modules.push(path.resolve("./"));
     return config;
-  },
+  }/*,
   async rewrites() {
     return [
       {
         source: '/api/:path*',
-        destination: 'https://api.example.com/:path*',
+        destination: 'https://www.instagram.com/movewellmelbourne/',
       },
     ]
-  },
+  },*/
 });
 
 /*module.exports = {

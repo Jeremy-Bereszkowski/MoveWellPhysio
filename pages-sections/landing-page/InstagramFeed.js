@@ -37,7 +37,7 @@ export default function InstagramFeed(props) {
                 'lazy_load': true
             })
         }
-    })
+    }, [])
 
     return (
         <Grid
